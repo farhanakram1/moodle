@@ -1,0 +1,85 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Feb 13, 2020 at 06:26 PM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.2.22
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `moodle`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mdl_wiki_versions`
+--
+
+CREATE TABLE `mdl_wiki_versions` (
+  `id` bigint(10) NOT NULL,
+  `pageid` bigint(10) NOT NULL DEFAULT 0,
+  `content` longtext NOT NULL,
+  `contentformat` varchar(20) NOT NULL DEFAULT 'creole',
+  `version` mediumint(5) NOT NULL DEFAULT 0,
+  `timecreated` bigint(10) NOT NULL DEFAULT 0,
+  `userid` bigint(10) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Stores wiki page history' ROW_FORMAT=COMPRESSED;
+
+--
+-- Dumping data for table `mdl_wiki_versions`
+--
+
+INSERT INTO `mdl_wiki_versions` (`id`, `pageid`, `content`, `contentformat`, `version`, `timecreated`, `userid`) VALUES
+(1, 1, '', 'html', 0, 1581595559, 2),
+(2, 1, '<p>[[Home]]&nbsp; [[Contact]]&nbsp; [[About Us]] [[Login]]</p>\r\n<div style=\"background-image:url(\'@@PLUGINFILE@@/bg.png\'); background-repeat:no-repeat; background-size:100%; padding:200px 0 200px 0;\">\r\n    <h2 style=\"text-align: center; color:white;\"><b>WELCOME</b></h2>\r\n    <p style=\"text-align: center;color:white;\">to the exam review platform for <b>Dr. Derek Mahony’s</b> EODO Miniresidency students</p>\r\n    <h5 style=\"text-align: center;\"><a href=\"#\" style=\"color:white;\"><b>LEARN MOR</b>E</a></h5>\r\n    <br></div>\r\n<br>\r\n<br>\r\n<h4><img src=\"@@PLUGINFILE@@/left_image.jpg\" alt=\"\" role=\"presentation\" class=\"atto_image_button_left\" width=\"450\" height=\"300\">\r\n</h4>\r\n<br>\r\n\r\n<h4>How it works</h4>\r\n<div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n    <p><b>Login, upload your work, see the results</b></p>\r\n</div>\r\n\r\n<div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n    <div style=\"text-align:left;\">\r\n\r\n    </div>\r\n    <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n        <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n            <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                    <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                        <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                            <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                                <div style=\"text-align:left;\">Create a login<br>Choose the module you would like to submit<br>Upload your exam PDFs and pay for the corrections with PayPal<br>Review your results<br>Obtain the diploma at the end of the EODO Miniresidency Program</div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div style=\"text-align:left;\"><a href=\"#\">LOGIN</a></div>\r\n</div>\r\n<br>\r\n<br>\r\n<div><img src=\"@@PLUGINFILE@@/image3.png\" alt=\"\" role=\"presentation\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\"><img src=\"@@PLUGINFILE@@/image4.png\" alt=\"\" role=\"presentation\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\"> <img src=\"@@PLUGINFILE@@/image5.png\" alt=\"\" role=\"presentation\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\"> <img src=\"@@PLUGINFILE@@/image1.png\" alt=\"\" role=\"presentation\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\">&nbsp; <img src=\"@@PLUGINFILE@@/image2.png\" alt=\"\" role=\"presentation\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\"></div><div>&nbsp;&nbsp;&nbsp; 24h access&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Review results&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manage exams&nbsp;&nbsp; Deadline overview&nbsp;&nbsp; Easy upload</div><div><br></div><div>A PLACE THAT<br>PROVIDES ALL TOOLS<br>FOR COMFORTABLE<br>WORK ENVIRONMENT</div><div><br></div><div style=\"text-align: left;\">This platform provides you with the tools to easily upload and manage<br>your EODO Miniresidency exams and assignments. You can<br>conveniently access your account 24/7 to check on your results and<br>ensure that you fulfil all requirements for your diploma at the end of the<br>residency.</div><div><br></div><div style=\"text-align: center;\"><b>Copyright C 2019 MR Corrections<br>Impressum</b><br></div>', 'html', 1, 1581596773, 2),
+(3, 1, '<p>[[Home]]&nbsp; [[Contact]]&nbsp; [[About Us]] [[Login]]</p>\r\n<div style=\"background-image:url(&quot;@@PLUGINFILE@@/bg.png&quot;);background-repeat:no-repeat;padding:200px 0 200px 0;\">\r\n    <h2 style=\"text-align:center;color:#FFFFFF;\"><b>WELCOME</b></h2>\r\n    <p style=\"text-align:center;color:#FFFFFF;\">to the exam review platform for <b>Dr. Derek Mahony’s</b> EODO Miniresidency students</p>\r\n    <h5 style=\"text-align:center;\"><a href=\"#\" style=\"color:#FFFFFF;\"><b>LEARN MOR</b>E</a></h5>\r\n    <br></div>\r\n<br>\r\n<br>\r\n<h4><img src=\"@@PLUGINFILE@@/left_image.jpg\" alt=\"\" class=\"atto_image_button_left\" width=\"450\" height=\"300\">\r\n</h4>\r\n<br>\r\n\r\n<h4>How it works</h4>\r\n<div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n    <p><b>Login, upload your work, see the results</b></p>\r\n</div>\r\n\r\n<div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n    <div style=\"text-align:left;\">\r\n\r\n    </div>\r\n    <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n        <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n            <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                    <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                        <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                            <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                                <div style=\"text-align:left;\">Create a login<br>Choose the module you would like to submit<br>Upload your exam PDFs and pay for the corrections with PayPal<br>Review your results<br>Obtain the diploma at the end of the EODO Miniresidency Program</div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div style=\"text-align:left;\"><a href=\"#\">LOGIN</a></div>\r\n</div>\r\n<br>\r\n<br>\r\n<br>\r\n<br>\r\n<div style=\"text-align: center;\"><img src=\"@@PLUGINFILE@@/image3.png\" alt=\"\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\"><img src=\"@@PLUGINFILE@@/image4.png\" alt=\"\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\"> <img src=\"@@PLUGINFILE@@/image5.png\" alt=\"\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\">\r\n    <img src=\"@@PLUGINFILE@@/image1.png\" alt=\"\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\">&nbsp; <img src=\"@@PLUGINFILE@@/image2.png\" alt=\"\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\"></div>\r\n<div style=\"text-align: center;\">&nbsp;&nbsp;&nbsp; 24h access&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Review results&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manage exams&nbsp;&nbsp; Deadline overview&nbsp;&nbsp; Easy upload</div>\r\n<div><br></div>\r\n<div>A PLACE THAT<br>PROVIDES ALL TOOLS<br>FOR COMFORTABLE<br>WORK ENVIRONMENT</div>\r\n<div><br></div>\r\n<div style=\"text-align:left;\">This platform provides you with the tools to easily upload and manage<br>your EODO Miniresidency exams and assignments. You can<br>conveniently access your account 24/7 to check on your results and<br>ensure that you fulfil all requirements for your diploma\r\n    at the end of the<br>residency.</div>\r\n<div><br></div>\r\n<div style=\"text-align:center;\"><b>Copyright C 2019 MR Corrections<br>Impressum</b><br></div>', 'html', 2, 1581596852, 2),
+(4, 2, '', 'html', 0, 1581596935, 2),
+(5, 2, '<p>[[Home]]&nbsp; [[Contact]]&nbsp; [[About Us]] [[Login]]</p>\r\n<p><br></p>\r\n<form action=\"/action_page.php\">\r\n  First name:<br>\r\n  <input type=\"text\" name=\"firstname\" value=\"Mickey\">\r\n  <br>\r\n  Last name:<br>\r\n  <input type=\"text\" name=\"lastname\" value=\"Mouse\">\r\n  <br><br>\r\n  <input type=\"submit\" value=\"Submit\">\r\n</form>', 'html', 1, 1581598031, 2),
+(6, 2, '<p>[[Home]]&nbsp; [[Contact]]&nbsp; [[About Us]] [[Login]]</p>\r\n<p><br></p>\r\n\r\n<form action=\"/action_page.php\">\r\n  <label for=\"fname\">First name:</label><br>\r\n  <input type=\"text\" id=\"fname\" name=\"fname\" value=\"John\"><br>\r\n  <label for=\"lname\">Last name:</label><br>\r\n  <input type=\"text\" id=\"lname\" name=\"lname\" value=\"Doe\"><br><br>\r\n  <input type=\"submit\" value=\"Submit\">\r\n</form>', 'html', 2, 1581609357, 2),
+(7, 2, '<form action=\"/action_page.php\">\r\n  <label for=\"fname\">First name:</label><br>\r\n  <input type=\"text\" id=\"fname\" name=\"fname\" value=\"John\"><br>\r\n  <label for=\"lname\">Last name:</label><br>\r\n  <input type=\"text\" id=\"lname\" name=\"lname\" value=\"Doe\"><br><br>\r\n  <input type=\"submit\" value=\"Submit\">\r\n</form>', 'html', 3, 1581609544, 2),
+(8, 3, '', 'html', 0, 1581611105, 2),
+(9, 3, '<div style=\"background-image:url(@@PLUGINFILE@@/aboutus.png);background-repeat:no-repeat;padding:100px 0 100px 0;\">\r\n    <h2 style=\"text-align:center;color:#FFFFFF;\"><b>About Us</b></h2>\r\n</div>\r\n<div style=\"text-align: left;\"><b>ABOUT MR CORRECTIONS</b></div><div style=\"text-align: left;\">We carry out the corrections for all Miniresidency<br>exams and assignments for Dr. Derek Mahony\'s<br>courses and submit the results to EODO to be<br>taken into account for your diploma and if<br>applicable your application for the Master of<br>Clinical Dentistry of the City<b><br></b></div><div style=\"text-align: center;\"><b><img src=\"@@PLUGINFILE@@/image002.png\" alt=\"\" role=\"presentation\" class=\"img-responsive atto_image_button_text-bottom\" width=\"300\" height=\"200\"></b><br></div>', 'html', 1, 1581611965, 2),
+(10, 3, '<p>[[Home]]&nbsp; [[Contact]]&nbsp; [[About Us]] [[Login]]</p>\r\n<div style=\"background-image:url(&quot;@@PLUGINFILE@@/aboutus.png&quot;);background-repeat:no-repeat;padding:100px 0 100px 0;\">\r\n    <h2 style=\"text-align:center;color:#FFFFFF;\"><b>About Us</b></h2>\r\n</div>\r\n<div style=\"text-align:left;\"><b>ABOUT MR CORRECTIONS</b></div>\r\n<div style=\"text-align:left;\">We carry out the corrections for all Miniresidency<br>exams and assignments for Dr. Derek Mahony\'s<br>courses and submit the results to EODO to be<br>taken into account for your diploma and if<br>applicable your application for the Master of<br>Clinical\r\n    Dentistry of the City<b><br></b></div>\r\n<div style=\"text-align:center;\"><b><img src=\"@@PLUGINFILE@@/image002.png\" alt=\"\" class=\"img-responsive atto_image_button_text-bottom\" width=\"300\" height=\"200\"></b><br></div>', 'html', 2, 1581611989, 2),
+(11, 4, '', 'html', 0, 1581612002, 2),
+(12, 4, '<p>[[Home]]&nbsp; [[Contact]]&nbsp; [[About Us]] [[Login]]</p>', 'html', 1, 1581612012, 2),
+(13, 3, '<p>[[Home]]&nbsp; [[Contact]]&nbsp; [[About Us]] [[Login]]</p>\r\n<div style=\"background-image:url(&quot;@@PLUGINFILE@@/aboutus.png&quot;);background-repeat:no-repeat;padding:100px 0 100px 0;background-size:100%\">\r\n    <h2 style=\"text-align:center;color:#FFFFFF;\"><b>About Us</b></h2>\r\n</div>\r\n<div style=\"text-align:left;\"><b>ABOUT MR CORRECTIONS</b></div>\r\n<div style=\"text-align:left;\">We carry out the corrections for all Miniresidency<br>exams and assignments for Dr. Derek Mahony\'s<br>courses and submit the results to EODO to be<br>taken into account for your diploma and if<br>applicable your application for the Master of<br>Clinical\r\n    Dentistry of the City<b><br></b></div>\r\n<div style=\"text-align:center;\"><b><img src=\"@@PLUGINFILE@@/image002.png\" alt=\"\" class=\"img-responsive atto_image_button_text-bottom\" width=\"300\" height=\"200\"></b><br></div>', 'html', 3, 1581612104, 2),
+(14, 1, '<p>[[Home]]&nbsp; [[Contact]]&nbsp; [[About Us]] [[Login]]</p>\r\n<div style=\"background-image:url(&quot;@@PLUGINFILE@@/bg.png&quot;);background-repeat:no-repeat;padding:200px 0 200px 0;\">\r\n    <h2 style=\"text-align:center;color:#FFFFFF;\"><b>WELCOME</b></h2>\r\n    <p style=\"text-align:center;color:#FFFFFF;\">to the exam review platform for <b>Dr. Derek Mahony’s</b> EODO Miniresidency students</p>\r\n    <h5 style=\"text-align:center;\"><a href=\"#\" style=\"color:#FFFFFF;\"><b>LEARN MOR</b>E</a></h5>\r\n    <br></div>\r\n<br>\r\n<br>\r\n<h4><img src=\"@@PLUGINFILE@@/left_image.jpg\" alt=\"\" class=\"atto_image_button_left\" width=\"450\" height=\"300\">\r\n</h4>\r\n<br>\r\n\r\n<h4>How it works</h4>\r\n<div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n    <p><b>Login, upload your work, see the results</b></p>\r\n</div>\r\n\r\n<div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n    <div style=\"text-align:left;\">\r\n\r\n    </div>\r\n    <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n        <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n            <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                    <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                        <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                            <div style=\"margin-left:30px;\" class=\"editor-indent\">\r\n                                <div style=\"text-align:left;\">Create a login<br>Choose the module you would like to submit<br>Upload your exam PDFs and pay for the corrections with PayPal<br>Review your results<br>Obtain the diploma at the end of the EODO Miniresidency Program</div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div style=\"text-align:left;\"><a href=\"#\">LOGIN</a></div>\r\n</div>\r\n<br>\r\n<br>\r\n<br>\r\n<br>\r\n<div style=\"text-align:center;\"><img src=\"@@PLUGINFILE@@/image3.png\" alt=\"\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\"><img src=\"@@PLUGINFILE@@/image4.png\" alt=\"\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\"> <img src=\"@@PLUGINFILE@@/image5.png\" alt=\"\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\">\r\n    <img src=\"@@PLUGINFILE@@/image1.png\" alt=\"\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\">&nbsp; <img src=\"@@PLUGINFILE@@/image2.png\" alt=\"\" class=\"img-responsive atto_image_button_text-bottom\" width=\"99\" height=\"99\"></div>\r\n<div style=\"text-align:center;\">&nbsp;&nbsp;&nbsp; 24h access&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Review results&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manage exams&nbsp;&nbsp; Deadline overview&nbsp;&nbsp; Easy upload</div>\r\n<div><br></div>\r\n<div>A PLACE THAT<br>PROVIDES ALL TOOLS<br>FOR COMFORTABLE<br>WORK ENVIRONMENT</div>\r\n<div><br></div>\r\n<div style=\"text-align:left;\">This platform provides you with the tools to easily upload and manage<br>your EODO Miniresidency exams and assignments. You can<br>conveniently access your account 24/7 to check on your results and<br>ensure that you fulfil all requirements for your diploma\r\n    at the end of the<br>residency.</div>\r\n<div><br></div>\r\n<div style=\"text-align:center;\"><b>Copyright C 2019 MR Corrections<br>Impressum</b><br></div>', 'html', 3, 1581612597, 2);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `mdl_wiki_versions`
+--
+ALTER TABLE `mdl_wiki_versions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `mdl_wikivers_pag_ix` (`pageid`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `mdl_wiki_versions`
+--
+ALTER TABLE `mdl_wiki_versions`
+  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
