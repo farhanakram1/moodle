@@ -103,6 +103,36 @@ if (isloggedin()) {
         $bannercontent = theme_moove_get_setting('bannercontent', true);
     }
 
+    $bannerbuttontext = '';
+    if (!empty($PAGE->theme->settings->bannerbuttontext)) {
+        $bannerbuttontext = theme_moove_get_setting('bannerbuttontext', true);
+    }
+    
+    $bannerbuttonlink = '';
+    if (!empty($PAGE->theme->settings->bannerbuttonlink)) {
+        $bannerbuttonlink = theme_moove_get_setting('bannerbuttonlink', true);
+    }
+    
+    $howitworkcontent = '';
+    if (!empty($PAGE->theme->settings->howitworkcontent)) {
+        $howitworkcontent = theme_moove_get_setting('howitworkcontent', true);
+    }
+
+    $howitworklogintext = '';
+    if (!empty($PAGE->theme->settings->howitworklogintext)) {
+        $howitworklogintext = theme_moove_get_setting('howitworklogintext', true);
+    }
+
+    $howitworkloginlink = '';
+    if (!empty($PAGE->theme->settings->howitworkloginlink)) {
+        $howitworkloginlink = theme_moove_get_setting('howitworkloginlink', true);
+    }
+
+    $home24accesstext = '';
+    if (!empty($PAGE->theme->settings->home24accesstext)) {
+        $home24accesstext = theme_moove_get_setting('home24accesstext', true);
+    }
+
     $shoulddisplaymarketing = false;
     if (theme_moove_get_setting('displaymarketingbox', true) == true) {
         $shoulddisplaymarketing = true;
@@ -125,6 +155,12 @@ if (isloggedin()) {
         'cansignup' => $CFG->registerauth == 'email' || !empty($CFG->registerauth),
         'bannerheading' => $bannerheading,
         'bannercontent' => $bannercontent,
+        'bannerbuttontext' => $bannerbuttontext,
+        'bannerbuttonlink' => $bannerbuttonlink,
+        'howitworkcontent' => $howitworkcontent,
+        'howitworklogintext' => $howitworklogintext,
+        'howitworkloginlink' => $howitworkloginlink,
+        'home24accesstext' => $home24accesstext,
         'shoulddisplaymarketing' => $shoulddisplaymarketing,
         'sliderfrontpage' => $sliderfrontpage,
         'numbersfrontpage' => $numbersfrontpage,

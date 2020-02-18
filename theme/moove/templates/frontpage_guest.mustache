@@ -70,6 +70,10 @@
                         {{#bannercontent}}
                             <h2>{{{ bannercontent }}}</h2>
                         {{/bannercontent}}
+
+                        {{#bannerbuttontext}}
+                            <a href="{{{ bannerbuttonlink }}}" class="btn btn-default">{{{ bannerbuttontext }}}</a>
+                        {{/bannerbuttontext}}
                     </div>
                     {{^disablefrontpageloginbox}}
                         <div class="col-12 col-sm-12 col-md-5 card d-none d-lg-block" id="boxForm">
@@ -83,9 +87,27 @@
         {{>theme_moove/frontpage_marketing}}
 
         <div class="container frontpage-maincontent">
+            <div class="row">
+                <div class="col-sm-12">
+                    <img src="{{{ howitworkimg }}}" />
+                    {{#howitworkcontent}}
+                    <p>{{{ howitworkcontent }}}</p>
+                    {{/howitworkcontent}}
+                    {{#howitworklogintext}}
+                        <a href="{{{ howitworkloginlink }}}" class="btn btn-primary">{{{ howitworklogintext }}}</a>
+                    {{/howitworklogintext}}
+                </div>
+            </div>
           {{{ output.main_content }}}
         </div>
-
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="{{{ home24accessimage }}}" />
+                    <h3>{{{ home24accesstext }}}</h3>              
+                </div>
+            </div>
+        </div>
         {{>theme_moove/frontpage_numbers}}
 
         {{>theme_moove/frontpage_sponsorsclients}}

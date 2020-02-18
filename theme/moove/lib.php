@@ -196,6 +196,14 @@ function theme_moove_pluginfile($course, $cm, $context, $filearea, $args, $force
         return $theme->setting_file_serve('headerimg', $args, $forcedownload, $options);
     }
 
+    if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'howitworkimg') {
+        return $theme->setting_file_serve('howitworkimg', $args, $forcedownload, $options);
+    }
+
+    if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'home24accessimage') {
+        return $theme->setting_file_serve('home24accessimage', $args, $forcedownload, $options);
+    }
+
     if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'marketing1icon') {
         return $theme->setting_file_serve('marketing1icon', $args, $forcedownload, $options);
     }

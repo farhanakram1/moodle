@@ -233,6 +233,77 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Bannerbuttontext.
+    $name = 'theme_moove/bannerbuttontext';
+    $title = get_string('bannerbuttontext', 'theme_moove');
+    $description = get_string('bannerbuttontextdesc', 'theme_moove');
+    $default = 'Learn More';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Bannerbuttonlink.
+    $name = 'theme_moove/bannerbuttonlink';
+    $title = get_string('bannerbuttonlink', 'theme_moove');
+    $description = get_string('bannerbuttonlinkdesc', 'theme_moove');
+    $default = '#';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // HowItWorksImage.
+    $name = 'theme_moove/howitworkimg';
+    $title = get_string('howitworkimg', 'theme_moove');
+    $description = get_string('howitworkimgdesc', 'theme_moove');
+    $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'));
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'howitworkimg', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // HowItWorksContent.
+    $name = 'theme_moove/howitworkcontent';
+    $title = get_string('howitworkcontent', 'theme_moove');
+    $description = get_string('howitworkcontentdesc', 'theme_moove');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $page->add($setting);
+
+    // HowItWorksLogintext.
+    $name = 'theme_moove/howitworklogintext';
+    $title = get_string('howitworklogintext', 'theme_moove');
+    $description = get_string('howitworklogintextdesc', 'theme_moove');
+    $default = 'Learn More';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // HowItWorksLoginlink.
+    $name = 'theme_moove/howitworkloginlink';
+    $title = get_string('howitworkloginlink', 'theme_moove');
+    $description = get_string('howitworkloginlinkdesc', 'theme_moove');
+    $default = '#';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Home24accessimage.
+    $name = 'theme_moove/home24accessimage';
+    $title = get_string('home24accessimage', 'theme_moove');
+    $description = get_string('home24accessimagedesc', 'theme_moove');
+    $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'));
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'home24accessimage', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+     // Home24accesstest.
+    $name = 'theme_moove/home24accesstext';
+    $title = get_string('home24accesstext', 'theme_moove');
+    $description = get_string('home24accesstextdesc', 'theme_moove');
+    $default = '#';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     $name = 'theme_moove/displaymarketingbox';
     $title = get_string('displaymarketingbox', 'theme_moove');
     $description = get_string('displaymarketingboxdesc', 'theme_moove');
