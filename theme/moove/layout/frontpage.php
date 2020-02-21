@@ -133,6 +133,31 @@ if (isloggedin()) {
         $home24accesstext = theme_moove_get_setting('home24accesstext', true);
     }
 
+    $homeresultviewtest = '';
+    if (!empty($PAGE->theme->settings->homeresultviewtest)) {
+        $homeresultviewtest = theme_moove_get_setting('homeresultviewtest', true);
+    } 
+
+    $homemanageexamstest = '';
+    if (!empty($PAGE->theme->settings->homemanageexamstest)) {
+        $homemanageexamstest = theme_moove_get_setting('homemanageexamstest', true);
+    }
+
+    $homedeadlineoverviewtest = '';
+    if (!empty($PAGE->theme->settings->homedeadlineoverviewtest)) {
+        $homedeadlineoverviewtest = theme_moove_get_setting('homedeadlineoverviewtest', true);
+    }
+
+    $homeeasyuploadtest = '';
+    if (!empty($PAGE->theme->settings->homeeasyuploadtest)) {
+        $homeeasyuploadtest = theme_moove_get_setting('homeeasyuploadtest', true);
+    }
+
+    $placethatcontent = '';
+    if (!empty($PAGE->theme->settings->placethatcontent)) {
+        $placethatcontent = theme_moove_get_setting('placethatcontent', true);
+    }
+
     $shoulddisplaymarketing = false;
     if (theme_moove_get_setting('displaymarketingbox', true) == true) {
         $shoulddisplaymarketing = true;
@@ -161,6 +186,11 @@ if (isloggedin()) {
         'howitworklogintext' => $howitworklogintext,
         'howitworkloginlink' => $howitworkloginlink,
         'home24accesstext' => $home24accesstext,
+        'homemanageexamstest' => $homemanageexamstest,
+        'homeresultviewtest' => $homeresultviewtest,
+        'homedeadlineoverviewtest' => $homedeadlineoverviewtest,
+        'homeeasyuploadtest' => $homeeasyuploadtest,
+        'placethatcontent' => $placethatcontent,
         'shoulddisplaymarketing' => $shoulddisplaymarketing,
         'sliderfrontpage' => $sliderfrontpage,
         'numbersfrontpage' => $numbersfrontpage,

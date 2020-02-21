@@ -1,3 +1,95 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+                #page-site-index.notloggedin #loginbox #intro h1 {
+    color: #fff;
+    letter-spacing: .2rem;
+    text-shadow: none !important; 
+    margin-top: 5rem!important; 
+    font-size: 85px!important; 
+    text-align: center!important; 
+    margin-bottom: 0!important;
+}
+#page-site-index.notloggedin #loginbox #intro h2 {
+    color: #fff !important;
+    text-shadow: none !important;
+    letter-spacing: .1rem !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    font-size: 22px !important;
+    margin-bottom: 25px !important;
+}
+div#intro a.btn {
+    background-color: transparent!important;
+    color: white!important;
+    padding: 10px 30px!important;
+    font-size: 25px!important;
+    margin-top: 50px;
+    border: 2px solid #fff!important;
+    border-radius: 5px!important;
+}
+div#intro a.btn:hover {
+    background-color: #00a2ff!important;
+    border: 2px solid #00a2ff!important;
+}
+.frontpage-maincontent a.btn {
+    background-color: #00a2ff!important;
+    color: white!important;
+    padding: 12px 30px!important;
+    font-size: 20px!important;
+    margin-top: 50px;
+    border: 2px solid #fff!important;
+    border-radius: 5px!important;
+        margin-top: 7px!important;
+}
+.frontpage-maincontent a.btn:hover {
+    background-color: transparent!important;
+    border: 2px solid #00a2ff!important;
+    color: #00a2ff!important;
+}
+#intro {
+    text-align: center !important;
+}
+a.btn.btn-default .fa {
+    font-size: 24px;
+    margin-left: 2px;
+}
+#page-site-index.notloggedin #page-header {
+    min-height: 620px !important;
+}
+.imag-box img {
+    width: 95%!important;
+        margin-bottom: 25px;
+}
+.list-style-cust li {
+    font-size: 16px!important;
+    margin-bottom: 12px!important;
+}
+.list-style-cust {
+    padding-left: 15px!important;
+}
+.bg-blue-cust {
+    background-color: #00a2ff;
+    padding: 90px 0;
+        color: white;
+}
+.bg-blue-cust h3 {
+    color: white;
+    font-size: 18px;
+        margin-bottom: 40px;
+}
+.bg-blue-cust div.col-lg {
+    text-align:center;
+}
+.bg-blue-cust img {
+    min-height: 115px;
+    width: 100px;
+    margin-bottom: 20px;
+}
+.blue-area {
+    border-bottom: 3px solid #0076ba;
+    margin-bottom: 55px;
+}
+</style>
 {{!
     This file is part of Moodle - http://moodle.org/
 
@@ -72,7 +164,7 @@
                         {{/bannercontent}}
 
                         {{#bannerbuttontext}}
-                            <a href="{{{ bannerbuttonlink }}}" class="btn btn-default">{{{ bannerbuttontext }}}</a>
+                            <a href="{{{ bannerbuttonlink }}}" class="btn btn-default">{{{ bannerbuttontext }}} <i class="fa fa-arrow-right"></i></a>
                         {{/bannerbuttontext}}
                     </div>
                     {{^disablefrontpageloginbox}}
@@ -88,26 +180,74 @@
 
         <div class="container frontpage-maincontent">
             <div class="row">
-                <div class="col-sm-12">
-                    <img src="{{{ howitworkimg }}}" />
-                    {{#howitworkcontent}}
-                    <p>{{{ howitworkcontent }}}</p>
-                    {{/howitworkcontent}}
+
+             <div class="col-md-12 col-lg-6">
+                    <div class="imag-box">
+                        <img src="http://moodle.leadconcept.biz/theme/moove/pix/left_image.jpg" >
+                    </div>
+                </div>
+                 <div class="col-md-12 col-lg-6">
+                    <h1>How it works</h1>
+                    <p><b><i>Login, upload your work, see the results</i></b></p>
+                      <ol class="list-style-cust">
+                            <li>Create a login</li>
+                            <li>Choose the module you would like to submit </li>
+                            <li>Upload your exam PDFs and pay for the corrections with PayPal</li>
+                            <li>Review your results</li>
+                            <li>Obtain the diploma at the end of the EODO Miniresidency Pro</li>
+                            
+                        </ol>
                     {{#howitworklogintext}}
-                        <a href="{{{ howitworkloginlink }}}" class="btn btn-primary">{{{ howitworklogintext }}}</a>
+                        <a href="{{{ howitworkloginlink }}}" class="btn btn-primary">{{{ howitworklogintext }}} <i class="fa fa-arrow-right"></i></a>
                     {{/howitworklogintext}}
                 </div>
             </div>
           {{{ output.main_content }}}
         </div>
+        <div class="bg-blue-cust">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="{{{ home24accessimage }}}" />
+            <div class="row blue-area">
+                <div class="col-md-4 col-sm-6 col-12 col-lg">
+                    <img src="http://moodle.leadconcept.biz/theme/moove/pix/s1.png" />
                     <h3>{{{ home24accesstext }}}</h3>              
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 col-lg">
+                    <img src="http://moodle.leadconcept.biz/theme/moove/pix/s2.png" />
+                    <h3>{{{ homeresultviewtest }}}</h3>              
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-12 col-lg">
+                    <img src="http://moodle.leadconcept.biz/theme/moove/pix/s3.png" />
+                    <h3>{{{ homemanageexamstest }}}</h3>              
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-12 col-lg">
+                    <img src="http://moodle.leadconcept.biz/theme/moove/pix/s4.png" />
+                    <h3>{{{ homedeadlineoverviewtest }}}</h3>              
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-12 col-lg">
+                    <img src="http://moodle.leadconcept.biz/theme/moove/pix/s5.png" />
+                    <h3>{{{ homeeasyuploadtest }}}</h3>              
                 </div>
             </div>
         </div>
+        
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6 col-lg-5 col-sm-12">
+                        <h2 class="text-white">A PLACE THAT
+PROVIDES ALL TOOLS
+FOR COMFORTABLE
+WORK ENVIRONMENT</h2>   
+                </div>
+                <div class="col-md-6 col-lg-7 col-sm-12">
+                    {{{ placethatcontent }}}              
+                </div>
+            </div>
+        </div>
+        </div>
+
         {{>theme_moove/frontpage_numbers}}
 
         {{>theme_moove/frontpage_sponsorsclients}}

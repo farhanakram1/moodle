@@ -304,6 +304,87 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Homeresultviewimage.
+    $name = 'theme_moove/homeresultviewimage';
+    $title = get_string('homeresultviewimage', 'theme_moove');
+    $description = get_string('homeresultviewimagedesc', 'theme_moove');
+    $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'));
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'homeresultviewimage', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+     // Homeresultviewtest.
+    $name = 'theme_moove/homeresultviewtest';
+    $title = get_string('homeresultviewtest', 'theme_moove');
+    $description = get_string('homeresultviewtestdesc', 'theme_moove');
+    $default = '#';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Homemanageexamsimage.
+    $name = 'theme_moove/homemanageexamsimage';
+    $title = get_string('homemanageexamsimage', 'theme_moove');
+    $description = get_string('homemanageexamsimagedesc', 'theme_moove');
+    $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'));
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'homemanageexamsimage', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+     // Homemanageexamstest.
+    $name = 'theme_moove/homemanageexamstest';
+    $title = get_string('homemanageexamstest', 'theme_moove');
+    $description = get_string('homemanageexamstestdesc', 'theme_moove');
+    $default = '#';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Homedeadlineoverviewimage.
+    $name = 'theme_moove/homedeadlineoverviewimage';
+    $title = get_string('homedeadlineoverviewimage', 'theme_moove');
+    $description = get_string('homedeadlineoverviewimagedesc', 'theme_moove');
+    $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'));
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'homedeadlineoverviewimage', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+     // Homedeadlineoverviewtest.
+    $name = 'theme_moove/homedeadlineoverviewtest';
+    $title = get_string('homedeadlineoverviewtest', 'theme_moove');
+    $description = get_string('homedeadlineoverviewtestdesc', 'theme_moove');
+    $default = '#';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+     // Homeeasyuploadimage.
+    $name = 'theme_moove/homeeasyuploadimage';
+    $title = get_string('homeeasyuploadimage', 'theme_moove');
+    $description = get_string('homeeasyuploadimagedesc', 'theme_moove');
+    $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'));
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'homeeasyuploadimage', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+     // Homeeasyuploadtest.
+    $name = 'theme_moove/homeeasyuploadtest';
+    $title = get_string('homeeasyuploadtest', 'theme_moove');
+    $description = get_string('homeeasyuploadtestdesc', 'theme_moove');
+    $default = '#';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // PlaceThatContent.
+    $name = 'theme_moove/placethatcontent';
+    $title = get_string('placethatcontent', 'theme_moove');
+    $description = get_string('placethatcontentdesc', 'theme_moove');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $page->add($setting);
+    
+
     $name = 'theme_moove/displaymarketingbox';
     $title = get_string('displaymarketingbox', 'theme_moove');
     $description = get_string('displaymarketingboxdesc', 'theme_moove');

@@ -1,3 +1,63 @@
+<style>
+#top-footer h3,#top-footer h4,.tool_dataprivacy a {
+    color: #ffffff!important;
+}
+#top-footer h4{
+  font-size:16px !important;
+}
+#top-footer {
+    background-size: cover!important;
+}
+#top-footer .contact ul li a, #top-footer .contact ul li i {
+    color: white!important;
+        font-size: 14px!important;
+            margin-right: 20px; 
+}
+#top-footer .contact ul {
+    list-style: none;
+    margin-top: 30px!important;
+    padding-left: 0!important;
+}
+.b-line {
+    border-bottom: 3px solid #039ede;
+    width: 80px;
+    margin-bottom: 20px;
+}
+.subscribe-b input {
+    border: 0;
+    border-radius: 3px 0 0 3px;
+}
+.subscribe-b .btn-success {
+    color: #fff;
+    background-color: #00a2ff;
+    border-color: #00a2ff;
+}
+.subscribe-b .btn-success:hover {
+    color: #fff;
+    background-color: #00a2ff;
+    border-color: #00a2ff;
+    opacity:0.8;
+}
+#page-footer {
+    background-color: #00a2ff!important;
+}
+p.D-D-l {
+    font-size: 12px;
+}
+#top-footer .social {
+    text-align: left!important;
+}
+#top-footer .social p{
+    color: #e9e9e9;
+    font-size: 14px!important;
+}
+.tool_dataprivacy,#theme_switch_link {
+    display: none;
+}
+p.D-D-l.mb-0 a {
+    text-decoration: none !important;
+}
+</style>
 {{!
     This file is part of Moodle - http://moodle.org/
 
@@ -22,10 +82,11 @@
     Example context (json): {}
 }}
 <div id="top-footer">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
-        <div class="col-md-7 contact">
+        <div class="col-lg-4 col-md-6 contact">
             <h3>{{#str}}stayintouch, theme_moove{{/str}}</h3>
+            <div class="b-line"></div>
             <h4>{{{getintouchcontent}}}</h4>
             <ul>
                 {{#website}}
@@ -48,8 +109,27 @@
                 {{/mail}}
             </ul>
         </div>
-        <div class="col-md-5 social">
-          <ul>
+        <div class="col-lg-4 col-md-6 contact">
+        <h3>Useful Links</h3>
+        <div class="b-line"></div>
+        <ul class="use-links">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Privacy Policy</a></li>
+        </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 social">
+ <h3 class="text-left">Connect With Us</h3>
+ <div class="b-line"></div>
+ <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div class="input-group mb-3 subscribe-b">
+  <input type="email" class="form-control" placeholder="Email Address">
+  <div class="input-group-append">
+    <button class="btn btn-success" type="submit">Go</button>
+  </div>
+</div>
+          <ul class="pl-0">
               {{#facebook}}
                 <li>
                   <a href="{{{facebook}}}" target="_blank" class="facebook btn">
@@ -107,19 +187,18 @@
 
 {{^disablebottomfooter}}
   <footer id="page-footer" class="p-y-1">
-      <div class="container-fluid">
-          <div id="course-footer">{{{ output.course_footer }}}</div>
-
-          <div class="madewithmoodle">
-              <p>{{#str}}madewitmoodle, theme_moove{{/str}}</p>
-              <a href="https://moodle.org"><img src="{{output.get_pix_image_url_base}}/moodle-logo-white.png" alt="Moodle logo"></a>
-          </div>
-
-          <div class="madeby">
-              <p>{{#str}}madeby, theme_moove{{/str}} <i class="text-danger fa fa-heart"></i> {{#str}}by, theme_moove{{/str}} <a href="http://conecti.me">conecti.me</a></p>
-          </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-6 col-12 text-white text-sm-left">
+            <p class="R-R mb-0"> 2020 Spring. All Rights Reserved.</p>
+            </div>
+            <div class="col-sm-6 col-12 text-sm-right text-center text-white">
+                <p class="D-D-l mb-0">Designed & Developed by <a href="" target="_blank">LEADconcept</a></p>
+            </div>
+         </div>
       </div>
   </footer>
 {{/disablebottomfooter}}
 
 {{{ output.standard_end_of_body_html }}}
+<!-- Button trigger modal -->

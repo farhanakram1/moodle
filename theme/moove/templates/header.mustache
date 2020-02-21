@@ -22,6 +22,140 @@
     Example context (json): {}
 }}
 
+<style>
+.cust-li li {
+    list-style: none;
+    margin-left: 11px;
+}
+nav.navbar ul.navbar-nav li>a,
+ nav.navbar ul.navbar-nav .nav-item>a {
+    color: #1d1c1c !important;
+        font-size: 20px !important;
+        border-bottom: 1px solid transparent !important;
+}
+nav.navbar ul.navbar-nav li:hover a {
+    border-bottom: 1px solid #1d1c1c !important;
+}
+.usermenu .btn-primary {
+    color: #fff;
+    background-color: #00a2ff!important;
+    border-radius: 5px!important;
+    padding: 5px 40px!important;
+    border-color: #00a2ff!important;
+    font-size: 18px!important;
+}
+nav.navbar ul.navbar-nav li, nav.navbar ul.navbar-nav .nav-item {
+    padding-right: 35px !important;
+}
+nav.navbar ul.navbar-nav li, nav.navbar ul.navbar-nav .nav-item:last-child {
+    padding-right: 0px !important;
+}
+nav.navbar ul.navbar-nav li, nav.navbar ul.navbar-nav .nav-item:last-child:hover a {
+    border-bottom:0 !important;
+}
+nav.navbar .navbar-brand .logo img {
+    max-height: 70px!important;
+}
+.cust-li {
+    padding-top: 20px!important;
+}
+.navbar-expand .navbar-nav {
+    padding-top: 24px!important;
+}
+nav.navbar {
+    padding: 45px 15px 45px!important;
+}
+nav.navbar ul.navbar-nav .usermenu {
+    line-height: 30px!important;
+}
+
+.navbar-expand .navbar-nav {
+    justify-content: flex-end!important;
+}
+nav.navbar ul.navbar-nav li>a.btn {
+    color: white !important;
+    margin-top: -5px!important;
+}
+
+
+@media screen and (max-width: 991px) {
+
+nav.navbar ul.navbar-nav li, nav.navbar ul.navbar-nav .nav-item {
+    padding-right: 10px !important;
+}
+.bg-blue-cust img {
+    min-height: auto;
+    width: 100px;
+}
+}
+@media screen and (max-width: 767px) {
+ 
+nav.navbar ul.navbar-nav li, nav.navbar ul.navbar-nav .nav-item {
+    padding-right: 0px !important;
+}
+nav.navbar ul.navbar-nav li>a, nav.navbar ul.navbar-nav .nav-item>a {
+    font-size: 16px !important;
+}
+nav.navbar ul.navbar-nav li>a.btn {
+    margin-top: -10px!important;
+}
+.usermenu .btn-primary {
+    padding: 5px 15px!important;
+}
+#page-site-index.notloggedin #page-header {
+    background-size: cover!important;
+}
+.bg-blue-cust img {
+    min-height: auto;
+    width: 80px;
+}
+}
+
+@media screen and (max-width: 575px) {
+ nav.navbar .navbar-brand {
+    margin-top: 66px!important;
+}
+nav.navbar {
+    padding: 45px 5px 105px!important;
+        position: relative!important;
+}
+nav.navbar ul.navbar-nav li, nav.navbar ul.navbar-nav .nav-item {
+    padding-left: 0!important;
+}
+nav.navbar ul.navbar-nav li>a, nav.navbar ul.navbar-nav .nav-item>a {
+    font-size: 13px !important;
+}
+#page-site-index.notloggedin #loginbox #intro h1 {
+    font-size: 40px!important;
+}
+#page-site-index.notloggedin #page-header {
+    min-height: 350px !important;
+        padding: 0 10px !important;
+}
+#page-site-index.notloggedin #loginbox #intro h2 {
+    font-size: 16px !important;
+    margin-bottom: 0px !important;
+}
+div#intro a.btn {
+    padding: 7px 25px!important;
+    font-size: 18px!important;
+}
+#page-site-index.notloggedin #page {
+    margin-top: 0px!important;
+}
+#top-footer .contact ul li a, #top-footer .contact ul li i {
+    font-size: 13px!important;
+    margin-right: 10px;
+}
+.bg-blue-cust img {
+    min-height: auto;
+    width: 60px;
+}
+.bg-blue-cust {
+    padding: 30px 0;
+}
+}
+</style>
 {{> theme_moove/accessibilitybar }}
 
 <nav class="fixed-top navbar navbar-light navbar-expand moodle-has-zindex">
@@ -30,14 +164,15 @@
             <button aria-expanded="{{#navdraweropen}}true{{/navdraweropen}}{{^navdraweropen}}false{{/navdraweropen}}" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav"><i class="slicon-menu"></i><span class="sr-only">{{#str}}sidepanel, core{{/str}}</span></button>
         </div>
     {{/hasdrawertoggle}}
-
-    <a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.get_logo }}has-logo{{/ output.get_logo }}
+<div class="row w-100">
+<div class="col-sm-3 col-12">
+  <a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.get_logo }}has-logo{{/ output.get_logo }}
         {{^ output.get_logo }}
             d-none d-sm-inline
         {{/ output.get_logo }}
             ">
         {{# output.get_logo }}
-            <span class="logo d-none d-sm-inline">
+            <span class="logo d-block d-sm-inline">
                 <img src="{{output.get_logo}}" alt="{{sitename}}">
             </span>
         {{/ output.get_logo }}
@@ -45,15 +180,23 @@
             <span class="site-name d-none d-md-inline">{{{ sitename }}}</span>
         {{/ output.get_logo }}
     </a>
-
-    <ul class="navbar-nav d-none d-md-flex custom-menus">
+</div>
+<div class="col-sm-9 col-12 text-right">
+<ul class="navbar-nav d-md-flex custom-menus ml-auto cust-li">
         <!-- custom_menu -->
         {{{ output.custom_menu }}}
         <!-- page_heading_menu -->
         {{{ output.page_heading_menu }}}
+     {{{ output.user_menu }}}
     </ul>
-    <ul class="nav navbar-nav ml-auto">
-        <div class="d-none d-lg-block">
+     
+</div>
+</div>
+  
+
+    
+    <!-- <ul class="nav navbar-nav ml-auto">
+         <div class="d-none d-lg-block">
             {{{ output.search_box }}}
         </div>
 
@@ -62,7 +205,5 @@
         </li>
 
         {{{ output.navbar_plugin_output }}}
-
-        {{{ output.user_menu }}}
-    </ul>
+    </ul>-->
 </nav>

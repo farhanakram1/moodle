@@ -108,6 +108,30 @@ $string['home24accessimage'] = 'Home 24 Access Image';
 $string['home24accessimagedesc'] = 'Add Home 24 Access Image';
 $string['home24accesstext'] = 'Home 24 Access Text';
 $string['home24accesstextdesc'] = 'Add Home 24 Access Text';
+
+$string['homeresultviewimage'] = 'Home Review Results Image';
+$string['homeresultviewimagedesc'] = 'Add Review Results Image';
+$string['homeresultviewtest'] = 'Home Review Results Text';
+$string['homeresultviewtestdesc'] = 'Add Home Review Results Text';
+
+$string['homemanageexamsimage'] = 'Home Manage Exams Image';
+$string['homemanageexamsimagedesc'] = 'Add Manage Exams Image';
+$string['homemanageexamstest'] = 'Home Manage Exams Text';
+$string['homemanageexamstestdesc'] = 'Add Home Manage Exams Text';
+
+$string['homedeadlineoverviewimage'] = 'Home Manage Exams Image';
+$string['homedeadlineoverviewimagedesc'] = 'Add Manage Exams Image';
+$string['homedeadlineoverviewtest'] = 'Home Manage Exams Text';
+$string['homedeadlineoverviewtestdesc'] = 'Add Home Manage Exams Text';
+
+$string['homeeasyuploadimage'] = 'Home Easy Upload Image';
+$string['homeeasyuploadimagedesc'] = 'Add Easy Upload Image';
+$string['homeeasyuploadtest'] = 'Home Easy Upload Text';
+$string['homeeasyuploadtestdesc'] = 'Add Easy Upload Text';
+
+$string['placethatcontent'] = 'Home Place That Content';
+$string['placethatcontentdesc'] = 'Add Place That Content';
+
 $string['bannerheading'] = 'Banner Heading';
 $string['bannerheadingdesc'] = 'Enter Banner Heading Text';
 $string['bannercontent'] = 'Banner Content';
