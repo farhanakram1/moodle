@@ -94,7 +94,7 @@
 <div class="my-1 my-sm-5"></div>
 
 <div class="row my-4 mb-9">
-<div class="col-12 col-md-12 col-lg-4">
+<div class="col-12 col-md-8 col-lg-7 col-xl-5">
 
 {{#error}}
     <div class="loginerrors">
@@ -114,7 +114,7 @@
         <div class="row">
             
 
-            <div class="col-md-10 form">
+            <div class="col-md-12 form cust-form">
                 <form action="{{loginurl}}" method="post" id="login">
                     <input id="anchor" type="hidden" name="anchor" value="">
                     <script>document.getElementById('anchor').value = location.hash;</script>
@@ -130,7 +130,7 @@
                             {{#str}} usernameemail {{/str}}
                         {{/canloginbyemail}}
                     </label>
-                    <div class="input-group input-group-username">
+                    <div class="input-group input-group-username mb-3">
                         <input type="text" name="username" id="username"
                             class="form-control"
                             value="{{username}}"
@@ -138,7 +138,7 @@
                     </div>
 
                     <label for="password" class="sr-only">{{#str}} password {{/str}}</label>
-                    <div class="input-group input-group-password">
+                    <div class="input-group input-group-password mb-3">
                         <input type="password" name="password" id="password" value=""
                             class="form-control"
                             placeholder={{#quote}}{{#str}}password{{/str}}{{/quote}}>
@@ -149,7 +149,7 @@
                     <button type="submit" class="btn btn-primary btn-block" id="loginbtn">{{#str}}login{{/str}}</button>
                 </form>
 
-<hr>
+<div class="line-s"><i class="iii"></i></div>
                 {{#cansignup}}
                     <form class="m-t-1" action="{{signupurl}}" method="get" id="signup">
                         <button type="submit" class="btn btn-primary btn-block">{{#str}}startsignup{{/str}}</button>

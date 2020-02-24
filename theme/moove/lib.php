@@ -39,6 +39,8 @@ function theme_moove_get_extra_scss($theme) {
 
     $scss .= theme_moove_set_loginbgimg($theme);
 
+    $scss .= theme_moove_set_signupbgimg($theme);
+
     return $scss;
 }
 
@@ -98,6 +100,26 @@ function theme_moove_set_loginbgimg($theme) {
     }
 
     $headercss = "#page-login-index.moove-login #page-wrapper #page {background-image: url('$loginbgimg');}";
+
+    return $headercss;
+}
+
+/**
+ * Adds the signup page background image to CSS.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return string
+ */
+function theme_moove_set_signupbgimg($theme) {
+    global $OUTPUT;
+
+    $signupbgimg = $theme->setting_file_url('signupbgimg', 'signupbgimg');
+
+    if (is_null($signupbgimg)) {
+        $signupbgimg = $OUTPUT->image_url('signup_bg', 'theme');
+    }
+
+    $headercss = "#page-login-signup #page-wrapper .sigun_up {background-image: url('$signupbgimg');}";
 
     return $headercss;
 }
@@ -228,6 +250,10 @@ function theme_moove_pluginfile($course, $cm, $context, $filearea, $args, $force
         return $theme->setting_file_serve('loginbgimg', $args, $forcedownload, $options);
     }
 
+    if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'signupbgimg') {
+        return $theme->setting_file_serve('signupbgimg', $args, $forcedownload, $options);
+    }
+    
     if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'favicon') {
         return $theme->setting_file_serve('favicon', $args, $forcedownload, $options);
     }

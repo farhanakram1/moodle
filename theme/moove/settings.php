@@ -97,6 +97,17 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+
+    // Signup page background image.
+    $name = 'theme_moove/signupbgimg';
+    $title = get_string('signupbgimg', 'theme_moove');
+    $description = get_string('signupbgimg_desc', 'theme_moove');
+    $opts = array('accepted_types' => array('.png', '.jpg', '.svg'));
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'signupbgimg', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    
     // Variable $brand-color.
     // We use an empty default value because the default colour should come from the preset.
     $name = 'theme_moove/brandcolor';
