@@ -113,9 +113,39 @@ if (isloggedin()) {
         $bannerbuttonlink = theme_moove_get_setting('bannerbuttonlink', true);
     }
     
-    $howitworkcontent = '';
-    if (!empty($PAGE->theme->settings->howitworkcontent)) {
-        $howitworkcontent = theme_moove_get_setting('howitworkcontent', true);
+    $howitworktext = '';
+    if (!empty($PAGE->theme->settings->howitworktext)) {
+        $howitworktext = theme_moove_get_setting('howitworktext', true);
+    }
+
+    $loginupload = '';
+    if (!empty($PAGE->theme->settings->loginupload)) {
+        $loginupload = theme_moove_get_setting('loginupload', true);
+    }
+
+    $createalogin = '';
+    if (!empty($PAGE->theme->settings->createalogin)) {
+        $createalogin = theme_moove_get_setting('createalogin', true);
+    }
+
+    $choosethemodule = '';
+    if (!empty($PAGE->theme->settings->choosethemodule)) {
+        $choosethemodule = theme_moove_get_setting('choosethemodule', true);
+    }
+
+    $uploadyourexam = '';
+    if (!empty($PAGE->theme->settings->uploadyourexam)) {
+        $uploadyourexam = theme_moove_get_setting('uploadyourexam', true);
+    }
+
+    $reviewyourresults = '';
+    if (!empty($PAGE->theme->settings->reviewyourresults)) {
+        $reviewyourresults = theme_moove_get_setting('reviewyourresults', true);
+    }
+
+    $obtainthediploma = '';
+    if (!empty($PAGE->theme->settings->obtainthediploma)) {
+        $obtainthediploma = theme_moove_get_setting('obtainthediploma', true);
     }
 
     $howitworklogintext = '';
@@ -153,6 +183,11 @@ if (isloggedin()) {
         $homeeasyuploadtest = theme_moove_get_setting('homeeasyuploadtest', true);
     }
 
+    $placethatprovides = '';
+    if (!empty($PAGE->theme->settings->placethatprovides)) {
+        $placethatprovides = theme_moove_get_setting('placethatprovides', true);
+    }
+    
     $placethatcontent = '';
     if (!empty($PAGE->theme->settings->placethatcontent)) {
         $placethatcontent = theme_moove_get_setting('placethatcontent', true);
@@ -182,7 +217,13 @@ if (isloggedin()) {
         'bannercontent' => $bannercontent,
         'bannerbuttontext' => $bannerbuttontext,
         'bannerbuttonlink' => $bannerbuttonlink,
-        'howitworkcontent' => $howitworkcontent,
+        'howitworktext' => $howitworktext,
+        'loginupload' => $loginupload,
+        'createalogin' => $createalogin,
+        'choosethemodule' => $choosethemodule,
+        'uploadyourexam' => $uploadyourexam,
+        'reviewyourresults' => $reviewyourresults,
+        'obtainthediploma' => $obtainthediploma,
         'howitworklogintext' => $howitworklogintext,
         'howitworkloginlink' => $howitworkloginlink,
         'home24accesstext' => $home24accesstext,
@@ -190,6 +231,7 @@ if (isloggedin()) {
         'homeresultviewtest' => $homeresultviewtest,
         'homedeadlineoverviewtest' => $homedeadlineoverviewtest,
         'homeeasyuploadtest' => $homeeasyuploadtest,
+        'placethatprovides' => $placethatprovides,
         'placethatcontent' => $placethatcontent,
         'shoulddisplaymarketing' => $shoulddisplaymarketing,
         'sliderfrontpage' => $sliderfrontpage,
