@@ -23,6 +23,16 @@
 }}
 
 <style>
+#nav-drawer{
+	z-index: 99999999;height: 100%;margin-top: 10px;
+}
+#coursecat-management #category-listing, #coursecat-management #course-listing{
+	min-width: 80% !important;
+}
+#page-login-signup .card-block {
+    padding-left: 0;
+    padding-right: 0;
+}
 .cust-li li {
     list-style: none;
     margin-left: 11px;
@@ -38,11 +48,16 @@ nav.navbar ul.navbar-nav li:hover a {
 }
 .usermenu .btn-primary {
     color: #fff;
-    background-color: #00a2ff!important;
+    background-color: #00daf0!important;
     border-radius: 5px!important;
     padding: 5px 40px!important;
-    border-color: #00a2ff!important;
+    border-color: #00daf0!important;
     font-size: 18px!important;
+}
+a.black_c {
+    color: #1d1c1c!important;
+    font-size: 18px!important;
+    text-decoration: underline!important;
 }
 nav.navbar ul.navbar-nav li, nav.navbar ul.navbar-nav .nav-item {
     padding-right: 35px !important;
@@ -116,15 +131,32 @@ h2.about-txt {
 }
 
 .container-fluid.about-page-s {
-    padding: 20px 70px;
+    padding: 52px 70px 20px;
 }
 body {
     background-color: #ffffff!important;
    
 }
 #region-main-box .card{
-        background-color: #f3f6f6!important;
+        background-color: #fff!important;
             border: 0!important;
+}
+.bg-grey-s{
+        background-color: #e8e8e8a1!important;
+        border-radius:5px;
+}
+.pad-d{
+    padding: 25px 40px 10px;
+}
+.bg-grey-s h4 {
+    background-color: #39e1f2;
+    padding: 25px 40px;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+#id_error_password {
+    height: 37px;
+    overflow: hidden;
 }
 .mform>.form-group {
     margin-left: 0!important;
@@ -137,18 +169,21 @@ h4.contact_heading {
 #region-main .card-body {
     padding: 25px 40px !important;
 }
-#region-main .form-control {
+.bg-grey-s .form-control {
     border:0 !important;
+}
+.gecko #top-footer , .gecko #page-footer{
+    display:none;
 }
 #region-main .btn-primary {
     color: #fff!important;
     background-color: #1177d1!important;
     border-color: #1177d1!important;
-    background-color: #00a2ff!important;
+    background-color: #00daf0!important;
     border-radius: 5px!important;
     padding: 8px 30px!important;
     font-size: 20px!important;
-    border-color: #00a2ff!important;
+    border-color: #00daf0!important;
 }
 
 span.red {
@@ -163,8 +198,20 @@ span.red {
 .cust-form #signup {
     margin-top: 70px !important;
 }
-#region-main .cust-form .form-control {
+#region-main .cust-form .form-control, #page-login-signup #region-main .form-control, #page-login-signup #region-main .custom-select {
     border: 2px solid #9e9e9e !important;
+}
+#page-login-signup .card{
+    border-radius: 10px!important;
+        padding: 5px 25px!important;
+}
+.fdescription.required ,.w-50-s legend, .w-50-s .collapsible-actions , .w-50-s .form-group .col-md-3, .w-50-s .form-control-static,
+ .w-50-s input#id_cancel, .w-50-s #recaptcha_element{
+    display: none !important;
+}
+.w-50-s fieldset {
+    margin-bottom: 0 !important;
+    border-bottom: 0 !important;
 }
 .cust-form p.welcome {
     text-align: center;
@@ -186,6 +233,7 @@ span.red {
     justify-content: center;
     display: flex;
 }
+
 .opacity-d {
     width: 100%;
     position: absolute;
@@ -197,9 +245,92 @@ span.red {
     z-index: 999;
     position: relative;
 }
-
+#yui_3_17_2_1_1582739127197_121 {
+    margin-left: 37px;
+}
+#page-login-signup #page-wrapper .sigun_up {
+    background-position: center center!important;
+}
+.w-50-s .form-group{
+    width: 50%;
+    float: left;
+    padding: 0 15px;
+        margin-bottom: 0 !important;
+}
+.w-50-s .form-control , .w-50-s .form-inline .custom-select{
+    margin-bottom: 15px!important;
+}
+.w-50-s  .form-inline {
+    width: 95%!important;
+}
+.w-50-s  input , .w-50-s  select{
+    width: 100%!important;
+}
+.w-50-s input#id_submitbutton {
+    margin-left: 30%;
+        margin-top: 40px;
+}
+.posi_tx {
+    position: absolute;
+    margin-left: 18px;
+}
+#region-main .w-50-s .btn-primary {
+    padding: 5px 90px!important;
+}
+    padding: 25px 40px;
+    background-color: #f3f6f6!important;
+    border: 0!important;
+    border-radius: 0;
+    border: 1px solid #d7dfe3;
+}
+#page-login-signup .card-title h3 {
+    color: #373a3c !important;
+    font-size: 32px !important;
+    margin-bottom: 30px;
+    text-align: center;
+}
+#nav-drawer ul {
+    margin-top: 30px!important;
+}
+#page-login-signup #page-wrapper #page {
+    background-size: cover!important;
+    background-position: center!important;
+}
+.w-50-s {
+    padding-left: 25px;
+}
+.w-50-s .form-inline {
+    width: 100%!important;
+        max-width: 100% !important;
+    flex: 0 0 100%!important;
+}
+@media screen and (max-width: 1200px) {
+.w-50-s input#id_submitbutton {
+    margin-left: 0%;
+}
+#region-main .w-50-s .btn-primary {
+    padding: 5px 70px!important;
+}
+}
 @media screen and (max-width: 991px) {
-
+    #page-login-signup .card-title h3 {
+    font-size: 25px !important;
+}
+#yui_3_17_2_1_1582739127197_121 {
+    margin-left: 0px;
+}
+.w-50-s {
+    padding-left: 0px;
+}
+.w-50-s .form-group {
+    width: 100%;
+        padding: 0 !important;
+}
+.w-50-s .form-inline {
+    width: 100%!important;
+        max-width: 100% !important;
+    flex: 0 0 100%!important;
+}
 nav.navbar ul.navbar-nav li, nav.navbar ul.navbar-nav .nav-item {
     padding-right: 10px !important;
 }
@@ -212,7 +343,24 @@ nav.navbar ul.navbar-nav li, nav.navbar ul.navbar-nav .nav-item {
     text-align: center!important;
 }
 }
+@media (min-width: 576px){
+.w-50-s  fieldset {
+    margin-left: 0 !important;
+}
+}
 @media screen and (max-width: 767px) {
+    #region-main .w-50-s .btn-primary {
+    padding: 5px 50px!important;
+}
+#page-login-signup .card-block {
+    padding: 0 !important;
+}
+#page-login-signup .card-title h3 {
+    font-size: 18px!important;
+}
+#page-login-signup .card {
+    padding: 20px 0 10px 30px!important;
+}
  
 nav.navbar ul.navbar-nav li, nav.navbar ul.navbar-nav .nav-item {
     padding-right: 0px !important;
@@ -253,9 +401,7 @@ h2.about-txt {
 }
 
 @media screen and (max-width: 575px) {
- nav.navbar .navbar-brand {
-    margin-top: 66px!important;
-}
+
 .container-fluid.about-page-s {
         padding: 20px 25px 20px 40px;
 }
@@ -343,6 +489,18 @@ h4.contact_heading {
     height: auto !important;
     padding: 20px 10px!important;
 }
+.cust-li li {
+    margin-left: 5px;
+}
+nav.navbar ul.navbar-nav li .nav-link, nav.navbar ul.navbar-nav .nav-item .nav-link {
+    font-size: 9px !important;
+}
+.navbar-expand .navbar-nav {
+    padding-left: 14px!important;
+}
+nav.navbar {
+    padding: 45px 5px 45px !important;
+}
 }
 </style>
 {{> theme_moove/accessibilitybar }}
@@ -354,7 +512,7 @@ h4.contact_heading {
         </div>
     {{/hasdrawertoggle}}
 <div class="row w-100">
-<div class="col-sm-3 col-12">
+<div class="col-sm-3 col-2">
   <a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.get_logo }}has-logo{{/ output.get_logo }}
         {{^ output.get_logo }}
             d-none d-sm-inline
@@ -370,7 +528,7 @@ h4.contact_heading {
         {{/ output.get_logo }}
     </a>
 </div>
-<div class="col-sm-9 col-12 text-right">
+<div class="col-sm-9 col-10 text-right">
 <ul class="navbar-nav d-md-flex custom-menus ml-auto cust-li">
         <!-- custom_menu -->
         {{{ output.custom_menu }}}
