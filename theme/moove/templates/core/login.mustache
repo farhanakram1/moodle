@@ -93,7 +93,7 @@
 
 <div class="my-1 my-sm-5"></div>
 
-<div class="row my-4 mb-9">
+<div class="row justify-content-center my-4 mb-9">
 <div class="col-12 col-md-8 col-lg-7 col-xl-5">
 
 {{#error}}
@@ -148,7 +148,9 @@
 
                     <button type="submit" class="btn btn-primary btn-block" id="loginbtn">{{#str}}login{{/str}}</button>
                 </form>
-
+                <div class="forgot_pass">
+                    <a href="{{{ config.wwwroot }}}/login/forgot_password.php">Forgot username or password?</a>
+                </div>
 <div class="line-s"><i class="iii"></i></div>
                 {{#cansignup}}
                     <form class="m-t-1" action="{{signupurl}}" method="get" id="signup">

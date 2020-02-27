@@ -28,11 +28,11 @@ div#intro a.btn {
     border-radius: 5px!important;
 }
 div#intro a.btn:hover {
-    background-color: #00a2ff!important;
-    border: 2px solid #00a2ff!important;
+    background-color: #00daf0!important;
+    border: 2px solid #00daf0!important;
 }
 .frontpage-maincontent a.btn {
-    background-color: #00a2ff!important;
+    background-color: #000!important;
     color: white!important;
     padding: 12px 30px!important;
     font-size: 20px!important;
@@ -43,8 +43,8 @@ div#intro a.btn:hover {
 }
 .frontpage-maincontent a.btn:hover {
     background-color: transparent!important;
-    border: 2px solid #00a2ff!important;
-    color: #00a2ff!important;
+    border: 2px solid #000!important;
+    color: #000!important;
 }
 #intro {
     text-align: center !important;
@@ -68,7 +68,7 @@ a.btn.btn-default .fa {
     padding-left: 15px!important;
 }
 .bg-blue-cust {
-    background-color: #00a2ff;
+    background-color: #00daf0;
     padding: 90px 0;
         color: white;
 }
@@ -86,8 +86,9 @@ a.btn.btn-default .fa {
     margin-bottom: 20px;
 }
 .blue-area {
-    border-bottom: 3px solid #0076ba;
+    border-bottom: 2px solid #00c6da;
     margin-bottom: 55px;
+        padding-bottom: 30px;
 }
 </style>
 {{!
@@ -187,15 +188,32 @@ a.btn.btn-default .fa {
                     </div>
                 </div>
                  <div class="col-md-12 col-lg-6">
-                    <h1>How it works</h1>
-                    <p><b><i>Login, upload your work, see the results</i></b></p>
+                        {{#howitworktext}}
+                            <h1>{{{ howitworktext }}}</h1>
+                        {{/howitworktext}}
+                        {{#loginupload}}
+                        <p><b><i>{{{ loginupload }}}</i></b></p>
+                        {{/loginupload}}
                       <ol class="list-style-cust">
-                            <li>Create a login</li>
-                            <li>Choose the module you would like to submit </li>
-                            <li>Upload your exam PDFs and pay for the corrections with PayPal</li>
-                            <li>Review your results</li>
-                            <li>Obtain the diploma at the end of the EODO Miniresidency Pro</li>
-                            
+                            {{#createalogin}}
+                                <li>{{{ createalogin }}}</li>
+                            {{/createalogin}}
+
+                            {{#choosethemodule}}
+                                <li>{{{ choosethemodule }}}</li>
+                            {{/choosethemodule}}
+
+                            {{#uploadyourexam}}
+                                <li>{{{ uploadyourexam }}}</li>
+                            {{/uploadyourexam}}
+
+                            {{#reviewyourresults}}
+                                <li>{{{ reviewyourresults }}}</li>
+                            {{/reviewyourresults}}
+
+                            {{#obtainthediploma}}
+                                <li>{{{ obtainthediploma }}}</li>
+                            {{/obtainthediploma}}
                         </ol>
                     {{#howitworklogintext}}
                         <a href="{{{ howitworkloginlink }}}" class="btn btn-primary">{{{ howitworklogintext }}} <i class="fa fa-arrow-right"></i></a>
@@ -236,10 +254,7 @@ a.btn.btn-default .fa {
         <div class="container">
             <div class="row">
             <div class="col-md-6 col-lg-5 col-sm-12">
-                        <h2 class="text-white">A PLACE THAT
-PROVIDES ALL TOOLS
-FOR COMFORTABLE
-WORK ENVIRONMENT</h2>   
+                        <h2 class="text-white">{{{ placethatprovides }}}</h2>
                 </div>
                 <div class="col-md-6 col-lg-7 col-sm-12">
                     {{{ placethatcontent }}}              

@@ -5,6 +5,9 @@
 #top-footer h4{
   font-size:16px !important;
 }
+.gecko #top-footer, .gecko #page-footer {
+	display: block !important;
+}
 #top-footer {
     background-size: cover!important;
 }
@@ -19,7 +22,7 @@
     padding-left: 0!important;
 }
 .b-line {
-    border-bottom: 3px solid #039ede;
+    border-bottom: 3px solid #00daf0;
     width: 80px;
     margin-bottom: 20px;
 }
@@ -29,17 +32,17 @@
 }
 .subscribe-b .btn-success {
     color: #fff;
-    background-color: #00a2ff;
-    border-color: #00a2ff;
+    background-color: #00daf0;
+    border-color: #00daf0;
 }
 .subscribe-b .btn-success:hover {
     color: #fff;
-    background-color: #00a2ff;
-    border-color: #00a2ff;
+    background-color: #00daf0;
+    border-color: #00daf0;
     opacity:0.8;
 }
 #page-footer {
-    background-color: #00a2ff!important;
+    background-color: #000!important;
 }
 p.D-D-l {
     font-size: 12px;
@@ -87,36 +90,32 @@ p.D-D-l.mb-0 a {
         <div class="col-lg-4 col-md-6 contact">
             <h3>{{#str}}stayintouch, theme_moove{{/str}}</h3>
             <div class="b-line"></div>
-            <h4>{{{getintouchcontent}}}</h4>
+            <h4>Conecti.me</h4>
             <ul>
-                {{#website}}
+                
                     <li>
                         <i class="slicon-globe"></i>
-                        <a href="{{{website}}}" target="_blank">{{{website}}}</a>
+                        <a href="http://conecti.me" target="_blank">http://conecti.me</a>
                     </li>
-                {{/website}}
-                {{#mobile}}
                     <li>
                         <i class="slicon-phone"></i>
-                        <a href="tel:{{{mobile}}}" target="_blank">{{{mobile}}}</a>
+                        <a href="tel:+55 (98) 00123-45678" target="_blank">Mobile : +55 (98) 00123-45678</a>
                     </li>
-                {{/mobile}}
-                {{#mail}}
                     <li>
                         <i class="slicon-envelope"></i>
-                        <a href="mailto:{{{mail}}}" target="_blank">{{{mail}}}</a>
+                        <a href="mailto:willianmano@conecti.me" target="_blank">willianmano@conecti.me</a>
                     </li>
-                {{/mail}}
+                
             </ul>
         </div>
         <div class="col-lg-4 col-md-6 contact">
         <h3>Useful Links</h3>
         <div class="b-line"></div>
         <ul class="use-links">
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="">Privacy Policy</a></li>
+          <li><a href="{{{ config.wwwroot }}}">Home</a></li>
+          <li><a href="{{{ config.wwwroot }}}/local/pages/?id=1">About</a></li>
+          <li><a href="{{{ config.wwwroot }}}/local/pages/?id=2">Contact</a></li>
+          <li><a href="{{{ config.wwwroot }}}/login/index.php">Login</a></li>
         </ul>
         </div>
         <div class="col-lg-4 col-md-6 social">
@@ -130,53 +129,45 @@ p.D-D-l.mb-0 a {
   </div>
 </div>
           <ul class="pl-0">
-              {{#facebook}}
+             
                 <li>
                   <a href="{{{facebook}}}" target="_blank" class="facebook btn">
                     <i class="slicon-social-facebook"></i>
                   </a>
                 </li>
-              {{/facebook}}
+              
 
-              {{#twitter}}
+             
                 <li>
                   <a href="{{{twitter}}}" target="_blank" class="twitter btn">
                     <i class="slicon-social-twitter"></i>
                   </a>
                 </li>
-              {{/twitter}}
+             
 
-              {{#googleplus}}
                 <li>
                   <a href="{{{googleplus}}}" target="_blank" class="googleplus btn">
                     <i class="slicon-social-google"></i>
                   </a>
                 </li>
-              {{/googleplus}}
 
-              {{#linkedin}}
                 <li>
                   <a href="{{{linkedin}}}" target="_blank" class="linkedin btn">
                     <i class="slicon-social-linkedin"></i>
                   </a>
                 </li>
-              {{/linkedin}}
 
-              {{#youtube}}
                 <li>
                   <a href="{{{youtube}}}" target="_blank" class="youtube btn">
                     <i class="slicon-social-youtube"></i>
                   </a>
                 </li>
-              {{/youtube}}
 
-              {{#instagram}}
                 <li>
                   <a href="{{{instagram}}}" target="_blank" class="instagram btn">
                     <i class="slicon-social-instagram"></i>
                   </a>
                 </li>
-              {{/instagram}}
           </ul>
 
           {{{ output.standard_footer_html }}}
@@ -193,7 +184,7 @@ p.D-D-l.mb-0 a {
             <p class="R-R mb-0"> 2020 Spring. All Rights Reserved.</p>
             </div>
             <div class="col-sm-6 col-12 text-sm-right text-center text-white">
-                <p class="D-D-l mb-0">Designed & Developed by <a href="" target="_blank">LEADconcept</a></p>
+                <p class="D-D-l mb-0">Designed & Developed by <a href="https://leadconcept.com/" target="_blank">LEADconcept</a></p>
             </div>
          </div>
       </div>

@@ -23,6 +23,84 @@
 }}
 
 <style>
+
+#page-login-index .forgot_pass{
+	margin-top:10px;
+}	
+#id_error_profile_field_yearyoustarted{
+	margin-top: -10px !important;
+}
+#page-login-forgot_password #page {
+	background-image: url(//moodle.leadconcept.biz/pluginfile.php/1/theme_moove/signupbgimg/1582813949/bg.jpg);
+	background-position: center;
+}
+#page-login-forgot_password #page #page-content {
+	width: 50%;
+	margin: auto;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+#page-login-forgot_password #region-main {
+	padding: 0;
+	border-radius: 10px;
+}
+#frontpage-available-course-list{
+	display:none;
+}
+#page-login-signup #id_username{
+	margin-top: 15px;
+}
+#page-login-signup #fitem_id_username .form-inline {
+	margin-bottom:0px !important;
+}
+#page-login-signup .w-50-s .form-control, .w-50-s .form-inline .custom-select {
+	margin-bottom: 0px !important;
+} 
+
+#page-login-signup .w-50-s .form-control, .w-50-s .form-inline .custom-select {
+	margin-bottom: 0px !important;
+}
+
+#page-login-signup .w-50-s .form-inline {
+	width: 100% !important;
+	max-width: 100% !important;
+	flex: 0 0 100% !important;
+	margin-bottom: 15px;
+}
+#page-site-index.notloggedin .frontpage-maincontent {
+    padding-top: 4rem!important;
+}
+#page-site-index #frontpage-available-course-list h2 {
+    color: #000!important;
+    margin-bottom: 40px!important;
+}
+#page-site-index #frontpage-available-course-list h2:before, #page-site-index #frontpage-available-course-list h2:after {
+    border-bottom: 1px solid #000!important;
+    border-top: 1px solid #000!important;
+    }
+div#frontpage-available-course-list {
+    padding: 2rem 0!important;
+}
+.card-title a {
+    color: #000!important;
+}
+h1 {
+    color: #000000!important;
+    }
+#page-my-index .small-box h3 {
+    white-space: inherit!important;
+}
+#page-footer {
+    margin-top: -1px!important;
+}
+#page-site-index.notloggedin #loginbox #intro h1,.bg-blue-cust h3{
+    color: #fff!important;
+    }
+#page-login-signup #page-wrapper .sigun_up,#page-login-index.moove-login #page-wrapper #page {
+    background-size: auto!important;
+    background-position: left!important;
+}
+
 #nav-drawer{
 	z-index: 99999999;height: 100%;margin-top: 10px;
 }
@@ -95,26 +173,27 @@ nav.navbar ul.navbar-nav li>a.btn {
     margin-top: 90px!important;
 }
 
-.page-local-pages-about-us-5 #region-main .card-body {
+.page-local-pages-about-us-1 #region-main .card-body {
     padding: 0 !important;
 }
 
-.page-local-pages-about-us-5 #page {
+.page-local-pages-about-us-1 #page {
     padding-left: 0!important;
     padding-right: 0!important;
     margin-left: -15px!important;
     margin-right: -15px!important;
     padding-top: 0!important;
 }
-.page-local-pages-about-us-5 #region-main-box {
+.page-local-pages-about-us-1 #region-main-box {
     padding: 0!important;
 }
-.page-local-pages-about-us-5 #region-main-box .card{
+.page-local-pages-about-us-1 #region-main-box .card{
         background-color: #fff!important;
 }
 .about-page-s .text-boxs {
     padding-top: 186px!important;
     text-align: center!important;
+        margin-bottom: 20px!important;
 }
 
 .text-boxs h1 {
@@ -196,7 +275,7 @@ span.red {
         padding: 20px 42px!important;
 }
 .cust-form #signup {
-    margin-top: 70px !important;
+    margin-top: 50px !important;
 }
 #region-main .cust-form .form-control, #page-login-signup #region-main .form-control, #page-login-signup #region-main .custom-select {
     border: 2px solid #9e9e9e !important;
@@ -204,6 +283,9 @@ span.red {
 #page-login-signup .card{
     border-radius: 10px!important;
         padding: 5px 25px!important;
+}
+#page-login-signup .card-title h3{
+	text-align: center;
 }
 .fdescription.required ,.w-50-s legend, .w-50-s .collapsible-actions , .w-50-s .form-group .col-md-3, .w-50-s .form-control-static,
  .w-50-s input#id_cancel, .w-50-s #recaptcha_element{
@@ -226,7 +308,7 @@ span.red {
     width: 150px;
     border-bottom: 2px solid black;
     float: left;
-    margin-top: 35px;
+    margin-top: 50px;
 }
 .line-s {
     width: 100%;
@@ -248,9 +330,7 @@ span.red {
 #yui_3_17_2_1_1582739127197_121 {
     margin-left: 37px;
 }
-#page-login-signup #page-wrapper .sigun_up {
-    background-position: center center!important;
-}
+
 .w-50-s .form-group{
     width: 50%;
     float: left;
@@ -292,10 +372,7 @@ span.red {
 #nav-drawer ul {
     margin-top: 30px!important;
 }
-#page-login-signup #page-wrapper #page {
-    background-size: cover!important;
-    background-position: center!important;
-}
+
 .w-50-s {
     padding-left: 25px;
 }
@@ -482,7 +559,7 @@ h4.contact_heading {
     padding: 7px 25px!important;
     font-size: 16px!important;
 }
-.page-local-pages-about-us-5 #page.container-fluid {
+.page-local-pages-about-us-1 #page.container-fluid {
     padding: 0rem!important;
 }
 #page-login-index.moove-login .loginpanel .card-block .form.cust-form {

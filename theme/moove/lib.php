@@ -39,6 +39,8 @@ function theme_moove_get_extra_scss($theme) {
 
     $scss .= theme_moove_set_loginbgimg($theme);
 
+    $scss .= theme_moove_set_forgotbgimg($theme);
+
     $scss .= theme_moove_set_signupbgimg($theme);
 
     return $scss;
@@ -100,6 +102,26 @@ function theme_moove_set_loginbgimg($theme) {
     }
 
     $headercss = "#page-login-index.moove-login #page-wrapper #page {background-image: url('$loginbgimg');}";
+
+    return $headercss;
+}
+
+/**
+ * Adds the login page background image to CSS.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return string
+ */
+function theme_moove_set_forgotbgimg($theme) {
+    global $OUTPUT;
+
+    $forgotbgimg = $theme->setting_file_url('forgotbgimg', 'forgotbgimg');
+
+    if (is_null($forgotbgimg)) {
+        $forgotbgimg = $OUTPUT->image_url('forgot_bg', 'theme');
+    }
+
+    $headercss = "#page-login-forgot_password #page-wrapper #page {background-image: url('$forgotbgimg');}";
 
     return $headercss;
 }
@@ -248,6 +270,10 @@ function theme_moove_pluginfile($course, $cm, $context, $filearea, $args, $force
 
     if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'loginbgimg') {
         return $theme->setting_file_serve('loginbgimg', $args, $forcedownload, $options);
+    }
+
+    if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'forgotbgimg') {
+        return $theme->setting_file_serve('forgotbgimg', $args, $forcedownload, $options);
     }
 
     if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'signupbgimg') {

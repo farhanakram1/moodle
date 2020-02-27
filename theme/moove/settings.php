@@ -97,6 +97,14 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // forgot page background image.
+    $name = 'theme_moove/forgotbgimg';
+    $title = get_string('forgotbgimg', 'theme_moove');
+    $description = get_string('forgotbgimg_desc', 'theme_moove');
+    $opts = array('accepted_types' => array('.png', '.jpg', '.svg'));
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'forgotbgimg', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
 
     // Signup page background image.
     $name = 'theme_moove/signupbgimg';
@@ -271,13 +279,68 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // HowItWorksContent.
-    $name = 'theme_moove/howitworkcontent';
-    $title = get_string('howitworkcontent', 'theme_moove');
-    $description = get_string('howitworkcontentdesc', 'theme_moove');
-    $default = '';
-    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    // howitworktext.
+    $name = 'theme_moove/howitworktext';
+    $title = get_string('howitworktext', 'theme_moove');
+    $description = get_string('howitworktextdesc', 'theme_moove');
+    $default = 'How it works';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
+
+    // loginupload.
+    $name = 'theme_moove/loginupload';
+    $title = get_string('loginupload', 'theme_moove');
+    $description = get_string('loginuploaddesc', 'theme_moove');
+    $default = 'Login, upload your work, see the results';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // createalogin.
+    $name = 'theme_moove/createalogin';
+    $title = get_string('createalogin', 'theme_moove');
+    $description = get_string('createalogindesc', 'theme_moove');
+    $default = 'Create a login';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // choosethemodule.
+    $name = 'theme_moove/choosethemodule';
+    $title = get_string('choosethemodule', 'theme_moove');
+    $description = get_string('choosethemoduledesc', 'theme_moove');
+    $default = 'Choose the module you would like to submit';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // uploadyourexam.
+    $name = 'theme_moove/uploadyourexam';
+    $title = get_string('uploadyourexam', 'theme_moove');
+    $description = get_string('uploadyourexamdesc', 'theme_moove');
+    $default = 'Upload your exam PDFs and pay for the corrections with PayPal';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // reviewyourresults.
+    $name = 'theme_moove/reviewyourresults';
+    $title = get_string('reviewyourresults', 'theme_moove');
+    $description = get_string('reviewyourresultsdesc', 'theme_moove');
+    $default = 'Review your results';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // obtainthediploma.
+    $name = 'theme_moove/obtainthediploma';
+    $title = get_string('obtainthediploma', 'theme_moove');
+    $description = get_string('obtainthediplomadesc', 'theme_moove');
+    $default = 'Obtain the diploma at the end of the EODO Miniresidency Pro';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);  
 
     // HowItWorksLogintext.
     $name = 'theme_moove/howitworklogintext';
@@ -387,6 +450,14 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // placethatprovides.
+    $name = 'theme_moove/placethatprovides';
+    $title = get_string('placethatprovides', 'theme_moove');
+    $description = get_string('placethatprovidesdesc', 'theme_moove');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $page->add($setting);
+    
     // PlaceThatContent.
     $name = 'theme_moove/placethatcontent';
     $title = get_string('placethatcontent', 'theme_moove');

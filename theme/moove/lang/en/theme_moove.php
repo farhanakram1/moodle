@@ -68,6 +68,8 @@ $string['loginbgimg'] = 'Login page background';
 $string['loginbgimg_desc'] = 'Upload your custom background image for the login page.';
 $string['signupbgimg'] = 'Sign Up page background';
 $string['signupbgimg_desc'] = 'Upload your custom background image for the signup page.';
+$string['forgotbgimg'] = 'Forgot page background';
+$string['forgotbgimg_desc'] = 'Upload your custom background image for the forgot page.';
 $string['brandcolor'] = 'Brand colour';
 $string['brandcolor_desc'] = 'The accent colour.';
 $string['navbarheadercolor'] = 'Navbar header color';
@@ -100,8 +102,26 @@ $string['headerimg'] = 'Header image';
 $string['headerimgdesc'] = 'Upload your custom header-image here if you want to add it to the header.mage works best if (Image size should be 1500px x 700px)';
 $string['howitworkimg'] = 'How It Work Image';
 $string['howitworkimgdesc'] = 'Upload How To Work Image';
-$string['howitworkcontent'] = 'How It Work Content';
-$string['howitworkcontentdesc'] = 'Add Content for How It Works';
+$string['howitworktext'] = 'How It Work Text';
+$string['howitworktextdesc'] = 'Add Text for How It Works';
+$string['loginupload'] = 'Login Upload Text';
+$string['loginuploaddesc'] = 'Add Text for Login Upload';
+
+$string['createalogin'] = 'Create Login Text';
+$string['createalogindesc'] = 'Add Text for Create Login';
+
+$string['choosethemodule'] = 'Choose the module Text';
+$string['choosethemoduledesc'] = 'Add Text for Choose the module';
+
+$string['uploadyourexam'] = 'Upload your exam Text';
+$string['uploadyourexamdesc'] = 'Add Text for Upload your exam';
+
+$string['reviewyourresults'] = 'Review your results Text';
+$string['reviewyourresultsdesc'] = 'Add Text for Review your results';
+
+$string['obtainthediploma'] = 'Obtain the diploma Text';
+$string['obtainthediplomadesc'] = 'Add Text for Obtain the diploma';
+
 $string['howitworklogintext'] = 'How It Work Login Text';
 $string['howitworklogintextdesc'] = 'Add Login Text for How It Works';
 $string['howitworkloginlink'] = 'How It Work Login Link';
@@ -130,6 +150,9 @@ $string['homeeasyuploadimage'] = 'Home Easy Upload Image';
 $string['homeeasyuploadimagedesc'] = 'Add Easy Upload Image';
 $string['homeeasyuploadtest'] = 'Home Easy Upload Text';
 $string['homeeasyuploadtestdesc'] = 'Add Easy Upload Text';
+
+$string['placethatprovides'] = 'Home Place That Provides';
+$string['placethatprovidesdesc'] = 'Add Place That Provides';
 
 $string['placethatcontent'] = 'Home Place That Content';
 $string['placethatcontentdesc'] = 'Add Place That Content';
