@@ -294,6 +294,7 @@ if ($ADMIN->fulltree) {
     $default = 'How it works';
     $setting = new admin_setting_configtext($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
+<<<<<<< HEAD
     $page->add($setting);
 
     // loginupload.
@@ -323,6 +324,37 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+=======
+    $page->add($setting);
+
+    // loginupload.
+    $name = 'theme_moove/loginupload';
+    $title = get_string('loginupload', 'theme_moove');
+    $description = get_string('loginuploaddesc', 'theme_moove');
+    $default = 'Login, upload your work, see the results';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // createalogin.
+    $name = 'theme_moove/createalogin';
+    $title = get_string('createalogin', 'theme_moove');
+    $description = get_string('createalogindesc', 'theme_moove');
+    $default = 'Create a login';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // choosethemodule.
+    $name = 'theme_moove/choosethemodule';
+    $title = get_string('choosethemodule', 'theme_moove');
+    $description = get_string('choosethemoduledesc', 'theme_moove');
+    $default = 'Choose the module you would like to submit';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+>>>>>>> 4fcf07c78db8102111012ccd9938d34df943c254
     // uploadyourexam.
     $name = 'theme_moove/uploadyourexam';
     $title = get_string('uploadyourexam', 'theme_moove');
