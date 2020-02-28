@@ -119,7 +119,9 @@
                     <input id="anchor" type="hidden" name="anchor" value="">
                     <script>document.getElementById('anchor').value = location.hash;</script>
                     <input type="hidden" name="logintoken" value="{{logintoken}}">
-
+                    <div class="icon_login">
+                        <img src="{{{ config.wwwroot }}}/theme/moove/pix/l-icon.png"/>
+                    </div>
                     <p class="welcome">{{#str}}login, theme_moove{{/str}}</p>
 
                     <label for="username" class="sr-only">
@@ -148,7 +150,9 @@
 
                     <button type="submit" class="btn btn-primary btn-block" id="loginbtn">{{#str}}login{{/str}}</button>
                 </form>
-
+                <div class="forgot_pass">
+                    <a href="{{{ config.wwwroot }}}/login/forgot_password.php">Forgot username or password?</a>
+                </div>
 <div class="line-s"><i class="iii"></i></div>
                 {{#cansignup}}
                     <form class="m-t-1" action="{{signupurl}}" method="get" id="signup">

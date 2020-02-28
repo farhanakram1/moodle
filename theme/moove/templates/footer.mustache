@@ -5,6 +5,9 @@
 #top-footer h4{
   font-size:16px !important;
 }
+.gecko #top-footer, .gecko #page-footer {
+	display: block !important;
+}
 #top-footer {
     background-size: cover!important;
 }
@@ -39,7 +42,7 @@
     opacity:0.8;
 }
 #page-footer {
-    background-color: #00daf0!important;
+    background-color: #000!important;
 }
 p.D-D-l {
     font-size: 12px;
@@ -87,20 +90,20 @@ p.D-D-l.mb-0 a {
         <div class="col-lg-4 col-md-6 contact">
             <h3>{{#str}}stayintouch, theme_moove{{/str}}</h3>
             <div class="b-line"></div>
-            <h4>{{{getintouchcontent}}}</h4>
+            <h4>Conecti.me</h4>
             <ul>
                 
                     <li>
                         <i class="slicon-globe"></i>
-                        <a href="{{{website}}}" target="_blank">{{{website}}}</a>
+                        <a href="http://conecti.me" target="_blank">http://conecti.me</a>
                     </li>
                     <li>
                         <i class="slicon-phone"></i>
-                        <a href="tel:{{{mobile}}}" target="_blank">{{{mobile}}}</a>
+                        <a href="tel:+55 (98) 00123-45678" target="_blank">Mobile : +55 (98) 00123-45678</a>
                     </li>
                     <li>
                         <i class="slicon-envelope"></i>
-                        <a href="mailto:{{{mail}}}" target="_blank">{{{mail}}}</a>
+                        <a href="mailto:willianmano@conecti.me" target="_blank">willianmano@conecti.me</a>
                     </li>
                 
             </ul>
@@ -109,10 +112,10 @@ p.D-D-l.mb-0 a {
         <h3>Useful Links</h3>
         <div class="b-line"></div>
         <ul class="use-links">
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="">Privacy Policy</a></li>
+          <li><a href="{{{ config.wwwroot }}}">Home</a></li>
+          <li><a href="{{{ config.wwwroot }}}/local/pages/?id=1">About</a></li>
+          <li><a href="{{{ config.wwwroot }}}/local/pages/?id=2">Contact</a></li>
+          <li><a href="{{{ config.wwwroot }}}/login/index.php">Login</a></li>
         </ul>
         </div>
         <div class="col-lg-4 col-md-6 social">
@@ -181,7 +184,7 @@ p.D-D-l.mb-0 a {
             <p class="R-R mb-0"> 2020 Spring. All Rights Reserved.</p>
             </div>
             <div class="col-sm-6 col-12 text-sm-right text-center text-white">
-                <p class="D-D-l mb-0">Designed & Developed by <a href="" target="_blank">LEADconcept</a></p>
+                <p class="D-D-l mb-0">Designed & Developed by <a href="https://leadconcept.com/" target="_blank">LEADconcept</a></p>
             </div>
          </div>
       </div>

@@ -8,3 +8,102 @@
 [20-Feb-2020 11:43:25 Europe/Berlin] [client 101.53.242.54]  http://moodle.leadconcept.biz  Failed Login:    Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
 [21-Feb-2020 17:08:20 Europe/Berlin] [client 101.53.235.242]  http://moodle.leadconcept.biz  Invalid Login Token:  admin  Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
 [24-Feb-2020 17:35:26 Europe/Berlin] [client 101.53.235.242]  http://moodle.leadconcept.biz  Failed Login:    Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+[25-Feb-2020 12:51:21 Europe/Berlin] Default exception handler: Exception - Class 'login_signup_form' not found Debug: 
+Error code: generalexceptionmessage
+* line 317 of /lib/authlib.php: Error thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 13:13:43 Europe/Berlin] Default exception handler: Coding error detected, it must be fixed by a programmer: clean_param() can not process arrays, please use clean_param_array() instead. Debug: 
+Error code: codingerror
+* line 797 of /lib/moodlelib.php: coding_exception thrown
+* line 7263 of /lib/moodlelib.php: call to clean_param()
+* line 48 of /login/signup_form.php: call to get_string()
+* line 214 of /lib/formslib.php: call to login_signup_form->definition()
+* line 317 of /lib/authlib.php: call to moodleform->__construct()
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 13:18:24 Europe/Berlin] Default exception handler: Exception - Class 'login_signup_form' not found Debug: 
+Error code: generalexceptionmessage
+* line 317 of /lib/authlib.php: Error thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 13:18:24 Europe/Berlin] Default exception handler: Exception - Class 'login_signup_form' not found Debug: 
+Error code: generalexceptionmessage
+* line 317 of /lib/authlib.php: Error thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 14:12:01 Europe/Berlin] Default exception handler: Exception - syntax error, unexpected ';', expecting ',' or ')' Debug: 
+Error code: generalexceptionmessage
+* line 120 of /login/signup_form.php: ParseError thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 14:12:06 Europe/Berlin] Default exception handler: Exception - syntax error, unexpected ';', expecting ',' or ')' Debug: 
+Error code: generalexceptionmessage
+* line 120 of /login/signup_form.php: ParseError thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 14:12:25 Europe/Berlin] Default exception handler: Exception - syntax error, unexpected 'profile_signup_fields' (T_STRING) Debug: 
+Error code: generalexceptionmessage
+* line 121 of /login/signup_form.php: ParseError thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 14:12:30 Europe/Berlin] Default exception handler: Exception - syntax error, unexpected 'profile_signup_fields' (T_STRING) Debug: 
+Error code: generalexceptionmessage
+* line 121 of /login/signup_form.php: ParseError thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 14:12:31 Europe/Berlin] Default exception handler: Exception - syntax error, unexpected 'profile_signup_fields' (T_STRING) Debug: 
+Error code: generalexceptionmessage
+* line 121 of /login/signup_form.php: ParseError thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 14:12:56 Europe/Berlin] Default exception handler: Exception - syntax error, unexpected 'profile_signup_fields' (T_STRING), expecting ',' or ')' Debug: 
+Error code: generalexceptionmessage
+* line 120 of /login/signup_form.php: ParseError thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 14:13:01 Europe/Berlin] Default exception handler: Exception - syntax error, unexpected 'profile_signup_fields' (T_STRING), expecting ',' or ')' Debug: 
+Error code: generalexceptionmessage
+* line 120 of /login/signup_form.php: ParseError thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 14:13:02 Europe/Berlin] Default exception handler: Exception - syntax error, unexpected 'profile_signup_fields' (T_STRING), expecting ',' or ')' Debug: 
+Error code: generalexceptionmessage
+* line 120 of /login/signup_form.php: ParseError thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 14:13:18 Europe/Berlin] Default exception handler: Exception - syntax error, unexpected ';', expecting ',' or ')' Debug: 
+Error code: generalexceptionmessage
+* line 119 of /login/signup_form.php: ParseError thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 14:15:16 Europe/Berlin] Default exception handler: Exception - syntax error, unexpected ';', expecting ',' or ')' Debug: 
+Error code: generalexceptionmessage
+* line 120 of /login/signup_form.php: ParseError thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 14:15:16 Europe/Berlin] Default exception handler: Exception - syntax error, unexpected ';', expecting ',' or ')' Debug: 
+Error code: generalexceptionmessage
+* line 120 of /login/signup_form.php: ParseError thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[25-Feb-2020 14:33:40 Europe/Berlin] Default exception handler: Exception - Class 'login_signup_form' not found Debug: 
+Error code: generalexceptionmessage
+* line 317 of /lib/authlib.php: Error thrown
+* line 80 of /login/signup.php: call to auth_plugin_base->signup_form()
+
+[26-Feb-2020 19:00:38 Europe/Berlin] [client 196.195.101.105]  http://moodle.leadconcept.biz  Failed Login:  admin  Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15
+[26-Feb-2020 22:28:40 Europe/Berlin] [client 196.195.101.105]  http://moodle.leadconcept.biz  Failed Login:  test@teacher.com  Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:73.0) Gecko/20100101 Firefox/73.0
+[27-Feb-2020 10:20:17 Europe/Luxembourg] [client 101.53.235.242]  http://moodle.leadconcept.biz  Failed Login:  admin  Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+[27-Feb-2020 10:20:27 Europe/Luxembourg] [client 101.53.235.242]  http://moodle.leadconcept.biz  Failed Login:  admin  Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+[27-Feb-2020 10:23:50 Europe/Luxembourg] [client 101.53.235.242]  http://moodle.leadconcept.biz  Failed Login:  admin  Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+[27-Feb-2020 12:10:09 Europe/Luxembourg] [client 196.195.101.105]  http://moodle.leadconcept.biz  Failed Login:  admin  Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:73.0) Gecko/20100101 Firefox/73.0
+[27-Feb-2020 14:47:34 Europe/Luxembourg] PHP Notice:  Trying to get property of non-object in /home4/yasir/public_html/clients/abrarlc/moodle/lib/moodlelib.php on line 4427
+[27-Feb-2020 14:47:34 Europe/Luxembourg] [client 196.195.101.105]  http://moodle.leadconcept.biz  Invalid Login Token:  teacher@eodo.com  Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+[27-Feb-2020 14:48:06 Europe/Luxembourg] [client 196.195.101.105]  http://moodle.leadconcept.biz  Failed Login:  teacher@eodo.com  Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+[27-Feb-2020 14:49:41 Europe/Luxembourg] [client 196.195.101.105]  http://moodle.leadconcept.biz  Failed Login:  teacher@eodo.com  Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+[27-Feb-2020 14:49:58 Europe/Luxembourg] [client 196.195.101.105]  http://moodle.leadconcept.biz  Failed Login:  teacher@eodo.com  Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+[27-Feb-2020 14:51:05 Europe/Luxembourg] [client 196.195.101.105]  http://moodle.leadconcept.biz  Failed Login:  teacher@eodo.com  Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+[27-Feb-2020 14:56:39 Europe/Luxembourg] [client 196.195.101.105]  http://moodle.leadconcept.biz  Failed Login:  student2@eodo.com  Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+[27-Feb-2020 16:14:00 Europe/Luxembourg] [client 101.53.235.242]  http://moodle.leadconcept.biz  Failed Login:  admin  Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+[27-Feb-2020 17:21:25 Europe/Luxembourg] [client 39.59.82.62]  http://moodle.leadconcept.biz  Failed Login:    Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36

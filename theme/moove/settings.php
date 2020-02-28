@@ -97,6 +97,14 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // forgot page background image.
+    $name = 'theme_moove/forgotbgimg';
+    $title = get_string('forgotbgimg', 'theme_moove');
+    $description = get_string('forgotbgimg_desc', 'theme_moove');
+    $opts = array('accepted_types' => array('.png', '.jpg', '.svg'));
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'forgotbgimg', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
 
     // Signup page background image.
     $name = 'theme_moove/signupbgimg';
@@ -107,6 +115,14 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Conatct us page background image.
+    $name = 'theme_moove/contactusbgimg';
+    $title = get_string('contactusbgimg', 'theme_moove');
+    $description = get_string('contactusbgimg_desc', 'theme_moove');
+    $opts = array('accepted_types' => array('.png', '.jpg', '.svg'));
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'contactusbgimg', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
     
     // Variable $brand-color.
     // We use an empty default value because the default colour should come from the preset.
