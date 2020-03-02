@@ -70,11 +70,8 @@ $string['signupbgimg'] = 'Sign Up page background';
 $string['signupbgimg_desc'] = 'Upload your custom background image for the signup page.';
 $string['forgotbgimg'] = 'Forgot page background';
 $string['forgotbgimg_desc'] = 'Upload your custom background image for the forgot page.';
-<<<<<<< HEAD
 $string['contactusbgimg'] = 'Conatct Us page background';
 $string['contactusbgimg_desc'] = 'Upload your custom background image for the Contact Us page.';
-=======
->>>>>>> 4fcf07c78db8102111012ccd9938d34df943c254
 $string['brandcolor'] = 'Brand colour';
 $string['brandcolor_desc'] = 'The accent colour.';
 $string['navbarheadercolor'] = 'Navbar header color';

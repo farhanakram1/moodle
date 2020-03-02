@@ -108,7 +108,6 @@ function theme_moove_set_loginbgimg($theme) {
 }
 
 /**
-<<<<<<< HEAD
  * Adds the Conatct page background image to CSS.
  *
  * @param theme_config $theme The theme config object.
@@ -129,8 +128,6 @@ function theme_moove_set_contactusbgimg($theme) {
 }
 
 /**
-=======
->>>>>>> 4fcf07c78db8102111012ccd9938d34df943c254
  * Adds the login page background image to CSS.
  *
  * @param theme_config $theme The theme config object.
