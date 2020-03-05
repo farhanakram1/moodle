@@ -485,10 +485,11 @@ span.red {
     background-color: transparent!important;
 }
 #page-course-switchrole #page {
-    padding: 0 15px 32px 0;
+    padding: 0 15px 0 0;
 }
 #page-course-switchrole .card-body {
   padding: 0 0px 32px 0 !important;
+  background-color: #f4f7fb;
 }
 #page-course-switchrole #region-main-box {
   padding-right: 0 !important;
@@ -572,7 +573,7 @@ body.drawer-open-left {
 }
 
 #page-admin-search #page {
-    padding: 0 15px 32px 0;
+    padding: 0 15px 0 0;
 }
 
 #page-admin-search #region-main-box {
@@ -581,6 +582,7 @@ body.drawer-open-left {
 
 #page-admin-search .card-body {
     padding: 0 0px 32px 0 !important;
+    background-color: #f4f7fb;
 }
 
 #page-admin-search .card-body div > h2 {
@@ -594,7 +596,112 @@ body.drawer-open-left {
 #page-admin-search .nav.nav-tabs {
     margin-left: 23px;
 }
+#page-admin-search #id_query {
+    border: 2px solid #00daf0;
+    width: 280px;
+    height: 39px;
+}
+#page-admin-search .btn-primary {
+    color: #fff!important;
+    background-color: #00daf0!important;
+    border-radius: 5px!important;
+    padding: 4px 25px!important;
+    font-size: 20px!important;
+    border-color: #00daf0!important;
+}
+#page-admin-search .fitem {
+    margin: 0!important;
+}
 
+
+
+
+#page-admin-search nav > .nav.nav-tabs{
+    border: none;
+    color:#fff;
+    padding: 1px;
+    border-radius: 0;
+
+}
+#page-admin-search nav > ul > li{
+    padding: 0 6px 13px 0;
+}
+#page-admin-search nav > ul > li a.nav-link.active, 
+#page-admin-search nav > ul > li a.nav-link{
+    border: none;
+    padding: 10px 14px;
+    color: #000;
+    background: #cdd2d8;
+    border-radius: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-right: 7px;
+} 
+
+#page-admin-search nav > ul > li a.nav-link.active:after
+ {
+  content: "";
+  position: relative;
+    bottom: -41px;
+    left: -40%;
+    border: 7px solid transparent;
+    border-top-color: #00daf0;
+}
+
+
+#page-admin-search nav > ul > li a.nav-link:hover,
+#page-admin-search nav > ul > li a.nav-link.active,
+#page-admin-search nav > ul > li a.nav-link:focus
+{
+  border: none;
+    background: #00daf0;
+    color:#fff;
+    border-radius:0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition:background 0.20s linear;
+}
+
+#page-admin-search .tab-content{
+  background: #fdfdfd;
+    line-height: 25px;
+    border: 1px solid #ddd;
+    border-top:2px solid #00daf0;
+    padding:30px 25px;
+    margin-top: -13px;
+    -webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3);
+}
+
+ #page-admin-search .tab-content .setting_Links h4 a{
+        font-size: 21px!important;
+        color: #00daf0!important;
+ }
+ #page-admin-search .tab-content .setting_Links h4 > a:hover{
+    color: #00daf0!important;
+    text-decoration: none;
+    border-bottom: 2px solid #00daf0!important;
+ }
+
+#page-admin-search .tab-content .setting_Links ul li > a{
+    color: #00daf0!important;
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 15px;
+}
+#page-admin-search .tab-content .setting_Links ul li > a:hover{
+    color: #00daf0!important;
+    border-bottom: 1px solid #00daf0!important;
+}
+#page-admin-search .tab-content .setting_Links ul li:before {
+    content: "•";
+    color: #00daf0;
+    display: inline-block;
+    width: 1em;
+    font-size: 18px;
+    margin-left: 0em;
+}
 
 @media (max-width: 767px){
 body.drawer-open-left {
