@@ -110,9 +110,7 @@ nav.navbar ul.navbar-nav > li:last-child:hover > a {
 	padding: 0;
 	border-radius: 10px;
 }
-#frontpage-available-course-list{
-	display:none;
-}
+
 #page-login-signup #id_username{
 	margin-top: 15px;
 }
@@ -146,6 +144,7 @@ nav.navbar ul.navbar-nav > li:last-child:hover > a {
     }
 div#frontpage-available-course-list {
     padding: 2rem 0!important;
+    display:none;
 }
 .card-title a {
     color: #000!important;
@@ -636,14 +635,15 @@ body.drawer-open-left {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin-right: 7px;
+    position: relative !important;
 } 
 
 #page-admin-search nav > ul > li a.nav-link.active:after
  {
   content: "";
-  position: relative;
-    bottom: -41px;
-    left: -40%;
+  position: absolute;
+    bottom: -17px;
+    left: 42%;
     border: 7px solid transparent;
     border-top-color: #00daf0;
 }
@@ -676,7 +676,7 @@ body.drawer-open-left {
 
  #page-admin-search .tab-content .setting_Links h4 a{
         font-size: 21px!important;
-        color: #00daf0!important;
+        color: #000!important;
  }
  #page-admin-search .tab-content .setting_Links h4 > a:hover{
     color: #00daf0!important;
@@ -685,7 +685,7 @@ body.drawer-open-left {
  }
 
 #page-admin-search .tab-content .setting_Links ul li > a{
-    color: #00daf0!important;
+    color: #000!important;
     text-decoration: none;
     font-weight: lighter;
     font-size: 15px;
@@ -696,12 +696,116 @@ body.drawer-open-left {
 }
 #page-admin-search .tab-content .setting_Links ul li:before {
     content: "•";
-    color: #00daf0;
+    color: #000;
     display: inline-block;
     width: 1em;
     font-size: 18px;
     margin-left: 0em;
 }
+
+
+#page-my-index #page {
+    padding: 0 0 32px !important;
+}
+.bg-blue-brud {
+    padding: 30px 5px 35px;
+    background-color: #00daf0;
+}
+
+#page-my-index .btn-secondary{
+  background-color: #ced4da00!important;
+  padding: 0 !important;
+  border-color: #cfd5da00!important;
+}
+#page-my-index .singlebutton {
+  margin-left: 0 !important;
+  display: inline-block;
+}
+#page-my-index .p-a-1 {
+  padding: 0rem!important;
+  padding-left: 15px !important;
+  margin-bottom: 20px !important;
+}
+
+#page-my-index  .btn-secondary:hover {
+  color: #fdfeff !important;
+  background-color: #b8c1ca00 !important;
+  border-color: #b1bbc400 !important;
+}
+.col.text-dash {
+  color: white;
+  font-size: 25px;
+}
+
+.brud_s {
+  background-color: #75ebf7;
+  float: right;
+  padding: 15px 25px;
+  border-radius: 30px;
+}
+.brud_s a {
+  color: white;
+}
+
+#page-my-index .admininfos {
+    margin-top: -35px;
+}
+
+#page-my-index .small-box h3 {
+    z-index: 9;
+    white-space: inherit!important;
+    text-align: center;
+    position: relative;
+}
+#page-my-index .small-box p {;
+    text-align: center;
+}
+
+#page-my-index #region-main-box {
+      background-color: #f4f7fb!important;
+  }
+  #page-my-index #region-main-box .overviews-dasH .card.dashboard-card {
+    background-color: #dedede52 !important;
+    padding: 15px!important;
+    display: inline-block!important;
+}
+#page-my-index #region-main-box section > .card-body {
+  background-color: #fff !important;
+}
+#page-my-index .card.mymaincontent > .card-body {
+  background-color: #f4f7fb !important;
+}
+#page-my-index .overviews-dasH .card.dashboard-card > a {
+  float: left!important;
+  width: 33%!important;
+  margin-right: 10px!important;
+}
+#page-my-index #region-main .overviews-dasH .card.dashboard-card > .card-body {
+  float: left!important;
+  padding: 0 !important;
+  width: 60%!important;
+}
+#page-my-index  aside#block-region-content .card-body > h5 {
+  font-weight: 600!important;
+  border-bottom: 1px solid #000!important;
+}
+#page-my-index .block .block-cards .multiline {
+    white-space: normal!important;
+    font-weight: 600!important;
+}
+
+#page-my-index .recent_slider .card-deck.dashboard-card-deck .card-body a .text-truncate {
+  font-weight: 600!important;
+}
+#page-my-index .recent_slider .card-body {
+  text-align: center!important;
+}
+#page-my-index .recent_slider .card-body .flex-wrap {
+  display: block !important;
+  text-align: center!important;
+}
+
+
 
 @media (max-width: 767px){
 body.drawer-open-left {
