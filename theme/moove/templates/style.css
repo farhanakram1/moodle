@@ -15,6 +15,13 @@ span.logo {
     padding-left: 70px!important;
     padding-right: 45px!important;
 }
+#region-main {
+	overflow-x: auto;
+	overflow-y: visible;
+	border: 1px solid #d7dfe3;
+	padding: 1.25rem;
+	background-color: transparent;
+}
 .page-local-pages-about-us-1 #region-main-box .card {
     margin-bottom: 20px!important;
 }
@@ -267,7 +274,10 @@ h2.about-txt {
     padding: 50px 55px 50px 70px;
     background-color: #f1f6f7;
 }
-#page-login-forgot_password #page{
+.region-main-box{
+    margin-top: 35px;margin-bottom: 100px;
+}
+.page-local-pages-contact-2 #page, #page-login-forgot_password #page{
     max-width: 100%;
 }
 .page-local-pages-about-us-1 .container.about-page-s-2 {
@@ -283,8 +293,17 @@ body {
 
 }
 #region-main-box .card{
-    background-color: #fff!important;
+    background-color: transparent !important;
     border: 0!important;
+}
+#region-main-box .card .card-body h1{
+	color: #FFF !important;
+	margin-bottom: 100px;
+	margin-top: 55px;
+}
+#page-local-pages-index h1{
+    color:#000 !important;
+    margin: 0 !important;
 }
 .bg-grey-s{
     background-color: #fff!important;
@@ -332,7 +351,7 @@ h4.contact_heading {
     margin-bottom: 20px;
 }
 #region-main .card-body {
-    padding: 25px 40px !important;
+    padding: 0px !important;
 }
 
 .gecko #top-footer , .gecko #page-footer{
@@ -440,7 +459,7 @@ span.red {
 }
 #region-main .w-50-s .btn-primary {
     padding: 5px 90px!important;
-}
+
 padding: 25px 40px;
 background-color: #f3f6f6!important;
 border: 0!important;
