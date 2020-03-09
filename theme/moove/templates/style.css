@@ -239,7 +239,9 @@ nav.navbar ul.navbar-nav li>a.btn {
 .page-local-pages-about-us-1 #region-main .card-body {
     padding: 0 !important;
 }
-
+button#admin-menu-toggle:focus {
+    box-shadow: none!important;
+}
 .page-local-pages-about-us-1 #page {
     padding-left: 0!important;
     padding-right: 0!important;
@@ -357,9 +359,9 @@ h4.contact_heading {
     font-weight: 300!important;
     margin-bottom: 20px;
 }
-#region-main .card-body {
+/*#region-main .card-body {
     padding: 0px !important;
-}
+}*/
 
 .gecko #top-footer , .gecko #page-footer{
     display:none;
@@ -727,7 +729,7 @@ body.drawer-close-left {
     padding: 0 0 32px !important;
 }
 .bg-blue-brud {
-    padding: 30px 5px 35px;
+    padding: 30px 5px 28px;
     background-color: #00daf0;
 }
 
@@ -760,6 +762,7 @@ body.drawer-close-left {
     background-color: #75ebf7;
     float: right;
     padding: 15px 25px;
+    margin-bottom: 20px;
     border-radius: 30px;
 }
 .brud_s a {
@@ -934,6 +937,9 @@ nav.navbar .drawer-toggle .nav-link {
     }
 }
 @media screen and (max-width: 767px) {
+    #nav-drawer {
+        left: 0%!important;
+    }
     #region-main .w-50-s .btn-primary {
         padding: 5px 50px!important;
     }
