@@ -196,7 +196,7 @@ profile_view($user, $usercontext);
 
 // TODO WORK OUT WHERE THE NAV BAR IS!
 echo $OUTPUT->header();
-echo '<div class="userprofile">';
+echo '<div class="userprofile user-t-pro">';
 
 if ($user->description && !isset($hiddenfields['description'])) {
     echo '<div class="description">';

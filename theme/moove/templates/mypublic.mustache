@@ -105,7 +105,7 @@
                             </div>
                             <div class="col-sm-12 col-md-9">
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-body cust-tabs-s">
                                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                                             {{# hascourses }}
                                                 <li class="nav-item">
@@ -125,13 +125,13 @@
                                             {{# hascourses }}
                                                 <div class="tab-pane fade show active" id="cursos" role="tabpanel" aria-labelledby="courses-tab">
                                                     {{# courses }}
-                                                        <div id="course-{{ id }}" class="card mt-1">
+                                                        <div id="course-{{ id }}" class="card mt-1 course-m-box">
                                                             <div class="card-body row">
                                                                 <div class="col-md-3 col-sm-6 courseimage">
                                                                     {{{ courseimage }}}
                                                                 </div>
 
-                                                                <div class="media-body col-md-9 col-sm-6">
+                                                                <div class="media-body col-md-9 col-sm-6 course_Text">
                                                                     <a href="{{ link }}"><h5 class="mt-0">{{{ fullname }}}</h5></a>
                                                                     {{# startdate }}<small>{{#str}}startedon, theme_moove{{/str}}: {{#userdate}} {{startdate}}, %A, %d %B %Y {{/userdate}}</small>{{/ startdate }}
 
