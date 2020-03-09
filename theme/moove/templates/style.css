@@ -141,7 +141,7 @@ div#frontpage-available-course-list {
     color: #000!important;
 }
 h1 {
-    color: #000000!important;
+    color: #000000;
 }
 #page-my-index .small-box h3 {
     white-space: inherit!important;
@@ -297,7 +297,7 @@ body {
     border: 0!important;
 }
 #region-main-box .card .card-body h1{
-	color: #FFF !important;
+	color: #FFF;
 	margin-bottom: 100px;
 	margin-top: 55px;
 }
