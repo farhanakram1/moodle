@@ -21,11 +21,11 @@
 
     Example context (json): {}
 }}
-<div id="nav-drawer" data-region="drawer" class="hidden-print moodle-has-zindex {{^navdraweropen}}closed{{/navdraweropen}}" aria-hidden="{{#navdraweropen}}false{{/navdraweropen}}{{^navdraweropen}}true{{/navdraweropen}}" tabindex="-1">
+<div id="nav-drawer" style="display:none;" data-region="drawer" class="hidden-print moodle-has-zindex open aria-hidden="{{#navdraweropen}}false{{/navdraweropen}}{{^navdraweropen}}true{{/navdraweropen}}" tabindex="-1">
     {{> theme_moove/flat_navigation }}
 </div>
 
-<div id="nav-drawer-footer">
+<div id="nav-drawer-footer" style="display:none;">
     <span id="themesettings-control">
         <i title="{{#str}}themesettingstitle, theme_moove{{/str}}"
            class="fa fa-universal-access">

@@ -193,3 +193,20 @@ p.D-D-l.mb-0 a {
 
 {{{ output.standard_end_of_body_html }}}
 <!-- Button trigger modal -->
+
+
+<script>
+require(['jquery'], function($) {  
+    $('#admin-menu-toggle').click(function(){
+        if($('#nav-drawer').css('display') == 'none'){
+            $('#nav-drawer').removeClass('closed');
+            $('#nav-drawer').removeClass('open');
+            $('#nav-drawer').slideDown();
+        }else{
+            $('#nav-drawer').removeClass('closed');
+            $('#nav-drawer').removeClass('open');
+            $('#nav-drawer').slideUp();
+        }
+    });
+});
+</script>
