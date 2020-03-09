@@ -36,8 +36,8 @@
 <nav class="fixed-top navbar navbar-light navbar-expand moodle-has-zindex">
     
     <div class="container" style="display: block;">
-<div class="row">
-<div class="col-sm-3 col-md-3">
+<div class="row m-0">
+<div class="col-3">
     {{#hasdrawertoggle}}
         <div data-region="drawer-toggle" class="d-inline-block mr-3 drawer-toggle">
             <button id="admin-menu-toggle" aria-expanded="{{#navdraweropen}}true{{/navdraweropen}}{{^navdraweropen}}false{{/navdraweropen}}" type="button" class="btn nav-link float-sm-left mr-1" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav">
@@ -61,7 +61,7 @@
         {{/ output.get_logo }}
     </a>
 </div>
-<div class="col-sm-9 col-md-9 text-right">
+<div class="col-9 text-right pr-0">
 <ul class="navbar-nav d-md-flex custom-menus ml-auto cust-li">
         <!-- custom_menu -->
         {{{ output.custom_menu }}}
