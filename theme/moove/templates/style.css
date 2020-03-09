@@ -8,6 +8,10 @@
 .page-local-pages-contact-2 #page-wrapper #page {
     background-size: cover!important;
 }
+#nav-drawer {
+	right: auto;
+	left: 11%;
+}
 span.logo {
     margin-left: 25px!important;
 }
@@ -301,7 +305,7 @@ body {
 	margin-bottom: 100px;
 	margin-top: 55px;
 }
-#page-local-pages-index h1{
+.about-page-s h1{
     color:#000 !important;
     margin: 0 !important;
 }
