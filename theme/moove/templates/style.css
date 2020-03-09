@@ -310,6 +310,11 @@ body {
 .about-page-s h1{
     color:#000 !important;
 }
+#page-calendar-view #region-main{
+    margin-top: 185px;margin-bottom: 100px;
+    background: #FFF;
+    padding: 20px 30px;
+}
 #page-local-pages-index h1{
     margin-top: 0px !important;
     margin-bottom: 10px !important;
