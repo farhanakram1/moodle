@@ -1742,7 +1742,10 @@ class moodle_page {
      */
     protected function initialise_standard_body_classes() {
         global $CFG, $USER;
-
+        
+        if(!empty($USER->id)){
+           $this->add_body_class('pad_logo');
+        }
         $pagetype = $this->pagetype;
         if ($pagetype == 'site-index') {
             $this->_legacyclass = 'course';

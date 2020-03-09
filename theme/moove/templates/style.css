@@ -906,6 +906,26 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         min-height: auto;
         width: 100px;
     }
+.pad_logo .logo img {
+    margin-top: 0px;
+    }
+.slicon-menu {
+    font-size: 20px!important;
+    color: black!important;
+}
+nav.navbar .drawer-toggle {
+    background-color: #ffffff00!important;
+    padding: 0;
+    margin: 0 !important;
+    position: absolute;
+    height: auto;
+    width: auto;
+    left: 5px;
+    top: 20px;
+}
+nav.navbar .drawer-toggle .nav-link {
+    padding: 0;
+}
 
 }
 @media (min-width: 576px){
@@ -1079,21 +1099,4 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     nav.navbar {
         padding: 45px 5px 45px !important;
     }
-.slicon-menu {
-    font-size: 20px!important;
-    color: black!important;
-}
-nav.navbar .drawer-toggle {
-    background-color: #ffffff00!important;
-    padding: 0;
-    margin: 0 !important;
-    position: absolute;
-    height: auto;
-    width: auto;
-    left: 5px;
-    top: 20px;
-}
-nav.navbar .drawer-toggle .nav-link {
-    padding: 0;
-}
 }
