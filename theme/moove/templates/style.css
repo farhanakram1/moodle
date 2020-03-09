@@ -280,7 +280,7 @@ h2.about-txt {
 .page-local-pages-contact-2 #page, #page-login-forgot_password #page{
     max-width: 100%;
 }
-.page-local-pages-about-us-1 .container.about-page-s-2 {
+.page-local-pages-about-us-1 .container-fluid.about-page-s-2 {
     padding: 60px 0px 8px 19px;
     background-color: #ffffff;
 }
@@ -962,7 +962,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         padding: 25px 0 25px 25px !important;
         background-size: cover !important;
     }
-    .page-local-pages-about-us-1 .container.about-page-s-2 {
+    .page-local-pages-about-us-1 .container-fluid.about-page-s-2 {
         padding: 25px 20px 20px 50px;
 
     }
