@@ -1000,6 +1000,9 @@ nav.navbar .drawer-toggle .nav-link {
 
 @media screen and (max-width: 575px) {
 
+    .pad_logo .menubar {
+        margin-top: -10px;
+    }
     .page-local-pages-about-us-1 .container.about-page-s {
         padding: 20px 25px 20px 40px;
     }
