@@ -267,6 +267,9 @@ h2.about-txt {
     padding: 50px 55px 50px 70px;
     background-color: #f1f6f7;
 }
+#page-login-forgot_password #page{
+    max-width: 100%;
+}
 .page-local-pages-about-us-1 .container.about-page-s-2 {
     padding: 60px 0px 8px 19px;
     background-color: #ffffff;
