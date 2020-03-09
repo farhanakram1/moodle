@@ -1002,6 +1002,7 @@ body.drawer-close-left {
     background-color: black!important;
     margin-bottom:0!important;
     padding: 10px 35px!important;
+    line-height: 15px;
 }
 #page-user-edit legend a {
       color: white!important;
@@ -1021,10 +1022,38 @@ body.drawer-close-left {
     border: 1px solid #ababab!important;
     padding: 20px!important;
 }
-
-
-
-
+#page-user-edit .jsenabled .collapsible-actions {
+    display: block;
+    margin-bottom: 20px;
+}
+#page-user-preferences .preferences-box {
+    background-color: white;
+    padding: 20px 25px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#page-user-preferences .preferences-box h4.card-title {
+    font-weight: bold;
+    border-bottom: 2px solid #efefef;
+    padding-bottom: 10px;
+}
+#page-user-preferences .card-body{
+    padding-left: 0px;
+}
+#page-user-preferences .card-body div > h2 {
+    color:white!important;
+}
+#page-user-preferences .preferences-box a {
+    color: #636363;
+    margin-bottom: 7px;
+    float: left;
+    width: 100%;
+}
+#page-user-preferences .preferences-box a:hover {
+    color: #00daf0;
+    text-decoration: none;
+}
 
 @media (max-width: 767px){
     body.drawer-open-left {
@@ -1199,10 +1228,16 @@ nav.navbar .drawer-toggle .nav-link {
     #page-login-index.moove-login .logo {
         margin-bottom: 0rem!important;
     }
+    #page-user-edit legend a {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 575px) {
 
+    #page-user-edit legend a {
+        font-size: 16px;
+    }
     .pad_logo .menubar {
         margin-top: -10px;
     }
