@@ -990,7 +990,7 @@ body.drawer-close-left {
     padding-left: 5px;
 }
 
-#page-user-edit form.mform {
+#page-user-edit form.mform, #page-login-change_password form.mform, #page-user-language form.mform{
     background-color: white;
     padding: 20px 25px;
     border-radius: 5px;
@@ -1011,10 +1011,13 @@ body.drawer-close-left {
       color: white!important;
       text-decoration: none;
 }
-#page-user-edit #fgroup_id_buttonar {
+#page-user-edit #fgroup_id_buttonar,#page-login-change_password #fgroup_id_buttonar {
     margin-top: 30px;
 }
-#page-user-edit .card-body div > h2 {
+#page-login-change_password legend{
+    font-weight: bold;
+}
+#page-user-edit .card-body div > h2, #page-user-language .card-body div > h2{
     color:white!important;
 }
 
@@ -1054,6 +1057,13 @@ body.drawer-close-left {
     color: #00daf0;
     text-decoration: none;
 }
+
+
+#page-login-change_password input ,#page-user-language #fgroup_id_buttonar{
+    margin-top: 10px;
+}
+
+
 
 @media (max-width: 767px){
     body.drawer-open-left {
@@ -1238,7 +1248,10 @@ nav.navbar .drawer-toggle .nav-link {
     #page-user-edit legend a {
         font-size: 16px;
     }
-    .pad_logo .menubar {
+    #page-login-change_password legend {
+        font-size: 20px;
+    }
+        .pad_logo .menubar {
         margin-top: -10px;
     }
     .page-local-pages-about-us-1 .container.about-page-s {
