@@ -22,8 +22,8 @@
     background-size: cover!important;
 }
 #nav-drawer {
-	right: auto;
-	left: 11%;
+    right: auto;
+    left: 11%;
 }
 span.logo {
     margin-left: 25px!important;
@@ -33,11 +33,11 @@ span.logo {
     padding-right: 45px!important;
 }
 #region-main {
-	overflow-x: auto;
-	overflow-y: visible;
-	border: 1px solid #d7dfe3;
-	padding: 1.25rem;
-	background-color: transparent;
+    overflow-x: auto;
+    overflow-y: visible;
+    border: 1px solid #d7dfe3;
+    padding: 1.25rem;
+    background-color: transparent;
 }
 .page-local-pages-about-us-1 #region-main-box .card {
     margin-bottom: 20px!important;
@@ -46,11 +46,11 @@ span.logo {
     margin-top: 24px!important;
 }
 .page-local-pages-about-us-1 #page {
-	width: 100% !important;
-	padding-right: 15px !important;
-	padding-left: 15px !important;
-	margin-right: auto !important;
-	margin-left: auto !important;
+    width: 100% !important;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
         max-width: 100%;
 }
 nav.navbar ul.navbar-nav > li:last-child:hover > a {
@@ -100,7 +100,7 @@ nav.navbar ul.navbar-nav > li:last-child:hover > a {
 }
 #page-login-index .forgot_pass{
     margin-top:10px;
-}	
+}   
 #id_error_profile_field_yearyoustarted{
     margin-top: -10px !important;
 }
@@ -316,9 +316,14 @@ body {
     border: 0!important;
 }
 #region-main-box .card .card-body h1{
-	color: #FFF;
-	margin-bottom: 100px;
-	margin-top: 55px;
+    color: #FFF;
+    margin-bottom: 100px;
+    margin-top: 55px;
+}
+
+#page-login-forgot_password .card{
+    background: #FFF !important;
+    
 }
 .about-page-s h1{
     color:#000 !important;
@@ -410,9 +415,10 @@ span.red {
 #region-main .cust-form .form-control, #page-login-signup #region-main .form-control, #page-login-signup #region-main .custom-select {
     border: 2px solid #9e9e9e !important;
 }
-#page-login-signup .card{
-    border-radius: 10px!important;
-    padding: 5px 25px!important;
+#page-login-signup .card {
+    border-radius: 10px !important;
+    padding: 5px 25px !important;
+    background: #FFF !important;
 }
 #page-login-signup .card-title h3{
     text-align: center;
@@ -488,7 +494,7 @@ span.red {
     padding: 5px 90px!important;
 
 padding: 25px 40px;
-background-color: #f3f6f6!important;
+background-color: #f3f6f6;
 border: 0!important;
 border-radius: 0;
 border: 1px solid #d7dfe3;
@@ -990,7 +996,10 @@ body.drawer-close-left {
     padding-left: 5px;
 }
 
-#page-user-edit form.mform, #page-login-change_password form.mform, #page-user-language form.mform{
+#page-user-edit form.mform, 
+#page-login-change_password form.mform,
+ #page-user-language form.mform,
+  #page-user-forum form.mform{
     background-color: white;
     padding: 20px 25px;
     border-radius: 5px;
@@ -998,32 +1007,47 @@ body.drawer-close-left {
     margin-bottom: 20px;
 }
 
-#page-user-edit legend {
+#page-user-edit legend,
+#page-user-forum legend {
     background-color: black!important;
     margin-bottom:0!important;
     padding: 10px 35px!important;
     line-height: 15px;
 }
-#page-user-edit legend a {
+#page-user-edit legend a,
+#page-user-forum legend a{
       color: white!important;
 }
-#page-user-edit legend a:hover,#page-user-edit legend a:active {
+#page-user-edit legend a:hover,#page-user-edit legend a:active,
+#page-user-forum legend a:hover,#page-user-forum legend a:active {
       color: white!important;
       text-decoration: none;
 }
-#page-user-edit #fgroup_id_buttonar,#page-login-change_password #fgroup_id_buttonar {
+#page-user-edit #fgroup_id_buttonar,
+#page-login-change_password #fgroup_id_buttonar,
+#page-user-forum #fgroup_id_buttonar {
     margin-top: 30px;
 }
 #page-login-change_password legend{
     font-weight: bold;
 }
-#page-user-edit .card-body div > h2, #page-user-language .card-body div > h2{
+#page-user-edit .card-body div > h2, 
+#page-user-language .card-body div > h2,
+#page-user-forum .card-body div > h2{
     color:white!important;
 }
 
-#page-user-edit .fcontainer {
+#page-user-edit .fcontainer ,
+#page-user-forum .fcontainer {
     border: 1px solid #ababab!important;
     padding: 20px!important;
+}
+#page-user-forum .custom-select {
+    word-wrap: normal;
+    margin-top: 10px;
+}
+#page-user-forum .mform fieldset {
+    margin-left: 17px !important;
 }
 #page-user-edit .jsenabled .collapsible-actions {
     display: block;
@@ -1238,14 +1262,16 @@ nav.navbar .drawer-toggle .nav-link {
     #page-login-index.moove-login .logo {
         margin-bottom: 0rem!important;
     }
-    #page-user-edit legend a {
+    #page-user-edit legend a,
+    #page-user-forum legend a {
         font-size: 20px;
     }
 }
 
 @media screen and (max-width: 575px) {
 
-    #page-user-edit legend a {
+    #page-user-edit legend a,
+    #page-user-forum legend a {
         font-size: 16px;
     }
     #page-login-change_password legend {
