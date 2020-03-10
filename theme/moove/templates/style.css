@@ -25,6 +25,11 @@
     right: auto;
     left: 11%;
 }
+#page-login-index.moove-login .loginpanel {
+	border-radius: 10px;
+	border: none;
+	background: #FFF !important;
+}
 span.logo {
     margin-left: 25px!important;
 }
@@ -33,11 +38,19 @@ span.logo {
     padding-right: 45px!important;
 }
 #region-main {
+<<<<<<< HEAD
     overflow-x: auto;
     overflow-y: visible;
     border: 1px solid #d7dfe3;
     padding: 1.25rem;
     background-color: transparent;
+=======
+	overflow-x: auto;
+	overflow-y: visible;
+	border: 0px;
+	padding: 1.25rem;
+	background-color: transparent;
+>>>>>>> c5cdaf0adc585cd2f1722916d6fb1572ff91bfa7
 }
 .page-local-pages-about-us-1 #region-main-box .card {
     margin-bottom: 20px!important;
@@ -319,6 +332,11 @@ body {
     color: #FFF;
     margin-bottom: 100px;
     margin-top: 55px;
+}
+
+#page-login-forgot_password .card{
+    background: #FFF !important;
+    
 }
 
 #page-login-forgot_password .card{
