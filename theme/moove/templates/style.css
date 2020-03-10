@@ -1030,6 +1030,15 @@ body.drawer-close-left {
     margin-top: 30px;
     margin-bottom: 20px;
 }
+
+  #page-blog-external_blog_edit form.mform
+  {
+    background-color: white;
+    padding: 35px 25px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
 #page-message-notificationpreferences .preferences-page-container{
     background-color: white;
     padding: 20px 25px;
@@ -1338,7 +1347,7 @@ nav.navbar .drawer-toggle .nav-link {
       #page-user-calendar form.mform,
       #page-user-editor form.mform
     {
-    padding: 20px 10px 20px 5px;
+    padding: 20px 10px 20px 10px;
     }
     form input{
         margin-top: 10px;
