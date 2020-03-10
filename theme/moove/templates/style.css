@@ -1062,7 +1062,7 @@ body.drawer-close-left {
 #page-message-notificationpreferences .preferences-page-container h2{
     font-weight: bold;
 }
-.collapsible-actions .collapseexpand{
+.collapsible-actions{
     margin-bottom: 20px;
 }
 #page-user-edit .card-body div > h2, 
@@ -1071,6 +1071,7 @@ body.drawer-close-left {
 #page-user-course .card-body div > h2,
 #page-user-calendar .card-body div > h2,
 #page-blog-preferences .card-body div > h2,
+#page-message-edit .card-body div > h2, 
 #page-user-forum .card-body div > h2{
     color:white!important;
 }
@@ -1129,6 +1130,12 @@ body.drawer-close-left {
     margin-top: 10px;
 }
 
+#page-wrapper {
+    min-height: 398px;
+}
+.action-menu-trigger .dropdown > a:focus {
+    outline: none;
+}
 
 
 @media (max-width: 767px){
