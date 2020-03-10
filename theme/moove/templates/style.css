@@ -1117,6 +1117,7 @@ body.drawer-close-left {
     color: black;
 }
 #page-user-edit .fcontainer ,
+#page-badges-preferences .fcontainer ,
 #page-user-forum .fcontainer {
     border: 1px solid #ababab!important;
     padding: 20px!important;
@@ -1353,6 +1354,7 @@ nav.navbar .drawer-toggle .nav-link {
     }
     #page-user-edit legend a,
     #page-badges-mybackpack legend a,
+    #page-badges-preferences legend a,
     #page-message-notificationpreferences .preferences-page-container h2,
     #page-user-forum legend a {
         font-size: 20px;
@@ -1385,9 +1387,10 @@ nav.navbar .drawer-toggle .nav-link {
 
     #page-user-edit legend a,
     #page-badges-mybackpack legend a,
+    #page-badges-preferences legend a,
     #page-message-notificationpreferences .preferences-page-container h2,
     #page-user-forum legend a {
-        font-size: 16px;
+        font-size: 15px;
     }
     #page-wrapper {
         background-size: cover;
