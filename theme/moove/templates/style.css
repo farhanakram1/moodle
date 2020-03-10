@@ -25,6 +25,11 @@
 	right: auto;
 	left: 11%;
 }
+#page-login-index.moove-login .loginpanel {
+	border-radius: 10px;
+	border: none;
+	background: #FFF !important;
+}
 span.logo {
     margin-left: 25px!important;
 }
@@ -35,7 +40,7 @@ span.logo {
 #region-main {
 	overflow-x: auto;
 	overflow-y: visible;
-	border: 1px solid #d7dfe3;
+	border: 0px;
 	padding: 1.25rem;
 	background-color: transparent;
 }
@@ -320,6 +325,11 @@ body {
 	margin-bottom: 100px;
 	margin-top: 55px;
 }
+
+#page-login-forgot_password .card{
+    background: #FFF !important;
+    
+}
 .about-page-s h1{
     color:#000 !important;
 }
@@ -410,9 +420,10 @@ span.red {
 #region-main .cust-form .form-control, #page-login-signup #region-main .form-control, #page-login-signup #region-main .custom-select {
     border: 2px solid #9e9e9e !important;
 }
-#page-login-signup .card{
-    border-radius: 10px!important;
-    padding: 5px 25px!important;
+#page-login-signup .card {
+    border-radius: 10px !important;
+    padding: 5px 25px !important;
+    background: #FFF !important;
 }
 #page-login-signup .card-title h3{
     text-align: center;
@@ -488,7 +499,7 @@ span.red {
     padding: 5px 90px!important;
 
 padding: 25px 40px;
-background-color: #f3f6f6!important;
+background-color: #f3f6f6;
 border: 0!important;
 border-radius: 0;
 border: 1px solid #d7dfe3;
