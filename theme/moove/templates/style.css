@@ -1022,6 +1022,8 @@ body.drawer-close-left {
   #page-user-calendar form.mform,
   #page-blog-preferences form.mform,
   #page-blog-external_blog_edit form.mform,
+  #page-badges-mybackpack form.mform,
+  #page-badges-preferences form.mform,
   #page-user-editor form.mform
   {
     background-color: white;
@@ -1030,7 +1032,13 @@ body.drawer-close-left {
     margin-top: 30px;
     margin-bottom: 20px;
 }
-
+#page-badges-mybadges .card-body{
+    background-color: white;
+    padding: 20px 25px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
   #page-blog-external_blog_edit form.mform
   {
     background-color: white;
@@ -1047,6 +1055,8 @@ body.drawer-close-left {
     margin-bottom: 20px;
 }
 #page-user-edit legend,
+#page-badges-preferences legend,
+#page-badges-mybackpack legend,
 #page-user-forum legend {
     background-color: black!important;
     margin-bottom:0!important;
@@ -1054,10 +1064,14 @@ body.drawer-close-left {
     line-height: 15px;
 }
 #page-user-edit legend a,
+#page-badges-mybackpack legend a,
+#page-badges-preferences legend a,
 #page-user-forum legend a{
       color: white!important;
 }
 #page-user-edit legend a:hover,#page-user-edit legend a:active,
+#page-badges-mybackpack legend a:hover,#page-badges-mybackpack legend a:active,
+#page-badges-preferences legend a:hover,#page-badges-preferences legend a:active,
 #page-user-forum legend a:hover,#page-user-forum legend a:active {
       color: white!important;
       text-decoration: none;
@@ -1066,9 +1080,14 @@ body.drawer-close-left {
 #page-login-change_password #fgroup_id_buttonar,
 #page-user-calendar #fgroup_id_buttonar,
 #page-blog-external_blog_edit #fgroup_id_buttonar,
+#page-badges-preferences #fgroup_id_buttonar,
 #page-user-forum #fgroup_id_buttonar {
     margin-top: 30px;
 }
+#page-badges-mybackpack #fitem_id_submitbutton {
+    margin-top: 30px;
+}
+
 #page-login-change_password legend,
 #page-message-notificationpreferences .preferences-page-container h2{
     font-weight: bold;
@@ -1085,6 +1104,8 @@ body.drawer-close-left {
 #page-message-edit .card-body div > h2, 
 #page-blog-external_blogs .card-body div > h2, 
 #page-blog-external_blog_edit .card-body div > h2, 
+#page-badges-preferences .card-body div > h2, 
+#page-badges-mybackpack .card-body div > h2, 
 #page-user-forum .card-body div > h2{
     color:white!important;
 }
@@ -1331,6 +1352,7 @@ nav.navbar .drawer-toggle .nav-link {
         margin-bottom: 0rem!important;
     }
     #page-user-edit legend a,
+    #page-badges-mybackpack legend a,
     #page-message-notificationpreferences .preferences-page-container h2,
     #page-user-forum legend a {
         font-size: 20px;
@@ -1340,15 +1362,19 @@ nav.navbar .drawer-toggle .nav-link {
 @media screen and (max-width: 575px) {
 
     #page-user-edit form.mform, 
-    #page-login-change_password form.mform,
-    #page-user-language form.mform,
-      #page-user-forum form.mform,
-      #page-user-course form.mform,
-      #page-user-calendar form.mform,
-      #page-user-editor form.mform
+#page-login-change_password form.mform,
+ #page-user-language form.mform,
+  #page-user-forum form.mform,
+  #page-user-course form.mform,
+  #page-user-calendar form.mform,
+  #page-blog-preferences form.mform,
+  #page-blog-external_blog_edit form.mform,
+  #page-badges-preferences form.mform,
+  #page-user-editor form.mform
     {
     padding: 20px 10px 20px 10px;
     }
+
     form input{
         margin-top: 10px;
     }
@@ -1358,6 +1384,7 @@ nav.navbar .drawer-toggle .nav-link {
     }   
 
     #page-user-edit legend a,
+    #page-badges-mybackpack legend a,
     #page-message-notificationpreferences .preferences-page-container h2,
     #page-user-forum legend a {
         font-size: 16px;
