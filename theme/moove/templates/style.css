@@ -1021,6 +1021,7 @@ body.drawer-close-left {
   #page-user-course form.mform,
   #page-user-calendar form.mform,
   #page-blog-preferences form.mform,
+  #page-blog-external_blog_edit form.mform,
   #page-user-editor form.mform
   {
     background-color: white;
@@ -1055,6 +1056,7 @@ body.drawer-close-left {
 #page-user-edit #fgroup_id_buttonar,
 #page-login-change_password #fgroup_id_buttonar,
 #page-user-calendar #fgroup_id_buttonar,
+#page-blog-external_blog_edit #fgroup_id_buttonar,
 #page-user-forum #fgroup_id_buttonar {
     margin-top: 30px;
 }
@@ -1072,10 +1074,18 @@ body.drawer-close-left {
 #page-user-calendar .card-body div > h2,
 #page-blog-preferences .card-body div > h2,
 #page-message-edit .card-body div > h2, 
+#page-blog-external_blogs .card-body div > h2, 
+#page-blog-external_blog_edit .card-body div > h2, 
 #page-user-forum .card-body div > h2{
     color:white!important;
 }
-
+#page-blog-external_blogs .boxaligncenter > a {
+    color: black;
+    text-decoration: none;
+}
+#page-blog-external_blogs .boxaligncenter > a:hover {
+    color: black;
+}
 #page-user-edit .fcontainer ,
 #page-user-forum .fcontainer {
     border: 1px solid #ababab!important;
@@ -1328,7 +1338,10 @@ nav.navbar .drawer-toggle .nav-link {
       #page-user-calendar form.mform,
       #page-user-editor form.mform
     {
-    padding: 20px 10px 20px 0px;
+    padding: 20px 10px 20px 5px;
+    }
+    form input{
+        margin-top: 10px;
     }
 
     #page-user-calendar .col-form-label {
