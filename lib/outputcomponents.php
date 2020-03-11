@@ -2156,7 +2156,9 @@ class html_writer {
             }
         }
         if (empty($table->attributes['class'])) {
+           echo html_writer::start_tag('div', array('class' => 'table-responsive'));
             $table->attributes['class'] = 'generaltable';
+            $table->attributes['style'] = 'min-width:600px;margin-top: 20px;';
         }
         if (!empty($table->tablealign)) {
             $table->attributes['class'] .= ' boxalign' . $table->tablealign;

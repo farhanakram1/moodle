@@ -1027,8 +1027,11 @@ body.drawer-close-left {
   #page-mod-forum-user #region-main > div > .card-body,
   #page-blog-index #region-main > div > .card-body,
   #page-admin-tool-lp-plans #region-main > div > .card-body,
-#page-badges-mybadges .card-body,
-#page-message-notificationpreferences .preferences-page-container,
+  #page-report-usersessions-user #region-main > div > .card-body,
+  #page-grade-report-overview-index #region-main > div > .card-body,
+  #page-admin-tool-dataprivacy-summary #region-main > div > .card-body,
+  #page-badges-mybadges .card-body,
+  #page-message-notificationpreferences .preferences-page-container,
   #page-user-editor form.mform,
   #page-blog-edit form.mform
   {
@@ -1092,6 +1095,9 @@ body.drawer-close-left {
 #page-mod-forum-user #region-main > div > .card-body > div > h2,
 #page-blog-index #region-main > div > .card-body > div > h2,
 #page-admin-tool-lp-plans #region-main > div > .card-body > div > h2,
+#page-report-usersessions-user #region-main > div > .card-body > div > h2,
+#page-admin-tool-dataprivacy-summary #region-main > div > .card-body > div > h2,
+#page-grade-report-overview-index #region-main > div > .card-body .no-overflow > h3,
 #page-message-notificationpreferences .preferences-page-container h2{
     font-weight: bold;
 }
@@ -1215,6 +1221,9 @@ body.drawer-close-left {
     outline: none;
 }
 
+table tr td {
+    white-space: nowrap;
+}
 
 @media (max-width: 767px){
     body.drawer-open-left {
@@ -1397,6 +1406,7 @@ nav.navbar .drawer-toggle .nav-link {
     #page-badges-preferences legend a,
     #page-blog-edit legend a,
     #page-message-notificationpreferences .preferences-page-container h2,
+    #page-admin-tool-dataprivacy-summary .card-header h3,
     #page-user-forum legend a {
         font-size: 20px;
     }
@@ -1417,8 +1427,11 @@ nav.navbar .drawer-toggle .nav-link {
   #page-mod-forum-user #region-main > div > .card-body,
   #page-blog-index #region-main > div > .card-body,
   #page-admin-tool-lp-plans #region-main > div > .card-body,
-#page-badges-mybadges .card-body,
-#page-message-notificationpreferences .preferences-page-container,
+  #page-report-usersessions-user #region-main > div > .card-body,
+  #page-grade-report-overview-index #region-main > div > .card-body,
+  #page-admin-tool-dataprivacy-summary #region-main > div > .card-body,
+  #page-badges-mybadges .card-body,
+  #page-message-notificationpreferences .preferences-page-container,
   #page-user-editor form.mform,
   #page-blog-edit form.mform
     {
@@ -1440,6 +1453,7 @@ nav.navbar .drawer-toggle .nav-link {
     #page-badges-preferences legend a,
     #page-blog-edit legend a,
     #page-message-notificationpreferences .preferences-page-container h2,
+    #page-admin-tool-dataprivacy-summary .card-header h3,
     #page-user-forum legend a {
         font-size: 15px;
     }
