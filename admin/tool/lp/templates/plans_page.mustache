@@ -39,7 +39,8 @@
     {{{.}}}
     {{/navigation}}
 </div>
-<table class="generaltable fullwidth">
+<div class="table-responsive">
+<table class="generaltable fullwidth" style="min-width:600px;">
     <caption>{{#str}}listplanscaption, tool_lp{{/str}}</caption>
     <thead>
         <tr>
@@ -147,7 +148,7 @@
         {{/plans}}
     </tbody>
 </table>
-
+</div>
 {{^plans}}
 <p class="alert alert-info">
     {{#str}}nouserplans, tool_lp{{/str}}

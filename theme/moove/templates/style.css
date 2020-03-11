@@ -1025,9 +1025,12 @@ body.drawer-close-left {
   #page-badges-mybackpack form.mform,
   #page-badges-preferences form.mform,
   #page-mod-forum-user #region-main > div > .card-body,
+  #page-blog-index #region-main > div > .card-body,
+  #page-admin-tool-lp-plans #region-main > div > .card-body,
 #page-badges-mybadges .card-body,
 #page-message-notificationpreferences .preferences-page-container,
-  #page-user-editor form.mform
+  #page-user-editor form.mform,
+  #page-blog-edit form.mform
   {
     background-color: white;
     padding: 20px 25px;
@@ -1048,6 +1051,7 @@ body.drawer-close-left {
 #page-user-edit legend,
 #page-badges-preferences legend,
 #page-badges-mybackpack legend,
+#page-blog-edit legend,
 #page-user-forum legend {
     background-color: #ececec!important;
     margin-bottom:0!important;
@@ -1059,12 +1063,14 @@ body.drawer-close-left {
 #page-user-edit legend a,
 #page-badges-mybackpack legend a,
 #page-badges-preferences legend a,
+#page-blog-edit legend a,
 #page-user-forum legend a{
       color: #1d1c1c!important;
 }
 #page-user-edit legend a:hover,#page-user-edit legend a:active,
 #page-badges-mybackpack legend a:hover,#page-badges-mybackpack legend a:active,
 #page-badges-preferences legend a:hover,#page-badges-preferences legend a:active,
+#page-blog-edit legend a:hover,#page-blog-edit legend a:active,
 #page-user-forum legend a:hover,#page-user-forum legend a:active {
       color: 1d1c1c !important;
       text-decoration: none;
@@ -1074,6 +1080,7 @@ body.drawer-close-left {
 #page-user-calendar #fgroup_id_buttonar,
 #page-blog-external_blog_edit #fgroup_id_buttonar,
 #page-badges-preferences #fgroup_id_buttonar,
+#page-blog-edit #fgroup_id_buttonar,
 #page-user-forum #fgroup_id_buttonar {
     margin-top: 30px;
 }
@@ -1083,11 +1090,41 @@ body.drawer-close-left {
 
 #page-login-change_password legend,
 #page-mod-forum-user #region-main > div > .card-body > div > h2,
+#page-blog-index #region-main > div > .card-body > div > h2,
+#page-admin-tool-lp-plans #region-main > div > .card-body > div > h2,
 #page-message-notificationpreferences .preferences-page-container h2{
     font-weight: bold;
 }
+.blog_entry .audience {
+    margin-bottom: 25px !important;
+    color: black;
+    margin-top: 15px!important;
+}
+.forumpost .content .attachedimages img {
+    margin-bottom: 25px;
+}
+.addbloglink {
+    margin-bottom: 10px;
+}
+
+#page-blog-index .addbloglink a{
+    text-decoration: none!important;
+    color: black!important;
+    font-weight: bold!important;
+}
+#page-blog-index .addbloglink a:hover{
+    color: #00daf0!important;
+    text-decoration: underline!important;
+}
+.commands,
+.commands + div{
+    margin-bottom: 10px;
+}
 .collapsible-actions{
     margin-bottom: 20px;
+}
+.fd-end{
+        flex-direction: row-reverse !important;
 }
 #page-user-edit .card-body div > h2, 
 #page-user-language .card-body div > h2,
@@ -1100,6 +1137,7 @@ body.drawer-close-left {
 #page-blog-external_blog_edit .card-body div > h2, 
 #page-badges-preferences .card-body div > h2, 
 #page-badges-mybackpack .card-body div > h2, 
+#page-blog-edit .card-body div > h2, 
 #page-user-forum .card-body div > h2{
     color:white!important;
 }
@@ -1113,6 +1151,7 @@ body.drawer-close-left {
 #page-user-edit .fcontainer ,
 #page-badges-preferences .fcontainer,
 #page-badges-mybackpack .fcontainer,
+#page-blog-edit .fcontainer,
 #page-user-forum .fcontainer {
     border: 1px solid #ececec!important;
     padding: 20px!important;
@@ -1285,6 +1324,9 @@ nav.navbar .drawer-toggle .nav-link {
     }
 }
 @media screen and (max-width: 767px) {
+    div.editor_atto_toolbar {
+        margin-top: 12px;
+    }
     #nav-drawer {
         left: 0%!important;
     }
@@ -1353,6 +1395,7 @@ nav.navbar .drawer-toggle .nav-link {
     #page-user-edit legend a,
     #page-badges-mybackpack legend a,
     #page-badges-preferences legend a,
+    #page-blog-edit legend a,
     #page-message-notificationpreferences .preferences-page-container h2,
     #page-user-forum legend a {
         font-size: 20px;
@@ -1361,7 +1404,7 @@ nav.navbar .drawer-toggle .nav-link {
 
 @media screen and (max-width: 575px) {
 
-    #page-user-edit form.mform, 
+   #page-user-edit form.mform, 
 #page-login-change_password form.mform,
  #page-user-language form.mform,
   #page-user-forum form.mform,
@@ -1369,8 +1412,15 @@ nav.navbar .drawer-toggle .nav-link {
   #page-user-calendar form.mform,
   #page-blog-preferences form.mform,
   #page-blog-external_blog_edit form.mform,
+  #page-badges-mybackpack form.mform,
   #page-badges-preferences form.mform,
-  #page-user-editor form.mform
+  #page-mod-forum-user #region-main > div > .card-body,
+  #page-blog-index #region-main > div > .card-body,
+  #page-admin-tool-lp-plans #region-main > div > .card-body,
+#page-badges-mybadges .card-body,
+#page-message-notificationpreferences .preferences-page-container,
+  #page-user-editor form.mform,
+  #page-blog-edit form.mform
     {
     padding: 20px 10px 20px 10px;
     }
@@ -1388,6 +1438,7 @@ nav.navbar .drawer-toggle .nav-link {
     #page-user-edit legend a,
     #page-badges-mybackpack legend a,
     #page-badges-preferences legend a,
+    #page-blog-edit legend a,
     #page-message-notificationpreferences .preferences-page-container h2,
     #page-user-forum legend a {
         font-size: 15px;
