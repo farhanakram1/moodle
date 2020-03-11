@@ -1034,6 +1034,7 @@ body.drawer-close-left {
   #page-message-notificationpreferences .preferences-page-container,
   #page-user-editor form.mform,
   #page-site-index #frontpage-available-course-list,
+  #page-site-index #frontpage-category-combo,
   #page-blog-edit form.mform
   {
     background-color: white;
@@ -1042,10 +1043,34 @@ body.drawer-close-left {
     margin-top: 30px;
     margin-bottom: 20px;
 }
+
+
+
+#page-site-index #frontpage-category-combo h2 {
+    text-align: center!important;
+    font-weight: bold!important;
+    color: #00daf0!important;
+    text-decoration: underline!important;
+}
+#page-site-index #frontpage-category-combo .info > h3 > a {
+    color: black !important;
+    text-decoration: none;
+}
+#page-site-index #frontpage-category-combo .info > h3 > a:hover {
+    color: #00daf0 !important;
+    text-decoration: underline;
+}
 #page-site-index #region-main-box #frontpage-available-course-list .card {
     background-color: transparent !important;
     border: 1px solid #d7dfe3 !important;
+    margin-bottom: 20px!important;
 }
+#page-site-index #region-main-box #frontpage-available-course-list .card-footer {
+    background-color: #ffffff00!important;
+}
+[data-region=right-hand-drawer].drawer {
+    top: 90px !important;
+}   
 #page-site-index #frontpage-available-course-list .card-deck.mt-2 .card > a img {
     max-height: 200px;
     object-fit: cover;
@@ -1428,7 +1453,7 @@ nav.navbar .drawer-toggle .nav-link {
         #page-site-index #frontpage-available-course-list h2 {
         font-size: 12px;
     }
-    
+
    #page-user-edit form.mform, 
 #page-login-change_password form.mform,
  #page-user-language form.mform,
