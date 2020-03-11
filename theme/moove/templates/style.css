@@ -1024,6 +1024,9 @@ body.drawer-close-left {
   #page-blog-external_blog_edit form.mform,
   #page-badges-mybackpack form.mform,
   #page-badges-preferences form.mform,
+  #page-mod-forum-user #region-main > div > .card-body,
+#page-badges-mybadges .card-body,
+#page-message-notificationpreferences .preferences-page-container,
   #page-user-editor form.mform
   {
     background-color: white;
@@ -1032,13 +1035,7 @@ body.drawer-close-left {
     margin-top: 30px;
     margin-bottom: 20px;
 }
-#page-badges-mybadges .card-body{
-    background-color: white;
-    padding: 20px 25px;
-    border-radius: 5px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
+
   #page-blog-external_blog_edit form.mform
   {
     background-color: white;
@@ -1047,19 +1044,15 @@ body.drawer-close-left {
     margin-top: 30px;
     margin-bottom: 20px;
 }
-#page-message-notificationpreferences .preferences-page-container{
-    background-color: white;
-    padding: 20px 25px;
-    border-radius: 5px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
+
 #page-user-edit legend,
 #page-badges-preferences legend,
 #page-badges-mybackpack legend,
 #page-user-forum legend {
-    background-color: black!important;
+    background-color: #ececec!important;
     margin-bottom:0!important;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #ececec;
     padding: 10px 35px!important;
     line-height: 15px;
 }
@@ -1067,13 +1060,13 @@ body.drawer-close-left {
 #page-badges-mybackpack legend a,
 #page-badges-preferences legend a,
 #page-user-forum legend a{
-      color: white!important;
+      color: #1d1c1c!important;
 }
 #page-user-edit legend a:hover,#page-user-edit legend a:active,
 #page-badges-mybackpack legend a:hover,#page-badges-mybackpack legend a:active,
 #page-badges-preferences legend a:hover,#page-badges-preferences legend a:active,
 #page-user-forum legend a:hover,#page-user-forum legend a:active {
-      color: white!important;
+      color: 1d1c1c !important;
       text-decoration: none;
 }
 #page-user-edit #fgroup_id_buttonar,
@@ -1089,6 +1082,7 @@ body.drawer-close-left {
 }
 
 #page-login-change_password legend,
+#page-mod-forum-user #region-main > div > .card-body > div > h2,
 #page-message-notificationpreferences .preferences-page-container h2{
     font-weight: bold;
 }
@@ -1117,10 +1111,14 @@ body.drawer-close-left {
     color: black;
 }
 #page-user-edit .fcontainer ,
-#page-badges-preferences .fcontainer ,
+#page-badges-preferences .fcontainer,
+#page-badges-mybackpack .fcontainer,
 #page-user-forum .fcontainer {
-    border: 1px solid #ababab!important;
+    border: 1px solid #ececec!important;
     padding: 20px!important;
+}
+.form-control-static {
+    word-break: break-all;
 }
 #page-user-forum .custom-select,
 #page-user-calendar .custom-select {
@@ -1380,7 +1378,9 @@ nav.navbar .drawer-toggle .nav-link {
     form input{
         margin-top: 10px;
     }
-
+    #page-badges-mybadges .box.py-3.row.m-l-2 {
+        margin-left: 5px !important;
+    }
     #page-user-calendar .col-form-label {
         font-size: 13px;
     }   
@@ -1479,7 +1479,7 @@ nav.navbar .drawer-toggle .nav-link {
     }
     #region-main .btn-primary {
         padding: 7px 25px!important;
-        font-size: 16px!important;
+        font-size: 12px!important;
     }
     .page-local-pages-about-us-1 #page.container-fluid {
         padding: 0rem!important;
