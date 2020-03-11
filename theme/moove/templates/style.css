@@ -1074,11 +1074,12 @@ body.drawer-close-left {
     background-color: #ffffff00!important;
 }
 #page-site-index #region-main-box #frontpage-category-combo .info>.categoryname {
-    padding: 10px 20px;
+    padding: 10px 30px!important;
     background-color: #ececec!important;
-    margin-bottom: 20px!important;
-    border-radius: 10px 10px 0 0;
-    border: 1px solid #ececec;
+    margin-bottom: 20px!important!important;
+    border-radius: 10px 10px 0 0!important;
+    border: 1px solid #ececec!important;
+    background-position: 10px!important;
 }
 
 
@@ -1477,7 +1478,7 @@ nav.navbar .drawer-toggle .nav-link {
      #page-site-index #frontpage-category-combo .info > h4 > a {
         font-size: 18px;
     }
-    
+
    #page-user-edit form.mform, 
 #page-login-change_password form.mform,
  #page-user-language form.mform,
