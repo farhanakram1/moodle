@@ -1033,6 +1033,7 @@ body.drawer-close-left {
   #page-badges-mybadges .card-body,
   #page-message-notificationpreferences .preferences-page-container,
   #page-user-editor form.mform,
+  #page-site-index #frontpage-available-course-list,
   #page-blog-edit form.mform
   {
     background-color: white;
@@ -1041,7 +1042,14 @@ body.drawer-close-left {
     margin-top: 30px;
     margin-bottom: 20px;
 }
-
+#page-site-index #region-main-box #frontpage-available-course-list .card {
+    background-color: transparent !important;
+    border: 1px solid #d7dfe3 !important;
+}
+#page-site-index #frontpage-available-course-list .card-deck.mt-2 .card > a img {
+    max-height: 200px;
+    object-fit: cover;
+}
   #page-blog-external_blog_edit form.mform
   {
     background-color: white;
@@ -1413,7 +1421,14 @@ nav.navbar .drawer-toggle .nav-link {
 }
 
 @media screen and (max-width: 575px) {
-
+    #page-site-index #frontpage-available-course-list h2:before, #page-site-index #frontpage-available-course-list h2:after {
+        width: 2rem;
+        position: relative;
+        top: 12px;}
+        #page-site-index #frontpage-available-course-list h2 {
+        font-size: 12px;
+    }
+    
    #page-user-edit form.mform, 
 #page-login-change_password form.mform,
  #page-user-language form.mform,
