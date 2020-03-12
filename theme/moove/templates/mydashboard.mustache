@@ -69,6 +69,31 @@
                 <section id="region-main">
                     <div class="card mymaincontent">
                         <div class="card-body">
+                            {{# hascourses }}
+                                {{# courses }}
+                                    <div id="course-{{ id }}" class="card mt-1 course-m-box">
+                                        <div class="card-body row">
+                                            <div class="col-md-3 col-sm-6 courseimage">
+                                                {{{ courseimage }}}
+                                            </div>
+
+                                            <div class="media-body col-md-9 col-sm-6 course_Text">
+                                                <a href="{{ link }}"><h5 class="mt-0">{{{ fullname }}}</h5></a>
+                                                {{# startdate }}<small>{{#str}}startedon, theme_moove{{/str}}: {{#userdate}} {{startdate}}, %A, %d %B %Y {{/userdate}}</small>{{/ startdate }}
+
+                                                <div class="mt-1">
+                                                    {{{ summary }}}
+                                                </div>
+                                            </div>
+                                            {{# enablecompletion }}
+                                                <div class="col-md-3 d-none d-md-block d-lg-block d-xl-block text-right">
+                                                    <div class="progress-circle" data-progress="{{ progress }}"></div>
+                                                </div>
+                                            {{/ enablecompletion }}
+                                        </div>
+                                    </div>
+                                {{/ courses }}
+                            {{/ hascourses }}
                             {{#hasregionmainsettingsmenu}}
                                 <div class="region_main_settings_menu_proxy"></div>
                             {{/hasregionmainsettingsmenu}}

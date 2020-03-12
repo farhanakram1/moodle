@@ -24,6 +24,16 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+
+global $DB;
+// Get the profile userid.
+$userid = optional_param('id', $USER->id, PARAM_INT);
+$user = $DB->get_record('user', ['id' => $userid], '*', MUST_EXIST);
+
+
+
+
+
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
 user_preference_allow_ajax_update('sidepre-open', PARAM_ALPHA);
 
@@ -83,5 +93,12 @@ if (is_siteadmin()) {
 theme_moove_extend_flat_navigation($PAGE->flatnav);
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;
+$themesettings = new \theme_moove\util\theme_settings();
+
+$templatecontext = array_merge($templatecontext, $themesettings->footer_items());
+
+$usercourses = \theme_moove\util\extras::user_courses_with_progress($user);
+$templatecontext['hascourses'] = (count($usercourses)) ? true : false;
+$templatecontext['courses'] = array_values($usercourses);
 
 echo $OUTPUT->render_from_template('theme_moove/mydashboard', $templatecontext);
