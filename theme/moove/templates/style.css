@@ -1285,8 +1285,11 @@ table tr td {
 
 
 
-
 @media (max-width: 767px){
+    
+    #page-message-index .message-app .body-container>* {
+        position: relative;
+    }
     body.drawer-open-left {
         margin-left: 0px !important;
     }
