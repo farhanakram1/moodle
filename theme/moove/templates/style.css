@@ -1040,8 +1040,9 @@ body.drawer-close-left {
     background-color: white;
     padding: 20px 25px;
     border-radius: 5px;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    min-height: 225px;
+    margin-bottom: 50px;
 }
 
 
@@ -1147,6 +1148,7 @@ body.drawer-close-left {
 #page-admin-tool-lp-plans #region-main > div > .card-body > div > h2,
 #page-report-usersessions-user #region-main > div > .card-body > div > h2,
 #page-admin-tool-dataprivacy-summary #region-main > div > .card-body > div > h2,
+#page-message-index #region-main > div > .card-body > div > h2,
 #page-grade-report-overview-index #region-main > div > .card-body .no-overflow > h3,
 #page-message-notificationpreferences .preferences-page-container h2{
     font-weight: bold;
@@ -1284,7 +1286,7 @@ table tr td {
 }
 #page-message-index #region-main div[role="main"] {
     background-color: white;
-    padding: 0px 0px 0 2px;
+    padding: 15px 0px 15PX 2px;
     border-radius: 5px;
     margin-top: 30px;
     margin-bottom: 20px;
