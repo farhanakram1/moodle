@@ -1275,6 +1275,17 @@ table tr td {
     white-space: nowrap;
 }
 
+#page-message-index #region-main {
+    height: auto;
+}
+
+.message-app .footer-container textarea {
+    width: 100%;
+}
+
+
+
+
 @media (max-width: 767px){
     body.drawer-open-left {
         margin-left: 0px !important;
