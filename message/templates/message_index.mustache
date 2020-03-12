@@ -35,16 +35,16 @@
 }}
 <div
         id="message-index-{{uniqid}}"
-        class="message-app main bg-light border flex-row"
+        class="message-app main bg-light flex-row"
         aria-expanded="false"
         aria-hidden="true"
         data-region="message-index"
         role="region"
 >
     <div class="container-fluid">
-        <div class="row-fluid h-100 no-gutters">
-            <div class="col-md-4 d-flex flex-column">
-                <div class="border-right h-100">
+        <div class="row-fluid h-100 no-gutters message-bg">
+            <div class="col-lg-4 d-flex flex-column">
+                <div class="border-right h-100 bg-white">
                     <div class="panel-header-container" data-region="panel-header-container">
                         {{> core_message/message_drawer_view_overview_header }}
                         {{> core_message/message_drawer_view_search_header }}
@@ -55,8 +55,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8 d-flex flex-column">
-                <div class="header-container position-relative" data-region="header-container">
+            <div class="col-lg-8 d-flex flex-column">
+                <div class="header-container position-relative bg-white" data-region="header-container">
                     {{> core_message/message_drawer_view_contacts_header }}
                     {{> core_message/message_drawer_view_conversation_header }}
                     {{> core_message/message_drawer_view_settings_header }}

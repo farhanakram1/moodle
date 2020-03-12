@@ -1279,18 +1279,26 @@ table tr td {
     height: auto;
 }
 
-.message-app .footer-container textarea {
+#page-message-index .message-app .footer-container textarea {
     width: 100%;
 }
-
-
+#page-message-index #region-main div[role="main"] {
+    background-color: white;
+    padding: 0px 0px 0 2px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#page-message-index #region-main div[role="main"] .message-app.main {
+    border-radius: 5px!important;
+}
+.bg-white {
+    background-color: white;
+}
 
 @media (max-width: 767px){
-    
-    #page-message-index .message-app .body-container>* {
-        position: relative;
-    }
-    body.drawer-open-left {
+
+        body.drawer-open-left {
         margin-left: 0px !important;
     }
 }
@@ -1335,6 +1343,12 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 @media screen and (max-width: 991px) {
     #page-login-signup .card-title h3 {
         font-size: 25px !important;
+    }
+    #page-message-index .message-app .body-container>* {
+        position: relative;
+    }
+    #page-message-index .content-message-container {
+        height: 300px !important;
     }
     .about-page-s .text-boxs {
         padding-top: 0px!important;
