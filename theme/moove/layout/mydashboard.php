@@ -128,9 +128,10 @@ $gpr = new grade_plugin_return(array('type'=>'report', 'plugin'=>'overview', 'co
         // Display a standard page.
         if ($courseid == SITEID) {
             
-            if ($report->fill_table(true, true)) {
-                $templatecontext['courses_report'] =  $report->print_table(true);
-            }
+            // if ($report->fill_table(true, true)) {
+            //     echo html_writer::tag('h3', get_string('coursesiamtaking', 'grades'));
+            //     $templatecontext['courses_report'] =  $report->print_table(true);
+            // }
         } else { // We have a course context. We must be navigating from the gradebook.
             print_grade_page_head($courseid, 'report', 'overview', get_string('pluginname', 'gradereport_overview')
                     . ' - ' . fullname($report->user));
@@ -140,10 +141,10 @@ $gpr = new grade_plugin_return(array('type'=>'report', 'plugin'=>'overview', 'co
         }
     }
 
-    if (count($report->teachercourses)) {
-        echo html_writer::tag('h3', get_string('coursesiamteaching', 'grades'));
-        $report->print_teacher_table();
-    }
+    // if (count($report->teachercourses)) {
+    //     echo html_writer::tag('h3', get_string('coursesiamteaching', 'grades'));
+    //     $report->print_teacher_table();
+    // }
 
     if (empty($report->studentcourseids) && empty($report->teachercourses)) {
         // We have no report to show the user. Let them know something.
