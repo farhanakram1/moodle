@@ -1141,7 +1141,28 @@ body.drawer-close-left {
 #page-badges-mybackpack #fitem_id_submitbutton {
     margin-top: 30px;
 }
-
+.cust-box-tab .nav-tabs .nav-link {
+    border: 1px solid transparent !important;
+    color: white !important;
+    font-size: 20px !important;
+    padding: 40px 15px !important;
+    text-align: center !important;
+}
+.cust-box-tab .nav-tabs .nav-item {
+    width: 100% !important;
+    border: 0 !important;
+    background-color: #00daf0 !important;
+    margin-bottom: 20px !important;
+}
+.cust-box-tab .nav-tabs .nav-link.active, .cust-box-tab  .nav-tabs .nav-item.show .nav-link {
+    color: #ffffff !important;
+    background-color: #00daf0 !important;
+    border-color: transparent !important;
+}
+.cust-box-tab  .nav-tabs {
+    border-bottom: 1px solid #dee2e6 !important;
+    margin-top: 45px !important;
+}
 #page-login-change_password legend,
 #page-mod-forum-user #region-main > div > .card-body > div > h2,
 #page-blog-index #region-main > div > .card-body > div > h2,
