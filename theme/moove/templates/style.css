@@ -18,6 +18,30 @@
 .brud_s .breadcrumb li:first-child a {
     color: white !important;
 }
+
+.pagelayout-admin .card-body div > h3, .pagelayout-admin .card-body div > h2 {
+	color: white !important;
+}
+#page-badges-backpacks h2, #page-admin-setting-competencysettings h2,#page-admin-tool-lpimportcsv-index h2, #page-admin-tool-lpmigrate-frameworks h2, #page-admin-registration-index h2{
+    color: #000 !important;
+}
+#page-admin-tool-lpimportcsv-index .card-body, #page-admin-tool-lpmigrate-frameworks .card-body, #page-admin-registration-index .card-body,#page-admin-tool-analytics-index .card-body{
+    background: #FFF;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+}
+#page-badges-backpacks .card-body div, .pagelayout-admin  .card-body [data-region="managetemplates"], .pagelayout-admin  .card-body [data-region="managecompetencies"], .pagelayout-admin  .card-body div > fieldset, #page-badges-newbadge .card-body {
+	background-color: white;
+	padding: 20px 25px;
+	border-radius: 5px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+#page-admin-setting-mobilesettings #region-main .card-body{
+    margin-top: 20px;
+}
 .page-local-pages-contact-2 #page-wrapper #page {
     background-size: cover!important;
 }
@@ -38,19 +62,16 @@ span.logo {
     padding-right: 45px!important;
 }
 #region-main {
-<<<<<<< HEAD
     overflow-x: auto;
     overflow-y: visible;
     border: 1px solid #d7dfe3;
     padding: 1.25rem;
     background-color: transparent;
-=======
 	overflow-x: auto;
 	overflow-y: visible;
 	border: 0px;
 	padding: 1.25rem;
 	background-color: transparent;
->>>>>>> c5cdaf0adc585cd2f1722916d6fb1572ff91bfa7
 }
 .page-local-pages-about-us-1 #region-main-box .card {
     margin-bottom: 20px!important;
@@ -642,10 +663,10 @@ body.drawer-close-left {
     padding-right: 0 !important;
 }
 
-#page-admin-search .card-body {
+/*#page-admin-search .card-body {
     padding: 0 0px 32px 0 !important;
     background-color: #f4f7fb;
-}
+}*/
 
 #page-admin-search .card-body div > h2 {
     font-size: 20px;
@@ -1077,7 +1098,7 @@ body.drawer-close-left {
 #page-site-index #region-main-box #frontpage-category-combo .info>.categoryname {
     padding: 10px 30px!important;
     background-color: #ececec!important;
-    margin-bottom: 20px!important!important;
+    margin-bottom: 20px!important;
     border-radius: 10px 10px 0 0!important;
     border: 1px solid #ececec!important;
     background-position: 10px!important;
