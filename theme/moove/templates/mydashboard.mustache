@@ -50,7 +50,7 @@
 }}
     {{>theme_moove/inc_start}}
 
-    <div id="page" class="container">
+    <div id="page" class="container-fluid">
 
         {{#is_siteadmin}}
             {{>theme_moove/mydashboard_admin}}
@@ -69,29 +69,33 @@
                 <section id="region-main" style="overflow-x: hidden;">
                     <div class="card mymaincontent">
                     <div class="row cust-box-tab">
-                    <div class="col-lg-2">
+                    <div class="col-lg-2 pl-lg-4">
                           <ul class="nav nav-tabs" id="myTab" role="tablist">
                                             {{# hascourses }}
                                                 <li class="nav-item">
-                                                    <a class="nav-link active" id="courses-tab" data-toggle="tab" href="#cursos" role="tab" aria-controls="cursos" aria-selected="true">Overview</a>
+                                                    <a class="nav-link" id="courses-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="cursos" aria-selected="true">{{{ overview }}}</a>
                                                 </li>
                                             {{/ hascourses }}
+
                                             <li class="nav-item">
-                                                <a class="nav-link {{^hascourses}}active{{/hascourses}}" id="details-tab" data-toggle="tab" href="#details" role="tab" aria-controls="details" aria-selected="{{^hascourses}}true{{/hascourses}}{{#hascourses}}false{{/hascourses}}">Exam organizer</a>
+                                                <a class="nav-link {{^hascourses}}active{{/hascourses}}" id="details-tab" data-toggle="tab" href="#details" role="tab" aria-controls="details" aria-selected="{{^hascourses}}true{{/hascourses}}{{#hascourses}}false{{/hascourses}}">{{{ examorganizer }}}</a>
                                             </li>
-                                             {{# hascourses }}
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" id="courses-tab" data-toggle="tab" href="#cursos" role="tab" aria-controls="cursos" aria-selected="true">Book Courses</a>
-                                                </li>
-                                            {{/ hascourses }}
+
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="courses-tab" data-toggle="tab" href="#cursos" role="tab" aria-controls="cursos" aria-selected="true">{{{ bookcourses }}}</a>
+                                            </li>
                                         </ul>
                     </div>
                     <div class="col-lg-10">
                     <div class="card-body cust-tabs-s">
                                       
                                         <div class="tab-content" id="mypublic-tab">
+                                             <div class="tab-pane fade show active" id="welcome" role="tabpanel" aria-labelledby="courses-tab">
+                                             <h1 class="text-center">{{{ welcome }}}</h1>
+                                             </div>
                                             {{# hascourses }}
-                                                <div class="tab-pane fade show active" id="cursos" role="tabpanel" aria-labelledby="courses-tab">
+                                                <div class="tab-pane fade" id="overview" role="tabpanel" aria-labelledby="courses-tab">
+                                                    <h1 class="text-center m-0 mb-3">{{{ overview }}}</h1>
                                                     {{# courses }}
                                                         <div id="course-{{ id }}" class="card mt-1 course-m-box">
                                                             <div class="card-body row">
@@ -115,9 +119,10 @@
                                                             </div>
                                                         </div>
                                                     {{/ courses }}
+                                                    
                                                     {{#hasregionmainsettingsmenu}}
-                                                    <div class="region_main_settings_menu_proxy"></div>
-                                                {{/hasregionmainsettingsmenu}}
+                                                        <div class="region_main_settings_menu_proxy"></div>
+                                                    {{/hasregionmainsettingsmenu}}
                                                 {{{ output.course_content_header }}}
                                                 {{{ output.main_content }}}
                                                 {{{ output.course_content_footer }}}

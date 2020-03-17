@@ -103,6 +103,11 @@ $usercourses = \theme_moove\util\extras::user_courses_with_progress($user);
 $templatecontext['hascourses'] = (count($usercourses)) ? true : false;
 $templatecontext['courses'] = array_values($usercourses);
 
+//Three Tabs Names
+$templatecontext['overview'] = get_string('overview','theme_moove');
+$templatecontext['examorganizer'] = get_string('examorganizer','theme_moove');
+$templatecontext['bookcourses'] = get_string('bookcourses','theme_moove');
+$templatecontext['welcome'] = get_string('welcome','theme_moove');
 
 
 
