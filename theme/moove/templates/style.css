@@ -1103,7 +1103,36 @@ body.drawer-close-left {
     color: #000!important;
 }
 #page-my-index #region-main-box .cust-box-tab{
-    background-size: 100% 100%;
+    background-size: cover;
+}
+.cust-box-tab .tab-content>.tab-pane::-webkit-scrollbar {
+  width: 5px;
+}
+.cust-box-tab .tab-content>.tab-pane:hover::-webkit-scrollbar {
+  width: 5px;
+}
+.cust-box-tab .tab-content>.tab-pane::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+.cust-box-tab .tab-content>.tab-pane::-webkit-scrollbar-thumb {
+  background: transparent; 
+}
+.cust-box-tab .tab-content>.tab-pane:hover::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+.cust-box-tab .tab-content>.tab-pane:hover::-webkit-scrollbar-thumb {
+  background: #00daf0; 
+}
+
+.cust-box-tab .tab-content>.tab-pane::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.cust-box-tab .tab-content>.tab-pane {
+    height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .cust-box-tab .progress-circle {
     background-color: #ddd!important;
@@ -1113,7 +1142,7 @@ body.drawer-close-left {
     width: 100%!important;
     position: relative!important;
 }
-.cust-box-tab.progress-circle:before {
+.cust-box-tab .progress-circle:before {
     align-items: center!important;
     background-color: #338824!important;
     border-radius: 10px!important;
@@ -1275,7 +1304,7 @@ body.drawer-close-left {
     border: 1px solid transparent !important;
     color: white !important;
     font-size: 20px !important;
-    padding: 40px 15px !important;
+    padding: 50px 15px !important;
     text-align: center !important;
 }
 .cust-box-tab .nav-tabs .nav-item {
@@ -1564,6 +1593,13 @@ nav.navbar .drawer-toggle .nav-link {
     }
 }
 @media screen and (max-width: 767px) {
+    .cust-box-tab .nav-tabs .nav-item {
+        width: 90% !important;
+        margin: 0 auto;
+    }
+    .cust-box-tab .nav-tabs .nav-link {
+        padding: 20px 15px !important;
+    }
     div.editor_atto_toolbar {
         margin-top: 12px;
     }

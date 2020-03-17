@@ -113,48 +113,48 @@ $templatecontext['welcome'] = get_string('welcome','theme_moove');
 
 //Grade Report Overview Dashboard Show
 
-$courseid = optional_param('id', SITEID, PARAM_INT);
+// $courseid = optional_param('id', SITEID, PARAM_INT);
 
-if (!$course = $DB->get_record('course', array('id' => $courseid))) {
-    print_error('invalidcourseid');
-}
+// if (!$course = $DB->get_record('course', array('id' => $courseid))) {
+//     print_error('invalidcourseid');
+// }
 
-$context = context_course::instance($course->id);
+// $context = context_course::instance($course->id);
 
-/// return tracking object
-$gpr = new grade_plugin_return(array('type'=>'report', 'plugin'=>'overview', 'courseid'=>$course->id, 'userid'=>$userid));
+// /// return tracking object
+// $gpr = new grade_plugin_return(array('type'=>'report', 'plugin'=>'overview', 'courseid'=>$course->id, 'userid'=>$userid));
 
-// grade_report_overview dashboard
-// Create a report instance
-    $report = new grade_report_overview($userid, $gpr, $context);
+// // grade_report_overview dashboard
+// // Create a report instance
+//     $report = new grade_report_overview($userid, $gpr, $context);
 
- if (!empty($report->studentcourseids)) {
-        // If the course id matches the site id then we don't have a course context to work with.
-        // Display a standard page.
-        if ($courseid == SITEID) {
+//  if (!empty($report->studentcourseids)) {
+//         // If the course id matches the site id then we don't have a course context to work with.
+//         // Display a standard page.
+//         if ($courseid == SITEID) {
             
-            // if ($report->fill_table(true, true)) {
-            //     echo html_writer::tag('h3', get_string('coursesiamtaking', 'grades'));
-            //     $templatecontext['courses_report'] =  $report->print_table(true);
-            // }
-        } else { // We have a course context. We must be navigating from the gradebook.
-            print_grade_page_head($courseid, 'report', 'overview', get_string('pluginname', 'gradereport_overview')
-                    . ' - ' . fullname($report->user));
-            if ($report->fill_table()) {
-                echo '<br />' . $report->print_table(true);
-            }
-        }
-    }
+//             if ($report->fill_table(true, true)) {
+//                 echo html_writer::tag('h3', get_string('coursesiamtaking', 'grades'));
+//                 $templatecontext['courses_report'] =  $report->print_table(true);
+//             }
+//         } else { // We have a course context. We must be navigating from the gradebook.
+//             print_grade_page_head($courseid, 'report', 'overview', get_string('pluginname', 'gradereport_overview')
+//                     . ' - ' . fullname($report->user));
+//             if ($report->fill_table()) {
+//                 echo '<br />' . $report->print_table(true);
+//             }
+//         }
+//     }
 
-    // if (count($report->teachercourses)) {
-    //     echo html_writer::tag('h3', get_string('coursesiamteaching', 'grades'));
-    //     $report->print_teacher_table();
-    // }
+//     if (count($report->teachercourses)) {
+//         echo html_writer::tag('h3', get_string('coursesiamteaching', 'grades'));
+//         $report->print_teacher_table();
+//     }
 
-    if (empty($report->studentcourseids) && empty($report->teachercourses)) {
-        // We have no report to show the user. Let them know something.
-        echo $OUTPUT->notification(get_string('noreports', 'grades'), 'notifymessage');
-    }
+//     if (empty($report->studentcourseids) && empty($report->teachercourses)) {
+//         // We have no report to show the user. Let them know something.
+//         echo $OUTPUT->notification(get_string('noreports', 'grades'), 'notifymessage');
+//     }
 
     // echo "<pre>";
     // // print_r($report->fill_table(true, true));

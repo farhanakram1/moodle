@@ -50,7 +50,7 @@
 }}
     {{>theme_moove/inc_start}}
 
-    <div id="page" class="container-fluid">
+    <div id="page" class="container">
 
         {{#is_siteadmin}}
             {{>theme_moove/mydashboard_admin}}
@@ -69,7 +69,7 @@
                 <section id="region-main" style="overflow-x: hidden;">
                     <div class="card mymaincontent">
                     <div class="row cust-box-tab">
-                    <div class="col-lg-2 pl-lg-4">
+                    <div class="col-lg-2 col-md-3 pl-lg-4 pl-md-3">
                           <ul class="nav nav-tabs" id="myTab" role="tablist">
                                             {{# hascourses }}
                                                 <li class="nav-item">
@@ -78,7 +78,7 @@
                                             {{/ hascourses }}
 
                                             <li class="nav-item">
-                                                <a class="nav-link {{^hascourses}}active{{/hascourses}}" id="details-tab" data-toggle="tab" href="#details" role="tab" aria-controls="details" aria-selected="{{^hascourses}}true{{/hascourses}}{{#hascourses}}false{{/hascourses}}">{{{ examorganizer }}}</a>
+                                                <a class="nav-link {{^hascourses}}active{{/hascourses}}" id="examorganizer-tab" data-toggle="tab" href="#examorganizer" role="tab" aria-controls="examorganizer" aria-selected="{{^hascourses}}true{{/hascourses}}{{#hascourses}}false{{/hascourses}}">{{{ examorganizer }}}</a>
                                             </li>
 
                                             <li class="nav-item">
@@ -86,16 +86,16 @@
                                             </li>
                                         </ul>
                     </div>
-                    <div class="col-lg-10">
+                    <div class="col-lg-10 col-md-9" style="overflow:hidden;">
                     <div class="card-body cust-tabs-s">
                                       
                                         <div class="tab-content" id="mypublic-tab">
                                              <div class="tab-pane fade show active" id="welcome" role="tabpanel" aria-labelledby="courses-tab">
-                                             <h1 class="text-center">{{{ welcome }}}</h1>
+                                             <h1 class="text-left">{{{ welcome }}}</h1>
                                              </div>
                                             {{# hascourses }}
                                                 <div class="tab-pane fade" id="overview" role="tabpanel" aria-labelledby="courses-tab">
-                                                    <h1 class="text-center m-0 mb-3">{{{ overview }}}</h1>
+                                                    <h1 class="text-left m-0 mb-3">{{{ overview }}}</h1>
                                                     {{# courses }}
                                                         <div id="course-{{ id }}" class="card mt-1 course-m-box">
                                                             <div class="card-body row">
