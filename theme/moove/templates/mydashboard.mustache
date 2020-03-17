@@ -50,7 +50,7 @@
 }}
     {{>theme_moove/inc_start}}
 
-    <div id="page" class="container">
+    <div id="page" class="container-fluid">
 
         {{#is_siteadmin}}
             {{>theme_moove/mydashboard_admin}}
@@ -66,9 +66,9 @@
                     <div> {{{ output.region_main_settings_menu }}} </div>
                 </div>
                 {{/hasregionmainsettingsmenu}}
-                <section id="region-main" style="overflow-x: hidden;">
-                    <div class="card mymaincontent">
-                    <div class="row cust-box-tab">
+                <section id="region-main" class="cust-box-tab" style="overflow-x: hidden;">
+                    <div class="card mymaincontent container">
+                    <div class="row">
                     <div class="col-lg-2 col-md-3 pl-lg-4 pl-md-3">
                           <ul class="nav nav-tabs" id="myTab" role="tablist">
                                             {{# hascourses }}
@@ -82,7 +82,7 @@
                                             </li>
 
                                             <li class="nav-item">
-                                                <a class="nav-link active" id="courses-tab" data-toggle="tab" href="#cursos" role="tab" aria-controls="cursos" aria-selected="true">{{{ bookcourses }}}</a>
+                                                <a class="nav-link active" id="courses-tab" data-toggle="tab" href="#bookcourses" role="tab" aria-controls="cursos" aria-selected="true">{{{ bookcourses }}}</a>
                                             </li>
                                         </ul>
                     </div>

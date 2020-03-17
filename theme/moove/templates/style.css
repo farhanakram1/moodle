@@ -1596,6 +1596,7 @@ nav.navbar .drawer-toggle .nav-link {
     .cust-box-tab .nav-tabs .nav-item {
         width: 90% !important;
         margin: 0 auto;
+        margin-bottom: 10px !important;
     }
     .cust-box-tab .nav-tabs .nav-link {
         padding: 20px 15px !important;
