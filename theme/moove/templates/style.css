@@ -1316,9 +1316,13 @@ background-color: #fff !important;
     width: 100% !important;
     border: 0 !important;
    background-color: #dddddd !important;
-    margin-bottom: 5px !important;
+    margin-bottom: 0px !important;
     margin-right: 15px;
-    border-radius: 10px 10px 0px 0px !important;
+    border-radius: 3px 3px 0px 0px !important;
+}
+#page-my-index .bg-blue-brud .dasH_name {
+    color: black !important;
+    font-size: 21px !important;
 }
 .cust-box-tab .nav-tabs .nav-link.active, .cust-box-tab  .nav-tabs .nav-item.show .nav-link {
     color: #ffffff !important;

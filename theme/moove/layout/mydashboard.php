@@ -35,7 +35,6 @@ $user = $DB->get_record('user', ['id' => $userid], '*', MUST_EXIST);
 
 
 
-
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
 user_preference_allow_ajax_update('sidepre-open', PARAM_ALPHA);
 
@@ -103,11 +102,13 @@ $usercourses = \theme_moove\util\extras::user_courses_with_progress($user);
 $templatecontext['hascourses'] = (count($usercourses)) ? true : false;
 $templatecontext['courses'] = array_values($usercourses);
 
+$templatecontext['firstname'] = $user->firstname;
+
 //Three Tabs Names
 $templatecontext['overview'] = get_string('overview','theme_moove');
 $templatecontext['examorganizer'] = get_string('examorganizer','theme_moove');
 $templatecontext['bookcourses'] = get_string('bookcourses','theme_moove');
-$templatecontext['welcome'] = get_string('welcome','theme_moove');
+// $templatecontext['welcome'] = get_string('welcome','theme_moove');
 
 
 
