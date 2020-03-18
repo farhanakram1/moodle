@@ -75,7 +75,7 @@
             {{{ output.full_header }}}
         {{/is_siteadmin}}
 
-        <div id="page-content" class="row">
+        <div id="page-content" class="row dasH_row_mar">
             <div id="region-main-box" class="col-xs-12 student_dash">
                 {{#hasregionmainsettingsmenu}}
                 <div id="region-main-settings-menu" class="hidden-print">
@@ -86,7 +86,7 @@
                     <div class="card mymaincontent">
                     <div class="row">
                     <div class="col-md-12 px-5">
-                          <ul class="row nav nav-tabs" id="myTab" role="tablist">
+                          <ul class="row nav nav-tabs {{#is_siteadmin}}remove_border{{/is_siteadmin}}" id="myTab" role="tablist">
                                             {{# hascourses }}
                                                 <li class="nav-item col-md-3 p-0">
                                                     <a class="nav-link py-2 active" id="courses-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="cursos" aria-selected="true">{{{ overview }}}</a>

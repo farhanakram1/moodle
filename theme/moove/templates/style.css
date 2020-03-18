@@ -24,10 +24,15 @@
 }
 .singlebutton{
    margin-top: 30px;
+       line-height: 1.5rem;
+} 
+.cust-box-tab .nav-tabs.remove_border{
+    border-bottom: 0px !important;
 }
 #page-admin-roles-check #explaincaps{
     width: 100%;
 }
+.card-body.cust-tabs-s{padding-top: 0px !important;}
 #page-admin-cache-admin #page {
 	margin-top: 25px !important;
 }
@@ -212,6 +217,9 @@ nav.navbar ul.navbar-nav > li:last-child:hover > a {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+#page-content.dasH_row_mar{
+         margin: 0 15px 0px 20px !important;   
+    }
 #page-login-forgot_password #region-main {
     padding: 0;
     border-radius: 10px;
@@ -1030,11 +1038,15 @@ body.drawer-close-left {
 #page-my-index .breadcrumb-button{
     margin-top: 0px !important;
 }
-#page-my-index .small-box>.admin_Record{
+/*#page-my-index .small-box>.admin_Record{
     min-height: 130px!important;
-}
+}*/
 #page-my-index .small-box{
     margin-left: 5px!important;
+     width: 100% !important;
+} 
+.block-myoverview.block-cards.overviews-dasH button{
+font-size: 12px;
 }
 #page-my-index .small-box>.admin_Record h3{
     font-size: 20px!important;
@@ -1063,7 +1075,7 @@ body.drawer-close-left {
 }
 
 #page-my-index .admininfos {
-    margin-top: -35px;
+    margin-top: -30px;
 }
 
 #page-my-index .small-box h3 {
@@ -1091,6 +1103,7 @@ background-color: #fff !important;
 }
 #page-my-index #region-main-box section > .card-body {
     background-color: #fff !important;
+    padding-top: 0px !important;
 }
 #page-my-index .card.mymaincontent > .card-body {
     background-color: #f4f7fb !important;
@@ -1559,6 +1572,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     }
 }
 @media screen and (max-width: 991px) {
+    .cust-box-tab .nav-tabs .nav-link{
+        font-size: 14px;
+    }
     #page-login-signup .card-title h3 {
         font-size: 25px !important;
     }
@@ -1576,6 +1592,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-login-forgot_password #page #page-content {
         width: 80%;
     }
+
     .posi_tx {
         margin-left: 0px;
     }
@@ -1629,7 +1646,10 @@ nav.navbar .drawer-toggle .nav-link {
     }
 }
 @media screen and (max-width: 767px) {
-    .cust-box-tab .nav-tabs .nav-item {
+    #page-my-index #region-main-box .cust-box-tab h1 {
+        padding-left: 13px!important;
+    }
+        .cust-box-tab .nav-tabs .nav-item {
         width: 90% !important;
         margin: 0 auto;
         margin-bottom: 10px !important;
@@ -1902,5 +1922,9 @@ nav.navbar .drawer-toggle .nav-link {
     }
     .brud_s a {
         font-size: 13px;
+    }
+    #page-my-index .btn-secondary{
+        font-size: 13px;
+        margin-bottom: 11px;
     }
 }
