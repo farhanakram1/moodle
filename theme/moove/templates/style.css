@@ -1059,6 +1059,11 @@ body.drawer-close-left {
 #page-my-index #region-main-box {
     background-color: #f4f7fb!important;
 }
+
+#page-my-index #region-main-box.student_dash{
+background-color: #fff !important;
+    margin-bottom: 50px;
+}
 #page-my-index #region-main-box .overviews-dasH .card.dashboard-card {
     background-color: #dedede52 !important;
     padding: 15px!important;
@@ -1102,9 +1107,10 @@ body.drawer-close-left {
 #page-my-index #region-main-box .cust-box-tab h1 {
     color: #000!important;
 }
-#page-my-index #region-main-box .cust-box-tab{
+/*#page-my-index #region-main-box .cust-box-tab{
     background-size: cover;
-}
+}*/
+
 .cust-box-tab .tab-content>.tab-pane::-webkit-scrollbar {
   width: 5px;
 }
@@ -1302,25 +1308,27 @@ body.drawer-close-left {
 }
 .cust-box-tab .nav-tabs .nav-link {
     border: 1px solid transparent !important;
-    color: white !important;
-    font-size: 20px !important;
-    padding: 50px 15px !important;
+    color: black !important; 
     text-align: center !important;
+    font-size: 20px;
 }
 .cust-box-tab .nav-tabs .nav-item {
     width: 100% !important;
     border: 0 !important;
-    background-color: #00daf0 !important;
-    margin-bottom: 20px !important;
+   background-color: #dddddd !important;
+    margin-bottom: 5px !important;
+    margin-right: 15px;
+    border-radius: 10px 10px 0px 0px !important;
 }
 .cust-box-tab .nav-tabs .nav-link.active, .cust-box-tab  .nav-tabs .nav-item.show .nav-link {
     color: #ffffff !important;
     background-color: #00daf0 !important;
     border-color: transparent !important;
+     border-radius: 10px 10px 0px 0px !important;
 }
 .cust-box-tab  .nav-tabs {
     border-bottom: 1px solid #dee2e6 !important;
-    margin-top: 45px !important;
+    margin-top: 20px !important;
 }
 #page-login-change_password legend,
 #page-mod-forum-user #region-main > div > .card-body > div > h2,
@@ -1477,6 +1485,10 @@ table tr td {
 .bg-white {
     background-color: white;
 }
+
+
+
+
 
 @media (max-width: 767px){
 

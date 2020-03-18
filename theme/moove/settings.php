@@ -116,13 +116,13 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     // Dashboard page background image.
-    $name = 'theme_moove/dashboardbgimg';
-    $title = get_string('dashboardbgimg', 'theme_moove');
-    $description = get_string('dashboardbgimg_desc', 'theme_moove');
-    $opts = array('accepted_types' => array('.png', '.jpg', '.svg'));
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'dashboardbgimg', 0, $opts);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
+    // $name = 'theme_moove/dashboardbgimg';
+    // $title = get_string('dashboardbgimg', 'theme_moove');
+    // $description = get_string('dashboardbgimg_desc', 'theme_moove');
+    // $opts = array('accepted_types' => array('.png', '.jpg', '.svg'));
+    // $setting = new admin_setting_configstoredfile($name, $title, $description, 'dashboardbgimg', 0, $opts);
+    // $setting->set_updatedcallback('theme_reset_all_caches');
+    // $page->add($setting);
 
     // Conatct us page background image.
     $name = 'theme_moove/contactusbgimg';

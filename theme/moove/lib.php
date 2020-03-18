@@ -43,7 +43,7 @@ function theme_moove_get_extra_scss($theme) {
 
     $scss .= theme_moove_set_signupbgimg($theme);
 
-    $scss .= theme_moove_set_dashboardbgimg($theme);
+    // $scss .= theme_moove_set_dashboardbgimg($theme);
 
     $scss .= theme_moove_set_contactusbgimg($theme);
     return $scss;
@@ -175,19 +175,19 @@ function theme_moove_set_signupbgimg($theme) {
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_moove_set_dashboardbgimg($theme) {
-    global $OUTPUT;
+// function theme_moove_set_dashboardbgimg($theme) {
+//     global $OUTPUT;
 
-    $dashboardbgimg = $theme->setting_file_url('dashboardbgimg', 'dashboardbgimg');
+//     $dashboardbgimg = $theme->setting_file_url('dashboardbgimg', 'dashboardbgimg');
 
-    if (is_null($dashboardbgimg)) {
-        $dashboardbgimg = $OUTPUT->image_url('dashboard_bg', 'theme');
-    }
+//     if (is_null($dashboardbgimg)) {
+//         $dashboardbgimg = $OUTPUT->image_url('dashboard_bg', 'theme');
+//     }
 
-    $headercss = "#page-my-index #page-wrapper .cust-box-tab {background-image: url('$dashboardbgimg');}";
+//     $headercss = "#page-my-index #page-wrapper .cust-box-tab {background-image: url('$dashboardbgimg');}";
 
-    return $headercss;
-}
+//     return $headercss;
+// }
 
 /**
  * Returns the main SCSS content.
