@@ -1111,7 +1111,7 @@ background-color: #fff !important;
     background-size: cover;
 }*/
 
-.cust-box-tab .tab-content>.tab-pane::-webkit-scrollbar {
+/*.cust-box-tab .tab-content>.tab-pane::-webkit-scrollbar {
   width: 5px;
 }
 .cust-box-tab .tab-content>.tab-pane:hover::-webkit-scrollbar {
@@ -1139,7 +1139,7 @@ background-color: #fff !important;
     height: 600px;
     overflow-y: auto;
     overflow-x: hidden;
-}
+}*/
 .cust-box-tab .progress-circle {
     background-color: #ddd!important;
     border-radius: 10px!important;
