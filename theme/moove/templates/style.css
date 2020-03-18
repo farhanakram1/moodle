@@ -1009,22 +1009,36 @@ body.drawer-close-left {
     background-color: #25daee!important;
     padding: 0 !important;
     border-color: #25daee !important;
-    color: #FFF;
+    color: #000;
 }
 #page-my-index .singlebutton {
     margin-left: 0 !important;
+    margin-top: 0;
     display: inline-block;
 }
 #page-my-index .p-a-1 {
     padding: 0rem!important;
-    padding-left: 15px !important;
+    padding-left: 14px !important;
     margin-bottom: 20px !important;
 }
-
+#page-my-index .breadcrumb-button{
+    margin-top: 0px !important;
+}
+#page-my-index .small-box>.admin_Record{
+    min-height: 130px!important;
+}
+#page-my-index .small-box{
+    margin-left: 5px!important;
+}
+#page-my-index .small-box>.admin_Record h3{
+    font-size: 20px!important;
+    font-weight: 600!important;
+    margin-top: 25px!important;
+}
 #page-my-index  .btn-secondary:hover {
     color: #fdfeff !important;
     background-color: #b8c1ca00 !important;
-    border-color: #b1bbc400 !important;
+    /*border-color: #b1bbc400 !important;*/
 }
 .col.text-dash {
     color: white;

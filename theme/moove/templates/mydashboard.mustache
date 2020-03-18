@@ -56,6 +56,9 @@
           <div class="col text-dash">Dashboard
           <br>
           <span class="dasH_name">Welcome {{{ firstname }}}</span>
+            {{#is_siteadmin}}
+               {{{ output.mydashboard_admin_header }}}
+            {{/is_siteadmin}}
           </div>
           <div class="col text-right">
             <div class="brud_s">
@@ -90,13 +93,17 @@
                                                 </li>
                                             {{/ hascourses }}
 
+                                            {{# hascourses }}
                                             <li class="nav-item col-md-3 p-0">
                                                 <a class="nav-link py-2 {{^hascourses}}active{{/hascourses}}" id="examorganizer-tab" data-toggle="tab" href="#examorganizer" role="tab" aria-controls="examorganizer" aria-selected="{{^hascourses}}true{{/hascourses}}{{#hascourses}}false{{/hascourses}}">{{{ examorganizer }}}</a>
                                             </li>
+                                            {{/ hascourses }}
 
+                                            {{# hascourses }}
                                             <li class="nav-item col-md-3 p-0">
                                                 <a class="nav-link py-2" id="courses-tab" data-toggle="tab" href="#bookcourses" role="tab" aria-controls="cursos" aria-selected="true">{{{ bookcourses }}}</a>
                                             </li>
+                                            {{/ hascourses }}
                                         </ul>
                     </div>
                     <div class="col-md-12" style="overflow:hidden;">
