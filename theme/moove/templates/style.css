@@ -1590,17 +1590,17 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 .dropdown-divider {
     display: none;
 }
-
+#page-course-index-category #region-main {
+        overflow-x: hidden !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 @media (min-width: 768px){
     #page-course-index-category #region-main-box {
     padding-left: 0 !important;
     padding-right: 0 !important;
     }
-    #page-course-index-category #region-main {
-        overflow-x: hidden !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
+    
     #page-course-index-category #region-main  .card > .card-body {
         padding-right: 0 !important;
     }
