@@ -1523,6 +1523,17 @@ table tr td {
     background-color: white;
 }
 
+#page-course-index-category .categorypicker {
+    text-align: right!important;
+}
+#page-course-index-category .generalbox.info {
+    margin-bottom: 15px!important;
+    border: 0!important;
+    padding: 0px !important!important;
+    font-size: 28px!important;
+    font-weight: 600!important;
+    padding-top: 55px !important!important;
+}
 
 
 
