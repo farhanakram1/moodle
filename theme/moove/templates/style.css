@@ -1543,6 +1543,25 @@ table tr td {
 .moodle-actionmenu .dropdown a {
     color: #313f40!important;
 }
+#coursesearch {
+    margin-top: 1em!important;
+    background-color: white!important;
+    text-align: center!important;
+    padding: 20px 0!important;
+    border-radius: 10px!important;
+}
+#region-main-box .category-browse .card .card-footer {
+    background-color: white!important;
+}
+#region-main-box .category-browse .card {
+    background-color: white !important;
+}
+#region-main-box .category-browse .card .card-title a {
+    font-size: 18px!important;
+    font-weight: 600!important;
+}
+
+
 
 @media (max-width: 767px){
 
@@ -1758,6 +1777,12 @@ nav.navbar .drawer-toggle .nav-link {
 }
 
 @media screen and (max-width: 575px) {
+    fieldset.coursesearchbox.invisiblefieldset {
+        padding: 0 10px!important;
+    }
+    input#coursesearchbox {
+        margin-bottom: 20px!important;
+    }
     #page-my-index .bg-blue-brud .dasH_name {
         font-size: 15px !important;
     }
