@@ -1547,7 +1547,7 @@ table tr td {
     margin-top: 1em!important;
     background-color: white!important;
     text-align: center!important;
-    padding: 20px 0!important;
+    padding: 20px 10px !important;
     border-radius: 10px!important;
 }
 #region-main-box .category-browse .card .card-footer {
@@ -1555,6 +1555,7 @@ table tr td {
 }
 #region-main-box .category-browse .card {
     background-color: white !important;
+    margin-bottom: 20px;
 }
 #region-main-box .category-browse .card .card-title a {
     font-size: 18px!important;
@@ -1608,6 +1609,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     }
 }
 @media screen and (max-width: 991px) {
+    .card-deck {
+        flex-flow: column !important;
+    }
     .cust-box-tab .nav-tabs .nav-link{
         font-size: 14px;
     }
@@ -1682,6 +1686,12 @@ nav.navbar .drawer-toggle .nav-link {
     }
 }
 @media screen and (max-width: 767px) {
+
+    #page-course-index-category .generalbox.info {
+
+        padding-top: 10px !important;
+    }
+
     #page-my-index #region-main-box .cust-box-tab h1 {
         padding-left: 13px!important;
     }
@@ -1777,6 +1787,10 @@ nav.navbar .drawer-toggle .nav-link {
 }
 
 @media screen and (max-width: 575px) {
+    #page-course-index-category #region-main .btn-secondary {
+        background-color: #0b3c40 !important;
+        border-color: #0b3c40 !important;
+    }
     fieldset.coursesearchbox.invisiblefieldset {
         padding: 0 10px!important;
     }
