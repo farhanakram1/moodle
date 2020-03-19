@@ -1564,6 +1564,10 @@ table tr td {
 
 
 
+#page-course-index-category .category-browse .pagination {
+    justify-content: flex-end !important;
+}
+
 @media (max-width: 767px){
 
         body.drawer-open-left {
@@ -1588,6 +1592,18 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media (min-width: 768px){
+    #page-course-index-category #region-main-box {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    }
+    #page-course-index-category #region-main {
+        overflow-x: hidden !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    #page-course-index-category #region-main  .card > .card-body {
+        padding-right: 0 !important;
+    }
     body#page-course-switchrole{
         margin-left: 70px;
     }
