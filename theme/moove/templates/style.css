@@ -1529,14 +1529,20 @@ table tr td {
 #page-course-index-category .generalbox.info {
     margin-bottom: 15px!important;
     border: 0!important;
-    padding: 0px !important!important;
+    padding: 0px !important;
     font-size: 28px!important;
     font-weight: 600!important;
-    padding-top: 55px !important!important;
+    padding-top: 55px !important;
 }
-
-
-
+.region_main_settings_menu_proxy {
+    width: auto!important;
+}
+.category-browse {
+    padding-top: 25px!important;
+}
+.moodle-actionmenu .dropdown a {
+    color: #313f40!important;
+}
 
 @media (max-width: 767px){
 
