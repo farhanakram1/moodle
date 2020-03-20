@@ -234,7 +234,7 @@ class course_renderer extends \core_course_renderer {
         // Course name.
         $coursename = $chelper->get_course_formatted_name($course);
         $courselink = new moodle_url('/course/view.php', array('id' => $course->id));
-        $coursenamelink = html_writer::link($courselink, $coursename, array('class' => $course->visible ? '' : 'dimmed'));
+        $coursenamelink = html_writer::link($courselink, substr($coursename,0,30), array('class' => $course->visible ? '' : 'dimmed'));
 
         $content = extras::get_course_summary_image($course, $courselink);
 
