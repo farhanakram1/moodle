@@ -188,7 +188,7 @@ class course_renderer extends \core_course_renderer {
             $course = new core_course_list_element($course);
         }
 
-        $classes = trim('card');
+        $classes = trim('card row-3');
         if ($chelper->get_show_courses() >= self::COURSECAT_SHOW_COURSES_EXPANDED) {
             $nametag = 'h3';
         } else {

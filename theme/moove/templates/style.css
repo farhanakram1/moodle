@@ -1567,6 +1567,10 @@ table tr td {
 #page-course-index-category .category-browse .pagination {
     justify-content: flex-end !important;
 }
+.card-deck .row-3{
+        flex-basis: calc(33% - .5rem)!important;
+}
+
 
 @media (max-width: 767px){
 
@@ -1595,6 +1599,11 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
+.image_width img{
+    max-width: 98%!important;
+    max-height: 250px!important;
+    margin-bottom: 20px!important; 
+}    
 @media (min-width: 768px){
     #page-course-index-category #region-main-box {
     padding-left: 0 !important;
