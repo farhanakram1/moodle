@@ -1569,7 +1569,9 @@ table tr td {
     justify-content: flex-end !important;
 }
 .card-deck .row-3{
-        flex-basis: calc(33% - .5rem)!important;
+    flex-basis: calc(32% - 0.5rem)!important;
+    margin-right: 10px!important;
+    margin-left: 10px!important;
 }
 
 
@@ -1613,6 +1615,10 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     
     #page-course-index-category #region-main  .card > .card-body {
         padding-right: 0 !important;
+        background: #FFF;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-radius: 5px;
     }
     body#page-course-switchrole{
         margin-left: 70px;
