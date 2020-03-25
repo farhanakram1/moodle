@@ -30,6 +30,15 @@
 
     This template includes ajax functionality, so it cannot be shown in the template library.
 }}
+<style>
+    .graDers a {
+    color: #1f1e1e !important;
+}
+.graDers a:first-child {
+    font-size:16px !important;
+}
+</style>
+
 <div class="container-fluid">
 <div data-region="grading-navigation" class="row graDers">
 
@@ -81,7 +90,7 @@
 {{!
     B) Current user name and info.
 }}
-<div data-region="user-info-s" class="col-md-4" data-assignmentid="{{assignmentid}}" data-groupid="{{groupid}}">
+<div data-region="user-info" class="col-md-4 user-info-s" data-assignmentid="{{assignmentid}}" data-groupid="{{groupid}}">
     {{> mod_assign/grading_navigation_user_info }}
 </div>
 
