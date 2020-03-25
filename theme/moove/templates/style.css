@@ -1243,8 +1243,21 @@ background-color: #fff !important;
     margin-bottom: 50px;
 }
 
-
-
+#page-mod-lesson-view #region-main .card-body,
+#page-mod-assign-grading #region-main .card-body,
+#page-mod-lesson-report #region-main .card-body,
+#page-mod-assign-view #region-main .card-body
+{
+    background-color: white;
+    padding: 20px 25px;
+    border-radius: 5px;
+    margin-top: 75px;
+    min-height: 225px;
+    margin-bottom: 50px;
+}
+#page-mod-lesson-view #action-menu-3-menubar {
+    margin-top: 15px!important;
+}
 #page-site-index #frontpage-category-combo h2 {
     text-align: center!important;
     font-weight: bold!important;
