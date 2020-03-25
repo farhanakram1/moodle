@@ -839,7 +839,12 @@ body.drawer-close-left {
     border-top-right-radius: 5px;
     transition: background 0.20s linear;
 }
-.cust-tabs-s .nav-tabs {
+.cust-tabs-s .nav-tabs,
+#page-mod-lesson-report .nav-tabs,
+#page-mod-lesson-edit .nav-tabs,
+#page-mod-lesson-view .nav-tabs,
+#page-mod-lesson-essay .nav-tabs
+{
     border-bottom: 2px solid #00daf0;
     padding-bottom: 1px;
 }
