@@ -1264,6 +1264,8 @@ background-color: #fff !important;
   #page-badges-mybadges .card-body,
   #page-message-notificationpreferences .preferences-page-container,
   #page-user-editor form.mform,
+  #page-mod-assign-mod form.mform,
+  #page-mod-assign-overrides #assignoverrides,
   #page-site-index #frontpage-available-course-list,
   #page-site-index #frontpage-category-combo,
   #page-blog-edit form.mform
@@ -1290,9 +1292,11 @@ background-color: #fff !important;
     min-height: 225px;
     margin-bottom: 50px;
 }
+
 #page-mod-lesson-report .slicon-question:before,
 #page-mod-lesson-view .slicon-question:before,
 #page-mod-lesson-essay .slicon-question:before,
+#page-mod-assign-mod .slicon-question:before,
 #page-mod-lesson-edit .slicon-question:before{
     margin-left: 9px!important;
 }
@@ -1467,6 +1471,7 @@ background-color: #fff !important;
 #page-user-edit .card-body div > h2, 
 #page-user-language .card-body div > h2,
 #page-user-editor .card-body div > h2,
+#page-mod-assign-mod .card-body div > h2,
 #page-user-course .card-body div > h2,
 #page-user-calendar .card-body div > h2,
 #page-blog-preferences .card-body div > h2,
@@ -1542,6 +1547,7 @@ background-color: #fff !important;
 #page-login-change_password input ,
 #page-user-language #fgroup_id_buttonar,
 #page-blog-preferences #fgroup_id_buttonar,
+#page-mod-assign-mod #fgroup_id_buttonar,
 #page-user-editor #fgroup_id_buttonar{
     margin-top: 10px;
 }
@@ -1938,6 +1944,10 @@ nav.navbar .drawer-toggle .nav-link {
   #page-badges-mybadges .card-body,
   #page-message-notificationpreferences .preferences-page-container,
   #page-user-editor form.mform,
+  #page-mod-assign-mod form.mform,
+  #page-mod-assign-overrides #assignoverrides,
+  #page-site-index #frontpage-available-course-list,
+  #page-site-index #frontpage-category-combo,
   #page-blog-edit form.mform
     {
     padding: 20px 10px 20px 10px;
