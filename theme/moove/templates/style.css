@@ -1291,6 +1291,7 @@ background-color: #fff !important;
   #page-report-usersessions-user #region-main > div > .card-body,
   #page-grade-report-overview-index #region-main > div > .card-body,
   #page-admin-tool-dataprivacy-summary #region-main > div > .card-body,
+  #page-admin-roles-permissions #region-main > div > .card-body,
   #page-badges-mybadges .card-body,
   #page-message-notificationpreferences .preferences-page-container,
   #page-user-editor form.mform,
@@ -1307,7 +1308,9 @@ background-color: #fff !important;
     min-height: 225px;
     margin-bottom: 50px;
 }
-
+#page-admin-roles-permissions .card-body div > h2{
+    color: black !important;
+}
 #page-mod-lesson-view #region-main .card-body,
 #page-mod-assign-grading #region-main .card-body,
 #page-mod-lesson-report #region-main .card-body,
@@ -1955,7 +1958,7 @@ nav.navbar .drawer-toggle .nav-link {
         font-size: 18px;
     }
 
-   #page-user-edit form.mform, 
+  #page-user-edit form.mform, 
 #page-login-change_password form.mform,
  #page-user-language form.mform,
   #page-user-forum form.mform,
@@ -1971,6 +1974,7 @@ nav.navbar .drawer-toggle .nav-link {
   #page-report-usersessions-user #region-main > div > .card-body,
   #page-grade-report-overview-index #region-main > div > .card-body,
   #page-admin-tool-dataprivacy-summary #region-main > div > .card-body,
+  #page-admin-roles-permissions #region-main > div > .card-body,
   #page-badges-mybadges .card-body,
   #page-message-notificationpreferences .preferences-page-container,
   #page-user-editor form.mform,
