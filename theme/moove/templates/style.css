@@ -773,7 +773,15 @@ body.drawer-close-left {
 /*tab*/
 
 
-.cust-tabs-s .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+.cust-tabs-s .nav-tabs .nav-link.active, 
+.nav-tabs .nav-item.show .nav-link,
+#page-mod-lesson-view .nav-tabs .nav-link.active, 
+#page-mod-lesson-view .nav-tabs .nav-item.show .nav-link,
+#page-mod-lesson-edit .nav-tabs .nav-link.active, 
+#page-mod-lesson-edit .nav-tabs .nav-item.show .nav-link,
+#page-mod-lesson-report .nav-tabs .nav-link.active, 
+#page-mod-lesson-report .nav-tabs .nav-item.show .nav-link
+ {
 
     border: none;
     background: #00daf0;
@@ -784,7 +792,11 @@ body.drawer-close-left {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-.cust-tabs-s .nav-tabs .nav-link {
+.cust-tabs-s .nav-tabs .nav-link,
+#page-mod-lesson-report .nav-tabs .nav-link,
+#page-mod-lesson-edit .nav-tabs .nav-link,
+#page-mod-lesson-view .nav-tabs .nav-link
+ {
     border: 1px solid transparent;
     border: none;
     padding: 10px 14px;
@@ -800,7 +812,17 @@ body.drawer-close-left {
 }
 .cust-tabs-s .nav-tabs .nav-link:hover,
 .cust-tabs-s .nav-tabs .nav-link:active,
-.cust-tabs-s .nav-tabs .nav-link:focus {
+.cust-tabs-s .nav-tabs .nav-link:focus,
+#page-mod-lesson-view .nav-tabs .nav-link:hover,
+#page-mod-lesson-view .nav-tabs .nav-link:active,
+#page-mod-lesson-view .nav-tabs .nav-link:focus,
+#page-mod-lesson-edit .nav-tabs .nav-link:hover,
+#page-mod-lesson-edit .nav-tabs .nav-link:active,
+#page-mod-lesson-edit .nav-tabs .nav-link:focus,
+#page-mod-lesson-report .nav-tabs .nav-link:hover,
+#page-mod-lesson-report .nav-tabs .nav-link:active,
+#page-mod-lesson-report .nav-tabs .nav-link:focus 
+{
     border: none;
     background: #00daf0;
     color: #fff;
@@ -1246,6 +1268,7 @@ background-color: #fff !important;
 #page-mod-lesson-view #region-main .card-body,
 #page-mod-assign-grading #region-main .card-body,
 #page-mod-lesson-report #region-main .card-body,
+#page-mod-lesson-edit #region-main .card-body,
 #page-mod-assign-view #region-main .card-body
 {
     background-color: white;
@@ -1740,6 +1763,9 @@ nav.navbar .drawer-toggle .nav-link {
     .w-50-s  fieldset {
         margin-left: 0 !important;
     }
+    #page-mod-lesson-view .form-inline .form-control {
+        width: 100% !important;
+    }
 }
 @media screen and (max-width: 767px) {
 
@@ -1843,6 +1869,15 @@ nav.navbar .drawer-toggle .nav-link {
 }
 
 @media screen and (max-width: 575px) {
+
+    .cust-tabs-s .nav-tabs .nav-link,
+    #page-mod-lesson-report .nav-tabs .nav-link,
+    #page-mod-lesson-edit .nav-tabs .nav-link,
+    #page-mod-lesson-view .nav-tabs .nav-link{
+        padding: 10px 5px!important;
+        font-size: 11px!important;
+        margin-bottom: 20px!important;
+    }
     #page-course-index-category #region-main .btn-secondary {
         background-color: #0b3c40 !important;
         border-color: #0b3c40 !important;
