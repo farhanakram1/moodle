@@ -1255,6 +1255,10 @@ background-color: #fff !important;
     min-height: 225px;
     margin-bottom: 50px;
 }
+#page-mod-lesson-report .slicon-question:before{
+    margin-left: 9px!important;
+}
+}
 #page-mod-lesson-view #action-menu-3-menubar {
     margin-top: 15px!important;
 }

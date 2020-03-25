@@ -942,7 +942,7 @@ function lesson_get_overview_report_table_and_data(lesson $lesson, $currentgroup
     $table->wrap = [];
     $table->wrap = array_pad($table->wrap, $colcount, 'nowrap');
 
-    $table->attributes['class'] = 'table table-striped';
+    $table->attributes['class'] = 'table table-striped table-responsive-md';
 
     // print out the $studentdata array
     // going through each student that has attempted the lesson, so, each student should have something to be displayed
