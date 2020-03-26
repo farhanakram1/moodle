@@ -614,6 +614,7 @@ class core_backup_renderer extends plugin_renderer_base {
         }
 
         $table = new html_table();
+        echo html_writer::start_tag('div', array('class' => 'table-responsive'));
         $table->attributes['class'] = 'backup-files-table generaltable';
         $table->head = $tablehead;
         $table->width = '100%';
@@ -680,7 +681,7 @@ class core_backup_renderer extends plugin_renderer_base {
         }
 
         $html = html_writer::table($table);
-
+        
         // For automated backups, the ability to manage backup files is controlled by the ability to download them.
         // All files must be from the same file area in a backup_files_viewer.
         $canmanagebackups = true;
