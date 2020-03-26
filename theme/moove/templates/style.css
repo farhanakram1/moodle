@@ -40,9 +40,12 @@
     color: #000 !important;
     margin: 0 !important;
 }
-#page-admin-tool-dbtransfer-index h2, #page-admin-tool-xmldb-index h2, #page-admin-tool-phpunit-index .generalbox h2, #page-admin-tool-phpunit-index .generalbox h3, #page-admin-tool-generator-maketestplan h2, #page-admin-tool-generator-maketestcourse h2, #page-admin-tool-behat-index h2, #page-admin-thirdpartylibs h2, #page-admin-purgecaches h2, #page-admin-webservice-testclient h2, #page-admin-tool-spamcleaner-index h2, #page-admin-tool-monitor-managerules h2, #page-admin-report-security-index h2, #page-admin-report-questioninstances-index h2, #page-admin-report-performance-index h2, #page-admin-report-loglive-index h2, #page-admin-report-log-index h2, #page-admin-report-insights-insights h2, #page-admin-report-configlog-index h2, #page-admin-comment-index h2, #page-admin-tool-oauth2-issuers h2, #page-admin-tool-task-scheduledtasks h2, #page-admin-setting-themesettingmoove h2, #page-admin-setting-themesettingclassic h2, #page-admin-setting-themesettingboost h2, #page-admin-theme-index h2, #page-admin-theme-index h3, #page-admin-setting-cachestores h2, #page-admin-setting-cachestores h3, #page-admin-cache-testperformance h2, #page-admin-cache-testperformance h3, #page-admin-cache-admin h2, #page-admin-cache-admin h3, #page-admin-setting-assignfeedback_editpdf h2, #page-admin-setting-assignfeedback_editpdf h3, #page-admin-setting-assignfeedbackplugins h2, #page-admin-setting-assignfeedbackplugins h3, #page-admin-filters h2, #page-admin-webservice-documentation h2, #page-admin-plugins h2, #page-admin-tool-installaddon-index h2, #page-admin-grade-edit-scale-index h2, #page-admin-grade-edit-scale-index h3, #page-backup-restorefile h2, #page-course-management .coursesearchbox h2, #page-course-management .card-header, #page-admin-tool-dataprivacy-datarequests h2, #page-admin-tool-dataprivacy-pluginregistry h2, #page-admin-roles-assign h2, #page-admin-roles-assign h3,#page-admin-roles-check h3, #page-cohort-upload h2, #page-cohort-edit h2, #page-admin-user-profile-index h2, #page-admin-user-profile-index h3, #page-admin-user h2, #page-badges-backpacks h2, #page-admin-setting-competencysettings h2,#page-admin-tool-lpimportcsv-index h2, #page-admin-tool-lpmigrate-frameworks h2, #page-admin-registration-index h2{
+#page-admin-tool-dbtransfer-index h2, #page-admin-tool-xmldb-index h2, #page-admin-tool-phpunit-index .generalbox h2, #page-admin-tool-phpunit-index .generalbox h3, #page-admin-tool-generator-maketestplan h2, #page-admin-tool-generator-maketestcourse h2, #page-admin-tool-behat-index h2, #page-admin-thirdpartylibs h2, #page-admin-purgecaches h2, #page-admin-webservice-testclient h2, #page-admin-tool-spamcleaner-index h2, #page-admin-tool-monitor-managerules h2, #page-admin-report-security-index h2, #page-admin-report-questioninstances-index h2, #page-admin-report-performance-index h2, #page-admin-report-loglive-index h2, #page-admin-report-log-index h2, #page-admin-report-insights-insights h2, #page-admin-report-configlog-index h2, #page-admin-comment-index h2, #page-admin-tool-oauth2-issuers h2, #page-admin-tool-task-scheduledtasks h2, #page-admin-setting-themesettingmoove h2, #page-admin-setting-themesettingclassic h2, #page-admin-setting-themesettingboost h2, #page-admin-theme-index h2, #page-admin-theme-index h3, #page-admin-setting-cachestores h2, #page-admin-setting-cachestores h3, #page-admin-cache-testperformance h2, #page-admin-cache-testperformance h3, #page-admin-cache-admin h2, #page-admin-cache-admin h3, #page-admin-setting-assignfeedback_editpdf h2, #page-admin-setting-assignfeedback_editpdf h3, #page-admin-setting-assignfeedbackplugins h2, #page-admin-setting-assignfeedbackplugins h3, #page-admin-filters h2, #page-admin-webservice-documentation h2, #page-admin-plugins h2, #page-admin-tool-installaddon-index h2, #page-admin-grade-edit-scale-index h2, #page-admin-grade-edit-scale-index h3, #page-backup-restorefile h2, #page-course-management .coursesearchbox h2, #page-course-management .card-header, #page-admin-tool-dataprivacy-datarequests h2, #page-admin-tool-dataprivacy-pluginregistry h2, #page-admin-roles-check h3, #page-cohort-upload h2, #page-cohort-edit h2, #page-admin-user-profile-index h2, #page-admin-user-profile-index h3, #page-admin-user h2, #page-badges-backpacks h2, #page-admin-setting-competencysettings h2,#page-admin-tool-lpimportcsv-index h2, #page-admin-tool-lpmigrate-frameworks h2, #page-admin-registration-index h2{
     color: #000 !important;
 }
+ #page-admin-roles-assign h2, #page-admin-roles-assign h3{
+    color: white!important;
+ }
 #page-admin-report-backups-index h2, #page-local-pages-edit .page__title, #page-admin-local-pages-pages .page__title{
 	color: #FFF !important;
 	margin-bottom: 10px !important;
@@ -77,13 +80,18 @@
 #page-admin-course-customfield h3 a{
     color: #00daf0;
 }
-
+#page-mod-assign-grader .graDers a {
+    color: #1f1e1e !important;
+}
+#page-mod-assign-grader .graDers a:first-child {
+    font-size:16px !important;
+}
 #page-course-management #coursecat-management, 
 #page-admin-tool-dataprivacy-createdatarequest .createrequestform, 
 #page-admin-tool-dataprivacy-datarequests .card-body, 
 #page-admin-tool-dataprivacy-dataregistry .data-registry, 
 [data-region="data-deletion"], 
-#page-admin-roles-assign .card-body,
+#page-admin-roles-assign .Assign_Role,
 #page-admin-roles-check #reportuser_wrapper, 
 #page-admin-tool-capability-index .card-body, 
 #page-admin-roles-define .card-body, 
@@ -1331,6 +1339,7 @@ background-color: #fff !important;
 #page-mod-lesson-view .slicon-question:before,
 #page-mod-lesson-essay .slicon-question:before,
 #page-mod-assign-mod .slicon-question:before,
+#page-admin-roles-assign .slicon-question:before,
 #page-mod-lesson-edit .slicon-question:before{
     margin-left: 9px!important;
 }
@@ -1927,7 +1936,24 @@ nav.navbar .drawer-toggle .nav-link {
 }
 
 @media screen and (max-width: 575px) {
-
+     #page-admin-roles-assign h2, 
+     #page-admin-roles-assign h3,
+     #page-admin-roles-check h2
+     {
+        font-size: 13px !important;
+     }
+    #page-mod-assign-mod .form-check label {
+        font-size: 13px!important;
+    }
+    #page-mod-assign-mod .filemanager .fp-restrictions {
+        font-size: 12px!important;
+    }
+    #page-mod-assign-mod #region-main .btn-secondary{
+        margin-bottom: 10px!important;
+    }
+    #page-mod-assign-mod .card-body div > h2{
+        font-size: 13px !important;
+    }
     .cust-tabs-s .nav-tabs .nav-link,
     #page-mod-lesson-report .nav-tabs .nav-link,
     #page-mod-lesson-essay .nav-tabs .nav-link,

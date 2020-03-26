@@ -294,6 +294,8 @@ if ($roleid) {
     $table->id = 'assignrole';
     $table->head = array(get_string('role'), get_string('description'), get_string('userswiththisrole', 'core_role'));
     $table->colclasses = array('leftalign role', 'leftalign', 'centeralign userrole');
+   echo html_writer::start_tag('div', array('class' => 'Assign_Role'));
+   echo html_writer::start_tag('div', array('class' => 'table-responsive'));
     $table->attributes['class'] = 'admintable generaltable';
     if ($showroleholders) {
         $table->headspan = array(1, 1, 2);
@@ -312,7 +314,7 @@ if ($roleid) {
     }
 
     echo html_writer::table($table);
-
+    echo html_writer::end_tag('div');
     if ($context->contextlevel > CONTEXT_USER) {
 
         if ($returnurl) {
@@ -323,6 +325,7 @@ if ($roleid) {
 
         echo html_writer::start_tag('div', array('class'=>'backlink'));
         echo html_writer::tag('a', get_string('backto', '', $contextname), array('href' => $url));
+        echo html_writer::end_tag('div');
         echo html_writer::end_tag('div');
     }
 }
