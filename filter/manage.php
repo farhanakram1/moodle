@@ -153,7 +153,7 @@ if (empty($availablefilters)) {
         TEXTFILTER_ON => $stron,
     );
 
-    echo html_writer::start_tag('form', array('action'=>$baseurl->out_omit_querystring(), 'method'=>'post'));
+    echo html_writer::start_tag('form', array('action'=>$baseurl->out_omit_querystring(), 'method'=>'post','class' => 'filters-Manage'));
     echo html_writer::start_tag('div');
     echo html_writer::empty_tag('input', array('type'=>'hidden', 'name'=>'sesskey', 'value'=>sesskey()));
     foreach ($baseurl->params() as $key => $value) {
@@ -167,6 +167,7 @@ if (empty($availablefilters)) {
         $table->head[] = $strsettings;
         $table->colclasses[] = 'leftalign';
     }
+    echo html_writer::start_tag('div', array('class' => 'table-responsive'));
     $table->id = 'frontpagefiltersettings';
     $table->attributes['class'] = 'admintable generaltable';
     $table->data = array();
@@ -201,6 +202,7 @@ if (empty($availablefilters)) {
     }
 
     echo html_writer::table($table);
+    echo html_writer::end_tag('div');
     echo html_writer::start_tag('div', array('class'=>'buttons'));
     $submitattr = ['type' => 'submit', 'name' => 'savechanges', 'value' => get_string('savechanges'), 'class' => 'btn btn-primary'];
     echo html_writer::empty_tag('input', $submitattr);

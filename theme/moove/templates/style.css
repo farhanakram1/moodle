@@ -1305,6 +1305,7 @@ background-color: #fff !important;
   #page-message-notificationpreferences .preferences-page-container,
   #page-user-editor form.mform,
   #page-mod-assign-mod form.mform,
+  #page-filter-manage .filters-Manage,
   #page-mod-assign-overrides #assignoverrides,
   #page-site-index #frontpage-available-course-list,
   #page-site-index #frontpage-category-combo,
@@ -1325,6 +1326,7 @@ background-color: #fff !important;
 #page-mod-lesson-report #region-main .card-body,
 #page-mod-lesson-essay #region-main .card-body,
 #page-mod-lesson-edit #region-main .card-body,
+#page-report-competency-index #region-main .card-body,
 #page-mod-assign-view #region-main .card-body
 {
     background-color: white;
@@ -1688,6 +1690,10 @@ table tr td {
     padding: 12px 15px 12px 15px!important;
 }
 
+#page-admin-roles-check .form-inline .form-check{
+        justify-content: normal !important;
+     }
+
 
 
 @media (max-width: 767px){
@@ -1936,12 +1942,23 @@ nav.navbar .drawer-toggle .nav-link {
 }
 
 @media screen and (max-width: 575px) {
+    #page-report-competency-index .form-control{
+        min-width: 24ch !important;
+    }
+    #page-report-competency-index h3{
+        font-size: 17px !important;
+    }
+    #page-admin-roles-check .backlink > a{
+        color: white !important;
+    }
      #page-admin-roles-assign h2, 
      #page-admin-roles-assign h3,
+     #page-filter-manage h2,
      #page-admin-roles-check h2
      {
         font-size: 13px !important;
      }
+
     #page-mod-assign-mod .form-check label {
         font-size: 13px!important;
     }
@@ -2009,6 +2026,7 @@ nav.navbar .drawer-toggle .nav-link {
   #page-message-notificationpreferences .preferences-page-container,
   #page-user-editor form.mform,
   #page-mod-assign-mod form.mform,
+  #page-filter-manage .filters-Manage,
   #page-mod-assign-overrides #assignoverrides,
   #page-site-index #frontpage-available-course-list,
   #page-site-index #frontpage-category-combo,
