@@ -1273,7 +1273,7 @@ class grade_report_grader extends grade_report {
             $fulltable->data[] = $row;
         }
         $html .= html_writer::table($fulltable);
-        return $OUTPUT->container($html, 'gradeparent');
+        return $OUTPUT->container($html, 'gradeparent table-responsive');
     }
 
     /**
