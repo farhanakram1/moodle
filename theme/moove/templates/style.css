@@ -75,10 +75,10 @@
     color:#FFF !important;
 }
 #page-course-management .dropdown-item span.menu-action-text{
-    color: #00daf0;
+    color: #008ec2;
 }
 #page-admin-course-customfield h3 a{
-    color: #00daf0;
+    color: #008ec2;
 }
 #page-mod-assign-grader .graDers a {
     color: #1f1e1e !important;
@@ -141,11 +141,11 @@
 	color: #fff !important;
 	background-color: #1177d1 !important;
 	border-color: #1177d1 !important;
-	background-color: #00daf0 !important;
+	background-color: #008ec2 !important;
 	border-radius: 5px !important;
 	padding: 8px 30px !important;
 	font-size: 14px !important;
-	border-color: #00daf0 !important;
+	border-color: #008ec2 !important;
 }
 #page-admin-setting-mobilesettings #region-main .card-body{
     margin-top: 20px;
@@ -211,7 +211,7 @@ nav.navbar ul.navbar-nav > li:last-child:hover > a {
 }
 
 #testimonials {
-    background: #f1f6f7;
+    background: #ececec;
     padding-bottom:3rem;
 }
 .testmo_inc p {
@@ -344,10 +344,10 @@ nav.navbar ul.navbar-nav > li:hover > a {
 }
 .usermenu .btn-primary {
     color: #fff;
-    background-color: #00daf0!important;
+    background-color: #008ec2!important;
     border-radius: 5px!important;
     padding: 5px 40px!important;
-    border-color: #00daf0!important;
+    border-color: #008ec2!important;
     font-size: 18px!important;
 }
 a.black_c {
@@ -436,7 +436,7 @@ h2.about-txt {
 
 .page-local-pages-about-us-1 .container-fluid.about-page-s {
     padding: 50px 55px 50px 70px;
-    background-color: #f1f6f7;
+    background-color: #ececec;
 }
 .region-main-box{
     margin-top: 35px;margin-bottom: 100px;
@@ -543,11 +543,11 @@ h4.contact_heading {
     color: #fff!important;
     background-color: #1177d1!important;
     border-color: #1177d1!important;
-    background-color: #00daf0!important;
+    background-color: #008ec2!important;
     border-radius: 5px!important;
     padding: 8px 30px!important;
     font-size: 16px!important;
-    border-color: #00daf0!important;
+    border-color: #008ec2!important;
 }
 
 span.red {
@@ -686,7 +686,7 @@ border: 1px solid #d7dfe3;
     padding-right: 0 !important;
 }
 #page-course-switchrole .card-body div > h2 {
-    background-color: #00daf0;
+    background-color: #008ec2;
     color: white;
     font-size: 20px;
     font-weight:bold;
@@ -743,8 +743,8 @@ body.drawer-close-left {
 }
 #page-course-switchrole .anchor_btn a{
     color: #fff !important;
-    background-color: #00daf0 !important;
-    border: 2px solid #00daf0!important;
+    background-color: #008ec2 !important;
+    border: 2px solid #008ec2!important;
     border-radius: 25px!important;
     padding: 9px 30px!important;
     box-shadow: 0px 5px 11px -7px #595959;
@@ -757,8 +757,8 @@ body.drawer-close-left {
 }
 #page-course-switchrole .btn-secondary:hover {
     color: #fff!important;
-    background-color: #00daf0!important;
-    border-color: #00daf0!important;
+    background-color: #008ec2!important;
+    border-color: #008ec2!important;
 }
 #page-course-switchrole .anchor_btn a:hover{
     color: #000 !important;
@@ -784,24 +784,24 @@ body.drawer-close-left {
     font-weight: bold;
     text-transform: uppercase;
     padding: 30px 30px 30px 23px;
-    background-color: #00daf0;
+    background-color: #008ec2;
     color: white;
 }
 #page-admin-search .nav.nav-tabs {
     margin-left: 23px;
 }
 #page-admin-search #id_query {
-    border: 2px solid #00daf0;
+    border: 2px solid #008ec2;
     width: 280px;
     height: 39px;
 }
 #page-admin-search .btn-primary {
     color: #fff!important;
-    background-color: #00daf0!important;
+    background-color: #008ec2!important;
     border-radius: 5px!important;
     padding: 4px 25px!important;
     font-size: 20px!important;
-    border-color: #00daf0!important;
+    border-color: #008ec2!important;
 }
 #page-admin-search .fitem {
     margin: 0!important;
@@ -829,7 +829,7 @@ body.drawer-close-left {
  {
 
     border: none;
-    background: #00daf0;
+    background: #008ec2;
     color: #fff;
     border-radius: 0;
     border-top-left-radius: 0px;
@@ -881,7 +881,7 @@ body.drawer-close-left {
 #page-mod-lesson-report .nav-tabs .nav-link:focus 
 {
     border: none;
-    background: #00daf0;
+    background: #008ec2;
     color: #fff;
     border-radius: 0;
     border-top-left-radius: 0px;
@@ -898,7 +898,7 @@ body.drawer-close-left {
 #page-grade-edit-tree-index .nav-tabs,
 #page-mod-lesson-essay .nav-tabs
 {
-    border-bottom: 2px solid #00daf0;
+    border-bottom: 2px solid #008ec2;
     padding-bottom: 1px;
 }
 .cust-tabs-s .nav-tabs .nav-link.active::after {
@@ -909,7 +909,7 @@ body.drawer-close-left {
     left: 42%;
     border: 7px solid transparent;
         border-top-color: transparent;
-    border-top-color: #00daf0;
+    border-top-color: #008ec2;
 
 }
 .cust-tabs-s .tab-content {
@@ -949,11 +949,11 @@ body.drawer-close-left {
         position: relative;
 }
 .user-t-pro .node_category li a:hover{
-        color: #00daf0!important;
+        color: #008ec2!important;
 }
 .user-t-pro .node_category li a:before {
     content:'>';
-    color: #00daf0;
+    color: #008ec2;
     font-size: 24px;
     position: absolute;
     left: 0px;
@@ -972,8 +972,8 @@ body.drawer-close-left {
     }
     .user-t-pro .node_category li.editprofile a:hover{
         background-color: transparent!important;
-    color: #00daf0!important;
-     border: 2px solid #00daf0;
+    color: #008ec2!important;
+     border: 2px solid #008ec2;
      text-decoration: none;
 
     }
@@ -1026,7 +1026,7 @@ body.drawer-close-left {
     bottom: -17px;
     left: 42%;
     border: 7px solid transparent;
-    border-top-color: #00daf0;
+    border-top-color: #008ec2;
 }
 
 
@@ -1035,7 +1035,7 @@ body.drawer-close-left {
 #page-admin-search nav > ul > li a.nav-link:focus
 {
     border: none;
-    background: #00daf0;
+    background: #008ec2;
     color:#fff;
     border-radius:0;
     border-top-left-radius: 5px;
@@ -1047,7 +1047,7 @@ body.drawer-close-left {
     background: #fdfdfd;
     line-height: 25px;
     border: 1px solid #ddd;
-    border-top:2px solid #00daf0;
+    border-top:2px solid #008ec2;
     padding:30px 25px;
     margin-top: -13px;
     -webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3);
@@ -1060,9 +1060,9 @@ body.drawer-close-left {
     color: #000!important;
 }
 #page-admin-search .tab-content .setting_Links h4 > a:hover{
-    color: #00daf0!important;
+    color: #008ec2!important;
     text-decoration: none;
-    border-bottom: 2px solid #00daf0!important;
+    border-bottom: 2px solid #008ec2!important;
 }
 
 #page-admin-search .tab-content .setting_Links ul li > a,
@@ -1078,8 +1078,8 @@ body.drawer-close-left {
 #page-my-index .cust-tabs-s .my_block ul > li > div > a:hover,
 #page-my-index .cust-tabs-s .my_block .footer a:hover
 {
-    color: #00daf0!important;
-    border-bottom: 1px solid #00daf0!important;
+    color: #008ec2!important;
+    border-bottom: 1px solid #008ec2!important;
 }
 #page-admin-search .tab-content .setting_Links ul li:before {
     content: "•";
@@ -1106,9 +1106,9 @@ body.drawer-close-left {
 	clear: left;
 }
 #page-my-index .btn-secondary{
-    background-color: #25daee!important;
+    background-color: #1691c0!important;
     padding: 0 !important;
-    border-color: #25daee !important;
+    border-color: #1691c0 !important;
     color: #000;
 }
 #page-my-index .singlebutton {
@@ -1248,7 +1248,7 @@ background-color: #fff !important;
 }
  
 .cust-box-tab .tab-content>.tab-pane:hover::-webkit-scrollbar-thumb {
-  background: #00daf0; 
+  background: #008ec2; 
 }
 
 .cust-box-tab .tab-content>.tab-pane::-webkit-scrollbar-thumb:hover {
@@ -1372,7 +1372,7 @@ background-color: #fff !important;
 #page-site-index #frontpage-category-combo h2 {
     text-align: center!important;
     font-weight: bold!important;
-    color: #00daf0!important;
+    color: #008ec2!important;
     text-decoration: underline!important;
 }
 #page-site-index #frontpage-category-combo .info > h3 > a,
@@ -1382,7 +1382,7 @@ background-color: #fff !important;
 }
 #page-site-index #frontpage-category-combo .info > h3 > a:hover,
 #page-site-index #frontpage-category-combo .info > h4 > a:hover {
-    color: #00daf0 !important;
+    color: #008ec2 !important;
     text-decoration: underline;
 }
 
@@ -1486,7 +1486,7 @@ background-color: #fff !important;
 }
 .cust-box-tab .nav-tabs .nav-link.active, .cust-box-tab  .nav-tabs .nav-item.show .nav-link {
     color: #ffffff !important;
-    background-color: #00daf0 !important;
+    background-color: #008ec2 !important;
     border-color: transparent !important;
      border-radius: 10px 10px 0px 0px !important;
 }
@@ -1523,7 +1523,7 @@ background-color: #fff !important;
     font-weight: bold!important;
 }
 #page-blog-index .addbloglink a:hover{
-    color: #00daf0!important;
+    color: #008ec2!important;
     text-decoration: underline!important;
 }
 .commands,
@@ -1607,7 +1607,7 @@ background-color: #fff !important;
     width: 100%;
 }
 #page-user-preferences .preferences-box a:hover {
-    color: #00daf0;
+    color: #008ec2;
     text-decoration: none;
 }
 

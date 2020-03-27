@@ -22,7 +22,7 @@
     padding-left: 0!important;
 }
 .b-line {
-    border-bottom: 3px solid #00daf0;
+    border-bottom: 3px solid #008ec2;
     width: 80px;
     margin-bottom: 20px;
 }
@@ -32,13 +32,13 @@
 }
 .subscribe-b .btn-success {
     color: #fff;
-    background-color: #00daf0;
-    border-color: #00daf0;
+    background-color: #008ec2;
+    border-color: #008ec2;
 }
 .subscribe-b .btn-success:hover {
     color: #fff;
-    background-color: #00daf0;
-    border-color: #00daf0;
+    background-color: #008ec2;
+    border-color: #008ec2;
     opacity:0.8;
 }
 #page-footer {
@@ -207,6 +207,9 @@ require(['jquery'], function($) {
             $('#nav-drawer').removeClass('open');
             $('#nav-drawer').slideUp();
         }
+    });
+    $('#cc_payment_btn').click(function(){
+        $('#page-login-signup .mform').submit();
     });
 });
 </script>
