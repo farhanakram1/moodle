@@ -1243,9 +1243,11 @@ function grade_report_user_profilereport($course, $user, $viewasuser = false) {
 
         // print the page
         echo '<div class="grade-report-user">'; // css fix to share styles with real report page
+        echo '<div class="table-responsive">'; // css fix to share styles with real report page
         if ($report->fill_table()) {
             echo $report->print_table(true);
         }
+        echo '</div>';
         echo '</div>';
     }
 }

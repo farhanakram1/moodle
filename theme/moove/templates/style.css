@@ -43,7 +43,9 @@
 #page-admin-tool-dbtransfer-index h2, #page-admin-tool-xmldb-index h2, #page-admin-tool-phpunit-index .generalbox h2, #page-admin-tool-phpunit-index .generalbox h3, #page-admin-tool-generator-maketestplan h2, #page-admin-tool-generator-maketestcourse h2, #page-admin-tool-behat-index h2, #page-admin-thirdpartylibs h2, #page-admin-purgecaches h2, #page-admin-webservice-testclient h2, #page-admin-tool-spamcleaner-index h2, #page-admin-tool-monitor-managerules h2, #page-admin-report-security-index h2, #page-admin-report-questioninstances-index h2, #page-admin-report-performance-index h2, #page-admin-report-loglive-index h2, #page-admin-report-log-index h2, #page-admin-report-insights-insights h2, #page-admin-report-configlog-index h2, #page-admin-comment-index h2, #page-admin-tool-oauth2-issuers h2, #page-admin-tool-task-scheduledtasks h2, #page-admin-setting-themesettingmoove h2, #page-admin-setting-themesettingclassic h2, #page-admin-setting-themesettingboost h2, #page-admin-theme-index h2, #page-admin-theme-index h3, #page-admin-setting-cachestores h2, #page-admin-setting-cachestores h3, #page-admin-cache-testperformance h2, #page-admin-cache-testperformance h3, #page-admin-cache-admin h2, #page-admin-cache-admin h3, #page-admin-setting-assignfeedback_editpdf h2, #page-admin-setting-assignfeedback_editpdf h3, #page-admin-setting-assignfeedbackplugins h2, #page-admin-setting-assignfeedbackplugins h3, #page-admin-filters h2, #page-admin-webservice-documentation h2, #page-admin-plugins h2, #page-admin-tool-installaddon-index h2, #page-admin-grade-edit-scale-index h2, #page-admin-grade-edit-scale-index h3, #page-backup-restorefile h2, #page-course-management .coursesearchbox h2, #page-course-management .card-header, #page-admin-tool-dataprivacy-datarequests h2, #page-admin-tool-dataprivacy-pluginregistry h2, #page-admin-roles-check h3, #page-cohort-upload h2, #page-cohort-edit h2, #page-admin-user-profile-index h2, #page-admin-user-profile-index h3, #page-admin-user h2, #page-badges-backpacks h2, #page-admin-setting-competencysettings h2,#page-admin-tool-lpimportcsv-index h2, #page-admin-tool-lpmigrate-frameworks h2, #page-admin-registration-index h2{
     color: #000 !important;
 }
- #page-admin-roles-assign h2, #page-admin-roles-assign h3{
+ #page-admin-roles-assign h2, #page-admin-roles-assign h3,
+ #page-admin-tool-lp-editplan h2, #page-admin-tool-lp-editplan h3
+ {
     color: white!important;
  }
 #page-admin-report-backups-index h2, #page-local-pages-edit .page__title, #page-admin-local-pages-pages .page__title{
@@ -99,6 +101,7 @@
 #page-admin-roles-manage .card-body, 
 #page-admin-roles-admins #assignform, 
 #page-admin-tool-uploaduser-picture .mform, 
+#page-admin-tool-lp-editplan .mform, 
 #page-admin-tool-uploaduser-index .mform, 
 #page-cohort-upload .card-body, 
 #page-cohort-edit .card-body, 
@@ -1313,6 +1316,10 @@ background-color: #fff !important;
   #page-admin-tool-lp-plans #region-main > div > .card-body,
   #page-report-usersessions-user #region-main > div > .card-body,
   #page-grade-report-overview-index #region-main > div > .card-body,
+  #page-report-outline-user #region-main > div > .card-body,
+  #page-report-log-user #region-main > div > .card-body,
+  #page-course-user #region-main > div > .card-body,
+  #page-notes-index #region-main > div > .card-body,
   #page-admin-tool-dataprivacy-summary #region-main > div > .card-body,
   #page-admin-roles-permissions #region-main > div > .card-body,
   #page-badges-mybadges .card-body,
@@ -1978,6 +1985,8 @@ nav.navbar .drawer-toggle .nav-link {
     }
      #page-admin-roles-assign h2, 
      #page-admin-roles-assign h3,
+     #page-admin-tool-lp-editplan h2, 
+     #page-admin-tool-lp-editplan h3,
      #page-filter-manage h2,
      #page-admin-roles-check h2
      {
@@ -2031,7 +2040,7 @@ nav.navbar .drawer-toggle .nav-link {
         font-size: 18px;
     }
 
-  #page-user-edit form.mform, 
+ #page-user-edit form.mform, 
 #page-login-change_password form.mform,
  #page-user-language form.mform,
   #page-user-forum form.mform,
@@ -2046,6 +2055,10 @@ nav.navbar .drawer-toggle .nav-link {
   #page-admin-tool-lp-plans #region-main > div > .card-body,
   #page-report-usersessions-user #region-main > div > .card-body,
   #page-grade-report-overview-index #region-main > div > .card-body,
+  #page-report-outline-user #region-main > div > .card-body,
+  #page-report-log-user #region-main > div > .card-body,
+  #page-course-user #region-main > div > .card-body,
+  #page-notes-index #region-main > div > .card-body,
   #page-admin-tool-dataprivacy-summary #region-main > div > .card-body,
   #page-admin-roles-permissions #region-main > div > .card-body,
   #page-badges-mybadges .card-body,
