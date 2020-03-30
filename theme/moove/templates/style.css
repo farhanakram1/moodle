@@ -1973,6 +1973,12 @@ nav.navbar .drawer-toggle .nav-link {
 }
 
 @media screen and (max-width: 575px) {
+    #page-mod-assign-mod legend {
+        font-size: 15px !important;
+    }
+    #page-mod-assign-mod .col-form-label {
+        font-size: 13px;
+    }
     #page-backup-restorefile h2{
         margin-top: 20px !important;
     }
