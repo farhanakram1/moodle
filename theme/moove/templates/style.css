@@ -1328,6 +1328,7 @@ background-color: #fff !important;
   #page-message-notificationpreferences .preferences-page-container,
   #page-user-editor form.mform,
   #page-mod-assign-mod form.mform,
+  #page-mod-assign-overrideedit form.mform,
   #page-filter-manage .filters-Manage,
   #page-mod-assign-overrides #assignoverrides,
   #page-site-index #frontpage-available-course-list,
@@ -1625,6 +1626,7 @@ background-color: #fff !important;
 #page-user-language #fgroup_id_buttonar,
 #page-blog-preferences #fgroup_id_buttonar,
 #page-mod-assign-mod #fgroup_id_buttonar,
+#page-mod-assign-overrideedit #fgroup_id_buttonar,
 #page-user-editor #fgroup_id_buttonar{
     margin-top: 10px;
 }
@@ -2048,7 +2050,7 @@ nav.navbar .drawer-toggle .nav-link {
         font-size: 18px;
     }
 
- #page-user-edit form.mform, 
+#page-user-edit form.mform, 
 #page-login-change_password form.mform,
  #page-user-language form.mform,
   #page-user-forum form.mform,
@@ -2073,6 +2075,7 @@ nav.navbar .drawer-toggle .nav-link {
   #page-message-notificationpreferences .preferences-page-container,
   #page-user-editor form.mform,
   #page-mod-assign-mod form.mform,
+  #page-mod-assign-overrideedit form.mform,
   #page-filter-manage .filters-Manage,
   #page-mod-assign-overrides #assignoverrides,
   #page-site-index #frontpage-available-course-list,
