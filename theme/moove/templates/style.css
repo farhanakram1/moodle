@@ -1975,6 +1975,9 @@ nav.navbar .drawer-toggle .nav-link {
 }
 
 @media screen and (max-width: 575px) {
+    .pagination-sm .page-link {
+        padding: .25rem 4px;
+    }
     #page-mod-assign-mod legend {
         font-size: 15px !important;
     }
