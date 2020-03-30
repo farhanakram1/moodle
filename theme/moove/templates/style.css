@@ -1744,6 +1744,9 @@ form.logselecform select {
 
 
 @media (max-width: 767px){
+    #page-grade-report-grader-index .nav-tabs .nav-link{
+        margin-bottom: 20px!important;
+    }
 
         body.drawer-open-left {
         margin-left: 0px !important;
@@ -1810,6 +1813,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 @media screen and (max-width: 991px) {
     .card-deck {
         flex-flow: column !important;
+    }
+    #page-grade-report-grader-index .nav-tabs .nav-link{
+        margin-bottom: 20px!important;
     }
     .cust-box-tab .nav-tabs .nav-link{
         font-size: 14px;
@@ -2222,7 +2228,7 @@ nav.navbar .drawer-toggle .nav-link {
     }
     #region-main .btn-primary {
         padding: 7px 25px!important;
-        font-size: 12px!important;
+        font-size: 11px!important;
     }
     .page-local-pages-about-us-1 #page.container-fluid {
         padding: 0rem!important;
