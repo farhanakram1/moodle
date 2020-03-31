@@ -178,9 +178,20 @@ class login_signup_form extends moodleform implements renderable, templatable {
         ob_start();
         $this->display();
         $formhtml = ob_get_contents();
+        $script  = '<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+            <script src="https://www.braemoor.co.uk/software/_private/creditcard.js"></script>';
         ob_end_clean();
+        $sanbox = get_config('local_stripsignup', 'sandboxlive');
+        $spublish_key = '';
+        if($sanbox == 1){
+            $spublish_key = get_config('local_stripsignup', 'publishablekey');
+        }else{
+            $spublish_key = get_config('local_stripsignup', 'sandbox_publishablekey');
+        }
         $context = [
-            'formhtml' => $formhtml
+            'formhtml' => $formhtml,
+            'publish_key' => get_config('local_stripsignup', 'sandbox_publishablekey'),
+            'script' => $script
         ];
         return $context;
     }

@@ -209,7 +209,155 @@ require(['jquery'], function($) {
         }
     });
     $('#cc_payment_btn').click(function(){
-        $('#page-login-signup .mform').submit();
+        var valid = cardValidation();
+        if(valid){
+            Stripe.createToken({
+                number: $('#id_cc_payment').val(),
+                cvc: $('#id_cc_cvv').val(),
+                exp_month: $('#id_cc_exp_month').val(),
+                exp_year: $('#id_cc_exp_year').val()
+            }, stripeResponseHandler);
+        }
     });
+    function cardValidation() {
+        var valid = true;
+        var first_name = $('#id_firstname').val();
+        var last_name = $('#id_lastname').val();
+        var username = $('#id_username').val();
+        var password = $('#id_password').val();
+        var email = $('#id_email').val();
+        var email2 = $('#id_email2').val();
+
+        var name = $('#id_firstname').val() + " " + $('#id_lastname').val();
+
+        var cardNumber = $('#id_cc_payment').val();
+        var month = $('#id_cc_exp_month').val();
+        var year = $('#id_cc_exp_year').val();
+        var cvv = $('#id_cc_cvv').val();
+        var type = $('#id_cc_type').val();
+
+        $("#id_error_firstname").html("").hide();
+        $("#id_error_lastname").html("").hide();
+        $("#id_error_username").html("").hide();
+
+        $("#id_error_password").html("").hide();
+        $("#id_error_email").html("").hide();
+        $("#id_error_email2").html("").hide();
+        
+        $("#id_error_cc_payment").html("").hide();
+        $("#id_error_cc_type").html("").hide();
+        $("#id_error_cc_exp_month").html("").hide();
+        $("#id_error_cc_exp_year").html("").hide();
+        $("#id_error_cc_cvv").html("").hide();
+
+        if (first_name.trim() == "") {
+            $("#id_error_firstname").html("Missing First Name").show();
+            valid = false;
+        }
+
+        if (last_name.trim() == "") {
+            $("#id_error_lastname").html("Missing Last Name").show();
+            valid = false;
+        }
+
+        if (username.trim() == "") {
+            $("#id_error_username").html("Missing Username").show();
+            valid = false;
+        }
+        if (password.match(/[a-z]/g) && password.match( 
+                    /[A-Z]/g) && password.match( 
+                    /[0-9]/g) && password.match( 
+                    /[^a-zA-Z\d]/g) && password.length >= 8) {
+               valid = true;     
+        }else{
+            $("#id_error_password").html("Passwords must be at least 8 characters long.").show();
+            valid = false;
+        }
+        
+        if (email.trim() == "") {
+            $("#id_error_email").html("Missing email address").show();
+            valid = false;
+        }
+        
+        if (email2.trim() == "") {
+            $("#id_error_email2").html("Missing email address").show();
+            valid = false;
+        }
+        
+        if (validateEmail(email)) {
+        }else{
+            $("#id_error_email").html("Invalid email address").show();
+            valid = false;
+        }
+        
+        if (validateEmail(email)) {
+        }else{
+            $("#id_error_email2").html("Invalid email address").show();
+            valid = false;
+        }
+        if(email != email2){
+            $("#id_error_email2").html("Please match email address").show();
+            valid = false;
+        }
+        if(cvv.length > 3){
+            $("#id_error_cc_cvv").html("Invalid CVV").show();
+            valid = false;
+        }
+        if (cardNumber.trim() == "") {
+            $("#id_error_cc_payment").html("Missing credit card").show();
+            valid = false;
+        }
+        if (type.trim() == "") {
+            $("#id_error_cc_type").html("Select credit card type").show();
+            valid = false;
+        }
+        
+        if (checkCreditCard(cardNumber, type)) {
+            
+        } else {
+            $("#id_error_cc_payment").html(ccErrors[ccErrorNo]).show();
+            valid = false;
+        };
+
+        if (month.trim() == "") {
+            $("#id_error_cc_exp_month").html("Missing Month").show();
+            valid = false;
+        }
+        if (year.trim() == "") {
+            $("#id_error_cc_exp_year").html("Missing Year").show();
+            valid = false;
+        }
+
+        if (valid == false) {
+            $("#error-message").html("All Fields are required").show();
+        }
+        if(valid == true){
+            var el = '<input type="hidden" id="token" name="token" value=""></input>';
+            $('#page-login-signup .mform').append(el);
+        }
+        return valid;
+    }
+
+    //callback to handle the response from stripe
+    function stripeResponseHandler(status, response) {
+        if (response.error) {
+            //enable the submit button
+            $("#submit-btn").show();
+            //display the errors on the form
+            $("#error-message").html(response.error.message).show();
+        } else {
+            //get token id
+            var token = response['id'];
+            //insert the token into the form
+            $('#page-login-signup .mform #token').val(token);
+
+            $('#page-login-signup .mform').submit();
+            return false;
+        }
+    }
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
 });
 </script>

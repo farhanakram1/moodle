@@ -24,6 +24,7 @@
                     </div>
                     <div class="w-50-s">
                         {{{formhtml}}}
+                        
                     </div>
                     <div class="w-50-s">
                         <p class="posi_tx">Registration code can be requested from EODO</p>
@@ -44,18 +45,32 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div id="fitem_id_cc_cvv" class="form-group row  fitem   ">
+                        <div id="fitem_id_cc_payment" class="form-group row  fitem   ">
                             <div class="col-md-3">
                                 <span class="float-sm-right text-nowrap">
                                 </span>
-                                <label class="col-form-label d-inline " for="id_cc_cvv">
-                                    CVV
+                                <label class="col-form-label d-inline " for="id_cc_payment">
+                                    City/town
                                 </label>
                             </div>
-                            <div class="col-md-9 form-inline felement fd-end" data-fieldtype="text">
-                                <input type="text" class="form-control " name="cc_cvv" id="id_cc_cvv" value="" size="" maxlength="120" placeholder="CVV">
-                                <div class="form-control-feedback invalid-feedback" id="id_error_cc_cvv">
+                            <div class="col-md-9 form-inline felement fd-end" data-fieldtype="select">
+                                <select class="custom-select" tabindex="11" id="id_cc_type">
+                                    <option value="">Select Credit Card Type</option>
+                                    <option value="AmEx">American Express</option>
+                                    <option value="CarteBlanche">Carte Blanche</option>
+                                    <option value="DinersClub">Diners Club</option>
+                                    <option value="Discover">Discover</option>
+                                    <option value="EnRoute">enRoute</option>
+                                    <option value="JCB">JCB</option>
+                                    <option value="Maestro">Maestro</option>
+                                    <option value="MasterCard">MasterCard</option>
+                                    <option value="Solo">Solo</option>
+                                    <option value="Switch">Switch</option>
+                                    <option value="Visa">Visa</option>
+                                    <option value="VisaElectron">Visa Electron</option>
+                                    <option value="LaserCard">Laser</option>
+                                  </select>
+                                <div class="form-control-feedback invalid-feedback" id="id_error_cc_type">
 
                                 </div>
                             </div>
@@ -101,7 +116,7 @@
                                 </label>
                             </div>
                             <div class="col-md-9 form-inline felement fd-end" data-fieldtype="select">
-                                <select class="custom-select" name="cc_exp_year" id="id_cc_exp_month">
+                                <select class="custom-select" name="cc_exp_year" id="id_cc_exp_year">
                                      <option value="">Select Exp. Year</option>
                                      <option value="2020">2020</option>
                                      <option value="2021">2021</option>
@@ -123,17 +138,20 @@
                             </div>
                         </div>
                         
-                        <div id="fitem_id_cc_payment_price" class="form-group row  fitem   ">
+                        
+    
+
+                        <div id="fitem_id_cc_cvv" class="form-group row  fitem   ">
                             <div class="col-md-3">
                                 <span class="float-sm-right text-nowrap">
                                 </span>
-                                <label class="col-form-label d-inline " for="id_cc_payment_price">
-                                    City/town
+                                <label class="col-form-label d-inline " for="id_cc_cvv">
+                                    CVV
                                 </label>
                             </div>
                             <div class="col-md-9 form-inline felement fd-end" data-fieldtype="text">
-                                <input type="text" class="form-control " name="cc_payment_price" id="id_cc_payment_price" value="" size="" maxlength="120" placeholder="Price">
-                                <div class="form-control-feedback invalid-feedback" id="id_error_cc_payment_price">
+                                <input type="text" class="form-control " name="cc_cvv" id="id_cc_cvv" value="" size="" maxlength="120" placeholder="CVV">
+                                <div class="form-control-feedback invalid-feedback" id="id_error_cc_cvv">
 
                                 </div>
                             </div>
@@ -156,7 +174,7 @@
                         </div>
                         <div id="btnRegister">
                             <input id="cc_payment_btn" type="button" class="btn btn-primary" value="Register" style="margin-top: 40px;margin-left: -50px;" />
-                        </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -165,7 +183,7 @@
 </div>
 <style>
     #id_submitbutton{
-      display:none !important;
+      display:none;
     }
     #btnRegister{
         width: 200px;
@@ -179,4 +197,7 @@
         text-align: center;
     }
 </style>
-
+{{{script}}}
+<script>
+    Stripe.setPublishableKey("{{{publish_key}}}");
+</script>

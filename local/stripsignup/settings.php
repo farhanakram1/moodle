@@ -30,7 +30,7 @@ $componentname = "local_stripsignup";
 
 // Default for users that have site config.
 
-if (is_siteadmin()) {
+if ($hassiteconfig) {
     
     $settings = new admin_settingpage( $componentname, get_string('stippaymentheading', $componentname) );
  
@@ -44,15 +44,15 @@ if (is_siteadmin()) {
     $settings->add(new admin_setting_configtext('local_stripsignup/discount_code', get_string('discount_code', $componentname),
     '', '', PARAM_TEXT));
     
+    $settings->add(new admin_setting_configtext('local_stripsignup/percentage', get_string('discount_percentage', $componentname),
+    '', 0, PARAM_INT));
+        
     $settings->add(new admin_setting_configtext('local_stripsignup/cost', get_string('cost', $componentname),
     '', 0, PARAM_FLOAT, 4));
     
-    $settings->add(new admin_setting_configtext('local_stripsignup/percentage', get_string('discount_percentage', $componentname),
-    '', 0, PARAM_INT));
-    
-    $stripecurrencies = enrol_get_plugin('stripepayment')->get_currencies();
-    $settings->add(new admin_setting_configselect('local_stripsignup/currency',
-    get_string('currency', $componentname), '', 'USD', $stripecurrencies));
+//    $stripecurrencies = $CFG->get_currencies();
+//    $settings->add(new admin_setting_configselect('enrol_stripepayment/currency',
+//    get_string('currency', 'enrol_stripepayment'), '', 'USD', $stripecurrencies));
     
     // Strip Live Payment Settings
     $settings->add(new admin_setting_heading("local_stripsignup_live",
@@ -78,6 +78,6 @@ if (is_siteadmin()) {
     $settings->add(new admin_setting_configcheckbox('local_stripsignup/sandbox',
     get_string('sandboxlive', $componentname), '', 0));
     
-    $ADMIN->add('localplugins', new \admin_category($componentname, get_string('pluginname', $componentname)));
+    $ADMIN->add('localplugins', new admin_category($componentname, get_string('pluginname', $componentname)));
     
 }

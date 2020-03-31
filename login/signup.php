@@ -28,6 +28,11 @@ require('../config.php');
 require_once($CFG->dirroot . '/user/editlib.php');
 require_once($CFG->libdir . '/authlib.php');
 require_once('lib.php');
+require_once('Stripe/init.php');
+use \Stripe\Stripe;
+use \Stripe\Customer;
+use \Stripe\ApiOperations\Create;
+use \Stripe\Charge;
 
 if (!$authplugin = signup_is_enabled()) {
     print_error('notlocalisederrormessage', 'error', '', 'Sorry, you may not use this page.');
@@ -72,7 +77,47 @@ if (\core_auth\digital_consent::is_age_digital_consent_verification_enabled()) {
         redirect(new moodle_url('/login/digital_minor.php'));
     }
 }
+if(count($_POST) > 0){
+    $customerDetailsAry = array(
+        'email' => $client_info['email'],
+        'source' => $_POST['token']
+    );
+    $sandbox = get_config('local_stripsignup', 'sandbox');
+    if($sandbox == 1){
+        \Stripe\Stripe::setApiKey(get_config('local_stripsignup','sandbox_secretkey'));
+    }else{
+        \Stripe\Stripe::setApiKey(get_config('local_stripsignup','secretkey'));
+    }
+    $customer = new Customer();
 
+    $customerDetails = $customer->create($customerDetailsAry);
+    $discount_code = get_config('local_stripsignup', 'discount_code');
+    $amount = get_config('local_stripsignup', 'cost');
+    if(isset($_POST['cc_discount_code']) && $discount_code == $_POST['cc_discount_code']){
+        $percentage = get_config('local_stripsignup', 'percentage');
+        if(round($percentage) == 100){
+            $amount = 0;
+        }else{
+            $percentage = round($percentage/100,2);
+            $amount = $amount*$percentage;
+        }
+    }
+    $cardDetailsAry = array(
+        'customer' => $customerDetails->id,
+        'amount' => $amount*100,
+        'currency' => 'eur',
+        'description' => 'User Subscription on eodo',
+        
+    );
+    $charge = new Charge();
+    $result = $charge->create($cardDetailsAry);
+    $strip_result = $result->jsonSerialize();
+    if ($strip_result['status'] == 'succeeded') {
+//        echo $strip_result['status'];
+    }else{
+        redirect(new moodle_url('/login/signup.php'));
+    }
+}
 // Plugins can create pre sign up requests.
 // Can be used to force additional actions before sign up such as acceptance of policies, validations, etc.
 core_login_pre_signup_requests();
