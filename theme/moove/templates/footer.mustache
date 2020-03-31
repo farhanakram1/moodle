@@ -264,6 +264,10 @@ require(['jquery'], function($) {
             $("#id_error_username").html("Missing Username").show();
             valid = false;
         }
+        if (username == username.toUpperCase()) {
+            $("#id_error_username").html("Only lowercase letters allowed").show();
+            valid = false;
+        }
         if (password.match(/[a-z]/g) && password.match( 
                     /[A-Z]/g) && password.match( 
                     /[0-9]/g) && password.match( 
@@ -332,7 +336,9 @@ require(['jquery'], function($) {
             $("#error-message").html("All Fields are required").show();
         }
         if(valid == true){
+            var discount = $('#id_cc_discount_code').val();
             var el = '<input type="hidden" id="token" name="token" value=""></input>';
+              el += '<input type="hidden" id="cc_discount_code" name="cc_discount_code" value="'+discount+'"></input>';
             $('#page-login-signup .mform').append(el);
         }
         return valid;

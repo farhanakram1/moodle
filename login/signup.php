@@ -77,45 +77,52 @@ if (\core_auth\digital_consent::is_age_digital_consent_verification_enabled()) {
         redirect(new moodle_url('/login/digital_minor.php'));
     }
 }
-if(count($_POST) > 0){
-    $customerDetailsAry = array(
-        'email' => $client_info['email'],
-        'source' => $_POST['token']
-    );
-    $sandbox = get_config('local_stripsignup', 'sandbox');
-    if($sandbox == 1){
-        \Stripe\Stripe::setApiKey(get_config('local_stripsignup','sandbox_secretkey'));
-    }else{
-        \Stripe\Stripe::setApiKey(get_config('local_stripsignup','secretkey'));
-    }
-    $customer = new Customer();
 
-    $customerDetails = $customer->create($customerDetailsAry);
-    $discount_code = get_config('local_stripsignup', 'discount_code');
-    $amount = get_config('local_stripsignup', 'cost');
-    if(isset($_POST['cc_discount_code']) && $discount_code == $_POST['cc_discount_code']){
-        $percentage = get_config('local_stripsignup', 'percentage');
-        if(round($percentage) == 100){
-            $amount = 0;
+if(count($_POST) > 0){
+    global $DB;
+    $user_email = $DB->get_record('user', array('email' =>  $_POST['email']));
+    $user_username = $DB->get_record('user', array('username' =>  $_POST['username']));
+    if (empty($user_email) && empty($user_username)) {
+        $customerDetailsAry = array(
+            'email' => $_POST['email'],
+            'source' => $_POST['token']
+        );
+        $sandbox = get_config('local_stripsignup', 'sandbox');
+        if($sandbox == 1){
+            \Stripe\Stripe::setApiKey(get_config('local_stripsignup','sandbox_secretkey'));
         }else{
-            $percentage = round($percentage/100,2);
-            $amount = $amount*$percentage;
+            \Stripe\Stripe::setApiKey(get_config('local_stripsignup','secretkey'));
         }
-    }
-    $cardDetailsAry = array(
-        'customer' => $customerDetails->id,
-        'amount' => $amount*100,
-        'currency' => 'eur',
-        'description' => 'User Subscription on eodo',
-        
-    );
-    $charge = new Charge();
-    $result = $charge->create($cardDetailsAry);
-    $strip_result = $result->jsonSerialize();
-    if ($strip_result['status'] == 'succeeded') {
-//        echo $strip_result['status'];
-    }else{
-        redirect(new moodle_url('/login/signup.php'));
+        $customer = new Customer();
+
+        $customerDetails = $customer->create($customerDetailsAry);
+        $discount_code = get_config('local_stripsignup', 'discount_code');
+        $amount = get_config('local_stripsignup', 'cost');
+        if(isset($_POST['cc_discount_code']) && $discount_code == $_POST['cc_discount_code']){
+            $percentage = get_config('local_stripsignup', 'percentage');
+            if(round($percentage) == 100){
+                $amount = 0;
+            }else{
+                $percentage = $percentage/100;
+                $discount_amout = $amount*$percentage;
+                $amount = $amount-$discount_amout;
+            }
+        }
+        $cardDetailsAry = array(
+            'customer' => $customerDetails->id,
+            'amount' => $amount*100,
+            'currency' => 'eur',
+            'description' => 'User Subscription on eodo',
+
+        );
+        $charge = new Charge();
+        $result = $charge->create($cardDetailsAry);
+        $strip_result = $result->jsonSerialize();
+        if ($strip_result['status'] == 'succeeded') {
+    //        echo $strip_result['status'];
+        }else{
+            redirect(new moodle_url('/login/signup.php'));
+        }
     }
 }
 // Plugins can create pre sign up requests.
@@ -133,11 +140,10 @@ if ($mform_signup->is_cancelled()) {
 
     // Plugins can perform post sign up actions once data has been validated.
     core_login_post_signup_requests($user);
-
+    
     $authplugin->user_signup($user, true); // prints notice and link to login/index.php
     exit; //never reached
 }
-
 
 $newaccount = get_string('newaccount');
 $login      = get_string('login');
