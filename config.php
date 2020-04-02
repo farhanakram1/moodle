@@ -7,9 +7,9 @@ $CFG = new stdClass();
 $CFG->dbtype    = 'mariadb';
 $CFG->dblibrary = 'native';
 $CFG->dbhost    = 'localhost';
-$CFG->dbname    = 'eodee';
-$CFG->dbuser    = 'root';
-$CFG->dbpass    = '';
+$CFG->dbname    = 'moodle';
+$CFG->dbuser    = 'moodle1';
+$CFG->dbpass    = 'moodle1';
 $CFG->prefix    = 'oodo_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
@@ -18,8 +18,8 @@ $CFG->dboptions = array (
   'dbcollation' => 'utf8_general_ci',
 );
 
-$CFG->wwwroot   = 'http://localhost:8000/moodle';
-$CFG->dataroot  = '/Applications/XAMPP/xamppfiles/htdocs/moodledata';
+$CFG->wwwroot   = 'http://localhost/moodle';
+$CFG->dataroot  = 'D:\\farhan_work\\luna_xammp\\moodledata';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
