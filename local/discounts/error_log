@@ -1,0 +1,36 @@
+[24-Feb-2020 12:42:38 Europe/Berlin] Default exception handler: Unknown exception related to local files (File does not exist) Debug: 
+Error code: storedfileproblem
+* line 1076 of /lib/filestorage/file_storage.php: file_exception thrown
+* line 1019 of /lib/filelib.php: call to file_storage->create_file_from_storedfile()
+* line 932 of /lib/filelib.php: call to file_copy_file_to_file_area()
+* line 1077 of /lib/filelib.php: call to file_merge_draft_areas()
+* line 419 of /local/pages/renderer.php: call to file_save_draft_area_files()
+* line 56 of /local/pages/edit.php: call to local_pages_renderer->save_page()
+
+[24-Feb-2020 12:51:22 Europe/Berlin] Default exception handler: Unknown exception related to local files (File does not exist) Debug: 
+Error code: storedfileproblem
+* line 1076 of /lib/filestorage/file_storage.php: file_exception thrown
+* line 1019 of /lib/filelib.php: call to file_storage->create_file_from_storedfile()
+* line 932 of /lib/filelib.php: call to file_copy_file_to_file_area()
+* line 1077 of /lib/filelib.php: call to file_merge_draft_areas()
+* line 419 of /local/pages/renderer.php: call to file_save_draft_area_files()
+* line 56 of /local/pages/edit.php: call to local_pages_renderer->save_page()
+
+[24-Feb-2020 13:26:06 Europe/Berlin] Default exception handler: Unknown exception related to local files (File does not exist) Debug: 
+Error code: storedfileproblem
+* line 1076 of /lib/filestorage/file_storage.php: file_exception thrown
+* line 1019 of /lib/filelib.php: call to file_storage->create_file_from_storedfile()
+* line 932 of /lib/filelib.php: call to file_copy_file_to_file_area()
+* line 1077 of /lib/filelib.php: call to file_merge_draft_areas()
+* line 419 of /local/pages/renderer.php: call to file_save_draft_area_files()
+* line 56 of /local/pages/edit.php: call to local_pages_renderer->save_page()
+
+[24-Feb-2020 13:27:45 Europe/Berlin] Default exception handler: Unknown exception related to local files (File does not exist) Debug: 
+Error code: storedfileproblem
+* line 1076 of /lib/filestorage/file_storage.php: file_exception thrown
+* line 1019 of /lib/filelib.php: call to file_storage->create_file_from_storedfile()
+* line 932 of /lib/filelib.php: call to file_copy_file_to_file_area()
+* line 1077 of /lib/filelib.php: call to file_merge_draft_areas()
+* line 419 of /local/pages/renderer.php: call to file_save_draft_area_files()
+* line 56 of /local/pages/edit.php: call to local_pages_renderer->save_page()
+
