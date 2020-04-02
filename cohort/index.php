@@ -205,9 +205,11 @@ if (!$editcolumnisempty) {
         array_pop($row->cells);
     }
 }
+echo html_writer::start_tag('div', array('class' => 'table-responsive'));
 $table->id = 'cohorts';
 $table->attributes['class'] = 'admintable generaltable';
 $table->data  = $data;
 echo html_writer::table($table);
+echo html_writer::end_tag('div');
 echo $OUTPUT->paging_bar($cohorts['totalcohorts'], $page, 25, $baseurl);
 echo $OUTPUT->footer();

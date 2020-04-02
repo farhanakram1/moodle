@@ -572,7 +572,7 @@ span.red {
 }
 #page-login-signup .card {
     border-radius: 10px !important;
-    padding: 5px 25px !important;
+    padding: 12px 10px !important;
     background: #FFF !important;
 }
 #page-login-signup .card-title h3{
@@ -820,6 +820,7 @@ body.drawer-close-left {
 .cust-tabs-s .nav-tabs .nav-link.active, 
 .nav-tabs .nav-item.show .nav-link,
 #page-mod-lesson-view .nav-tabs .nav-link.active, 
+#page-cohort-index .nav-tabs .nav-link.active, 
 #page-mod-lesson-view .nav-tabs .nav-item.show .nav-link,
 #page-grade-report-grader-index .nav-tabs .nav-link.active, 
 #page-grade-report-grader-index .nav-tabs .nav-item.show .nav-link,
@@ -848,6 +849,7 @@ body.drawer-close-left {
 #page-mod-lesson-edit .nav-tabs .nav-link,
 #page-grade-report-grader-index .nav-tabs .nav-link,
 #page-grade-edit-tree-index .nav-tabs .nav-link,
+#page-cohort-index .nav-tabs .nav-link,
 #page-mod-lesson-view .nav-tabs .nav-link
  {
     border: 1px solid transparent;
@@ -869,6 +871,9 @@ body.drawer-close-left {
 #page-mod-lesson-view .nav-tabs .nav-link:hover,
 #page-mod-lesson-view .nav-tabs .nav-link:active,
 #page-mod-lesson-view .nav-tabs .nav-link:focus,
+#page-cohort-index .nav-tabs .nav-link:hover,
+#page-cohort-index .nav-tabs .nav-link:active,
+#page-cohort-index .nav-tabs .nav-link:focus,
 #page-grade-report-grader-index .nav-tabs .nav-link:hover,
 #page-grade-report-grader-index .nav-tabs .nav-link:active,
 #page-grade-report-grader-index .nav-tabs .nav-link:focus,
@@ -1741,6 +1746,15 @@ form.logselecform select {
     background-color: #0099d8!important;
 }
 
+#page-cohort-index #region-main > div > .card-body {
+    background-color: white!important;
+    margin-top: 25px!important;
+    margin-bottom: 30px;
+}
+
+#page-cohort-index #region-main > div > .card-body > div > h2 {
+    color: black !important!important;
+}
 
 
 @media (max-width: 767px){
@@ -2056,7 +2070,9 @@ nav.navbar .drawer-toggle .nav-link {
     #page-mod-lesson-report .nav-tabs .nav-link,
     #page-mod-lesson-essay .nav-tabs .nav-link,
     #page-mod-lesson-edit .nav-tabs .nav-link,
+    #page-cohort-index .nav-tabs .nav-link,
     #page-grade-report-grader-index .nav-tabs .nav-link,
+    #page-cohort-index .nav-tabs .nav-link,
     #page-mod-lesson-view .nav-tabs .nav-link{
         padding: 10px 5px!important;
         font-size: 11px!important;

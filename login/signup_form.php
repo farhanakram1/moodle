@@ -105,6 +105,11 @@ class login_signup_form extends moodleform implements renderable, templatable {
             $mform->setDefault('country', '');
         }
 
+        $mform->addElement('text', 'registrationcode', get_string('registrationcode'), 'maxlength="120" placeholder="Registration Code" ');
+        // $mform->setType('city', core_user::get_property_type('city'));
+        // if (!empty($CFG->defaultcity)) {
+        //     $mform->setDefault('city', $CFG->defaultcity);
+        // }
        
         profile_signup_fields($mform);
 
