@@ -18,7 +18,7 @@
  * Pages main view page.
  *
  * @package         local_discounts
- * @author          LEADconcept <kevin.dibble@learningworks.co.nz>.
+ * @author          LEADconcept <info@leadconcept.biz>.
  * @copyright       2020 LEADconcept Ltd.
  * @license         http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later.
  */

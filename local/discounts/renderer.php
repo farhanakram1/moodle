@@ -52,14 +52,8 @@ class local_discounts_renderer extends plugin_renderer_base {
     public function get_submenuitem($parent, $name) {
         global $DB, $CFG, $USER;
         $html = '';
-        $records = $DB->get_records_sql("SELECT * FROM {local_discounts} WHERE deleted=0 " .
-            "ORDER BY discountorder");
-        if ($records) {
-            $html .= "<li class='custompages-list-element'>";
+        $html .= "<li class='custompages-list-element'>";
             $html .= '<div class="pages-action">' .
-                '<a href="' . new moodle_url($CFG->wwwroot . '/local/discounts/',
-                    array('id' => $parent)) . '" class="custompages-edit">' .
-                    get_string('view', 'local_discounts') .'</a> | ' .
                 '<a href="' . new moodle_url($CFG->wwwroot . '/local/discounts/edit.php',
                     array('id' => $parent)) . '" class="custompages-edit">' .
                     get_string('edit', 'local_discounts') . '</a> | ' .
@@ -68,26 +62,9 @@ class local_discounts_renderer extends plugin_renderer_base {
                     get_string('delete', 'local_discounts') .' </a></div>';
             $html .= "<h4 class='custompages-title'>" . $name . "</h4>";
             $html .= "<ul class='custompages_submenu'>";
-            foreach ($records as $page) {
-                $html .= $this->get_submenuitem($page->id, $page->discount_code);
-            }
+            
             $html .= "</ul>";
             $html .= "</li>";
-        } else {
-            $html .= "<li class='custompages-list-element'>";
-            $html .= '<div class="pages-action">' .
-                '<a href="' . new moodle_url($CFG->wwwroot . '/local/discounts/',
-                    array('id' => $parent)) . '" class="custompages-edit">' .
-                    get_string('view', 'local_discounts') .'</a> | ' .
-                '<a href="' . new moodle_url($CFG->wwwroot . '/local/discounts/edit.php',
-                    array('id' => $parent)) . '" class="custompages-edit">' .
-                    get_string('edit', 'local_discounts') .'</a> | ' .
-                '<a href="' . new moodle_url($CFG->wwwroot . '/local/discounts/discounts.php',
-                    array('pagedel' => $parent, 'sesskey' => $USER->sesskey)) . '" class="custompages-delete">' .
-                    get_string('delete', 'local_discounts') .' </a></div>';
-            $html .= "<h4 class='custompages-title'>" . $name . "</h4>";
-            $html .= "</li>";
-        }
         return $html;
     }
 
@@ -100,20 +77,16 @@ class local_discounts_renderer extends plugin_renderer_base {
     public function list_discounts() {
         global $DB, $CFG;
         $html = '<ul class="custompages-list">';
-        $records = $DB->get_records_sql("SELECT * FROM {local_discounts} WHERE deleted=0 ORDER BY discountorder");
+        $records = $DB->get_records_sql("SELECT * FROM {local_discounts} WHERE deleted=0");
+        $i = 1;
         foreach ($records as $page) {
             $html .= $this->get_submenuitem($page->id, $page->discount_code);
+            $i++;
         }
-
         $html .= "<li class='custompages-list-element'>
-                	<a href='" . new moodle_url($CFG->wwwroot . '/local/discounts/edit.php') .
+                	<a href='" . new moodle_url($CFG->wwwroot . '/local/discounts/edit.php?id='.$i) .
             "' class='custompages-add'>" . get_string("adddiscountcode", "local_discounts") . "</a>
             	</li>";
-
-        $html .= "<li class='custompages-list-element'>
-					<a target='_blank' href='" . new moodle_url($CFG->wwwroot .
-                '/local/discounts/pages.pdf') . "' class='custompages-add'>" . get_string("pdfmanual", "local_discounts") ."</a>
-				</li>";
 
         $html .= "</ul>";
         return $html;
@@ -406,7 +379,7 @@ class local_discounts_renderer extends plugin_renderer_base {
      * @param bool $page
      */
     public function save_page($page = false) {
-        global $CFG;
+        global $CFG,$USER,$DB;
         $mform = new pages_edit_product_form($page);
         if ($mform->is_cancelled()) {
             redirect(new moodle_url($CFG->wwwroot . '/local/discounts/discounts.php'));
@@ -418,36 +391,49 @@ class local_discounts_renderer extends plugin_renderer_base {
                 'local_discounts', 'emailcontent',
                 0, array('subdirs' => true), $data->emailcontent['text']);
 
-            $data->pagedata = '';
-            if (strtolower($data->pagetype) == "form") {
-                $pagedata = array();
-                $fieldnames = required_param_array('fieldname', PARAM_RAW);
-                $fieldtype = required_param_array('fieldtype', PARAM_RAW);
-                $fieldrequired = required_param_array('fieldrequired', PARAM_RAW);
-                $fielddefault = required_param_array('defaultvalue', PARAM_RAW);
-                $fieldreadsfrom = required_param_array('readsfrom', PARAM_RAW);
-
-                foreach ($fieldnames as $key => $value) {
-                    // Get all data sent from the form.
-                    // Stop empty fields being created.
-                    if (trim($value) != '') {
-                        $pagedata[] = array("name" => $value,
-                            "type" => $fieldtype[$key],
-                            "required" => $fieldrequired[$key],
-                            "defaultvalue" => $fielddefault[$key],
-                            "readsfrom" => $fieldreadsfrom[$key]);
-                    }
-                }
-                $data->pagedata = json_encode($pagedata);
-            }
             $recordpage = new stdClass();
             $recordpage->id = $data->id;
-            $recordpage->exp_discount_date = $data->exp_discount_date;
             $recordpage->discount_code = $data->discount_code;
-            $recordpage->discountorder = intval($data->discountorder);
             $recordpage->percentage = intval($data->percentage);
-            $recordpage->accesslevel = $data->accesslevel;
-            $recordpage->emailto = isset($data->emailto) ? $data->emailto : '';
+            $exp_date = strtotime(date('Y-m-d'). ' + 20 days');
+            $recordpage->exp_discount_date = $exp_date;
+            $recordpage->created_by = $USER->id;
+            $send_email_to = explode(',', $data->emailto);
+            $send_emails = array();
+            $amount = get_config('local_stripsignup', 'cost');
+            $percentage = intval($data->percentage);
+            if(round($percentage) == 100){
+                $amount = 0;
+            }else{
+                $percentage = $percentage/100;
+                $discount_amout = $amount*$percentage;
+                $amount = $amount-$discount_amout;
+            }
+            if(count($send_email_to) > 0){
+                foreach ($send_email_to as $email){
+                    $user_email = $DB->get_record('user', array('email' =>  $email));
+                    if(empty($user_email)){
+                        $send_emails[] = $email;
+                        if($data->send_email == 1){
+                            $email_content = $data->emailcontent['text'];
+                            $keywords = array('{discount_code}','{discounted_price}','{percentage}','{original_price}');
+                            $replace = array($data->discount_code,$amount,$recordpage->percentage,get_config('local_stripsignup', 'cost'));
+                            $email_content = '<html><body>'.str_replace($keywords, $replace, $email_content).'</body></html>';
+                            // Always set content-type when sending HTML email
+                            $headers = "MIME-Version: 1.0" . "\r\n";
+                            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+                            // More headers
+                            $headers .= 'From: <'.$USER->email.'>' . "\r\n";
+                            $subject = str_replace('{percentage}', $percentage, $data->subject_line);
+                            mail($email,$subject,$email_content,$headers);
+                        }
+                    }
+                }
+            }
+            $send_emails = implode(',', $send_emails);
+            $recordpage->emailto = $send_emails;
+            $recordpage->subject_line = $data->subject_line;
             $recordpage->emailcontent = $data->emailcontent['text'];
             $result = $page->update($recordpage);
             if ($result && $result > 0) {
@@ -463,16 +449,41 @@ class local_discounts_renderer extends plugin_renderer_base {
      * @param bool $page
      */
     public function edit_page($page = false) {
+        $Date = $page->date_created; 
+        $Date = strtotime($Date);  
+        $exp_date = $page->exp_discount_date;  
+
+        // Formulate the Difference between two dates 
+        $diff = abs($Date - $exp_date);  
+
+
+        // To get the year divide the resultant date into 
+        // total seconds in a year (365*60*60*24) 
+        $years = floor($diff / (365*60*60*24));  
+
+
+        // To get the month, subtract it with years and 
+        // divide the resultant date into 
+        // total seconds in a month (30*60*60*24) 
+        $months = floor(($diff - $years * 365*60*60*24) 
+                                       / (30*60*60*24));  
+
+
+        // To get the day, subtract it with years and  
+        // months and divide the resultant date into 
+        // total seconds in a days (60*60*24) 
+        $days = floor(($diff - $years * 365*60*60*24 -  
+                     $months*30*60*60*24)/ (60*60*24)); 
+        
         $mform = new pages_edit_product_form($page);
         $forform = new stdClass();
         $forform->emailcontent['text'] = $page->emailcontent;
+        $forform->exp_discount_date = $days;
         $forform->discount_code = $page->discount_code;
         $forform->percentage = $page->percentage;
-        $forform->accesslevel = $page->accesslevel;
         $forform->id = $page->id;
         $forform->emailto = $page->emailto;
-        $forform->exp_discount_date = $page->exp_discount_date;
-        $forform->discountorder = $page->discountorder;
+        $forform->subject_line = $page->subject_line;
         $mform->set_data($forform);
         $mform->display();
     }

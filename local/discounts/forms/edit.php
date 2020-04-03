@@ -85,63 +85,84 @@ class pages_edit_product_form extends moodleform {
         $pages = array(0 => $none);
         $allpages = $DB->get_records('local_discounts', array('deleted' => 0));
         foreach ($allpages as $page) {
-            if ($page->id != $this->callingpage) {
-                $pages[$page->id] = $page->discount_code;
-            }
+//            if ($page->id != $this->callingpage) {
+//                $pages[$page->id] = $page->discount_code;
+//            }
+             $pages[$page->id] = $page->discount_code;
         }
         $hasstandard = false;
         $layouts = array("standard" => "standard");
-        $layoutkeys = array_keys($PAGE->theme->layouts);
-        foreach ($layoutkeys as $layoutname) {
-            if (strtolower($layoutname) != "standard") {
-                $layouts[$layoutname] = $layoutname;
-            } else {
-                $hasstandard = true;
-            }
-        }
-        if (!$hasstandard) {
-            unset($layouts['standard']);
-        }
+//        $layoutkeys = array_keys($PAGE->theme->layouts);
+//        foreach ($layoutkeys as $layoutname) {
+//            if (strtolower($layoutname) != "standard") {
+//                $layouts[$layoutname] = $layoutname;
+//            } else {
+//                $hasstandard = true;
+//            }
+//        }
+//        if (!$hasstandard) {
+//            unset($layouts['standard']);
+//        }
 
         $mform = $this->_form;
 
-        $mform->addElement(
-            'date_selector', 'exp_discount_date',
-            get_string(
-                'discount_date',
-                'local_discounts'
-            ), get_string('to')
-        );
-        $mform->setType('exp_discount_date', PARAM_TEXT);
-        $mform->addHelpButton('exp_discount_date', 'exp_discount_date_description', 'local_discounts');
+//        $mform->addElement(
+//            'date_selector', 'exp_discount_date',
+//            get_string(
+//                'discount_date',
+//                'local_discounts'
+//            ), get_string('to')
+//        );
+//        $mform->setType('exp_discount_date', PARAM_TEXT);
+//        $mform->addHelpButton('exp_discount_date', 'exp_discount_date_description', 'local_discounts');
 
         $mform->addElement('text', 'discount_code', get_string('discount_name', 'local_discounts'));
         $mform->setType('discount_code', PARAM_TEXT);
-
-        $mform->addElement('text', 'discountorder', get_string('discount_order', 'local_discounts'));
-        $mform->setType('discountorder', PARAM_INT);
+        $mform->addRule('discount_code', null, 'required', null, 'client');
+        
+//        $mform->addElement('text', 'discountorder', get_string('discount_order', 'local_discounts'));
+//        $mform->setType('discountorder', PARAM_INT);
         
         $mform->addElement('text', 'percentage', get_string('discount_percentage', 'local_discounts'));
         $mform->setType('percentage', PARAM_INT);
+        $mform->addRule('percentage', null, 'required', null, 'client');
+        
+//        $mform->addElement('text', 'accesslevel', get_string('discount_accesslevel', 'local_discounts'));
+//        $mform->addHelpButton('accesslevel', 'accesslevel_description', 'local_discounts');
+//        $mform->setType('accesslevel', PARAM_TEXT);
 
-        $mform->addElement('text', 'accesslevel', get_string('discount_accesslevel', 'local_discounts'));
-        $mform->addHelpButton('accesslevel', 'accesslevel_description', 'local_discounts');
-        $mform->setType('accesslevel', PARAM_TEXT);
-
+        
+//        $mform->addElement('text', 'exp_discount_date', get_string('discount_date', 'local_discounts'));
+//        $mform->setType('exp_discount_date', PARAM_INT);
+//        $mform->addRule('exp_discount_date', null, 'required', null, 'client');
+//        $mform->addHelpButton('exp_discount_date', 'discount_date', 'local_discounts');
+        
+        $mform->addElement('text', 'emailto', get_string('emailto_name', 'local_discounts'));
+        $mform->setType('emailto', PARAM_TEXT);
+        $mform->addRule('emailto', null, 'required', null, 'client');
+        $mform->addHelpButton('emailto', 'emailto_description', 'local_discounts');
+        
+        
+        $mform->addElement('text', 'subject_line', get_string('subject_line_name', 'local_discounts'));
+        $mform->setType('subject_line', PARAM_TEXT);
+        $mform->addRule('subject_line', null, 'required', null, 'client');
+        $mform->addHelpButton('subject_line', 'subject_line_description', 'local_discounts');
+        
         $context = context_system::instance();
         $editoroptions = array('maxfiles' => EDITOR_UNLIMITED_FILES, 'noclean' => true, 'context' => $context);
 
         $mform->addElement('editor', 'emailcontent', get_string('email_content', 'local_discounts'),
             get_string('email_content_description', 'local_discounts'), $editoroptions);
         
-        $mform->addElement('text', 'emailto', get_string('emailto_name', 'local_discounts'));
-        $mform->setType('emailto', PARAM_TEXT);
-        
         $mform->addRule('emailcontent', null, 'required', null, 'client');
         $mform->setType('emailcontent', PARAM_RAW); // XSS is prevented when printing the block contents and serving files.
 
         $mform->addHelpButton('emailcontent', 'emailcontent_description', 'local_discounts');
+        
+         $mform->addElement('advcheckbox', 'send_email', get_string('send_email_label', 'local_discounts'));
+         $mform->addHelpButton('send_email', 'send_email_descriotion', 'local_discounts');
 
+//        $mform->addElement('send_email', 'local_discounts', get_string('send_email', 'forum'), 'Send Email to users?', array('group' => 1), array(0, 1));
 //        $mform->addElement('html', $this->build_html_form());
 
         // FORM BUTTONS.

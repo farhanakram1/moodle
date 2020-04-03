@@ -75,7 +75,7 @@ if (!$table->is_downloading()) {
 
     echo $OUTPUT->header();
 
-    printf('<h1 class="page__title">%s<a style="float:right;font-size:15px" href="' .
+    printf('<h1 class="page__title">%s<a style="color:#FFF;float:right;font-size:15px" href="' .
         new moodle_url($CFG->wwwroot . '/local/discounts/discounts.php') . '"> '.
         get_string('backtolist', 'local_discounts') .'</a></h1>',
         get_string('customdiscount_title', 'local_discounts'));

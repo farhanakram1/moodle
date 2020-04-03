@@ -18,7 +18,7 @@
  * Version file for component local_discounts.
  *
  * @package         local_discounts
- * @author          LEADconcept <kevin.dibble@learningworks.co.nz>.
+ * @author          LEADconcept <info@leadconcept.biz>.
  * @copyright       2020 LEADconcept Ltd.
  * @license         http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later.
  */
@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $plugin->requires   = 2015111600;                       // This plugin requires Moodle VER 3.0.
-$plugin->version    = 2019011107;                       // This plugins version number.
-$plugin->release    = 'v1.7';                           // This plugins release number.
+$plugin->version    = 2020011107;                       // This plugins version number.
+$plugin->release    = 'v1.1';                           // This plugins release number.
 $plugin->maturity   = MATURITY_STABLE;
 $plugin->component  = 'local_discounts';

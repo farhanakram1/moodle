@@ -132,7 +132,6 @@ class custompage {
                 $data = $page;
             }
         }
-
         $str = get_string('noaccess', 'local_discounts');
         $data->emailcontent = isset($data->emailcontent) ? $data->emailcontent : ($editor ? '' : $str);
 
