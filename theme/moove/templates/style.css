@@ -823,6 +823,7 @@ body.drawer-close-left {
 #page-cohort-index .nav-tabs .nav-link.active, 
 #page-mod-lesson-view .nav-tabs .nav-item.show .nav-link,
 #page-grade-report-grader-index .nav-tabs .nav-link.active, 
+#page-cohort-edit .nav-tabs .nav-link.active, 
 #page-grade-report-grader-index .nav-tabs .nav-item.show .nav-link,
 #page-grade-edit-tree-index .nav-tabs .nav-link.active, 
 #page-grade-edit-tree-index .nav-tabs .nav-item.show .nav-link,
@@ -850,6 +851,7 @@ body.drawer-close-left {
 #page-grade-report-grader-index .nav-tabs .nav-link,
 #page-grade-edit-tree-index .nav-tabs .nav-link,
 #page-cohort-index .nav-tabs .nav-link,
+#page-cohort-edit .nav-tabs .nav-link,
 #page-mod-lesson-view .nav-tabs .nav-link
  {
     border: 1px solid transparent;
@@ -877,6 +879,9 @@ body.drawer-close-left {
 #page-grade-report-grader-index .nav-tabs .nav-link:hover,
 #page-grade-report-grader-index .nav-tabs .nav-link:active,
 #page-grade-report-grader-index .nav-tabs .nav-link:focus,
+#page-cohort-edit .nav-tabs .nav-link:hover,
+#page-cohort-edit .nav-tabs .nav-link:active,
+#page-cohort-edit .nav-tabs .nav-link:focus,
 #page-grade-edit-tree-index .nav-tabs .nav-link:hover,
 #page-grade-edit-tree-index .nav-tabs .nav-link:active,
 #page-grade-edit-tree-index .nav-tabs .nav-link:focus,
