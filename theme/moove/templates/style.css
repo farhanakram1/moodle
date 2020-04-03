@@ -1352,6 +1352,12 @@ background-color: #fff !important;
     min-height: 225px;
     margin-bottom: 50px;
 }
+#page-badges-view #region-main > div > .card-body,
+#page-admin-tool-lp-coursecompetencies  #region-main > div > .card-body {
+    background-color: white;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
 #page-admin-roles-permissions .card-body div > h2{
     color: black !important;
 }
