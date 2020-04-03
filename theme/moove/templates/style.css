@@ -824,6 +824,12 @@ body.drawer-close-left {
 #page-mod-lesson-view .nav-tabs .nav-item.show .nav-link,
 #page-grade-report-grader-index .nav-tabs .nav-link.active, 
 #page-cohort-edit .nav-tabs .nav-link.active, 
+#page-grade-report-user-index .nav-tabs .nav-link.active,
+#page-grade-report-singleview-index .nav-tabs .nav-link.active,
+#page-grade-report-outcomes-index .nav-tabs .nav-link.active,
+#page-grade-report-history-index .nav-tabs .nav-link.active,
+#page-grade-edit-scale-index .nav-tabs .nav-link.active,
+#page-grade-edit-letter-index .nav-tabs .nav-link.active,
 #page-grade-report-grader-index .nav-tabs .nav-item.show .nav-link,
 #page-grade-edit-tree-index .nav-tabs .nav-link.active, 
 #page-grade-edit-tree-index .nav-tabs .nav-item.show .nav-link,
@@ -852,6 +858,12 @@ body.drawer-close-left {
 #page-grade-edit-tree-index .nav-tabs .nav-link,
 #page-cohort-index .nav-tabs .nav-link,
 #page-cohort-edit .nav-tabs .nav-link,
+#page-grade-report-user-index .nav-tabs .nav-link,
+#page-grade-report-singleview-index .nav-tabs .nav-link,
+#page-grade-report-outcomes-index .nav-tabs .nav-link,
+#page-grade-report-history-index .nav-tabs .nav-link,
+#page-grade-edit-scale-index .nav-tabs .nav-link,
+#page-grade-edit-letter-index .nav-tabs .nav-link
 #page-mod-lesson-view .nav-tabs .nav-link
  {
     border: 1px solid transparent;
@@ -882,6 +894,24 @@ body.drawer-close-left {
 #page-cohort-edit .nav-tabs .nav-link:hover,
 #page-cohort-edit .nav-tabs .nav-link:active,
 #page-cohort-edit .nav-tabs .nav-link:focus,
+#page-grade-edit-scale-index .nav-tabs .nav-link:hover,
+#page-grade-edit-scale-index .nav-tabs .nav-link:active,
+#page-grade-edit-scale-index .nav-tabs .nav-link:focus,
+#page-grade-edit-letter-index .nav-tabs .nav-link:hover,
+#page-grade-edit-letter-index .nav-tabs .nav-link:active,
+#page-grade-edit-letter-index .nav-tabs .nav-link:focus,
+#page-grade-report-history-index .nav-tabs .nav-link:hover,
+#page-grade-report-history-index .nav-tabs .nav-link:active,
+#page-grade-report-history-index .nav-tabs .nav-link:focus,
+#page-grade-report-outcomes-index .nav-tabs .nav-link:hover,
+#page-grade-report-outcomes-index .nav-tabs .nav-link:active,
+#page-grade-report-outcomes-index .nav-tabs .nav-link:focus,
+#page-grade-report-singleview-index .nav-tabs .nav-link:hover,
+#page-grade-report-singleview-index .nav-tabs .nav-link:active,
+#page-grade-report-singleview-index .nav-tabs .nav-link:focus,
+#page-grade-report-user-index .nav-tabs .nav-link:hover,
+#page-grade-report-user-index .nav-tabs .nav-link:active,
+#page-grade-report-user-index .nav-tabs .nav-link:focus,
 #page-grade-edit-tree-index .nav-tabs .nav-link:hover,
 #page-grade-edit-tree-index .nav-tabs .nav-link:active,
 #page-grade-edit-tree-index .nav-tabs .nav-link:focus,
@@ -974,6 +1004,17 @@ body.drawer-close-left {
     left: 0px;
     top: -7px;  
 
+}
+#page-grade-report-user-index #region-main > div > .card-body,
+#page-grade-report-singleview-index #region-main > div > .card-body,
+#page-grade-report-outcomes-index #region-main > div > .card-body,
+#page-grade-report-history-index #region-main > div > .card-body,
+#page-grade-edit-scale-index #region-main > div > .card-body,
+#page-grade-edit-letter-index #region-main > div > .card-body,
+ {
+    background-color: white!important;
+    margin-top: 25px!important;
+    margin-bottom: 30px!important;
 }
 .user-t-pro .node_category li.editprofile a {
     background-color: #008ec2!important;
@@ -1334,6 +1375,7 @@ background-color: #fff !important;
   #page-notes-index #region-main > div > .card-body,
   #page-admin-tool-dataprivacy-summary #region-main > div > .card-body,
   #page-admin-roles-permissions #region-main > div > .card-body,
+  #page-grade-report-user-index #region-main > div > .card-body,
   #page-badges-mybadges .card-body,
   #page-message-notificationpreferences .preferences-page-container,
   #page-user-editor form.mform,
@@ -1351,6 +1393,12 @@ background-color: #fff !important;
     margin-top: 50px;
     min-height: 225px;
     margin-bottom: 50px;
+}
+#page-badges-view #region-main > div > .card-body,
+#page-admin-tool-lp-coursecompetencies  #region-main > div > .card-body {
+    background-color: white;
+    margin-top: 25px;
+    margin-bottom: 30px;
 }
 #page-admin-roles-permissions .card-body div > h2{
     color: black !important;
@@ -2075,9 +2123,16 @@ nav.navbar .drawer-toggle .nav-link {
     #page-mod-lesson-report .nav-tabs .nav-link,
     #page-mod-lesson-essay .nav-tabs .nav-link,
     #page-mod-lesson-edit .nav-tabs .nav-link,
-    #page-cohort-index .nav-tabs .nav-link,
     #page-grade-report-grader-index .nav-tabs .nav-link,
+    #page-grade-edit-tree-index .nav-tabs .nav-link,
     #page-cohort-index .nav-tabs .nav-link,
+    #page-cohort-edit .nav-tabs .nav-link,
+    #page-grade-report-user-index .nav-tabs .nav-link,
+    #page-grade-report-singleview-index .nav-tabs .nav-link,
+    #page-grade-report-outcomes-index .nav-tabs .nav-link,
+    #page-grade-report-history-index .nav-tabs .nav-link,
+    #page-grade-edit-scale-index .nav-tabs .nav-link,
+    #page-grade-edit-letter-index .nav-tabs .nav-link
     #page-mod-lesson-view .nav-tabs .nav-link{
         padding: 10px 5px!important;
         font-size: 11px!important;
