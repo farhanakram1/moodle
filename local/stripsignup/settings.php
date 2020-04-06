@@ -38,14 +38,14 @@ if ($hassiteconfig) {
     $ADMIN->add( 'localplugins', $settings );
     
     // Strip Sandbox Payment Settings.
-    $settings->add(new admin_setting_heading("local_stripsignup_discount",
-        get_string('discount_code', $componentname), get_string('discount_code_desc', $componentname) ));
+//    $settings->add(new admin_setting_heading("local_stripsignup_discount",
+//        get_string('discount_code', $componentname), get_string('discount_code_desc', $componentname) ));
+//    
+//    $settings->add(new admin_setting_configtext('local_stripsignup/discount_code', get_string('discount_code', $componentname),
+//    '', '', PARAM_TEXT));
     
-    $settings->add(new admin_setting_configtext('local_stripsignup/discount_code', get_string('discount_code', $componentname),
-    '', '', PARAM_TEXT));
-    
-    $settings->add(new admin_setting_configtext('local_stripsignup/percentage', get_string('discount_percentage', $componentname),
-    '', 0, PARAM_INT));
+//    $settings->add(new admin_setting_configtext('local_stripsignup/percentage', get_string('discount_percentage', $componentname),
+//    '', 0, PARAM_INT));
         
     $settings->add(new admin_setting_configtext('local_stripsignup/cost', get_string('cost', $componentname),
     '', 0, PARAM_FLOAT, 4));

@@ -1,6 +1,6 @@
 <XMLDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" PATH="local/discounts/db" VERSION="20150505" COMMENT="XMLDB file for Moodle local/pages" xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd">
     <TABLES>
-        <TABLE NAME="local_discounts" COMMENT="Custom Page">
+        <TABLE NAME="local_discounts" COMMENT="Discount Codes">
             <FIELDS>
                 <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
                 <FIELD NAME="discount_code" TYPE="text" NOTNULL="true" SEQUENCE="false" />
@@ -12,18 +12,20 @@
                 <FIELD NAME="percentage" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false" />
                 <FIELD NAME="emailto" TYPE="text" NOTNULL="false" SEQUENCE="false" />
                 <FIELD NAME="date_created" TYPE="datetime" NOTNULL="false" SEQUENCE="false" />
-                <FIELD NAME="created_by" TYPE="datetime" NOTNULL="false" SEQUENCE="false" />
+                <FIELD NAME="created_by" TYPE="int" length="10" NOTNULL="false" SEQUENCE="false" />
             </FIELDS>
             <KEYS>
                 <KEY NAME="primary" TYPE="primary" FIELDS="id" />
             </KEYS>
         </TABLE>
-        <TABLE NAME="local_subscribed_user" COMMENT="logging Page">
+        <TABLE NAME="local_subscribed_user" COMMENT="Subscribed User">
             <FIELDS>
                 <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
-                <FIELD NAME="discount_code" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
-                <FIELD NAME="price" TYPE="text" NOTNULL="true" SEQUENCE="true" />
-                <FIELD NAME="user_email" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
+                <FIELD NAME="discount_code" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" />
+                <FIELD NAME="price" TYPE="text" NOTNULL="true" SEQUENCE="false" />
+                <FIELD NAME="user_email" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" />
+                <FIELD NAME="username" TYPE="text" NOTNULL="true" SEQUENCE="false" />
+                <FIELD NAME="date_created" TYPE="datetime" NOTNULL="false" SEQUENCE="false" />
             </FIELDS>
             <KEYS>
                 <KEY NAME="primary" TYPE="primary" FIELDS="id" />

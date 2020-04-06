@@ -197,6 +197,258 @@ p.D-D-l.mb-0 a {
 
 <script>
 require(['jquery'], function($) {  
+    $("#page-login-signup [placeholder]").each(function() {
+        var ph = this.placeholder;
+        
+        if(ph == '•••• •••• •••• ••••'){
+            ph = $(this).attr('title')+'<small class="text-muted">[<span class="cc-brand"></span>]</small>';
+            $(this).before("<label class='card-label'>" + ph + "</label>");
+        }else if(ph == '•• / ••'){
+            ph = $(this).attr('title');
+            $(this).before("<label class='card-expiry-label'>" + ph + "</label>");
+        }else if(ph == '•••'){
+            ph = $(this).attr('title');
+            $(this).before("<label class='cvc-label'>" + ph + "</label>");
+        }else{
+            $(this).before("<label class=" + ph + "-label>" + ph + "</label>");
+        }
+    });
+    $('#id_username').focusout(function(){
+        var username = $(this).val()
+        if(!checkUsername(username)){
+            $(this).addClass('is-invalid');
+            $(this).removeClass('is-valid');
+            $('#id_username').focus();
+        }else{
+            $(this).removeClass('is-invalid');
+            $(this).addClass('is-valid');
+            $("#id_error").html("");
+        }
+    });
+
+    
+    $('#id_password').focusout(function(){
+        checkPassword($(this));
+    });
+    
+    $('#id_email').focusout(function(){
+        var valid  = validateEmail($(this))
+        if(!valid){
+            $('#id_email').focus();
+            return valid;
+        }
+    });
+
+    $('#id_email2').focusout(function(){
+        emailCompare($(this));
+    });
+
+    $('#id_firstname').focusout(function(){
+        var first_name = $(this).val();
+        if (first_name.trim() == "") {
+            $("#id_error").html("Missing Name");
+            $('#id_firstname').addClass('is-invalid');
+            $('#id_firstname').removeClass('is-valid');
+            $('#id_firstname').focus();
+            valid = false;
+            return valid;
+        }else{
+            $("#id_error").html("").show();
+            $('#id_firstname').addClass('is-valid');
+            $('#id_firstname').removeClass('is-invalid');
+            valid = true;
+        }
+    });
+
+    $('#id_lastname').focusout(function(){
+        var valid = true;
+        var last_name = $(this).val();
+        if (last_name.trim() == "") {
+            $("#id_error").html("Missing Surname");
+            $('#id_lastname').addClass('is-invalid');
+            $('#id_lastname').removeClass('is-valid');
+            $('#id_lastname').focus();
+            valid = false;
+            return valid;
+        }else{
+            $("#id_error").html("").show();
+            $('#id_lastname').addClass('is-valid');
+            $('#id_lastname').removeClass('is-invalid');
+            valid = true;
+        }
+    });
+
+    $('#id_cc_payment').focusout(function(){
+        var valid = true;
+        var cardType = $(this).val();
+        if (cardType.trim() == "") {
+           $("#id_error").html("Missing Card Number");
+           $('#id_cc_payment').addClass('is-invalid');
+           $('#id_cc_payment').removeClass('is-valid');
+           $('#id_cc_payment').focus();
+           valid = false;
+           return valid;
+        }else{
+           $("#id_error").html("");
+           $('#id_cc_payment').removeClass('is-invalid');
+           $('#id_cc_payment').addClass('is-valid');
+           $('#id_cc_payment').focus();
+           valid = true;
+        }
+    });
+
+    
+
+    $('#id_cc_exp_date').focusout(function(){
+        var valid = true;
+        var cardMonth = $(this).val();
+        if (cardMonth.trim() == "") {
+           $("#id_error").html("Missing Expiry Date");
+           $('#id_cc_exp_date').addClass('is-invalid');
+           $('#id_cc_exp_date').removeClass('is-valid');
+           $('#id_cc_exp_date').focus();
+           valid = false;
+           return valid;
+        }else{
+           cardDate = cardMonth.split("/");
+           if(cardDate[0] > 12){
+                $("#id_error").html("Month Should be less then 12");
+                $('#id_cc_exp_date').addClass('is-invalid');
+                $('#id_cc_exp_date').removeClass('is-valid');
+                $('#id_cc_exp_date').focus();
+                valid = false;
+           }
+           
+           var year = new Date().getFullYear();
+            var year_added = year+12;
+            if(cardDate[1] < year || cardDate[1] >= year_added){
+                $("#id_error").html("Year Should be greater than  "+year+" and less than "+year_added);
+                $('#id_cc_exp_date').addClass('is-invalid');
+                $('#id_cc_exp_date').removeClass('is-valid');
+                $('#id_cc_exp_date').focus();
+                valid = false;
+           }
+           if(valid){
+                $("#id_error").html("");
+                $('#id_cc_exp_date').removeClass('is-invalid');
+                $('#id_cc_exp_date').addClass('is-valid');
+                $('#id_cc_exp_date').focus();
+                valid = true;
+           }
+        }
+    });
+
+    $('#id_cc_cvv').focusout(function(){
+        var cvv = $('#id_cc_cvv').val();
+        if (cvv.trim() == "") {
+           $("#id_error").html("Missing CVV");
+           $('#id_cc_cvv').removeClass('is-valid');
+           $('#id_cc_cvv').addClass('is-invalid');
+           $('#id_cc_cvv').focus();
+           valid = false;
+           return valid;
+        }else{
+            if(cvv.length > 3){
+                $("#id_error").html("Invalid CVV").show();
+                $('#id_cc_cvv').removeClass('is-valid');
+                $('#id_cc_cvv').addClass('is-invalid');
+                $('#id_cc_cvv').focus();
+                valid = false;
+                return valid;
+            }else{
+                $("#id_error").html("").show();
+                $('#id_cc_cvv').removeClass('is-invalid');
+                $('#id_cc_cvv').addClass('is-valid');
+                valid = true;
+            }
+        }
+    });
+    $('#id_cc_discount_code').focusout(function(){
+        checkDiscountCode();
+    });
+
+    function checkDiscountCode(){
+       var discount_code = $('#id_cc_discount_code').val();
+       var email = $('#id_email').val();
+        if (discount_code.trim() != "") {
+            $.ajax({url: "{{{ config.wwwroot }}}/local/stripsignup/validation.php?func=chkDiscount&email="+email+"&discount_code="+discount_code, success: function(result){
+                if(result == 'notfound'){
+                    $("#id_error").html("Discount Coud not correct");
+                    $('#id_cc_discount_code').val('');
+                    return false;
+                }else if(result == 'notfound'){
+                    $("#id_error").html("Discount Coud expired");
+                    $('#id_cc_discount_code').val('');
+                    return false;
+                }else{
+                    if(result == 'notok'){
+                        $("#id_error").html("Discount Coud expired");
+                        $('#id_cc_discount_code').val('');
+                        return false;
+                    }else{
+                        $('.subscription_amount').html(result);
+                        console.log(result);
+                    }
+                }
+            }});
+        }
+    }
+    function checkUsername(username){
+        if (username.trim() == "") {
+            $("#id_error").html("Missing Username");
+            return false;
+        }
+        if (username == username.toUpperCase()) {
+            $("#id_error").html("Only lowercase letters allowed");
+            return false;
+        }
+        $.ajax({url: "{{{ config.wwwroot }}}/local/stripsignup/validation.php?func=chkUName&uname="+username, success: function(result){
+            if(result == 'ok'){
+                return true;
+            }else{
+                $("#id_error").html("Username already taken");
+                return false;
+            }
+        }});
+        return true;
+    }
+
+    
+    function emailCompare(email){
+        
+        if($('#id_email').val() != email.val()){
+            $("#id_error").html("Please match email address");
+            email.addClass('is-invalid');
+            email.removeClass('is-valid');
+            email.focus();
+            valid = false;
+            return valid;
+        }else{
+            $("#id_error").html("");
+            email.addClass('is-valid');
+            email.removeClass('is-invalid');
+            return true;
+        }
+    }
+
+    function checkPassword(password){
+        passwordVal = password.val();
+        if (passwordVal.match(/[a-z]/g) && passwordVal.match( 
+                    /[A-Z]/g) && passwordVal.match( 
+                    /[0-9]/g) && passwordVal.match( 
+                    /[^a-zA-Z\d]/g) && passwordVal.length >= 8) {
+               password.removeClass('is-invalid');
+               password.addClass('is-valid');
+               $("#id_error").html("").hide();
+               return true;     
+        }else{
+            $("#id_error").html("Passwords must be at least 8 characters long.").show();
+            password.addClass('is-invalid');
+            password.removeClass('is-valid');
+            $('#id_password').focus();
+            return false;
+        }
+    }
     $('#admin-menu-toggle').click(function(){
         if($('#nav-drawer').css('display') == 'none'){
             $('#nav-drawer').removeClass('closed');
@@ -211,11 +463,13 @@ require(['jquery'], function($) {
     $('#cc_payment_btn').click(function(){
         var valid = cardValidation();
         if(valid){
+            var cardMonth = $('#id_cc_exp_date').val();
+            var cardDate = cardMonth.split("/");
             Stripe.createToken({
                 number: $('#id_cc_payment').val(),
                 cvc: $('#id_cc_cvv').val(),
-                exp_month: $('#id_cc_exp_month').val(),
-                exp_year: $('#id_cc_exp_year').val()
+                exp_month: parseInt(cardDate[0]),
+                exp_year: parseInt(cardDate[1])
             }, stripeResponseHandler);
         }
     });
@@ -229,116 +483,150 @@ require(['jquery'], function($) {
         var email2 = $('#id_email2').val();
 
         var name = $('#id_firstname').val() + " " + $('#id_lastname').val();
-
+        
         var cardNumber = $('#id_cc_payment').val();
-        var month = $('#id_cc_exp_month').val();
-        var year = $('#id_cc_exp_year').val();
-        var cvv = $('#id_cc_cvv').val();
         var type = $('#id_cc_type').val();
 
-        $("#id_error_firstname").html("").hide();
-        $("#id_error_lastname").html("").hide();
-        $("#id_error_username").html("").hide();
 
-        $("#id_error_password").html("").hide();
-        $("#id_error_email").html("").hide();
-        $("#id_error_email2").html("").hide();
+        if(!checkUsername(username)){
+            $('#id_username').addClass('is-invalid');
+            $('#id_username').removeClass('is-valid');
+            $('#id_username').focus();
+            valid = false;
+            return valid;
+        }else{
+            $('#id_username').removeClass('is-invalid');
+            $('#id_username').addClass('is-valid');
+            $("#id_error").html("").hide();
+            valid = true;
+        }
+        valid = checkPassword($('#id_password'));
+        if(!valid){
+            $('#id_password').focus();
+            return valid;
+        }
+        valid  = validateEmail($('#id_email'))
+        if(!valid){
+            $('#id_email').focus();
+            return valid;
+        }
         
-        $("#id_error_cc_payment").html("").hide();
-        $("#id_error_cc_type").html("").hide();
-        $("#id_error_cc_exp_month").html("").hide();
-        $("#id_error_cc_exp_year").html("").hide();
-        $("#id_error_cc_cvv").html("").hide();
-
+        valid = emailCompare($('#id_email2'));
+        if(!valid)
+            return valid;
+        
+        
         if (first_name.trim() == "") {
-            $("#id_error_firstname").html("Missing First Name").show();
+            $("#id_error").html("Missing Name");
+            $('#id_firstname').addClass('is-invalid');
+            $('#id_firstname').removeClass('is-valid');
+            $('#id_firstname').focus();
             valid = false;
+            return valid;
+        }else{
+            $("#id_error").html("").show();
+            $('#id_firstname').addClass('is-valid');
+            $('#id_firstname').removeClass('is-invalid');
+            valid = true;
         }
-
+        
         if (last_name.trim() == "") {
-            $("#id_error_lastname").html("Missing Last Name").show();
+            $("#id_error").html("Missing Surname");
+            $('#id_lastname').addClass('is-invalid');
+            $('#id_lastname').removeClass('is-valid');
+            $('#id_lastname').focus();
             valid = false;
-        }
-
-        if (username.trim() == "") {
-            $("#id_error_username").html("Missing Username").show();
-            valid = false;
-        }
-        if (username == username.toUpperCase()) {
-            $("#id_error_username").html("Only lowercase letters allowed").show();
-            valid = false;
-        }
-        if (password.match(/[a-z]/g) && password.match( 
-                    /[A-Z]/g) && password.match( 
-                    /[0-9]/g) && password.match( 
-                    /[^a-zA-Z\d]/g) && password.length >= 8) {
-               valid = true;     
+            return valid;
         }else{
-            $("#id_error_password").html("Passwords must be at least 8 characters long.").show();
-            valid = false;
+            $("#id_error").html("").show();
+            $('#id_lastname').removeClass('is-invalid');
+            $('#id_lastname').addClass('is-valid');
+            valid = true;
         }
         
-        if (email.trim() == "") {
-            $("#id_error_email").html("Missing email address").show();
-            valid = false;
-        }
-        
-        if (email2.trim() == "") {
-            $("#id_error_email2").html("Missing email address").show();
-            valid = false;
-        }
-        
-        if (validateEmail(email)) {
+        var cardType = $('#id_cc_payment').val();
+        if (cardType.trim() == "") {
+           $("#id_error").html("Missing Card Number");
+           $('#id_cc_payment').addClass('is-invalid');
+           $('#id_cc_payment').removeClass('is-valid');
+           $('#id_cc_payment').focus();
+           valid = false;
+           return valid;
         }else{
-            $("#id_error_email").html("Invalid email address").show();
-            valid = false;
+           $("#id_error").html("");
+           $('#id_cc_payment').removeClass('is-invalid');
+           $('#id_cc_payment').addClass('is-valid');
+           valid = true;
         }
         
-        if (validateEmail(email)) {
+        var cardMonth = $('#id_cc_exp_date').val();
+        if (cardMonth.trim() == "") {
+           $("#id_error").html("Missing Expiry Date");
+           $('#id_cc_exp_date').addClass('is-invalid');
+           $('#id_cc_exp_date').removeClass('is-valid');
+           $('#id_cc_exp_date').focus();
+           valid = false;
+           return valid;
         }else{
-            $("#id_error_email2").html("Invalid email address").show();
-            valid = false;
-        }
-        if(email != email2){
-            $("#id_error_email2").html("Please match email address").show();
-            valid = false;
-        }
-        if(cvv.length > 3){
-            $("#id_error_cc_cvv").html("Invalid CVV").show();
-            valid = false;
-        }
-        if (cardNumber.trim() == "") {
-            $("#id_error_cc_payment").html("Missing credit card").show();
-            valid = false;
-        }
-        if (type.trim() == "") {
-            $("#id_error_cc_type").html("Select credit card type").show();
-            valid = false;
+            cardDate = cardMonth.split("/");
+            if(cardDate[0] > 12){
+                 $("#id_error").html("Month Should be less then 12");
+                 $('#id_cc_exp_date').addClass('is-invalid');
+                 $('#id_cc_exp_date').removeClass('is-valid');
+                 $('#id_cc_exp_date').focus();
+                 valid = false;
+                 return valid;
+            }
+            var year = new Date().getFullYear();
+            var year_added = year+10;
+            if(cardDate[1] < year || cardDate[1] > year_added){
+                 $("#id_error").html("Year Should be greater than  "+year+" and less than "+year_added);
+                 $('#id_cc_exp_date').addClass('is-invalid');
+                 $('#id_cc_exp_date').removeClass('is-valid');
+                 $('#id_cc_exp_date').focus();
+                 valid = false;
+                 return valid;
+            }
+            if(valid){
+                 $("#id_error").html("");
+                 $('#id_cc_exp_date').removeClass('is-invalid');
+                 $('#id_cc_exp_date').addClass('is-valid');
+                 valid = true;
+            }
         }
         
-        if (checkCreditCard(cardNumber, type)) {
-            
-        } else {
-            $("#id_error_cc_payment").html(ccErrors[ccErrorNo]).show();
-            valid = false;
-        };
-
-        if (month.trim() == "") {
-            $("#id_error_cc_exp_month").html("Missing Month").show();
-            valid = false;
+        var cvv = $('#id_cc_cvv').val();
+        if (cvv.trim() == "") {
+           $("#id_error").html("Missing CVV");
+           $('#id_cc_cvv').removeClass('is-valid');
+           $('#id_cc_cvv').addClass('is-invalid');
+           $('#id_cc_cvv').focus();
+           valid = false;
+           return valid;
+        }else{
+            if(cvv.length > 3){
+                $("#id_error").html("Invalid CVV").show();
+                $('#id_cc_cvv').removeClass('is-valid');
+                $('#id_cc_cvv').addClass('is-invalid');
+                $('#id_cc_cvv').focus();
+                valid = false;
+                return valid;
+            }else{
+                $("#id_error").html("").show();
+                $('#id_cc_cvv').removeClass('is-invalid');
+                $('#id_cc_cvv').addClass('is-valid');
+                valid = true;
+            }
         }
-        if (year.trim() == "") {
-            $("#id_error_cc_exp_year").html("Missing Year").show();
-            valid = false;
-        }
-
+        checkDiscountCode();
+        
         if (valid == false) {
-            $("#error-message").html("All Fields are required").show();
+            $("#id_error").html("All Fields are required").show();
         }
         if(valid == true){
             var discount = $('#id_cc_discount_code').val();
             var el = '<input type="hidden" id="token" name="token" value=""></input>';
-              el += '<input type="hidden" id="cc_discount_code" name="cc_discount_code" value="'+discount+'"></input>';
+            el += '<input type="hidden" id="cc_discount_code" name="cc_discount_code" value="'+discount+'"></input>';
             $('#page-login-signup .mform').append(el);
         }
         return valid;
@@ -361,9 +649,41 @@ require(['jquery'], function($) {
             return false;
         }
     }
+
     function validateEmail(email) {
-        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
+        emailVal = email.val();
+        if (emailVal.trim() == "") {
+            $("#id_error").html("Missing email address");
+            email.addClass('is-invalid');
+            email.removeClass('is-valid');
+            email.focus();
+            return false;
+        }else{
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if(!re.test(String(emailVal).toLowerCase())){
+                $("#id_error").html("Invalid email address");
+                $(this).addClass('is-invalid');
+                $(this).removeClass('is-valid');
+                email.focus();
+                return false;
+            }else{
+                $.ajax({url: "{{{ config.wwwroot }}}/local/stripsignup/validation.php?func=chkEmail&email="+emailVal, success: function(result){
+                    if(result == 'ok'){
+                        $("#id_error").html("");
+                        email.removeClass('is-invalid');
+                        email.addClass('is-valid');
+                        return true;
+                    }else{
+                        $("#id_error").html("Email already taken");
+                        email.addClass('is-invalid');
+                        email.removeClass('is-valid');
+                        email.focus();
+                        return false;
+                    }
+                }});
+            }
+        }
+        return true;
     }
 });
 </script>

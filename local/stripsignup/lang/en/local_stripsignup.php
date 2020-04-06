@@ -22,7 +22,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['stippaymentheading'] = 'Discount Code & Stripe Setting';
+$string['stippaymentheading'] = 'Stripe Payment Setting';
 $string['discount_code'] = 'Discount Code';
 $string['discount_code_desc'] = 'Discount Code Settings';
 $string['discount_percentage'] = 'Discount in percentage';
