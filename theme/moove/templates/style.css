@@ -1484,6 +1484,7 @@ body.drawer-close-left {
 #page-user-calendar form.mform,
 #page-blog-preferences form.mform,
 #page-blog-external_blog_edit form.mform,
+#page-grade-edit-tree-category form.mform,
 #page-badges-mybackpack form.mform,
 #page-badges-preferences form.mform,
 #page-mod-forum-user #region-main > div > .card-body,
@@ -1658,6 +1659,7 @@ body.drawer-close-left {
 #page-login-change_password #fgroup_id_buttonar,
 #page-user-calendar #fgroup_id_buttonar,
 #page-blog-external_blog_edit #fgroup_id_buttonar,
+#page-grade-edit-tree-category #fgroup_id_buttonar,
 #page-badges-preferences #fgroup_id_buttonar,
 #page-blog-edit #fgroup_id_buttonar,
 #page-user-forum #fgroup_id_buttonar {
@@ -1941,7 +1943,7 @@ form.logselecform select {
     color: black !important;
 }
 
-#page-grade-edit-tree-index .Grade_tree #weightoverride_2 {
+#page-grade-edit-tree-index .Grade_tree .weightoverride {
     margin-bottom: 9px!important;
 }
 
@@ -2313,6 +2315,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-user-calendar form.mform,
     #page-blog-preferences form.mform,
     #page-blog-external_blog_edit form.mform,
+    #page-grade-edit-tree-category form.mform,
     #page-badges-mybackpack form.mform,
     #page-badges-preferences form.mform,
     #page-mod-forum-user #region-main > div > .card-body,
