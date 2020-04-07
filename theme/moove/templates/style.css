@@ -2110,7 +2110,10 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         padding-bottom: 5px!important;
         padding-top: 5px!important;
     }
-
+    #page-grade-edit-scale-edit #id_description_editor {
+        width: 100%!important;
+    }
+    
     #page-course-index-category .generalbox.info {
 
         padding-top: 10px !important;
