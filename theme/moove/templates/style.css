@@ -953,6 +953,7 @@ body.drawer-close-left {
 #page-mod-lesson-report .nav-tabs .nav-item.show .nav-link,
 #page-grade-import-csv-index .nav-tabs .nav-link.active,
 #page-grade-import-direct-index .nav-tabs .nav-link.active,
+#page-grade-import-xml-index .nav-tabs .nav-link.active,
 #page-grade-export-ods-index .nav-tabs .nav-link.active,
 #page-grade-export-xls-index .nav-tabs .nav-link.active,
 #page-grade-export-txt-index .nav-tabs .nav-link.active
@@ -984,6 +985,7 @@ body.drawer-close-left {
 #page-mod-lesson-view .nav-tabs .nav-link,
 #page-grade-import-csv-index .nav-tabs .nav-link,
 #page-grade-import-direct-index .nav-tabs .nav-link,
+#page-grade-import-xml-index .nav-tabs .nav-link,
 #page-grade-export-ods-index .nav-tabs .nav-link,
 #page-grade-export-xls-index .nav-tabs .nav-link,
 #page-grade-export-txt-index .nav-tabs .nav-link
@@ -1010,6 +1012,9 @@ body.drawer-close-left {
 #page-grade-import-direct-index .nav-tabs .nav-link:hover,
 #page-grade-import-direct-index .nav-tabs .nav-link:active,
 #page-grade-import-direct-index .nav-tabs .nav-link:focus,
+#page-grade-import-xml-index .nav-tabs .nav-link:hover,
+#page-grade-import-xml-index .nav-tabs .nav-link:active,
+#page-grade-import-xml-index .nav-tabs .nav-link:focus,
 #page-grade-export-txt-index .nav-tabs .nav-link:hover,
 #page-grade-export-txt-index .nav-tabs .nav-link:active,
 #page-grade-export-txt-index .nav-tabs .nav-link:focus,
@@ -1527,6 +1532,7 @@ body.drawer-close-left {
 #page-badges-view #region-main > div > .card-body,
 #page-grade-import-csv-index #region-main > div > .card-body,
 #page-grade-import-direct-index #region-main > div > .card-body,
+#page-grade-import-xml-index #region-main > div > .card-body,
 #page-grade-export-ods-index #region-main > div > .card-body,
 #page-grade-export-xls-index #region-main > div > .card-body,
 #page-grade-export-txt-index #region-main > div > .card-body,
@@ -1569,6 +1575,7 @@ body.drawer-close-left {
 
 #page-mod-lesson-report .slicon-question:before,
 #page-grade-import-direct-index .slicon-question:before,
+#page-grade-import-xml-index .slicon-question:before,
 #page-mod-lesson-view .slicon-question:before,
 #page-mod-lesson-essay .slicon-question:before,
 #page-mod-assign-mod .slicon-question:before,
@@ -2302,6 +2309,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-mod-lesson-view .nav-tabs .nav-link,
     #page-grade-import-csv-index .nav-tabs .nav-link,
     #page-grade-import-direct-index .nav-tabs .nav-link,
+    #page-grade-import-xml-index .nav-tabs .nav-link,
     #page-grade-export-ods-index .nav-tabs .nav-link,
     #page-grade-export-xls-index .nav-tabs .nav-link,
     #page-grade-export-txt-index .nav-tabs .nav-link
@@ -2387,6 +2395,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-badges-mybackpack legend a,
     #page-badges-preferences legend a,
     #page-grade-import-direct-index legend a,
+    #page-grade-import-xml-index legend a,
     #page-blog-edit legend a,
     #page-message-notificationpreferences .preferences-page-container h2,
     #page-admin-tool-dataprivacy-summary .card-header h3,
