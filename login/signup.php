@@ -96,10 +96,10 @@ if(count($_POST) > 0){
         $customer = new Customer();
 
         $customerDetails = $customer->create($customerDetailsAry);
-        $discount_code = get_config('local_stripsignup', 'discount_code');
+        $data = $DB->get_record_sql("SELECT * FROM {local_discounts} WHERE discount_code=? LIMIT 1", array($_POST['cc_discount_code']));
         $amount = get_config('local_stripsignup', 'cost');
-        if(isset($_POST['cc_discount_code']) && $discount_code == $_POST['cc_discount_code']){
-            $percentage = get_config('local_stripsignup', 'percentage');
+        if(!empty($data)){
+            $percentage = intval($data->percentage);
             if(round($percentage) == 100){
                 $amount = 0;
             }else{
@@ -107,19 +107,40 @@ if(count($_POST) > 0){
                 $discount_amout = $amount*$percentage;
                 $amount = $amount-$discount_amout;
             }
+            $send_email_to = explode(',', $data->emailto);
+            $send_emails = array();
+            if(count($send_email_to) > 0){
+                foreach ($send_email_to as $email){
+                    if($email != $_POST['email']){
+                        $send_emails[] = $email;
+                    }
+                }
+            }
+            $options = new stdClass();
+            $options->id = $data->id;
+            $options->emailto = implode(',', $send_emails);
+            $DB->update_record('local_discounts', $options);
         }
+        
         $cardDetailsAry = array(
             'customer' => $customerDetails->id,
             'amount' => $amount*100,
-            'currency' => 'eur',
+            'currency' => 'usd',
             'description' => 'User Subscription on eodo',
-
         );
         $charge = new Charge();
         $result = $charge->create($cardDetailsAry);
         $strip_result = $result->jsonSerialize();
         if ($strip_result['status'] == 'succeeded') {
-    //        echo $strip_result['status'];
+            $data = new stdClass();
+            if($_POST['cc_discount_code']){
+                $data->discount_code = $_POST['cc_discount_code'];
+            }
+            $data->price = $amount;
+            $data->user_email = $_POST['email'];
+            $data->username = $_POST['username'];
+            $data->date_created  = date('Y-m-d h:i:s');
+            $DB->insert_record('local_subscribed_user', $data);
         }else{
             redirect(new moodle_url('/login/signup.php'));
         }
@@ -137,7 +158,6 @@ if ($mform_signup->is_cancelled()) {
 } else if ($user = $mform_signup->get_data()) {
     // Add missing required fields.
     $user = signup_setup_new_user($user);
-
     // Plugins can perform post sign up actions once data has been validated.
     core_login_post_signup_requests($user);
     

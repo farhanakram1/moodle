@@ -22,230 +22,23 @@
                     <div class="card-title">
                         <h3>{{#str}}newaccount{{/str}}</h3>
                     </div>
-                    <div class="w-50-s">
+                    <div class="w-50-s" id="eodo-signup">
+                        <div class="form-control-feedback invalid-feedback" id="id_error">
+            
+                        </div>
                         {{{formhtml}}}
-                        
                     </div>
-                    <div class="w-50-s">
-                        <p class="posi_tx">Registration code can be requested from EODO</p>
-                        <br style="clear:both" />
-                        <h4> <b>One-time</b> Subscription Payment </h4>
-                        
-                        <div id="fitem_id_name" class="form-group row  fitem   ">
-                            <div class="col-md-3">
-                                <span class="float-sm-right text-nowrap">
-                                </span>
-                                <label class="col-form-label d-inline " for="fitem_id_name">
-                                    Name
-                                </label>
-                            </div>
-                            <div class="col-md-9 form-inline felement fd-end" data-fieldtype="text">
-                                <input type="text" class="form-control " name="name" id="fitem_id_name" value="" size="" maxlength="120" placeholder="Name">
-                                <div class="form-control-feedback invalid-feedback" id="id_error_cc_payment">
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="fitem_id_surname" class="form-group row  fitem   ">
-                            <div class="col-md-3">
-                                <span class="float-sm-right text-nowrap">
-                                </span>
-                                <label class="col-form-label d-inline " for="fitem_id_surname">
-                                    Name
-                                </label>
-                            </div>
-                            <div class="col-md-9 form-inline felement fd-end" data-fieldtype="text">
-                                <input type="text" class="form-control " name="surname" id="fitem_id_surname" value="" size="" maxlength="120" placeholder="Surname">
-                                <div class="form-control-feedback invalid-feedback" id="id_error_cc_payment">
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="fitem_id_cc_payment" class="form-group row  fitem" style="width:70%; margin-top: 14px !important;">
-                            <div class="col-md-3">
-                                <span class="float-sm-right text-nowrap">
-                                </span>
-                                <label class="col-form-label d-inline " for="id_cc_payment">
-                                    City/town
-                                </label>
-                            </div>
-                            <div class="col-md-9 form-inline felement fd-end" data-fieldtype="text">
-                                <input type="text" class="form-control " name="cc_payment" id="id_cc_payment" value="" size="" maxlength="120" placeholder="Credit Card Number">
-                                <div class="form-control-feedback invalid-feedback" id="id_error_cc_payment">
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="fitem_id_cc_exp_year" class="form-group row  fitem   " style="width:30%; margin-top: 14px !important;">
-                            <div class="col-md-3">
-                                <span class="float-sm-right text-nowrap">
-                                </span>
-                                <label class="col-form-label d-inline " for="id_cc_exp_year">
-                                    Exp Month
-                                </label>
-                            </div>
-                            <div class="col-md-9 form-inline felement fd-end" data-fieldtype="select">
-                                <select class="custom-select" name="cc_exp_year" id="id_cc_exp_year">
-                                     <option value="">Select Exp. Year</option>
-                                     <option value="2020">2020</option>
-                                     <option value="2021">2021</option>
-                                     <option value="2022">2022</option>
-                                     <option value="2023">2023</option>
-                                     <option value="2024">2024</option>
-                                     <option value="2025">2025</option>
-                                     <option value="2026">2026</option>
-                                     <option value="2027">2027</option>
-                                     <option value="2028">2028</option>
-                                     <option value="2029">2029</option>
-                                     <option value="2030">2030</option>
-                                     <option value="2031">2031</option>
-                                 </select>
-
-                                <div class="form-control-feedback invalid-feedback" id="id_error_cc_exp_year">
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="fitem_id_cc_payment" class="form-group row  fitem   ">
-                            <div class="col-md-3">
-                                <span class="float-sm-right text-nowrap">
-                                </span>
-                                <label class="col-form-label d-inline " for="id_cc_payment">
-                                    City/town
-                                </label>
-                            </div>
-                            <div class="col-md-9 form-inline felement fd-end" data-fieldtype="select">
-                                <select class="custom-select" tabindex="11" id="id_cc_type">
-                                    <option value="">Select Credit Card Type</option>
-                                    <option value="AmEx">American Express</option>
-                                    <option value="CarteBlanche">Carte Blanche</option>
-                                    <option value="DinersClub">Diners Club</option>
-                                    <option value="Discover">Discover</option>
-                                    <option value="EnRoute">enRoute</option>
-                                    <option value="JCB">JCB</option>
-                                    <option value="Maestro">Maestro</option>
-                                    <option value="MasterCard">MasterCard</option>
-                                    <option value="Solo">Solo</option>
-                                    <option value="Switch">Switch</option>
-                                    <option value="Visa">Visa</option>
-                                    <option value="VisaElectron">Visa Electron</option>
-                                    <option value="LaserCard">Laser</option>
-                                  </select>
-                                <div class="form-control-feedback invalid-feedback" id="id_error_cc_type">
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="fitem_id_cc_exp_month" class="form-group row  fitem   ">
-                            <div class="col-md-3">
-                                <span class="float-sm-right text-nowrap">
-                                </span>
-                                <label class="col-form-label d-inline " for="id_cc_exp_month">
-                                    Exp Month
-                                </label>
-                            </div>
-                            <div class="col-md-9 form-inline felement fd-end" data-fieldtype="select">
-                                <select class="custom-select" name="cc_exp_month" id="id_cc_exp_month">
-                                     <option value="">Select Exp. Month</option>
-                                     <option value="01">January</option>
-                                     <option value="02">February</option>
-                                     <option value="03">March</option>
-                                     <option value="04">April</option>
-                                     <option value="05">May</option>
-                                     <option value="06">June</option>
-                                     <option value="07">July</option>
-                                     <option value="08">August</option>
-                                     <option value="09">September</option>
-                                     <option value="10">October</option>
-                                     <option value="11">November</option>
-                                     <option value="12">December</option>
-                                 </select>
-
-                                <div class="form-control-feedback invalid-feedback" id="id_error_cc_exp_month">
-
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        
-                        
-    
-
-                        <div id="fitem_id_cc_cvv" class="form-group row  fitem   " style="width: 35%;">
-                            <div class="col-md-3">
-                                <span class="float-sm-right text-nowrap">
-                                </span>
-                                <label class="col-form-label d-inline " for="id_cc_cvv">
-                                    CVC
-                                </label>
-                            </div>
-                            <div class="col-md-9 form-inline felement fd-end" data-fieldtype="text">
-                                <input type="text" class="form-control " name="cc_cvv" id="id_cc_cvv" value="" size="" maxlength="120" placeholder="CVV">
-                                <div class="form-control-feedback invalid-feedback" id="id_error_cc_cvv">
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="fitem_id_cc_discount_code" class="form-group row  fitem   " style="    width: 35%;">
-                            <div class="col-md-3">
-                                <span class="float-sm-right text-nowrap">
-                                </span>
-                                <label class="col-form-label d-inline " for="id_cc_discount_code">
-                                    CVV
-                                </label>
-                            </div>
-                            <div class="col-md-9 form-inline felement fd-end" data-fieldtype="text">
-                                <input type="text" class="form-control " name="cc_discount_code" id="id_cc_discount_code" value="" size="" maxlength="120" placeholder="Discount Code">
-                                <div class="form-control-feedback invalid-feedback" id="id_error_cc_discount_code">
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="fitem_id_cc_discount_code" class="form-group row  fitem " style="    width: 36% !important;">
-                            <div class="col-md-9 form-inline felement fd-end" data-fieldtype="text">
-                                <div id="btnRegister">
-                                    <input id="cc_payment_btn" type="button" class="btn btn-success" value="USD $90" style="background: #008ec2;border-radius: 11px;padding: 10px 27px;border: none;"/>
-                                </div> 
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="btnRegister">
-                            <input id="cc_payment_btn" type="button" class="btn btn-primary" value="Register & Pay Now" style="margin-top: 40px;margin-left: -50px;padding: 10px !important;x !important;" />
-                        </div> 
-                    </div>
+                    <div id="btnRegister">
+                        <input id="cc_payment_btn" type="button" class="btn btn-primary" value="Register & Pay Now" />
+                    </div> 
                 </div>
             </div>
         </div>
     </div>
 </div>
-<style>
-    #id_submitbutton{
-      display:none;
-    }
-    #btnRegister{
-        width: 200px;
-        margin: auto;
-    }
-    #page-login-signup h4 {
-        color: #373a3c !important;
-        font-size: 25px !important;
-        margin-bottom: 20px;
-        margin-top: 10px;
-        text-align: left;
-        padding-left: 32px;
-    }
-</style>
 {{{script}}}
 <script>
     Stripe.setPublishableKey("{{{publish_key}}}");
 </script>
+
+

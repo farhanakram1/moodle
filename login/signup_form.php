@@ -39,37 +39,60 @@ class login_signup_form extends moodleform implements renderable, templatable {
         $mform->addElement('header', 'createuserandpass', get_string('createuserandpass'), '');
 
 
-        $mform->addElement('text', 'username', get_string('username'), 'maxlength="100" placeholder="username" autocapitalize="none"');
+        $mform->addElement('text', 'username', get_string('username'), 'maxlength="100" placeholder="'.get_string('username').'" autocapitalize="none"');
         $mform->setType('username', PARAM_RAW);
         $mform->addRule('username', get_string('missingusername'), 'required', null, 'client');
 
         if (!empty($CFG->passwordpolicy)){
             $mform->addElement('static', 'passwordpolicyinfo', '', print_password_policy());
         }
-        $mform->addElement('password', 'password', get_string('password'), 'maxlength="32" placeholder="password"');
+        $mform->addElement('password', 'password', get_string('password'), 'maxlength="32" placeholder="'.get_string('password').'"');
         $mform->setType('password', core_user::get_property_type('password'));
         $mform->addRule('password', get_string('missingpassword'), 'required', null, 'client');
 
         $mform->addElement('header', 'supplyinfo', get_string('supplyinfo'),'');
 
-        $mform->addElement('text', 'email', get_string('email'), 'maxlength="100" placeholder="email"');
+        $mform->addElement('text', 'email', get_string('email'), 'maxlength="100" placeholder="'.get_string('email').'"');
         $mform->setType('email', core_user::get_property_type('email'));
         $mform->addRule('email', get_string('missingemail'), 'required', null, 'client');
         $mform->setForceLtr('email');
 
-        $mform->addElement('text', 'email2', get_string('emailagain'), 'maxlength="100" placeholder="re-enter email"');
+        $mform->addElement('text', 'email2', get_string('emailagain'), 'maxlength="100" placeholder="'.get_string('reemail').'"');
         $mform->setType('email2', core_user::get_property_type('email'));
         $mform->addRule('email2', get_string('missingemail'), 'required', null, 'client');
         $mform->setForceLtr('email2');
 
         $namefields = useredit_get_required_name_fields();
+
+        $mform->addElement('text', 'city', get_string('city'), 'maxlength="120" placeholder="'.get_string('city').'" ');
+        $mform->setType('city', core_user::get_property_type('city'));
+        if (!empty($CFG->defaultcity)) {
+            $mform->setDefault('city', $CFG->defaultcity);
+        }
+
+        $country = get_string_manager()->get_list_of_countries();
+        $default_country[''] = get_string('selectacountry');
+        $country = array_merge($default_country, $country);
+        $mform->addElement('select', 'country', get_string('country'), $country);
+
+        if( !empty($CFG->country) ){
+            $mform->setDefault('country', $CFG->country);
+        }else{
+            $mform->setDefault('country', '');
+        }
+
+        $mform->addElement('text', 'registrationcode', get_string('registrationcode'), 'maxlength="120" placeholder="'.get_string('registrationcode').'" ');
+        
+        $mform->addElement('html', '<p style="clear: both;margin-left: 20px;">'.get_string('registeration_code_eodo').'</p>');
+        $mform->addElement('html', '<h4> '.get_string('one_time_payment').' </h4>');
+        
         // echo "<pre>";
         // print_r($namefields[5]);
         // print_r($namefields[21]);
         // die();
         // foreach ($namefields as $field) {
-            $mform->addElement('text', $namefields[5], get_string($namefields[5]), 'maxlength="100" placeholder="first"');
-            $mform->addElement('text', $namefields[21], get_string($namefields[21]), 'maxlength="100" placeholder="last"');
+            $mform->addElement('text', $namefields[5], get_string($namefields[5]), 'maxlength="100" placeholder="'. get_string('firstname').'"');
+            $mform->addElement('text', $namefields[21], get_string($namefields[21]), 'maxlength="100" placeholder="'.get_string('lastname').'"');
             
             $mform->setType($namefields[5], core_user::get_property_type('firstname'));
             $mform->setType($namefields[21], core_user::get_property_type('firstname'));
@@ -87,29 +110,20 @@ class login_signup_form extends moodleform implements renderable, templatable {
             $mform->addRule($namefields[5], get_string($stringid), 'required', null, 'client');
             $mform->addRule($namefields[21], get_string($stringids), 'required', null, 'client');
         // }
-
-        $mform->addElement('text', 'city', get_string('city'), 'maxlength="120" placeholder="city" ');
-        $mform->setType('city', core_user::get_property_type('city'));
-        if (!empty($CFG->defaultcity)) {
-            $mform->setDefault('city', $CFG->defaultcity);
-        }
-
-        $country = get_string_manager()->get_list_of_countries();
-        $default_country[''] = get_string('selectacountry');
-        $country = array_merge($default_country, $country);
-        $mform->addElement('select', 'country', get_string('country'), $country);
-
-        if( !empty($CFG->country) ){
-            $mform->setDefault('country', $CFG->country);
-        }else{
-            $mform->setDefault('country', '');
-        }
-
-        $mform->addElement('text', 'registrationcode', get_string('registrationcode'), 'maxlength="120" placeholder="Registration Code" ');
         // $mform->setType('city', core_user::get_property_type('city'));
         // if (!empty($CFG->defaultcity)) {
         //     $mform->setDefault('city', $CFG->defaultcity);
         // }
+            
+        
+        $mform->addElement('text', 'cc_payment', get_string('cc_payment'), 'maxlength="120" title="'.get_string('cc_payment').'" placeholder="•••• •••• •••• ••••" required autocomplete="cc_payment"');
+        $mform->addElement('text', 'cc_exp_date', get_string('cc_exp_date'), 'maxlength="120" title="'.get_string('cc_exp_date').'" placeholder="•• / ••" autocomplete="cc_exp_date" ');
+        $mform->addElement('text', 'cc_cvv', get_string('cc_cvv'), 'maxlength="120" title="'.get_string('cc_cvv').'" required autocomplete="cc_cvv" placeholder="•••" ');
+        
+        $mform->addElement('text', 'cc_discount_code', get_string('cc_discount_code'), 'maxlength="120" placeholder="'.get_string('cc_discount_code').'"');
+        $amount = get_config('local_stripsignup', 'cost');
+        $price_button = '<div class="subscription_amount">USD $'.$amount.' </div>';
+        $mform->addElement('html', $price_button);
        
         profile_signup_fields($mform);
 
@@ -126,7 +140,7 @@ class login_signup_form extends moodleform implements renderable, templatable {
         // it can be implemented differently in custom sitepolicy handlers.
         $manager = new \core_privacy\local\sitepolicy\manager();
         $manager->signup_form($mform);
-
+        
         // buttons
         $this->add_action_buttons(true, get_string('createaccount'));
 
@@ -181,10 +195,16 @@ class login_signup_form extends moodleform implements renderable, templatable {
      */
     public function export_for_template(renderer_base $output) {
         ob_start();
+       global $CFG;
         $this->display();
         $formhtml = ob_get_contents();
         $script  = '<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-            <script src="https://www.braemoor.co.uk/software/_private/creditcard.js"></script>';
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+            <script src="'.$CFG->wwwroot . '/local/stripsignup/jquery.payment.js"></script>'
+                . '<script>  jQuery(function($) {'
+                . "$('#id_cc_payment').payment('formatCardNumber');
+                    $('#id_cc_exp_date').payment('formatCardExpiry');
+                    $('#id_cc_cvv').payment('formatCardCVC');"." }); </script>";
         ob_end_clean();
         $sanbox = get_config('local_stripsignup', 'sandboxlive');
         $spublish_key = '';

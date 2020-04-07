@@ -55,17 +55,6 @@ function xmldb_local_discounts_upgrade($oldversion) {
             $dbman->add_field($table, $field);
         }
 
-        $table = new xmldb_table('local_discountslogging');
-        $table->add_field('id', XMLDB_TYPE_INTEGER, '10', null, XMLDB_NOTNULL, XMLDB_SEQUENCE, null);
-        $table->add_field('formcontent', XMLDB_TYPE_TEXT, null, null, null, null);
-        $table->add_field('formdate', XMLDB_TYPE_INTEGER, '10', null, null, null, '0');
-        $table->add_field('formname', XMLDB_TYPE_TEXT, '10', null, null, null);
-        $table->add_key('primary', XMLDB_KEY_PRIMARY, array('id'));
-
-        if (!$dbman->table_exists($table)) {
-            $dbman->create_table($table);
-        }
-
         // Local pages savepoint reached.
         upgrade_plugin_savepoint(true, 2020011100, 'local', 'pages');
     }
