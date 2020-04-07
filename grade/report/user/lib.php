@@ -873,7 +873,7 @@ class grade_report_user extends grade_report {
          $maxspan = $this->maxdepth;
 
         /// Build table structure
-        $html = "
+        $html = "<div class='table-responsive'>
             <table cellspacing='0'
                    cellpadding='0'
                    summary='" . s($this->get_lang_string('tablesummary', 'gradereport_user')) . "'
@@ -914,7 +914,7 @@ class grade_report_user extends grade_report {
             $html .= "</tr>\n";
         }
 
-        $html .= "</tbody></table>";
+        $html .= "</tbody></table></div>";
 
         if ($return) {
             return $html;

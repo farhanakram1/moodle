@@ -1105,6 +1105,10 @@ body.drawer-close-left {
 #page-mod-lesson-view .nav-tabs,
 #page-grade-report-grader-index .nav-tabs,
 #page-grade-edit-tree-index .nav-tabs,
+#page-grade-report-outcomes-index .nav-tabs,
+#page-grade-report-overview-index .nav-tabs,
+#page-grade-report-singleview-index .nav-tabs,
+#page-grade-report-user-index .nav-tabs,
 #page-grade-edit-scale-index .nav-tabs,
 #page-grade-edit-letter-index .nav-tabs,
 #page-grade-import-direct-index .nav-tabs,
@@ -2008,6 +2012,9 @@ form.logselecform select {
 @media (max-width: 767px){
     #page-grade-report-grader-index .nav-tabs .nav-link{
         margin-bottom: 20px!important;
+    }
+    #page-grade-report-singleview-index .singleselect {
+        padding-bottom: 10px!important;
     }
 
     body.drawer-open-left {
