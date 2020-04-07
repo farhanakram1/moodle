@@ -1684,7 +1684,9 @@ body.drawer-close-left {
 #page-user-forum #fgroup_id_buttonar {
     margin-top: 30px;
 }
-#page-badges-mybackpack #fitem_id_submitbutton {
+#page-badges-mybackpack #fitem_id_submitbutton,
+#page-grade-export-ods-index #fitem_id_submitbutton
+{
     margin-top: 30px;
 }
 .cust-box-tab .nav-tabs .nav-link {
