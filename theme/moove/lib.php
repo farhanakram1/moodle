@@ -39,13 +39,6 @@ function theme_moove_get_extra_scss($theme) {
 
     $scss .= theme_moove_set_loginbgimg($theme);
 
-    $scss .= theme_moove_set_forgotbgimg($theme);
-
-    $scss .= theme_moove_set_signupbgimg($theme);
-
-    // $scss .= theme_moove_set_dashboardbgimg($theme);
-
-    $scss .= theme_moove_set_contactusbgimg($theme);
     return $scss;
 }
 
@@ -108,86 +101,6 @@ function theme_moove_set_loginbgimg($theme) {
 
     return $headercss;
 }
-
-/**
- * Adds the Conatct page background image to CSS.
- *
- * @param theme_config $theme The theme config object.
- * @return string
- */
-function theme_moove_set_contactusbgimg($theme) {
-    global $OUTPUT;
-
-    $contactusbgimg = $theme->setting_file_url('contactusbgimg', 'contactusbgimg');
-
-    if (is_null($contactusbgimg)) {
-        $contactusbgimg = $OUTPUT->image_url('contactus_bg', 'theme');
-    }
-
-    $headercss = ".page-local-pages-contact-2 #page-wrapper #page {background-image: url('$contactusbgimg');}";
-
-    return $headercss;
-}
-
-/**
- * Adds the login page background image to CSS.
- *
- * @param theme_config $theme The theme config object.
- * @return string
- */
-function theme_moove_set_forgotbgimg($theme) {
-    global $OUTPUT;
-
-    $forgotbgimg = $theme->setting_file_url('forgotbgimg', 'forgotbgimg');
-
-    if (is_null($forgotbgimg)) {
-        $forgotbgimg = $OUTPUT->image_url('forgot_bg', 'theme');
-    }
-
-    $headercss = "#page-login-forgot_password #page-wrapper #page {background-image: url('$forgotbgimg');}";
-
-    return $headercss;
-}
-
-/**
- * Adds the signup page background image to CSS.
- *
- * @param theme_config $theme The theme config object.
- * @return string
- */
-function theme_moove_set_signupbgimg($theme) {
-    global $OUTPUT;
-
-    $signupbgimg = $theme->setting_file_url('signupbgimg', 'signupbgimg');
-
-    if (is_null($signupbgimg)) {
-        $signupbgimg = $OUTPUT->image_url('signup_bg', 'theme');
-    }
-
-    $headercss = "#page-login-signup #page-wrapper .sigun_up {background-image: url('$signupbgimg');}";
-
-    return $headercss;
-}
-
-/**
- * Adds the signup page background image to CSS.
- *
- * @param theme_config $theme The theme config object.
- * @return string
- */
-// function theme_moove_set_dashboardbgimg($theme) {
-//     global $OUTPUT;
-
-//     $dashboardbgimg = $theme->setting_file_url('dashboardbgimg', 'dashboardbgimg');
-
-//     if (is_null($dashboardbgimg)) {
-//         $dashboardbgimg = $OUTPUT->image_url('dashboard_bg', 'theme');
-//     }
-
-//     $headercss = "#page-my-index #page-wrapper .cust-box-tab {background-image: url('$dashboardbgimg');}";
-
-//     return $headercss;
-// }
 
 /**
  * Returns the main SCSS content.
@@ -283,14 +196,6 @@ function theme_moove_pluginfile($course, $cm, $context, $filearea, $args, $force
         return $theme->setting_file_serve('headerimg', $args, $forcedownload, $options);
     }
 
-    if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'howitworkimg') {
-        return $theme->setting_file_serve('howitworkimg', $args, $forcedownload, $options);
-    }
-
-    if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'home24accessimage') {
-        return $theme->setting_file_serve('home24accessimage', $args, $forcedownload, $options);
-    }
-
     if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'marketing1icon') {
         return $theme->setting_file_serve('marketing1icon', $args, $forcedownload, $options);
     }
@@ -315,18 +220,6 @@ function theme_moove_pluginfile($course, $cm, $context, $filearea, $args, $force
         return $theme->setting_file_serve('loginbgimg', $args, $forcedownload, $options);
     }
 
-    if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'forgotbgimg') {
-        return $theme->setting_file_serve('forgotbgimg', $args, $forcedownload, $options);
-    }
-
-    if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'signupbgimg') {
-        return $theme->setting_file_serve('signupbgimg', $args, $forcedownload, $options);
-    }
-
-    if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'contactusbgimg') {
-        return $theme->setting_file_serve('contactusbgimg', $args, $forcedownload, $options);
-    }
-    
     if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'favicon') {
         return $theme->setting_file_serve('favicon', $args, $forcedownload, $options);
     }

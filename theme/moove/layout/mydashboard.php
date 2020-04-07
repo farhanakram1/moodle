@@ -109,7 +109,9 @@ $templatecontext['overview'] = get_string('overview','theme_moove');
 $templatecontext['examorganizer'] = get_string('examorganizer','theme_moove');
 $templatecontext['bookcourses'] = get_string('bookcourses','theme_moove');
 // $templatecontext['welcome'] = get_string('welcome','theme_moove');
-
+$exam_course = get_courses();
+$templatecontext['courses_examorganizer'] = (count($exam_course)) ? true : false;
+$templatecontext['get_courses_examorganizer'] = array_values($exam_course);
 
 
 //Grade Report Overview Dashboard Show

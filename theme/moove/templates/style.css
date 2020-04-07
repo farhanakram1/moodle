@@ -20,11 +20,11 @@
 }
 
 #page-admin-tool-dataprivacy-createdatarequest h2, #page-admin-roles-check h3 label, .pagelayout-admin .card-body div > h3, .pagelayout-admin .card-body div > h2 {
-	color: white !important;
+    color: white !important;
 }
 .singlebutton{
-   margin-top: 30px;
-       line-height: 1.5rem;
+    margin-top: 30px;
+    line-height: 1.5rem;
 } 
 .cust-box-tab .nav-tabs.remove_border{
     border-bottom: 0px !important;
@@ -34,7 +34,7 @@
 }
 .card-body.cust-tabs-s{padding-top: 0px !important;}
 #page-admin-cache-admin #page {
-	margin-top: 25px !important;
+    margin-top: 25px !important;
 }
 #page-admin-tool-phpunit-index .generalbox h1{
     color: #000 !important;
@@ -43,17 +43,17 @@
 #page-admin-tool-dbtransfer-index h2, #page-admin-tool-xmldb-index h2, #page-admin-tool-phpunit-index .generalbox h2, #page-admin-tool-phpunit-index .generalbox h3, #page-admin-tool-generator-maketestplan h2, #page-admin-tool-generator-maketestcourse h2, #page-admin-tool-behat-index h2, #page-admin-thirdpartylibs h2, #page-admin-purgecaches h2, #page-admin-webservice-testclient h2, #page-admin-tool-spamcleaner-index h2, #page-admin-tool-monitor-managerules h2, #page-admin-report-security-index h2, #page-admin-report-questioninstances-index h2, #page-admin-report-performance-index h2, #page-admin-report-loglive-index h2, #page-admin-report-log-index h2, #page-admin-report-insights-insights h2, #page-admin-report-configlog-index h2, #page-admin-comment-index h2, #page-admin-tool-oauth2-issuers h2, #page-admin-tool-task-scheduledtasks h2, #page-admin-setting-themesettingmoove h2, #page-admin-setting-themesettingclassic h2, #page-admin-setting-themesettingboost h2, #page-admin-theme-index h2, #page-admin-theme-index h3, #page-admin-setting-cachestores h2, #page-admin-setting-cachestores h3, #page-admin-cache-testperformance h2, #page-admin-cache-testperformance h3, #page-admin-cache-admin h2, #page-admin-cache-admin h3, #page-admin-setting-assignfeedback_editpdf h2, #page-admin-setting-assignfeedback_editpdf h3, #page-admin-setting-assignfeedbackplugins h2, #page-admin-setting-assignfeedbackplugins h3, #page-admin-filters h2, #page-admin-webservice-documentation h2, #page-admin-plugins h2, #page-admin-tool-installaddon-index h2, #page-admin-grade-edit-scale-index h2, #page-admin-grade-edit-scale-index h3, #page-backup-restorefile h2, #page-course-management .coursesearchbox h2, #page-course-management .card-header, #page-admin-tool-dataprivacy-datarequests h2, #page-admin-tool-dataprivacy-pluginregistry h2, #page-admin-roles-check h3, #page-cohort-upload h2, #page-cohort-edit h2, #page-admin-user-profile-index h2, #page-admin-user-profile-index h3, #page-admin-user h2, #page-badges-backpacks h2, #page-admin-setting-competencysettings h2,#page-admin-tool-lpimportcsv-index h2, #page-admin-tool-lpmigrate-frameworks h2, #page-admin-registration-index h2{
     color: #000 !important;
 }
- #page-admin-roles-assign h2, #page-admin-roles-assign h3,
- #page-admin-tool-lp-editplan h2, #page-admin-tool-lp-editplan h3
- {
+#page-admin-roles-assign h2, #page-admin-roles-assign h3,
+#page-admin-tool-lp-editplan h2, #page-admin-tool-lp-editplan h3
+{
     color: white!important;
- }
-#page-local-discounts-edit h1.page__title, #page-local-discounts-discounts h1.discount__title, #page-admin-report-backups-index h2, #page-local-pages-edit .page__title, #page-admin-local-pages-pages .page__title{
-	color: #FFF !important;
-	margin-bottom: 10px !important;
-	margin-top: 5px !important;
 }
-#page-local-discounts-edit .mform, #page-local-discounts-discounts .custompages-list, #page-user-editadvanced .mform, #page-course-view-topics .card-body, #page-admin-tool-dbtransfer-index .card-body, #page-admin-tool-xmldb-index .card-body, #page-admin-tool-templatelibrary-index [data-region="list-templates"], #page-admin-tool-phpunit-index .generalbox, #page-admin-tool-generator-maketestplan .card-body, #page-admin-tool-generator-maketestcourse .card-body, #page-admin-tool-behat-index .card-body, #page-admin-thirdpartylibs .card-body, #page-admin-purgecaches .card-body, #page-admin-webservice-testclient .card-body, #page-admin-tool-spamcleaner-index .card-body, #page-admin-tool-monitor-managerules .card-body, #page-admin-report-security-index .card-body, #page-admin-report-questioninstances-index .card-body, #page-admin-report-performance-index .card-body, #page-admin-report-loglive-index .card-body, #page-admin-report-log-index .card-body, #page-admin-report-insights-insights .card-body, #page-admin-report-eventlist-index .mform, #page-admin-report-configlog-index .card-body, #page-admin-report-backups-index .generalbox, #page-admin-comment-index .card-body, #page-admin-tool-oauth2-issuers .card-body, #page-admin-tool-messageinbound-index .card-body,#page-admin-tool-task-scheduledtasks .card-body, #page-admin-setting-themesettingmoove .card-body, #page-admin-setting-themesettingclassic .card-body, #page-admin-setting-themesettingboost .card-body, #page-admin-theme-index .card-body, #page-admin-setting-cachestores .card-body, #page-admin-cache-testperformance .card-body, #page-admin-cache-admin .card-body, #page-admin-blocks .card-body .no-overflow, #page-admin-tool-availabilityconditions-index .card-body .no-overflow, #page-admin-tools .card-body .no-overflow, #page-admin-mod-lti-typessettings .mform, #page-admin-mod-lti-toolconfigure #main-content-container, #page-admin-setting-assignfeedback_editpdf .card-body, #page-admin-setting-assignfeedbackplugins .card-body, #page-admin-filters .card-body, #page-local-pages-edit .mform, #page-admin-local-pages-pages .custompages-list, #page-admin-setting-local_pages #adminsettings, #page-admin-localplugins .card-body .no-overflow,#page-admin-qtypes .card-body .no-overflow, #page-admin-reports .card-body .no-overflow,#page-admin-repository-recent .mform, #page-admin-repository-local .mform, #page-admin-repository-upload .mform, #page-admin-repository-url .mform, #page-admin-repository-wikimedia .mform, #page-admin-repository-user .mform, #page-admin-repository-areafiles .mform, #page-admin-repository-recent .mform, #page-admin-repository .generalbox, #page-admin-searchareas .card-body, #page-admin-searchareas .card-body, #page-admin-setting-editortinymce #adminsettings, #page-admin-setting-editoratto #adminsettings, #page-admin-webservice-tokens .mform, #page-admin-webservice-service .card-body, #page-admin-webservice-documentation .card-body, #page-admin-modules  .card-body .no-overflow,#page-admin-mod-assign-adminmanageplugins .card-body .no-overflow, #page-admin-setting-assignsubmissionplugins #adminsettings, #page-admin-setting-modassignfolder #adminsettings, #page-admin-plugins .card-body, #page-admin-tool-installaddon-index .card-body, #page-admin-grade-edit-letter-index .mform, #page-admin-grade-edit-letter-index .table-responsive, #page-admin-grade-edit-scale-edit .card-body, #page-admin-grade-edit-scale-index .card-body,#page-admin-tool-uploadcourse-index .mform, #page-backup-backupfilesedit .card-body, #page-backup-restorefile .card-body, #page-course-edit .mform, #page-course-editcategory .mform, #page-admin-customfield-edit .mform, #page-admin-course-customfield #customfield_catlist, #page-course-management .coursesearchbox, #page-admin-tool-dataprivacy-pluginregistry .card-body, #page-admin-roles-check .generalbox, #page-admin-tool-lpimportcsv-index .card-body, #page-admin-tool-lpmigrate-frameworks .card-body, #page-admin-registration-index .card-body,#page-admin-tool-analytics-index .card-body{
+#page-local-discounts-edit h1.page__title, #page-local-discounts-discounts h1.discount__title, #page-admin-report-backups-index h2, #page-local-pages-edit .page__title, #page-admin-local-pages-pages .page__title{
+    color: #FFF !important;
+    margin-bottom: 10px !important;
+    margin-top: 5px !important;
+}
+#page-login-confirm .card-body, #page-local-discounts-edit .mform, #page-local-discounts-discounts .custompages-list, #page-user-editadvanced .mform, #page-course-view-topics .card-body, #page-admin-tool-dbtransfer-index .card-body, #page-admin-tool-xmldb-index .card-body, #page-admin-tool-templatelibrary-index [data-region="list-templates"], #page-admin-tool-phpunit-index .generalbox, #page-admin-tool-generator-maketestplan .card-body, #page-admin-tool-generator-maketestcourse .card-body, #page-admin-tool-behat-index .card-body, #page-admin-thirdpartylibs .card-body, #page-admin-purgecaches .card-body, #page-admin-webservice-testclient .card-body, #page-admin-tool-spamcleaner-index .card-body, #page-admin-tool-monitor-managerules .card-body, #page-admin-report-security-index .card-body, #page-admin-report-questioninstances-index .card-body, #page-admin-report-performance-index .card-body, #page-admin-report-loglive-index .card-body, #page-admin-report-log-index .card-body, #page-admin-report-insights-insights .card-body, #page-admin-report-eventlist-index .mform, #page-admin-report-configlog-index .card-body, #page-admin-report-backups-index .generalbox, #page-admin-comment-index .card-body, #page-admin-tool-oauth2-issuers .card-body, #page-admin-tool-messageinbound-index .card-body,#page-admin-tool-task-scheduledtasks .card-body, #page-admin-setting-themesettingmoove .card-body, #page-admin-setting-themesettingclassic .card-body, #page-admin-setting-themesettingboost .card-body, #page-admin-theme-index .card-body, #page-admin-setting-cachestores .card-body, #page-admin-cache-testperformance .card-body, #page-admin-cache-admin .card-body, #page-admin-blocks .card-body .no-overflow, #page-admin-tool-availabilityconditions-index .card-body .no-overflow, #page-admin-tools .card-body .no-overflow, #page-admin-mod-lti-typessettings .mform, #page-admin-mod-lti-toolconfigure #main-content-container, #page-admin-setting-assignfeedback_editpdf .card-body, #page-admin-setting-assignfeedbackplugins .card-body, #page-admin-filters .card-body, #page-local-pages-edit .mform, #page-admin-local-pages-pages .custompages-list, #page-admin-setting-local_pages #adminsettings, #page-admin-localplugins .card-body .no-overflow,#page-admin-qtypes .card-body .no-overflow, #page-admin-reports .card-body .no-overflow,#page-admin-repository-recent .mform, #page-admin-repository-local .mform, #page-admin-repository-upload .mform, #page-admin-repository-url .mform, #page-admin-repository-wikimedia .mform, #page-admin-repository-user .mform, #page-admin-repository-areafiles .mform, #page-admin-repository-recent .mform, #page-admin-repository .generalbox, #page-admin-searchareas .card-body, #page-admin-searchareas .card-body, #page-admin-setting-editortinymce #adminsettings, #page-admin-setting-editoratto #adminsettings, #page-admin-webservice-tokens .mform, #page-admin-webservice-service .card-body, #page-admin-webservice-documentation .card-body, #page-admin-modules  .card-body .no-overflow,#page-admin-mod-assign-adminmanageplugins .card-body .no-overflow, #page-admin-setting-assignsubmissionplugins #adminsettings, #page-admin-setting-modassignfolder #adminsettings, #page-admin-plugins .card-body, #page-admin-tool-installaddon-index .card-body, #page-admin-grade-edit-letter-index .mform, #page-admin-grade-edit-letter-index .table-responsive, #page-admin-grade-edit-scale-edit .card-body, #page-admin-grade-edit-scale-index .card-body,#page-admin-tool-uploadcourse-index .mform, #page-backup-backupfilesedit .card-body, #page-backup-restorefile .card-body, #page-course-edit .mform, #page-course-editcategory .mform, #page-admin-customfield-edit .mform, #page-admin-course-customfield #customfield_catlist, #page-course-management .coursesearchbox, #page-admin-tool-dataprivacy-pluginregistry .card-body, #page-admin-roles-check .generalbox, #page-admin-tool-lpimportcsv-index .card-body, #page-admin-tool-lpmigrate-frameworks .card-body, #page-admin-registration-index .card-body,#page-admin-tool-analytics-index .card-body{
     background: #FFF;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -62,7 +62,7 @@
 #page-course-view-topics .card-body .page-header-headings h2{
     margin-top: 20px;
 }
-#page-local-discounts-edit .mform, #page-local-discounts-discounts .custompages-list, #page-user-editadvanced .mform,  #page-admin-tool-templatelibrary-index [data-region="list-templates"], #page-admin-tool-phpunit-index .generalbox, #page-admin-report-eventlist-index .mform,  #page-admin-report-backups-index .generalbox, #page-admin-blocks .card-body .no-overflow, #page-admin-tool-availabilityconditions-index .card-body .no-overflow, #page-admin-tools .card-body .no-overflow, #page-admin-mod-lti-typessettings .mform, #page-admin-mod-lti-toolconfigure #main-content-container, #page-local-pages-edit .mform, #page-admin-local-pages-pages .custompages-list, #page-admin-setting-local_pages #adminsettings, #page-admin-localplugins .card-body .no-overflow, #page-admin-qtypes .card-body .no-overflow, #page-admin-reports  .card-body .no-overflow,#page-admin-repository-recent .mform, #page-admin-repository-local .mform, #page-admin-repository-upload .mform, #page-admin-repository-url .mform, #page-admin-repository-wikimedia .mform, #page-admin-repository-user .mform,  #page-admin-repository-areafiles .mform, #page-admin-repository-recent .mform, #page-admin-repository .generalbox, #page-admin-setting-editortinymce #adminsettings, #page-admin-setting-editoratto #adminsettings, #page-admin-webservice-tokens .mform, #page-admin-modules  .card-body .no-overflow, #page-admin-mod-assign-adminmanageplugins .card-body .no-overflow, #page-admin-setting-assignsubmissionplugins #adminsettings, #page-admin-setting-modassignfolder #adminsettings, #page-admin-grade-edit-letter-index .mform, #page-admin-grade-edit-letter-index .table-responsive, #page-admin-tool-uploadcourse-index .mform, #page-course-edit .mform, #page-course-editcategory .mform, #page-admin-customfield-edit .mform, #page-admin-course-customfield #customfield_catlist{
+#page-login-confirm .card-body, #page-local-discounts-edit .mform, #page-local-discounts-discounts .custompages-list, #page-user-editadvanced .mform,  #page-admin-tool-templatelibrary-index [data-region="list-templates"], #page-admin-tool-phpunit-index .generalbox, #page-admin-report-eventlist-index .mform,  #page-admin-report-backups-index .generalbox, #page-admin-blocks .card-body .no-overflow, #page-admin-tool-availabilityconditions-index .card-body .no-overflow, #page-admin-tools .card-body .no-overflow, #page-admin-mod-lti-typessettings .mform, #page-admin-mod-lti-toolconfigure #main-content-container, #page-local-pages-edit .mform, #page-admin-local-pages-pages .custompages-list, #page-admin-setting-local_pages #adminsettings, #page-admin-localplugins .card-body .no-overflow, #page-admin-qtypes .card-body .no-overflow, #page-admin-reports  .card-body .no-overflow,#page-admin-repository-recent .mform, #page-admin-repository-local .mform, #page-admin-repository-upload .mform, #page-admin-repository-url .mform, #page-admin-repository-wikimedia .mform, #page-admin-repository-user .mform,  #page-admin-repository-areafiles .mform, #page-admin-repository-recent .mform, #page-admin-repository .generalbox, #page-admin-setting-editortinymce #adminsettings, #page-admin-setting-editoratto #adminsettings, #page-admin-webservice-tokens .mform, #page-admin-modules  .card-body .no-overflow, #page-admin-mod-assign-adminmanageplugins .card-body .no-overflow, #page-admin-setting-assignsubmissionplugins #adminsettings, #page-admin-setting-modassignfolder #adminsettings, #page-admin-grade-edit-letter-index .mform, #page-admin-grade-edit-letter-index .table-responsive, #page-admin-tool-uploadcourse-index .mform, #page-course-edit .mform, #page-course-editcategory .mform, #page-admin-customfield-edit .mform, #page-admin-course-customfield #customfield_catlist{
     padding: 20px;
     margin-top: 20px;
 }
@@ -122,11 +122,11 @@
 .pagelayout-admin  .card-body [data-region="managecompetencies"],
 .pagelayout-admin  .card-body div > fieldset,
 #page-badges-newbadge .card-body {
-	background-color: white;
-	padding: 20px 25px;
-	border-radius: 5px;
-	margin-top: 30px;
-	margin-bottom: 20px;
+    background-color: white;
+    padding: 20px 25px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 #page-admin-roles-check #reportuser_wrapper{
     margin-top: 10px !Important;
@@ -142,15 +142,15 @@
 .m-a-1 m-3{
     margin: 0;
 }
-#region-main .btn-secondary {
-	color: #fff !important;
-	background-color: #1177d1 !important;
-	border-color: #1177d1 !important;
-	background-color: #008ec2 !important;
-	border-radius: 5px !important;
-	padding: 8px 30px !important;
-	font-size: 14px !important;
-	border-color: #008ec2 !important;
+#page-my-index  .btn-secondary:hover, #page-my-index  .btn-secondary, #region-main .btn-secondary {
+    color: #fff !important;
+    background-color: #1177d1 !important;
+    border-color: #1177d1 !important;
+    background-color: #008ec2 !important;
+    border-radius: 5px !important;
+    padding: 8px 15px !important;
+    font-size: 14px !important;
+    border-color: #008ec2 !important;
 }
 #page-admin-setting-mobilesettings #region-main .card-body{
     margin-top: 20px;
@@ -163,9 +163,9 @@
     left: 11%;
 }
 #page-login-index.moove-login .loginpanel {
-	border-radius: 10px;
-	border: none;
-	background: #FFF !important;
+    border-radius: 10px;
+    border: none;
+    background: #FFF !important;
 }
 span.logo {
     margin-left: 25px!important;
@@ -180,11 +180,11 @@ span.logo {
     border: 1px solid #d7dfe3;
     padding: 1.25rem;
     background-color: transparent;
-	overflow-x: auto;
-	overflow-y: visible;
-	border: 0px;
-	padding: 1.25rem;
-	background-color: transparent;
+    overflow-x: auto;
+    overflow-y: visible;
+    border: 0px;
+    padding: 1.25rem;
+    background-color: transparent;
 }
 .page-local-pages-about-us-1 #region-main-box .card {
     margin-bottom: 20px!important;
@@ -198,7 +198,7 @@ span.logo {
     padding-left: 15px !important;
     margin-right: auto !important;
     margin-left: auto !important;
-        max-width: 100%;
+    max-width: 100%;
 }
 nav.navbar ul.navbar-nav > li:last-child:hover > a {
     border-bottom: none !important;
@@ -262,8 +262,8 @@ nav.navbar ul.navbar-nav > li:last-child:hover > a {
     padding-bottom: 50px;
 }
 #page-content.dasH_row_mar{
-         margin: 0 15px 0px 20px !important;   
-    }
+    margin: 0 15px 0px 20px !important;   
+}
 #page-login-forgot_password #region-main {
     padding: 0;
     border-radius: 10px;
@@ -272,22 +272,22 @@ nav.navbar ul.navbar-nav > li:last-child:hover > a {
 #page-login-signup #id_username{
     margin-top: 15px;
 }
-#page-login-signup #fitem_id_username .form-inline {
-    margin-bottom:0px !important;
+#page-login-signup #fitem_id_passwordpolicyinfo .form-inline {
+   margin-top: -20px;
 }
-#page-login-signup .w-50-s .form-control, .w-50-s .form-inline .custom-select {
+#page-login-signup #eodo-signup .form-control, .w-50-s .form-inline .custom-select {
     margin-bottom: 0px !important;
 } 
 
-#page-login-signup .w-50-s .form-control, .w-50-s .form-inline .custom-select {
+#page-login-signup #eodo-signup .form-control, .w-50-s .form-inline .custom-select {
     margin-bottom: 0px !important;
 }
 
-#page-login-signup .w-50-s .form-inline {
+#page-login-signup #eodo-signup .form-inline {
     width: 100% !important;
     max-width: 100% !important;
     flex: 0 0 100% !important;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 #page-site-index.notloggedin .frontpage-maincontent {
     padding-top: 4rem!important;
@@ -347,7 +347,7 @@ nav.navbar ul.navbar-nav .nav-item>a {
 nav.navbar ul.navbar-nav > li:hover > a {
     border-bottom: 1px solid #1d1c1c !important;
 }
-.usermenu .btn-primary {
+#page-my-index  .btn-primary, .usermenu .btn-primary {
     color: #fff;
     background-color: #008ec2!important;
     border-radius: 5px!important;
@@ -473,12 +473,12 @@ body {
 
 #page-login-forgot_password .card{
     background: #FFF !important;
-    
+
 }
 
 #page-login-forgot_password .card{
     background: #FFF !important;
-    
+
 }
 .about-page-s h1{
     color:#000 !important;
@@ -527,7 +527,16 @@ body {
 }
 #id_error_password {
     height: 37px;
-    overflow: hidden;
+    display: none;
+}
+
+#eodo-signup .is-invalid{
+    border: 2px solid #d95450 !important;
+    color: #d95450;
+}
+
+#eodo-signup .is-invalid[placeholder]{
+    color: #d95450;
 }
 .mform>.form-group {
     margin-left: 0!important;
@@ -611,7 +620,7 @@ span.red {
     width: 100%;
     position: absolute;
     height: 100%;
-    background-color: #ffffff85;
+    background-color: #ffff85;
     top: 90px;
 }
 #top-footer {
@@ -621,7 +630,78 @@ span.red {
 #yui_3_17_2_1_1582739127197_121 {
     margin-left: 37px;
 }
-
+#eodo-signup #fitem_id_password{
+    margin-top: 15px;
+}
+#eodo-signup #id_error_cc_payment{
+    display: none !important;
+}
+#eodo-signup #id_error_email{
+    display: none !important;
+}
+#eodo-signup #fitem_id_city{
+    width: 35%;
+}
+#eodo-signup input[placeholder]{
+    font-size: 12px;
+}
+#eodo-signup  #fitem_id_country{
+    width: 43%;
+}
+#eodo-signup #fitem_id_registrationcode{
+    width: 37%;
+}
+#eodo-signup #id_submitbutton{
+    display:none;
+}
+#eodo-signup #fitem_id_cc_payment{
+    width:75%;
+}
+#eodo-signup  #fitem_id_cc_exp_date{
+    width:35%;
+}
+#eodo-signup  #fitem_id_cc_cvv{
+    width:35%;
+}
+#eodo-signup  #fitem_id_cc_discount_code{
+    width: 45%;
+}
+#eodo-signup  #btnRegister{
+    width: 200px;
+    margin: auto;
+}
+#page-login-signup #eodo-signup h4 {
+    color: #373a3c !important;
+    font-size: 25px !important;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: left;
+    padding-left: 32px;
+    padding-bottom: 20px;
+}
+#eodo-signup  #fitem_id_passwordpolicyinfo{
+    display: none !important; 
+}
+#eodo-signup #id_error {
+	margin-left: 15px;
+	height: 25px;
+	font-size: 14px;
+	font-weight: bold;
+	display: block !important;
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+#page-login-signup #eodo-signup .form-inline label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    margin-left: 15px;
+    bottom: 40px;
+    font-size: 13px;
+}
 .w-50-s .form-group{
     width: 50%;
     float: left;
@@ -636,6 +716,27 @@ span.red {
 }
 .w-50-s  input , .w-50-s  select{
     width: 100%!important;
+    border-radius: 5px;
+}
+#btnRegister {
+    margin: auto;
+    width: 200px;
+}
+#btnRegister #cc_payment_btn {
+	margin-top: -30px;
+	padding: 10px !important;
+}
+.subscription_amount {
+	width: 25%;
+	margin-left: 20px;
+	background: #008ec2;
+	border-radius: 6px;
+	padding: 6px 15px;
+	border: none;
+	float: left;
+	color: #FFF;
+	text-align: center;
+	margin-top: -2px;
 }
 .w-50-s input#id_submitbutton {
     margin-left: 20%;
@@ -648,11 +749,11 @@ span.red {
 #region-main .w-50-s .btn-primary {
     padding: 5px 90px!important;
 
-padding: 25px 40px;
-background-color: #f3f6f6;
-border: 0!important;
-border-radius: 0;
-border: 1px solid #d7dfe3;
+    padding: 25px 40px;
+    background-color: #f3f6f6;
+    border: 0!important;
+    border-radius: 0;
+    border: 1px solid #d7dfe3;
 }
 #page-login-signup .card-title h3 {
     color: #373a3c !important;
@@ -666,6 +767,17 @@ border: 1px solid #d7dfe3;
 
 .w-50-s {
     padding-left: 55px;
+}
+#eodo-signup{
+    width: 90%;
+    margin: auto;
+    padding: 0;
+}
+#eodo-signup .form-group {
+	width: 55%;
+	float: left;
+	padding: 0 15px;
+	margin-bottom: 0 !important;
 }
 .w-50-s .form-inline {
     width: 100%!important;
@@ -839,7 +951,7 @@ body.drawer-close-left {
 #page-mod-lesson-essay .nav-tabs .nav-item.show .nav-link,
 #page-mod-lesson-report .nav-tabs .nav-link.active, 
 #page-mod-lesson-report .nav-tabs .nav-item.show .nav-link
- {
+{
 
     border: none;
     background: #008ec2;
@@ -865,7 +977,7 @@ body.drawer-close-left {
 #page-grade-edit-scale-index .nav-tabs .nav-link,
 #page-grade-edit-letter-index .nav-tabs .nav-link
 #page-mod-lesson-view .nav-tabs .nav-link
- {
+{
     border: 1px solid transparent;
     border: none;
     padding: 10px 14px;
@@ -953,7 +1065,7 @@ body.drawer-close-left {
     bottom: -15px;
     left: 42%;
     border: 7px solid transparent;
-        border-top-color: transparent;
+    border-top-color: transparent;
     border-top-color: #008ec2;
 
 }
@@ -991,10 +1103,10 @@ body.drawer-close-left {
 .user-t-pro .node_category li a {
     color:black;
     padding-left: 20px;
-        position: relative;
+    position: relative;
 }
 .user-t-pro .node_category li a:hover{
-        color: #008ec2!important;
+    color: #008ec2!important;
 }
 .user-t-pro .node_category li a:before {
     content:'>';
@@ -1005,13 +1117,14 @@ body.drawer-close-left {
     top: -7px;  
 
 }
+
 #page-grade-report-user-index #region-main > div > .card-body,
 #page-grade-report-singleview-index #region-main > div > .card-body,
 #page-grade-report-outcomes-index #region-main > div > .card-body,
 #page-grade-report-history-index #region-main > div > .card-body,
 #page-grade-edit-scale-index #region-main > div > .card-body,
-#page-grade-edit-letter-index #region-main > div > .card-body,
- {
+#page-grade-edit-letter-index #region-main > div > .card-body
+{
     background-color: white!important;
     margin-top: 25px!important;
     margin-bottom: 30px!important;
@@ -1025,19 +1138,19 @@ body.drawer-close-left {
 }
 .user-t-pro .node_category li.editprofile a:before {
     display: none;
-    }
-    .user-t-pro .node_category li.editprofile a:hover{
-        background-color: transparent!important;
+}
+.user-t-pro .node_category li.editprofile a:hover{
+    background-color: transparent!important;
     color: #008ec2!important;
-     border: 2px solid #008ec2;
-     text-decoration: none;
+    border: 2px solid #008ec2;
+    text-decoration: none;
 
-    }
+}
 .user-t-pro .node_category ul{
-        padding-top: 10px;
+    padding-top: 10px;
 }
 .user-t-pro .node_category li{
-        margin-top: 10px !important;
+    margin-top: 10px !important;
 }
 
 
@@ -1158,14 +1271,8 @@ body.drawer-close-left {
     width: 80px;height: 80px;
 }
 #page-course-view-topics .page-context-header .header-button-group {
-	display: block;
-	clear: left;
-}
-#page-my-index .btn-secondary{
-    background-color: #1691c0!important;
-    padding: 0 !important;
-    border-color: #1691c0 !important;
-    color: #000;
+    display: block;
+    clear: left;
 }
 #page-my-index .singlebutton {
     margin-left: 0 !important;
@@ -1185,20 +1292,15 @@ body.drawer-close-left {
 }*/
 #page-my-index .small-box{
     margin-left: 5px!important;
-     width: 100% !important;
+    width: 100% !important;
 } 
 .block-myoverview.block-cards.overviews-dasH button{
-font-size: 12px;
+    font-size: 12px;
 }
 #page-my-index .small-box>.admin_Record h3{
     font-size: 20px!important;
     font-weight: 600!important;
     margin-top: 25px!important;
-}
-#page-my-index  .btn-secondary:hover {
-    color: #fdfeff !important;
-    background-color: #b8c1ca00 !important;
-    /*border-color: #b1bbc400 !important;*/
 }
 .col.text-dash {
     color: white;
@@ -1227,7 +1329,7 @@ font-size: 12px;
     position: relative;
 }
 #page-my-index .small-box p {;
-   text-align: center;
+                             text-align: center;
 }
 
 #page-my-index #region-main-box {
@@ -1235,7 +1337,7 @@ font-size: 12px;
 }
 
 #page-my-index #region-main-box.student_dash{
-background-color: #fff !important;
+    background-color: #fff !important;
     margin-bottom: 50px;
 }
 #page-my-index #region-main-box .overviews-dasH .card.dashboard-card {
@@ -1356,37 +1458,37 @@ background-color: #fff !important;
 
 #page-user-edit form.mform, 
 #page-login-change_password form.mform,
- #page-user-language form.mform,
-  #page-user-forum form.mform,
-  #page-user-course form.mform,
-  #page-user-calendar form.mform,
-  #page-blog-preferences form.mform,
-  #page-blog-external_blog_edit form.mform,
-  #page-badges-mybackpack form.mform,
-  #page-badges-preferences form.mform,
-  #page-mod-forum-user #region-main > div > .card-body,
-  #page-blog-index #region-main > div > .card-body,
-  #page-admin-tool-lp-plans #region-main > div > .card-body,
-  #page-report-usersessions-user #region-main > div > .card-body,
-  #page-grade-report-overview-index #region-main > div > .card-body,
-  #page-report-outline-user #region-main > div > .card-body,
-  #page-report-log-user #region-main > div > .card-body,
-  #page-course-user #region-main > div > .card-body,
-  #page-notes-index #region-main > div > .card-body,
-  #page-admin-tool-dataprivacy-summary #region-main > div > .card-body,
-  #page-admin-roles-permissions #region-main > div > .card-body,
-  #page-grade-report-user-index #region-main > div > .card-body,
-  #page-badges-mybadges .card-body,
-  #page-message-notificationpreferences .preferences-page-container,
-  #page-user-editor form.mform,
-  #page-mod-assign-mod form.mform,
-  #page-mod-assign-overrideedit form.mform,
-  #page-filter-manage .filters-Manage,
-  #page-mod-assign-overrides #assignoverrides,
-  #page-site-index #frontpage-available-course-list,
-  #page-site-index #frontpage-category-combo,
-  #page-blog-edit form.mform
-  {
+#page-user-language form.mform,
+#page-user-forum form.mform,
+#page-user-course form.mform,
+#page-user-calendar form.mform,
+#page-blog-preferences form.mform,
+#page-blog-external_blog_edit form.mform,
+#page-badges-mybackpack form.mform,
+#page-badges-preferences form.mform,
+#page-mod-forum-user #region-main > div > .card-body,
+#page-blog-index #region-main > div > .card-body,
+#page-admin-tool-lp-plans #region-main > div > .card-body,
+#page-report-usersessions-user #region-main > div > .card-body,
+#page-grade-report-overview-index #region-main > div > .card-body,
+#page-report-outline-user #region-main > div > .card-body,
+#page-report-log-user #region-main > div > .card-body,
+#page-course-user #region-main > div > .card-body,
+#page-notes-index #region-main > div > .card-body,
+#page-admin-tool-dataprivacy-summary #region-main > div > .card-body,
+#page-admin-roles-permissions #region-main > div > .card-body,
+#page-grade-report-user-index #region-main > div > .card-body,
+#page-badges-mybadges .card-body,
+#page-message-notificationpreferences .preferences-page-container,
+#page-user-editor form.mform,
+#page-mod-assign-mod form.mform,
+#page-mod-assign-overrideedit form.mform,
+#page-filter-manage .filters-Manage,
+#page-mod-assign-overrides #assignoverrides,
+#page-site-index #frontpage-available-course-list,
+#page-site-index #frontpage-category-combo,
+#page-blog-edit form.mform
+{
     background-color: white;
     padding: 20px 25px;
     border-radius: 5px;
@@ -1486,8 +1588,8 @@ background-color: #fff !important;
     max-height: 200px;
     object-fit: cover;
 }
-  #page-blog-external_blog_edit form.mform
-  {
+#page-blog-external_blog_edit form.mform
+{
     background-color: white;
     padding: 35px 25px;
     border-radius: 5px;
@@ -1512,15 +1614,15 @@ background-color: #fff !important;
 #page-badges-preferences legend a,
 #page-blog-edit legend a,
 #page-user-forum legend a{
-      color: #1d1c1c!important;
+    color: #1d1c1c!important;
 }
 #page-user-edit legend a:hover,#page-user-edit legend a:active,
 #page-badges-mybackpack legend a:hover,#page-badges-mybackpack legend a:active,
 #page-badges-preferences legend a:hover,#page-badges-preferences legend a:active,
 #page-blog-edit legend a:hover,#page-blog-edit legend a:active,
 #page-user-forum legend a:hover,#page-user-forum legend a:active {
-      color: 1d1c1c !important;
-      text-decoration: none;
+    color: 1d1c1c !important;
+    text-decoration: none;
 }
 #page-user-edit #fgroup_id_buttonar,
 #page-login-change_password #fgroup_id_buttonar,
@@ -1543,7 +1645,7 @@ background-color: #fff !important;
 .cust-box-tab .nav-tabs .nav-item {
     width: 100% !important;
     border: 0 !important;
-   background-color: #dddddd !important;
+    background-color: #dddddd !important;
     margin-bottom: 0px !important;
     margin-right: 15px;
     border-radius: 3px 3px 0px 0px !important;
@@ -1556,7 +1658,7 @@ background-color: #fff !important;
     color: #ffffff !important;
     background-color: #008ec2 !important;
     border-color: transparent !important;
-     border-radius: 10px 10px 0px 0px !important;
+    border-radius: 10px 10px 0px 0px !important;
 }
 .cust-box-tab  .nav-tabs {
     border-bottom: 1px solid #dee2e6 !important;
@@ -1602,7 +1704,7 @@ background-color: #fff !important;
     margin-bottom: 20px;
 }
 .fd-end{
-        flex-direction: row-reverse !important;
+    flex-direction: row-reverse !important;
 }
 #page-user-edit .card-body div > h2, 
 #page-user-language .card-body div > h2,
@@ -1780,11 +1882,11 @@ table tr td {
 }
 
 #page-admin-roles-check .form-inline .form-check{
-        justify-content: normal !important;
-     }
+    justify-content: normal !important;
+}
 
 #page-backup-restorefile h2{
-        margin-top: 20px !important;
+    margin-top: 20px !important;
 }
 
 select#menuid {
@@ -1815,7 +1917,7 @@ form.logselecform select {
         margin-bottom: 20px!important;
     }
 
-        body.drawer-open-left {
+    body.drawer-open-left {
         margin-left: 0px !important;
     }
 }
@@ -1836,10 +1938,10 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     display: none;
 }
 #page-course-index-category #region-main {
-        overflow-x: hidden !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
+    overflow-x: hidden !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 .image_width img{
     max-width: 98%!important;
     max-height: 250px!important;
@@ -1847,10 +1949,10 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }    
 @media (min-width: 768px){
     #page-course-index-category #region-main-box {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
-    
+
     #page-course-index-category #region-main  .card > .card-body {
         background: #FFF;
         margin-top: 50px;
@@ -1930,26 +2032,26 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         min-height: auto;
         width: 100px;
     }
-.pad_logo .logo img {
-    margin-top: 0px;
+    .pad_logo .logo img {
+        margin-top: 0px;
     }
-.slicon-menu {
-    font-size: 20px!important;
-    color: black!important;
-}
-nav.navbar .drawer-toggle {
-    background-color: #ffffff00!important;
-    padding: 0;
-    margin: 0 !important;
-    position: absolute;
-    height: auto;
-    width: auto;
-    left: 5px;
-    top: 20px;
-}
-nav.navbar .drawer-toggle .nav-link {
-    padding: 0;
-}
+    .slicon-menu {
+        font-size: 20px!important;
+        color: black!important;
+    }
+    nav.navbar .drawer-toggle {
+        background-color: #ffffff00!important;
+        padding: 0;
+        margin: 0 !important;
+        position: absolute;
+        height: auto;
+        width: auto;
+        left: 5px;
+        top: 20px;
+    }
+    nav.navbar .drawer-toggle .nav-link {
+        padding: 0;
+    }
 
 }
 @media (min-width: 576px){
@@ -1970,7 +2072,7 @@ nav.navbar .drawer-toggle .nav-link {
     #page-my-index #region-main-box .cust-box-tab h1 {
         padding-left: 13px!important;
     }
-        .cust-box-tab .nav-tabs .nav-item {
+    .cust-box-tab .nav-tabs .nav-item {
         width: 90% !important;
         margin: 0 auto;
         margin-bottom: 10px !important;
@@ -2056,7 +2158,7 @@ nav.navbar .drawer-toggle .nav-link {
         font-size: 20px;
     }
     #page-site-index #frontpage-category-combo .info > h3 > a,
-     #page-site-index #frontpage-category-combo .info > h4 > a {
+    #page-site-index #frontpage-category-combo .info > h4 > a {
         font-size: 20px;
     }
 }
@@ -2097,15 +2199,15 @@ nav.navbar .drawer-toggle .nav-link {
     #page-admin-roles-check .backlink > a{
         color: white !important;
     }
-     #page-admin-roles-assign h2, 
-     #page-admin-roles-assign h3,
-     #page-admin-tool-lp-editplan h2, 
-     #page-admin-tool-lp-editplan h3,
-     #page-filter-manage h2,
-     #page-admin-roles-check h2
-     {
+    #page-admin-roles-assign h2, 
+    #page-admin-roles-assign h3,
+    #page-admin-tool-lp-editplan h2, 
+    #page-admin-tool-lp-editplan h3,
+    #page-filter-manage h2,
+    #page-admin-roles-check h2
+    {
         font-size: 13px !important;
-     }
+    }
 
     #page-mod-assign-mod .form-check label {
         font-size: 13px!important;
@@ -2155,47 +2257,47 @@ nav.navbar .drawer-toggle .nav-link {
         width: 2rem;
         position: relative;
         top: 12px;}
-        #page-site-index #frontpage-available-course-list h2 {
+    #page-site-index #frontpage-available-course-list h2 {
         font-size: 12px;
     }
     #page-site-index #frontpage-category-combo .info > h3 > a,
-     #page-site-index #frontpage-category-combo .info > h4 > a {
+    #page-site-index #frontpage-category-combo .info > h4 > a {
         font-size: 18px;
     }
 
-#page-user-edit form.mform, 
-#page-login-change_password form.mform,
- #page-user-language form.mform,
-  #page-user-forum form.mform,
-  #page-user-course form.mform,
-  #page-user-calendar form.mform,
-  #page-blog-preferences form.mform,
-  #page-blog-external_blog_edit form.mform,
-  #page-badges-mybackpack form.mform,
-  #page-badges-preferences form.mform,
-  #page-mod-forum-user #region-main > div > .card-body,
-  #page-blog-index #region-main > div > .card-body,
-  #page-admin-tool-lp-plans #region-main > div > .card-body,
-  #page-report-usersessions-user #region-main > div > .card-body,
-  #page-grade-report-overview-index #region-main > div > .card-body,
-  #page-report-outline-user #region-main > div > .card-body,
-  #page-report-log-user #region-main > div > .card-body,
-  #page-course-user #region-main > div > .card-body,
-  #page-notes-index #region-main > div > .card-body,
-  #page-admin-tool-dataprivacy-summary #region-main > div > .card-body,
-  #page-admin-roles-permissions #region-main > div > .card-body,
-  #page-badges-mybadges .card-body,
-  #page-message-notificationpreferences .preferences-page-container,
-  #page-user-editor form.mform,
-  #page-mod-assign-mod form.mform,
-  #page-mod-assign-overrideedit form.mform,
-  #page-filter-manage .filters-Manage,
-  #page-mod-assign-overrides #assignoverrides,
-  #page-site-index #frontpage-available-course-list,
-  #page-site-index #frontpage-category-combo,
-  #page-blog-edit form.mform
+    #page-user-edit form.mform, 
+    #page-login-change_password form.mform,
+    #page-user-language form.mform,
+    #page-user-forum form.mform,
+    #page-user-course form.mform,
+    #page-user-calendar form.mform,
+    #page-blog-preferences form.mform,
+    #page-blog-external_blog_edit form.mform,
+    #page-badges-mybackpack form.mform,
+    #page-badges-preferences form.mform,
+    #page-mod-forum-user #region-main > div > .card-body,
+    #page-blog-index #region-main > div > .card-body,
+    #page-admin-tool-lp-plans #region-main > div > .card-body,
+    #page-report-usersessions-user #region-main > div > .card-body,
+    #page-grade-report-overview-index #region-main > div > .card-body,
+    #page-report-outline-user #region-main > div > .card-body,
+    #page-report-log-user #region-main > div > .card-body,
+    #page-course-user #region-main > div > .card-body,
+    #page-notes-index #region-main > div > .card-body,
+    #page-admin-tool-dataprivacy-summary #region-main > div > .card-body,
+    #page-admin-roles-permissions #region-main > div > .card-body,
+    #page-badges-mybadges .card-body,
+    #page-message-notificationpreferences .preferences-page-container,
+    #page-user-editor form.mform,
+    #page-mod-assign-mod form.mform,
+    #page-mod-assign-overrideedit form.mform,
+    #page-filter-manage .filters-Manage,
+    #page-mod-assign-overrides #assignoverrides,
+    #page-site-index #frontpage-available-course-list,
+    #page-site-index #frontpage-category-combo,
+    #page-blog-edit form.mform
     {
-    padding: 20px 10px 20px 10px;
+        padding: 20px 10px 20px 10px;
     }
 
     form input{
@@ -2223,7 +2325,7 @@ nav.navbar .drawer-toggle .nav-link {
     #page-login-change_password legend {
         font-size: 20px;
     }
-        .pad_logo .menubar {
+    .pad_logo .menubar {
         margin-top: -10px;
     }
     .page-local-pages-about-us-1 .container.about-page-s {

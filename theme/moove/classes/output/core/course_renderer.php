@@ -135,8 +135,7 @@ class course_renderer extends \core_course_renderer {
         foreach ($courses as $course) {
             $content .= $this->coursecat_coursebox($chelper, $course);
 
-            // if ($coursecount % 4 == 0) {
-            if ($coursecount % 3 == 0) {
+            if ($coursecount % 4 == 0) {
                 $content .= html_writer::end_tag('div');
                 $content .= html_writer::start_tag('div', array('class' => 'card-deck mt-2'));
             }
@@ -189,7 +188,7 @@ class course_renderer extends \core_course_renderer {
             $course = new core_course_list_element($course);
         }
 
-        $classes = trim('card row-3');
+        $classes = trim('card');
         if ($chelper->get_show_courses() >= self::COURSECAT_SHOW_COURSES_EXPANDED) {
             $nametag = 'h3';
         } else {
@@ -235,7 +234,7 @@ class course_renderer extends \core_course_renderer {
         // Course name.
         $coursename = $chelper->get_course_formatted_name($course);
         $courselink = new moodle_url('/course/view.php', array('id' => $course->id));
-        $coursenamelink = html_writer::link($courselink, substr($coursename,0,30), array('class' => $course->visible ? '' : 'dimmed'));
+        $coursenamelink = html_writer::link($courselink, $coursename, array('class' => $course->visible ? '' : 'dimmed'));
 
         $content = extras::get_course_summary_image($course, $courselink);
 

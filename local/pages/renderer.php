@@ -243,8 +243,8 @@ class local_pages_renderer extends plugin_renderer_base {
             if ($value->type == "Text Area") {
                 $str .= '<div class="form-group fitem ' . $errorclass . '">';
                 $str .= '<div class="fitemtitle"><label for="' .
-                    str_replace(" ", "", $value->name) . '">' . $value->name . '<span class="red"> * </span></label></div>';
-                $str .= '<div class="felement"><textarea rows="5" class="form-control w-100" name="' .
+                    str_replace(" ", "", $value->name) . '">' . $value->name . '</label></div>';
+                $str .= '<div class="felement"><textarea class="form-control" name="' .
                     str_replace(" ", "_", $value->name) . '" id="' .
                     str_replace(" ", "", $value->name) . '" ' . ($value->required == "Yes" ? "Required" : '') .
                     ' placeholder="' . $value->defaultvalue . '">' .
@@ -266,7 +266,7 @@ class local_pages_renderer extends plugin_renderer_base {
                 } else if ($value->type == "Select") {
                     $str .= '<div class="form-group fitem fitem_fselect' . $errorclass . '">';
                     $str .= '<div class="fitemtitle"><label for="' . str_replace(" ", "", $value->name) . '">' .
-                        $value->name . '<span class="red"> * </span></label></div>';
+                        $value->name . '</label></div>';
                     $str .= '<div class="felement fselect">'.
                         '<select class="form-control" ' . ($value->required == "Yes" ? "Required" : '') .
                         ' name="' . str_replace(" ", "_", $value->name) . '" id="' .
@@ -285,7 +285,7 @@ class local_pages_renderer extends plugin_renderer_base {
                 } else {
                     $str .= '<div class="form-group fitem fitem_ftext ' . $errorclass . '">';
                     $str .= '<div class="fitemtitle"><label for="' . str_replace(" ", "", $value->name) . '">' .
-                        $value->name . '<span class="red"> * </span></label></div>';
+                        $value->name . '</label></div>';
                     $str .= '<div class="felement ftext"><input name="' . str_replace(" ", "_", $value->name) . '" type="' .
                         strtolower($value->type) . '" value="' .
                         ($tmpparam != '' ? $tmpparam : (isset($USER->$record) ? $USER->$record : ''))
