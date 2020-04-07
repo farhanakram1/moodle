@@ -1941,6 +1941,11 @@ form.logselecform select {
     color: black !important;
 }
 
+#page-grade-edit-tree-index .Grade_tree #weightoverride_2 {
+    margin-bottom: 9px!important;
+}
+
+
 
 @media (max-width: 767px){
     #page-grade-report-grader-index .nav-tabs .nav-link{
