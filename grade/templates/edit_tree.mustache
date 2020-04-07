@@ -39,7 +39,9 @@
         {{#notification}}
             {{>core/notification_info}}
         {{/notification}}
+        <div class="table-responsive">
         {{{table}}}
+        </div>
         <div id="gradetreesubmit">
             {{#showsave}}
                 <input class="advanced btn btn-primary" type="submit" value={{#quote}}{{#str}}savechanges{{/str}}{{/quote}}>
