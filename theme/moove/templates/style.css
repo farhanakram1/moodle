@@ -950,7 +950,11 @@ body.drawer-close-left {
 #page-mod-lesson-essay .nav-tabs .nav-link.active, 
 #page-mod-lesson-essay .nav-tabs .nav-item.show .nav-link,
 #page-mod-lesson-report .nav-tabs .nav-link.active, 
-#page-mod-lesson-report .nav-tabs .nav-item.show .nav-link
+#page-mod-lesson-report .nav-tabs .nav-item.show .nav-link,
+#page-grade-import-csv-index .nav-tabs .nav-link.active,
+#page-grade-export-ods-index .nav-tabs .nav-link.active,
+#page-grade-export-xls-index .nav-tabs .nav-link.active,
+#page-grade-export-txt-index .nav-tabs .nav-link.active
 {
 
     border: none;
@@ -975,8 +979,12 @@ body.drawer-close-left {
 #page-grade-report-outcomes-index .nav-tabs .nav-link,
 #page-grade-report-history-index .nav-tabs .nav-link,
 #page-grade-edit-scale-index .nav-tabs .nav-link,
-#page-grade-edit-letter-index .nav-tabs .nav-link
-#page-mod-lesson-view .nav-tabs .nav-link
+#page-grade-edit-letter-index .nav-tabs .nav-link,
+#page-mod-lesson-view .nav-tabs .nav-link,
+#page-grade-import-csv-index .nav-tabs .nav-link,
+#page-grade-export-ods-index .nav-tabs .nav-link,
+#page-grade-export-xls-index .nav-tabs .nav-link,
+#page-grade-export-txt-index .nav-tabs .nav-link
 {
     border: 1px solid transparent;
     border: none;
@@ -994,6 +1002,18 @@ body.drawer-close-left {
 .cust-tabs-s .nav-tabs .nav-link:hover,
 .cust-tabs-s .nav-tabs .nav-link:active,
 .cust-tabs-s .nav-tabs .nav-link:focus,
+#page-grade-import-csv-index .nav-tabs .nav-link:hover,
+#page-grade-import-csv-index .nav-tabs .nav-link:active,
+#page-grade-import-csv-index .nav-tabs .nav-link:focus,
+#page-grade-export-txt-index .nav-tabs .nav-link:hover,
+#page-grade-export-txt-index .nav-tabs .nav-link:active,
+#page-grade-export-txt-index .nav-tabs .nav-link:focus,
+#page-grade-export-xls-index .nav-tabs .nav-link:hover,
+#page-grade-export-xls-index .nav-tabs .nav-link:active,
+#page-grade-export-xls-index .nav-tabs .nav-link:focus,
+#page-grade-export-ods-index .nav-tabs .nav-link:hover,
+#page-grade-export-ods-index .nav-tabs .nav-link:active,
+#page-grade-export-ods-index .nav-tabs .nav-link:focus,
 #page-mod-lesson-view .nav-tabs .nav-link:hover,
 #page-mod-lesson-view .nav-tabs .nav-link:active,
 #page-mod-lesson-view .nav-tabs .nav-link:focus,
@@ -1497,12 +1517,22 @@ body.drawer-close-left {
     margin-bottom: 50px;
 }
 #page-badges-view #region-main > div > .card-body,
+#page-grade-import-csv-index #region-main > div > .card-body,
+#page-grade-export-ods-index #region-main > div > .card-body,
+#page-grade-export-xls-index #region-main > div > .card-body,
+#page-grade-export-txt-index #region-main > div > .card-body,
 #page-admin-tool-lp-coursecompetencies  #region-main > div > .card-body {
     background-color: white;
     margin-top: 25px;
+    border-radius: 5px;
     margin-bottom: 30px;
 }
-#page-admin-roles-permissions .card-body div > h2{
+#page-admin-roles-permissions .card-body div > h2,
+#page-grade-import-csv-index .card-body div > h2,
+#page-grade-export-ods-index .card-body div > h2,
+#page-grade-export-xls-index .card-body div > h2,
+#page-grade-export-txt-index .card-body div > h2
+{
     color: black !important;
 }
 #page-mod-lesson-view #region-main .card-body,
@@ -2234,8 +2264,13 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-grade-report-outcomes-index .nav-tabs .nav-link,
     #page-grade-report-history-index .nav-tabs .nav-link,
     #page-grade-edit-scale-index .nav-tabs .nav-link,
-    #page-grade-edit-letter-index .nav-tabs .nav-link
-    #page-mod-lesson-view .nav-tabs .nav-link{
+    #page-grade-edit-letter-index .nav-tabs .nav-link,
+    #page-mod-lesson-view .nav-tabs .nav-link,
+    #page-grade-import-csv-index .nav-tabs .nav-link,
+    #page-grade-export-ods-index .nav-tabs .nav-link,
+    #page-grade-export-xls-index .nav-tabs .nav-link,
+    #page-grade-export-txt-index .nav-tabs .nav-link
+    {
         padding: 10px 5px!important;
         font-size: 11px!important;
         margin-bottom: 20px!important;
