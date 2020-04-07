@@ -2101,6 +2101,11 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 @media screen and (max-width: 767px) {
 
+    #page-grade-edit-tree-category .fitem {
+        padding-bottom: 5px!important;
+        padding-top: 5px!important;
+    }
+
     #page-course-index-category .generalbox.info {
 
         padding-top: 10px !important;
