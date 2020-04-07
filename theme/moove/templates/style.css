@@ -1485,6 +1485,7 @@ body.drawer-close-left {
 #page-blog-preferences form.mform,
 #page-blog-external_blog_edit form.mform,
 #page-grade-edit-tree-category form.mform,
+#page-grade-edit-tree-item form.mform,
 #page-badges-mybackpack form.mform,
 #page-badges-preferences form.mform,
 #page-mod-forum-user #region-main > div > .card-body,
@@ -1660,6 +1661,7 @@ body.drawer-close-left {
 #page-user-calendar #fgroup_id_buttonar,
 #page-blog-external_blog_edit #fgroup_id_buttonar,
 #page-grade-edit-tree-category #fgroup_id_buttonar,
+#page-grade-edit-tree-item #fgroup_id_buttonar,
 #page-badges-preferences #fgroup_id_buttonar,
 #page-blog-edit #fgroup_id_buttonar,
 #page-user-forum #fgroup_id_buttonar {
@@ -2101,7 +2103,8 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 @media screen and (max-width: 767px) {
 
-    #page-grade-edit-tree-category .fitem {
+    #page-grade-edit-tree-category .fitem, 
+    #page-grade-edit-tree-item .fitem {
         padding-bottom: 5px!important;
         padding-top: 5px!important;
     }
@@ -2193,6 +2196,8 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-user-edit legend a,
     #page-badges-mybackpack legend a,
     #page-badges-preferences legend a,
+    #page-grade-edit-tree-category legend a,
+    #page-grade-edit-tree-item legend a,
     #page-blog-edit legend a,
     #page-message-notificationpreferences .preferences-page-container h2,
     #page-admin-tool-dataprivacy-summary .card-header h3,
@@ -2321,6 +2326,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-blog-preferences form.mform,
     #page-blog-external_blog_edit form.mform,
     #page-grade-edit-tree-category form.mform,
+    #page-grade-edit-tree-item form.mform,
     #page-badges-mybackpack form.mform,
     #page-badges-preferences form.mform,
     #page-mod-forum-user #region-main > div > .card-body,
