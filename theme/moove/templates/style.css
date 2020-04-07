@@ -956,6 +956,7 @@ body.drawer-close-left {
 #page-grade-import-xml-index .nav-tabs .nav-link.active,
 #page-grade-export-ods-index .nav-tabs .nav-link.active,
 #page-grade-export-xls-index .nav-tabs .nav-link.active,
+#page-grade-export-xml-index .nav-tabs .nav-link.active,
 #page-grade-export-txt-index .nav-tabs .nav-link.active
 {
 
@@ -988,6 +989,7 @@ body.drawer-close-left {
 #page-grade-import-xml-index .nav-tabs .nav-link,
 #page-grade-export-ods-index .nav-tabs .nav-link,
 #page-grade-export-xls-index .nav-tabs .nav-link,
+#page-grade-export-xml-index .nav-tabs .nav-link,
 #page-grade-export-txt-index .nav-tabs .nav-link
 {
     border: 1px solid transparent;
@@ -1021,6 +1023,9 @@ body.drawer-close-left {
 #page-grade-export-xls-index .nav-tabs .nav-link:hover,
 #page-grade-export-xls-index .nav-tabs .nav-link:active,
 #page-grade-export-xls-index .nav-tabs .nav-link:focus,
+#page-grade-export-xml-index .nav-tabs .nav-link:hover,
+#page-grade-export-xml-index .nav-tabs .nav-link:active,
+#page-grade-export-xml-index .nav-tabs .nav-link:focus,
 #page-grade-export-ods-index .nav-tabs .nav-link:hover,
 #page-grade-export-ods-index .nav-tabs .nav-link:active,
 #page-grade-export-ods-index .nav-tabs .nav-link:focus,
@@ -1535,6 +1540,7 @@ body.drawer-close-left {
 #page-grade-import-xml-index #region-main > div > .card-body,
 #page-grade-export-ods-index #region-main > div > .card-body,
 #page-grade-export-xls-index #region-main > div > .card-body,
+#page-grade-export-xml-index #region-main > div > .card-body,
 #page-grade-export-txt-index #region-main > div > .card-body,
 #page-admin-tool-lp-coursecompetencies  #region-main > div > .card-body {
     background-color: white;
@@ -1685,7 +1691,10 @@ body.drawer-close-left {
     margin-top: 30px;
 }
 #page-badges-mybackpack #fitem_id_submitbutton,
-#page-grade-export-ods-index #fitem_id_submitbutton
+#page-grade-export-ods-index #fitem_id_submitbutton,
+#page-grade-export-xls-index #fitem_id_submitbutton,
+#page-grade-export-xml-index #fitem_id_submitbutton,
+#page-grade-export-txt-index #fitem_id_submitbutton
 {
     margin-top: 30px;
 }
@@ -2224,6 +2233,10 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-grade-edit-tree-category legend a,
     #page-grade-edit-scale-edit legend a,
     #page-grade-edit-tree-item legend a,
+    #page-grade-export-ods-index legend a,
+    #page-grade-export-txt-index legend a,
+    #page-grade-export-xls-index legend a,
+    #page-grade-export-xml-index legend a,
     #page-blog-edit legend a,
     #page-message-notificationpreferences .preferences-page-container h2,
     #page-admin-tool-dataprivacy-summary .card-header h3,
@@ -2314,6 +2327,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-grade-import-xml-index .nav-tabs .nav-link,
     #page-grade-export-ods-index .nav-tabs .nav-link,
     #page-grade-export-xls-index .nav-tabs .nav-link,
+    #page-grade-export-xml-index .nav-tabs .nav-link,
     #page-grade-export-txt-index .nav-tabs .nav-link
     {
         padding: 10px 5px!important;
