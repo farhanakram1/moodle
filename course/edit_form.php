@@ -16,7 +16,7 @@ class course_edit_form extends moodleform {
      * Form definition.
      */
     function definition() {
-        global $CFG, $PAGE;
+        global $COURSE, $CFG, $PAGE;
 
         $mform    = $this->_form;
         $PAGE->requires->yui_module('moodle-course-formatchooser', 'M.course.init_formatchooser',
@@ -315,6 +315,25 @@ class course_edit_form extends moodleform {
         $options = array();
         $options[0] = get_string('none');
         $mform->addElement('select', 'defaultgroupingid', get_string('defaultgrouping', 'group'), $options);
+
+        // restrictaccess
+          $mform->addElement('header','groups', get_string('restrictaccess', 'availability'));
+
+          // Note: This field cannot be named 'availability' because that
+            // conflicts with fields in existing modules (such as assign).
+            // So it uses a long name that will not conflict.
+            $mform->addElement('textarea', 'availabilityconditionsjson',
+                    get_string('accessrestrictions', 'availability'));
+            if ($this->_cm) {
+                $modinfo = get_fast_modinfo($COURSE);
+                $cm = $modinfo->get_cm($this->_cm->id);
+            } else {
+                $cm = null;
+            }
+            \core_availability\frontend::include_all_javascript($COURSE, $cm);
+
+        // restrictaccess
+
 
         if ((empty($course->id) && guess_if_creator_will_have_course_capability('moodle/course:renameroles', $categorycontext))
                 || (!empty($course->id) && has_capability('moodle/course:renameroles', $coursecontext))) {
