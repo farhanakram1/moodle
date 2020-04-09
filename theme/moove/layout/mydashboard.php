@@ -111,7 +111,8 @@ $templatecontext['bookcourses'] = get_string('bookcourses','theme_moove');
 // $templatecontext['welcome'] = get_string('welcome','theme_moove');
 
 // Second Tabs Work Here ExamOrganizer
-$exam_course = get_courses();
+// $exam_course = get_courses();
+$exam_course = \theme_moove\util\extras::user_courses_with_progress($user);
 $templatecontext['courses_examorganizer'] = (count($exam_course)) ? true : false;
 $templatecontext['get_courses_examorganizer'] = array_values($exam_course);
 // Second Tabs Work Here ExamOrganizer
