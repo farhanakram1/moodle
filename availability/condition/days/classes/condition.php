@@ -106,6 +106,8 @@ class condition extends \core_availability\condition {
         if (empty($config->referencedate) || $config->referencedate == 'coursestartdate') {
             // Calculate from course start date.
             $referencedate = $COURSE->startdate;
+            $format = date('Y-m-d', $referencedate);
+            $date_plus = date('Y-m-d', strtotime($format. ' + 2 days'));
         } else {
             // Calculate from lowest active enrol date of the user.
             $sql = '
