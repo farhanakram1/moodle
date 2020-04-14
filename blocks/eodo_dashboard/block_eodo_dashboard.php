@@ -47,11 +47,10 @@ class block_eodo_dashboard extends block_base {
 
     /**
      * Allow the block to have a configuration page
-     *
-     * @return boolean
      */
     public function has_config() {
         return true;
     }
+
 
 }

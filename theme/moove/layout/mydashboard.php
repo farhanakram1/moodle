@@ -47,7 +47,9 @@ if (isloggedin()) {
     $navdraweropen = false;
     $draweropenright = false;
 }
-
+// echo "<pre>";
+// print_r($OUTPUT);
+// die();
 $blockshtml = $OUTPUT->blocks('side-pre');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 
