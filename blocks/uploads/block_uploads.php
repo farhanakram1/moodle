@@ -1,12 +1,12 @@
 <?php
 /**
- * Eodo Dashboard block
+ * Uploads block
  */
 
-class block_eodo_dashboard extends block_base {
+class block_uploads extends block_base {
 
     public function init() {
-        $this->title = get_string('pluginname', 'block_eodo_dashboard');
+        $this->title = get_string('pluginname', 'block_uploads');
     }
     // The PHP tag and the curly bracket for the class definition 
     // will only be closed after there is another function added in the next section.
@@ -27,13 +27,13 @@ class block_eodo_dashboard extends block_base {
 	public function specialization() {
 	    if (isset($this->config)) {
 	        if (empty($this->config->title)) {
-	            $this->title = get_string('blocksettings', 'block_eodo_dashboard');            
+	            $this->title = get_string('blocksettings', 'block_uploads');            
 	        } else {
 	            $this->title = $this->config->title;
 	        }
 	 
 	        if (empty($this->config->text)) {
-	            $this->config->text = get_string('defaulttext', 'block_eodo_dashboard');
+	            $this->config->text = get_string('defaulttext', 'block_uploads');
 	        }    
 	    }
 	}
