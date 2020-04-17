@@ -46,6 +46,20 @@ class admininfos {
         return $DB->count_records('user', array('deleted' => 0, 'suspended' => 0)) - 1;
     }
 
+    public function get_category_course_registered_user() {
+        global $DB;
+
+        $sql = "SELECT name FROM {course_categories} ";
+        $category_course_registered_user = $DB->get_records_sql($sql);
+
+        $course_category = [];
+        foreach ($category_course_registered_user as $key => $value) {
+            $course_cat = json_decode(json_encode($value),true);
+            array_push($course_category, $course_cat);
+        }
+        return $course_category;
+    }
+
     /**
      * Returns the total of suspended users.
      *

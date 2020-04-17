@@ -90,6 +90,7 @@ if (is_siteadmin()) {
     $templatecontext['totalsuspendedusers'] = $adminifos->get_suspendedusers();
     $templatecontext['totalcourses'] = $adminifos->get_totalcourses();
     $templatecontext['onlineusers'] = $adminifos->get_totalonlineusers();
+    $templatecontext['category_course_registered_user'] = $adminifos->get_category_course_registered_user();
 }
 
 // Improve boost navigation.
