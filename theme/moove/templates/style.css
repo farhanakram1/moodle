@@ -73,9 +73,18 @@
     margin-top: 0 !important;
     border-radius: 0px !important;
 }
-#page-course-management .action-menu-trigger a{
-    color:#FFF !important;
+#page-message-index .admininfos{
+    background: #FFF;padding: 20px;border-radius: 4px;
 }
+#page-message-index #page-content{
+    background: #FFF;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 50px !important;
+}
+/*#page-course-management .action-menu-trigger a{
+    color:#FFF !important;
+}*/
 #page-course-management .dropdown-item span.menu-action-text{
     color: #008ec2;
 }
@@ -121,7 +130,7 @@
 .pagelayout-admin  .card-body [data-region="managetemplates"],
 .pagelayout-admin  .card-body [data-region="managecompetencies"],
 .pagelayout-admin  .card-body div > fieldset,
-#page-badges-newbadge .card-body {
+#page-course-management .card-body, #page-badges-newbadge .card-body {
     background-color: white;
     padding: 20px 25px;
     border-radius: 5px;
@@ -141,6 +150,12 @@
 }
 .m-a-1 m-3{
     margin: 0;
+}
+.dropdown a{
+    color: #008ec2 !important;
+}
+#page-course-management  h2{
+    color: #000 !important;
 }
 #page-my-index  .btn-secondary:hover, #page-my-index  .btn-secondary, #region-main .btn-secondary {
     color: #fff !important;
@@ -843,7 +858,7 @@ nav.navbar .drawer-toggle {
 [data-region="drawer"] {
     width: 215px;
 }
-body.drawer-open-left {
+body {
     margin-left: 0px !important;
 }
 
@@ -929,7 +944,7 @@ body.drawer-close-left {
 /*tab*/
 
 
-.cust-tabs-s .nav-tabs .nav-link.active, 
+#page-admin-modules .nav-tabs .nav-item.show .nav-link,#page-admin-modules  .nav-tabs .nav-link.active,.cust-tabs-s .nav-tabs .nav-link.active, 
 .nav-tabs .nav-item.show .nav-link,
 #page-mod-lesson-view .nav-tabs .nav-link.active, 
 #page-cohort-index .nav-tabs .nav-link.active, 
@@ -974,6 +989,8 @@ body.drawer-close-left {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+#page-admin-setting-modsettingattendance .nav-tabs .nav-link,
+#page-admin-modules .nav-tabs .nav-link,
 .cust-tabs-s .nav-tabs .nav-link,
 #page-mod-lesson-report .nav-tabs .nav-link,
 #page-mod-lesson-essay .nav-tabs .nav-link,
@@ -1013,6 +1030,13 @@ body.drawer-close-left {
     margin-right: 7px;
     position: relative !important;
 }
+#page-admin-setting-modsettingattendance .nav-tabs .nav-link.active,
+#page-admin-setting-modsettingattendance .nav-tabs .nav-link:hover,
+#page-admin-setting-modsettingattendance .nav-tabs .nav-link:active,
+#page-admin-setting-modsettingattendance .nav-tabs .nav-link:focus,
+#page-admin-modules .nav-tabs .nav-link:hover,
+#page-admin-modules .nav-tabs .nav-link:active,
+#page-admin-modules .nav-tabs .nav-link:focus,
 .cust-tabs-s .nav-tabs .nav-link:hover,
 .cust-tabs-s .nav-tabs .nav-link:active,
 .cust-tabs-s .nav-tabs .nav-link:focus,
@@ -1099,7 +1123,7 @@ body.drawer-close-left {
     border-top-right-radius: 5px;
     transition: background 0.20s linear;
 }
-.cust-tabs-s .nav-tabs,
+#page-admin-modules  .nav-tabs, .cust-tabs-s .nav-tabs,
 #page-mod-lesson-report .nav-tabs,
 #page-mod-lesson-edit .nav-tabs,
 #page-mod-lesson-view .nav-tabs,
@@ -1518,8 +1542,13 @@ body.drawer-close-left {
     padding-right: 5px;
     padding-left: 5px;
 }
-
-#page-user-edit form.mform, 
+#page-course-management .course-detail #course-detail-title{
+    color:#000 !important;
+}
+#page-admin-setting-qtypesettings .card-body #adminsettings{
+    margin-top: 20px !important;
+}
+#page-mod-resource-view .card-body, #page-mod-resource-mod .mform, #page-course-view-singleactivity .card-body, #page-admin-setting-qtypesettings .card-body #adminsettings, #page-mod-forum-view .card-body, #page-course-view-periods .card-body, #page-user-edit form.mform, 
 #page-login-change_password form.mform,
 #page-user-language form.mform,
 #page-user-forum form.mform,
@@ -1554,6 +1583,7 @@ body.drawer-close-left {
 #page-site-index #frontpage-available-course-list,
 #page-site-index #frontpage-category-combo,
 #page-blog-edit form.mform
+#page-admin-modules 
 {
     background-color: white;
     padding: 20px 25px;
@@ -1576,7 +1606,7 @@ body.drawer-close-left {
     border-radius: 5px;
     margin-bottom: 30px;
 }
-#page-admin-roles-permissions .card-body div > h2,
+#page-admin-modules  .card-body h2, #page-admin-roles-permissions .card-body div > h2,
 #page-grade-import-csv-index .card-body div > h2,
 #page-grade-import-direct-index .card-body div > h2,
 #page-grade-export-ods-index .card-body div > h2,
@@ -1585,7 +1615,7 @@ body.drawer-close-left {
 {
     color: black !important;
 }
-#page-mod-lesson-view #region-main .card-body,
+#page-admin-modules .card-body, #page-mod-lesson-view #region-main .card-body,
 #page-grade-report-grader-index #region-main .card-body,
 #page-grade-edit-tree-index #region-main .card-body,
 #page-grade-edit-settings-index #region-main .card-body,
