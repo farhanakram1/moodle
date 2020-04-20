@@ -68,9 +68,9 @@ class admininfos {
 
         $sql = "SELECT * FROM `oodo_user_enrolments` as user_enroll
         LEFT JOIN `oodo_user` as user_details ON user_details.id = user_enroll.userid
-       
+
         ";
-        $course_cat = $DB->get_records_sql($sql);
+        $course_count = $DB->get_records_sql($sql);
 
 // echo "<pre>";
 // print_r($course_cat);
