@@ -1551,7 +1551,7 @@ body.drawer-close-left {
 #page-admin-setting-qtypesettings .card-body #adminsettings{
     margin-top: 20px !important;
 }
-#page-enrol-instances .card-body, #page-course-view-remuiformat .card-body, #page-mod-forum-post .mform,
+#page-enrol-editinstance  .mform, #page-enrol-instances .card-body, #page-course-view-remuiformat .card-body, #page-mod-forum-post .mform,
 #page-mod-assign-editsubmission .card-body,
 #page-mod-feedback-import .card-body,
 #page-mod-feedback-show_nonrespondents .card-body,
