@@ -46,19 +46,38 @@ class admininfos {
         return $DB->count_records('user', array('deleted' => 0, 'suspended' => 0)) - 1;
     }
 
-    public function get_category_course_registered_user() {
+    public function get_category_course_name() {
         global $DB;
 
         $sql = "SELECT name FROM {course_categories} ";
         $category_course_registered_user = $DB->get_records_sql($sql);
+        $course_cat = json_decode(json_encode($category_course_registered_user),true);
 
         $course_category = [];
-        foreach ($category_course_registered_user as $key => $value) {
-            $course_cat = json_decode(json_encode($value),true);
-            array_push($course_category, $course_cat);
+        foreach ($course_cat as $key => $value) {
+            array_push($course_category, $value);
         }
         return $course_category;
     }
+
+    public function get_category_course_registered_user(){
+        global $DB, $USER;
+
+        $userid = optional_param('id', $USER->id, PARAM_INT);
+        $user = $DB->get_record('user', ['id' => $userid], '*', MUST_EXIST);
+
+        $sql = "SELECT * FROM `oodo_user_enrolments` as user_enroll
+        LEFT JOIN `oodo_user` as user_details ON user_details.id = user_enroll.userid
+       
+        ";
+        $course_cat = $DB->get_records_sql($sql);
+
+// echo "<pre>";
+// print_r($course_cat);
+// die();
+
+    }
+
 
     /**
      * Returns the total of suspended users.

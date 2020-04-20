@@ -18,8 +18,8 @@ class block_uploads extends block_base {
 	    }
 	 
 	    $this->content         =  new stdClass;
-	    $this->content->text   = 'The content of our Eodo Dashboard block!';
-	    $this->content->footer = 'Footer here...';
+	    // $this->content->text   = 'The content of our Eodo Dashboard block!';
+	    // $this->content->footer = 'Footer here...';
 	 
 	    return $this->content;
 	}
