@@ -213,7 +213,7 @@ require(['jquery'], function($) {
             $(this).before("<label class=" + ph + "-label>" + ph + "</label>");
         }
     });
-    $('#id_username').focusout(function(){
+    $('#eodo-signup #id_username').focusout(function(){
         var username = $(this).val()
         if(!checkUsername(username)){
             $(this).addClass('is-invalid');
@@ -227,11 +227,11 @@ require(['jquery'], function($) {
     });
 
     
-    $('#id_password').focusout(function(){
+    $('#eodo-signup #id_password').focusout(function(){
         checkPassword($(this));
     });
     
-    $('#id_email').focusout(function(){
+    $('#eodo-signup #id_email').focusout(function(){
         var valid  = validateEmail($(this))
         if(!valid){
             $('#id_email').focus();
@@ -239,11 +239,11 @@ require(['jquery'], function($) {
         }
     });
 
-    $('#id_email2').focusout(function(){
+    $('#eodo-signup #id_email2').focusout(function(){
         emailCompare($(this));
     });
 
-    $('#id_firstname').focusout(function(){
+    $('#eodo-signup #id_firstname').focusout(function(){
         var first_name = $(this).val();
         if (first_name.trim() == "") {
             $("#id_error").html("Missing Name");
@@ -260,7 +260,7 @@ require(['jquery'], function($) {
         }
     });
 
-    $('#id_lastname').focusout(function(){
+    $('#eodo-signup #id_lastname').focusout(function(){
         var valid = true;
         var last_name = $(this).val();
         if (last_name.trim() == "") {
@@ -278,7 +278,7 @@ require(['jquery'], function($) {
         }
     });
 
-    $('#id_cc_payment').focusout(function(){
+    $('#eodo-signup #id_cc_payment').focusout(function(){
         var valid = true;
         var cardType = $(this).val();
         if (cardType.trim() == "") {
@@ -299,7 +299,7 @@ require(['jquery'], function($) {
 
     
 
-    $('#id_cc_exp_date').focusout(function(){
+    $('#eodo-signup #id_cc_exp_date').focusout(function(){
         var valid = true;
         var cardMonth = $(this).val();
         if (cardMonth.trim() == "") {
@@ -338,7 +338,7 @@ require(['jquery'], function($) {
         }
     });
 
-    $('#id_cc_cvv').focusout(function(){
+    $('#eodo-signup #id_cc_cvv').focusout(function(){
         var cvv = $('#id_cc_cvv').val();
         if (cvv.trim() == "") {
            $("#id_error").html("Missing CVV");
@@ -363,7 +363,7 @@ require(['jquery'], function($) {
             }
         }
     });
-    $('#id_cc_discount_code').focusout(function(){
+    $('#eodo-signup #id_cc_discount_code').focusout(function(){
         checkDiscountCode();
     });
 
