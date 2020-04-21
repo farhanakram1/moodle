@@ -8,7 +8,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $capabilities = array(
  
-            'block/eodo_dashboard:myaddinstance' => array(
+            'block/eodoo_dashboard:myaddinstance' => array(
                 'captype' => 'write',
                 'contextlevel' => CONTEXT_SYSTEM,
                 'archetypes' => array(
@@ -18,7 +18,7 @@ $capabilities = array(
                 'clonepermissionsfrom' => 'moodle/my:manageblocks'
             ),
          
-            'block/eodo_dashboard:addinstance' => array(
+            'block/eodoo_dashboard:addinstance' => array(
                 'riskbitmask' => RISK_SPAM | RISK_XSS,
          
                 'captype' => 'write',

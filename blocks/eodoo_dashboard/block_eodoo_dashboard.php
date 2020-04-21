@@ -1,12 +1,12 @@
 <?php
 /**
- * Eodo Dashboard block
+ * Accounts block
  */
 
-class block_eodo_dashboard extends block_base {
+class block_eodoo_dashboard extends block_base {
 
     public function init() {
-        // $this->title = get_string('pluginname', 'block_eodo_dashboard');
+        // $this->title = get_string('pluginname', 'block_eodoo_dashboard');
     }
     // The PHP tag and the curly bracket for the class definition 
     // will only be closed after there is another function added in the next section.
@@ -16,8 +16,8 @@ class block_eodo_dashboard extends block_base {
 	    if ($this->content !== null) {
 	      return $this->content;
 	    }
-	 	
-	 	$adminifos = new \theme_moove\util\admininfos();
+	 
+	    $adminifos = new \theme_moove\util\admininfos();
 	    $get_totalactiveusers = $adminifos->get_totalactiveusers();
 	    $get_category_name = $adminifos->get_category_course_name();
 	    $get_category_course_count_user = $adminifos->get_category_course_registered_user();
@@ -140,13 +140,13 @@ class block_eodo_dashboard extends block_base {
 	public function specialization() {
 	    if (isset($this->config)) {
 	        if (empty($this->config->title)) {
-	            $this->title = get_string('blocksettings', 'block_eodo_dashboard');            
+	            $this->title = get_string('blocksettings', 'block_eodoo_dashboard');            
 	        } else {
 	            $this->title = $this->config->title;
 	        }
 	 
 	        if (empty($this->config->text)) {
-	            $this->config->text = get_string('defaulttext', 'block_eodo_dashboard');
+	            $this->config->text = get_string('defaulttext', 'block_eodoo_dashboard');
 	        }    
 	    }
 	}
