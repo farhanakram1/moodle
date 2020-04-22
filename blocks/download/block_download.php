@@ -5,7 +5,7 @@
 
 class block_download extends block_base {
     public function init() {
-        $this->title = get_string('pluginname', 'block_download');
+        // $this->title = get_string('pluginname', 'block_download');
     }
     // The PHP tag and the curly bracket for the class definition 
     // will only be closed after there is another function added in the next section.

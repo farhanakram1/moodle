@@ -119,7 +119,7 @@ $exam_course = \theme_moove\util\extras::user_courses_with_progress($user);
 $templatecontext['courses_examorganizer'] = (count($exam_course)) ? true : false;
 $templatecontext['get_courses_examorganizer'] = array_values($exam_course);
 
-require_once $CFG->dirroot.'/availability/condition/days/classes/condition.php';
+// require_once $CFG->dirroot.'/availability/condition/days/classes/condition.php';
 
 // $res_course = new condition();
 // $reference_date = $res_course->get_reference_date();

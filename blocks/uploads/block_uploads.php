@@ -6,7 +6,7 @@
 class block_uploads extends block_base {
 
     public function init() {
-        $this->title = get_string('pluginname', 'block_uploads');
+        // $this->title = get_string('pluginname', 'block_uploads');
     }
     // The PHP tag and the curly bracket for the class definition 
     // will only be closed after there is another function added in the next section.
