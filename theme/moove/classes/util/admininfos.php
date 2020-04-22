@@ -49,7 +49,7 @@ class admininfos {
     public function get_category_course_name() {
         global $DB;
 
-        $sql = "SELECT name FROM {course_categories} ";
+        $sql = "SELECT name FROM `oodo_course_categories` ";
         $category_course_registered_user = $DB->get_records_sql($sql);
         $course_cat = json_decode(json_encode($category_course_registered_user),true);
 
@@ -63,19 +63,42 @@ class admininfos {
     public function get_category_course_registered_user(){
         global $DB, $USER;
 
-        $userid = optional_param('id', $USER->id, PARAM_INT);
-        $user = $DB->get_record('user', ['id' => $userid], '*', MUST_EXIST);
+        // $userid = optional_param('id', $USER->id, PARAM_INT);
+        // $user = $DB->get_record('user', ['id' => $userid], '*', MUST_EXIST);
 
-        $sql = "SELECT * FROM `oodo_user_enrolments` as user_enroll
-        LEFT JOIN `oodo_user` as user_details ON user_details.id = user_enroll.userid
+        // $sql = "SELECT DISTINCT coursecount, count(userid) FROM `oodo_course_categories` as course_cat
+        // INNER JOIN `oodo_course` as course ON course_cat.id = course.category
+        // INNER JOIN `oodo_enrol` as enroll ON enroll.courseid = course.id
+        // INNER JOIN `oodo_user_enrolments` as user_enrol ON user_enrol.enrolid = enroll.id";
 
-        ";
+          // $sql = "SELECT DISTINCT u.id AS userid, c.id AS courseid
+        //         FROM oodo_user u
+        //         INNER JOIN oodo_user_enrolments ue ON ue.userid = u.id
+        //         INNER JOIN oodo_enrol e ON e.id = ue.enrolid
+        //         INNER JOIN oodo_role_assignments ra ON ra.userid = u.id
+        //         INNER JOIN oodo_context ct ON ct.id = ra.contextid AND ct.contextlevel = 50
+        //         INNER JOIN oodo_course c ON c.id = ct.instanceid AND e.courseid = c.id
+        //         INNER JOIN oodo_role r ON r.id = ra.roleid AND r.shortname = 'student'
+        //         WHERE e.status = 0 AND u.suspended = 0 AND u.deleted = 0
+        //           AND (ue.timeend = 0 OR ue.timeend > NOW()) AND ue.status = 0";
+
+
+        $sql = "SELECT DISTINCT count(ue.userid), cc.name
+                FROM oodo_user u
+                INNER JOIN oodo_user_enrolments ue ON ue.userid = u.id
+                INNER JOIN oodo_enrol e ON e.id = ue.enrolid
+                INNER JOIN oodo_role_assignments ra ON ra.userid = u.id
+                INNER JOIN oodo_course c ON e.courseid = c.id
+                INNER JOIN oodo_course_categories cc ON cc.id = c.category
+                INNER JOIN oodo_role r ON r.id = ra.roleid AND r.shortname = 'student'
+                WHERE e.status = 0 AND u.suspended = 0 AND u.deleted = 0 AND ue.status = 0
+                ";
+
+
+
         $course_count = $DB->get_records_sql($sql);
 
-// echo "<pre>";
-// print_r($course_cat);
-// die();
-
+        return $course_count;
     }
 
 
