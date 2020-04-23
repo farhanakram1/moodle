@@ -101,6 +101,29 @@ class admininfos {
         return $course_count;
     }
 
+    public function allcourses() {
+        global $DB;
+
+        $sql = "SELECT id FROM `oodo_course_categories` ";
+        $category_course_id = $DB->get_records_sql($sql);
+        $course_cat = json_decode(json_encode($category_course_id),true);
+        $course_category_by_id = [];
+        
+        foreach ($course_cat as $key => $value) {
+            
+            $id_cat = $course_cat[$key]['id'];
+            $get_course = "SELECT * FROM `oodo_course` WHERE category = '". $id_cat ."'";
+            $_course_id = $DB->get_records_sql($get_course);
+            $cour_ = json_decode(json_encode($_course_id),true);
+
+            foreach ($cour_ as $keys => $values) {
+                array_push($course_category_by_id, $values);
+            }
+
+        }
+        
+        return $course_category_by_id;
+    }
 
     /**
      * Returns the total of suspended users.

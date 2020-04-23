@@ -8,6 +8,16 @@ class block_eodoo_dashboard extends block_base {
     public function init() {
         // $this->title = get_string('pluginname', 'block_eodoo_dashboard');
     }
+
+    public function allcourse($allcourses){
+        $array = [];
+        foreach ($allcourses as $key => $value) {
+            $row =  '<tr><td> '.$allcourses[$key]['fullname'].' </td></tr>';
+            array_push($array, $row);
+        }
+        $string_version = implode(',', $array);
+        return $string_version;
+    }
     // The PHP tag and the curly bracket for the class definition 
     // will only be closed after there is another function added in the next section.
 
@@ -20,6 +30,14 @@ class block_eodoo_dashboard extends block_base {
 	    $adminifos = new \theme_moove\util\admininfos();
 	    $get_totalactiveusers = $adminifos->get_totalactiveusers();
 	    $get_category_name = $adminifos->get_category_course_name();
+
+        // Download Tab Word
+        $allcourses = $adminifos->allcourses();
+        $course_down = $this->allcourse($allcourses);
+// echo "<pre>";
+// print_r($course_down);
+// die();
+        // Download Tab Word
 	    $get_category_course_count_user = $adminifos->get_category_course_registered_user();
 		
 	    $this->content         =  new stdClass;
@@ -101,12 +119,23 @@ class block_eodoo_dashboard extends block_base {
                                                 </table>
                                         </div>
                                             
-                                        <div class="tab-pane fade" id="nav-downloads" role="tabpanel" aria-labelledby="nav-downloads-tab">
-                                            <h1 class="text-left m-0 mb-3 px-md-3">Downloads</h1>
-                                        </div>
+                                            <div class="tab-pane fade" id="nav-downloads" role="tabpanel" aria-labelledby="nav-downloads-tab">
+                                                <h1 class="text-center m-0 mb-3 px-md-3">Download Manager</h1>
+                                                <div class="container">           
+                                                  <table class="table table-striped">
+                                                    <thead>
+                                                      <tr>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      '.$course_down.'
+                                                    </tbody>
+                                                  </table>
+                                                </div>
 
-                                        <div class="tab-pane fade" id="nav-downloads" role="tabpanel" aria-labelledby="nav-downloads-tab">
-                                                <h1 class="text-left m-0 mb-3 px-md-3">Downloads</h1>
                                             </div>
 
                                             <div class="tab-pane fade" id="nav-uploads" role="tabpanel" aria-labelledby="nav-uploads-tab">
