@@ -1553,7 +1553,7 @@ body.drawer-close-left {
     padding-right: 5px;
     padding-left: 5px;
 }
-#page-mod-forum-post .intro, #page-mod-forum-post h2{
+#page-course-editsection  h2, #page-mod-forum-post .intro, #page-mod-forum-post h2{
     color:#FFF !important;
 }
 #page-course-delete .alert h2, #page-enrol-instances h2, #page-course-management .course-detail #course-detail-title{
@@ -1562,7 +1562,9 @@ body.drawer-close-left {
 #page-admin-setting-qtypesettings .card-body #adminsettings{
     margin-top: 20px !important;
 }
-#page-mod-scheduler-view .card-body, #page-mod-scheduler-mod .mform, #page-course-view-social .card-body, #page-mod-assign-submit .card-body, #page-mod-attendance-tempusers .card-body, 
+#page-mod-attendance-take .card-body, #page-enrol-index .card-body, #page-mod-chat-view .card-body, #page-mod-chat-mod .mform, #page-course-editsection .mform, 
+#page-mod-scheduler-view .card-body, #page-mod-scheduler-mod .mform, #page-course-view-social .card-body, 
+#page-mod-assign-submit .card-body, #page-mod-attendance-tempusers .card-body, 
 #page-mod-attendance-preferences .card-body, #page-mod-attendance-export .card-body, #page-mod-attendance-report .card-body, 
 #page-mod-attendance-sessions .card-body, #page-mod-attendance-manage .card-body, #page-mod-attendance-mod .mform, 
 #page-enrol-editinstance  .mform, #page-enrol-instances .card-body, #page-course-view-remuiformat .card-body, #page-mod-forum-post .mform,
