@@ -125,6 +125,10 @@ class admininfos {
         return $course_category_by_id;
     }
 
+    // public function upload() {
+        
+    // }
+
     /**
      * Returns the total of suspended users.
      *

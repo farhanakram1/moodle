@@ -138,13 +138,172 @@ class block_eodoo_dashboard extends block_base {
 
                                             </div>
 
+
                                             <div class="tab-pane fade" id="nav-uploads" role="tabpanel" aria-labelledby="nav-uploads-tab">
-                                                <h1 class="text-left m-0 mb-3 px-md-3">Uploads</h1>
+                                                <div class="container">
+                                                  <div class="row">
+                                                    
+                                                    <div class="col-sm-6">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                              <tr>
+                                                                <th>Residency</th>
+                                                                <th>Pending</th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                              <tr>
+                                                                <td>MR2020</td>
+                                                                <td>12</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>BALI2019</td>
+                                                                <td>125</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>MR2019</td>
+                                                                <td>40</td>
+                                                              </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <form>
+                                                          <div class="form-group">
+                                                            <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
+                                                              <option>Select residency</option>
+                                                              <option>2</option>
+                                                              <option>3</option>
+                                                              <option>4</option>
+                                                              <option>5</option>
+                                                            </select>
+                                                          </div>
+                                                          <div class="form-group">
+                                                            <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
+                                                              <option>Select course</option>
+                                                              <option>2</option>
+                                                              <option>3</option>
+                                                              <option>4</option>
+                                                              <option>5</option>
+                                                            </select>
+                                                          </div>
+                                                        </form>
+                                                    </div>
+
+                                                  </div>
+                                                  <br><br>
+                                                  <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table class="table table-striped table-responsive">
+                                                            <thead>
+                                                              <tr>
+                                                                <th>Residency</th>
+                                                                <th>Name</th>
+                                                                <th>Course</th>
+                                                                <th>Files</th>
+                                                                <th>Uploaded on</th>
+                                                                <th>Days since submission</th>
+                                                                <th>Corrected on</th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                              <tr>
+                                                                <td>MR2020</td>
+                                                                <td>Norwalk, James C</td>
+                                                                <td>Course 1</td>
+                                                                <td>JamesNorwalk_MR2020_Course1_Exam.pdf</td>
+                                                                <td>25.5.2019</td>
+                                                                <td>8</td>
+                                                                <td>03.06.2019</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>MR2020</td>
+                                                                <td></td>
+                                                                <td>Course 2</td>
+                                                                <td>JamesNorwalk_MR2020_Course2_Exam.pdf</td>
+                                                                <td>25.5.2019</td>
+                                                                <td>8</td>
+                                                                <td>03.06.2019</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>BALI2019</td>
+                                                                <td>Lee, Cathy</td>
+                                                                <td>Course 1</td>
+                                                                <td>LeeCathy_MR2020_Course1_Exam.pdf</td>
+                                                                <td>25.5.2019</td>
+                                                                <td>8</td>
+                                                                <td>03.06.2019</td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                    </div>
+                                                  </div>
+
+                                                  <button type="button" class="btn btn-primary float-right mt-2">Save</button>
+
+                                                </div>
                                             </div>
 
+
                                             <div class="tab-pane fade" id="nav-accounts" role="tabpanel" aria-labelledby="nav-accounts-tab">
-                                                <h1 class="text-left m-0 mb-3 px-md-3">Accounts</h1>
+
+                                                <div class="container">
+                                                  <div class="row">
+                                                    
+                                                    <div class="col-sm-6">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                              <tr>
+                                                                <th>Residency</th>
+                                                                <th>Registered</th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                              <tr>
+                                                                <td>MR2020</td>
+                                                                <td>12</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>BALI2019</td>
+                                                                <td>125</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>MR2019</td>
+                                                                <td>40</td>
+                                                              </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <form>
+                                                          <div class="form-group">
+                                                            <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
+                                                              <option>Select residency</option>
+                                                              <option>2</option>
+                                                              <option>3</option>
+                                                              <option>4</option>
+                                                              <option>5</option>
+                                                            </select>
+                                                          </div>
+                                                          <div class="form-group">
+                                                            <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
+                                                              <option>Select course</option>
+                                                              <option>2</option>
+                                                              <option>3</option>
+                                                              <option>4</option>
+                                                              <option>5</option>
+                                                            </select>
+                                                          </div>
+                                                        </form>
+                                                    </div>
+
+                                                  </div>
+                                                  
+                                                </div>
                                             </div>
+
 
                                             <div class="tab-pane fade" id="nav-codes" role="tabpanel" aria-labelledby="nav-codes-tab">
                                                 <h1 class="text-left m-0 mb-3 px-md-3">Codes</h1>
