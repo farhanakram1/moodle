@@ -9,7 +9,7 @@ class block_eodoo_dashboard extends block_base {
         // $this->title = get_string('pluginname', 'block_eodoo_dashboard');
     }
 
-    public function allcourse($allcourses){
+     public function allcourse($allcourses){
         $array = [];
         foreach ($allcourses as $key => $value) {
             $row =  '<tr><td> '.$allcourses[$key]['fullname'].' </td></tr>';
@@ -18,6 +18,7 @@ class block_eodoo_dashboard extends block_base {
         $string_version = implode(',', $array);
         return $string_version;
     }
+   
     // The PHP tag and the curly bracket for the class definition 
     // will only be closed after there is another function added in the next section.
 
@@ -30,6 +31,7 @@ class block_eodoo_dashboard extends block_base {
 	    $adminifos = new \theme_moove\util\admininfos();
 	    $get_totalactiveusers = $adminifos->get_totalactiveusers();
 	    $get_category_name = $adminifos->get_category_course_name();
+        $upload_course = $adminifos->upload_course();
 
         // Download Tab Word
         $allcourses = $adminifos->allcourses();
