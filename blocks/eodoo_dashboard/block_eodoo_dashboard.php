@@ -31,7 +31,7 @@ class block_eodoo_dashboard extends block_base {
 	    $adminifos = new \theme_moove\util\admininfos();
 	    $get_totalactiveusers = $adminifos->get_totalactiveusers();
 	    $get_category_name = $adminifos->get_category_course_name();
-        $upload_course = $adminifos->upload_course();
+        // $upload_course = $adminifos->upload_course();
 
         // Download Tab Word
         $allcourses = $adminifos->allcourses();

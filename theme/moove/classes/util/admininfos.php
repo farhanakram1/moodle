@@ -125,19 +125,19 @@ class admininfos {
         return $course_category_by_id;
     }
 
-    public function upload_course() {
-        global $DB;
+    // public function upload_course() {
+    //     global $DB;
 
-        $get_course = "SELECT DISTINCT cc.name
-                        FROM oodo_course_categories cc
-                        INNER JOIN oodo_course c ON e.courseid = c.id
-                        INNER JOIN oodo_course_categories  ON cc.id = c.category
-                        INNER JOIN oodo_role r ON r.id = ra.roleid AND r.shortname = 'student'
-                        WHERE e.status = 0 AND u.suspended = 0 AND u.deleted = 0 AND ue.status = 0";
-        $_course_id = $DB->get_records_sql($get_course);
+    //     $get_course = "SELECT DISTINCT cc.name
+    //                     FROM oodo_course_categories cc
+    //                     INNER JOIN oodo_course c ON e.courseid = c.id
+    //                     INNER JOIN oodo_course_categories  ON cc.id = c.category
+    //                     INNER JOIN oodo_role r ON r.id = ra.roleid AND r.shortname = 'student'
+    //                     WHERE e.status = 0 AND u.suspended = 0 AND u.deleted = 0 AND ue.status = 0";
+    //     $_course_id = $DB->get_records_sql($get_course);
         
-        return $_course_id;
-    }
+    //     return $_course_id;
+    // }
 
     /**
      * Returns the total of suspended users.
