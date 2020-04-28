@@ -31,7 +31,7 @@ class block_eodoo_dashboard extends block_base {
 	    $adminifos = new \theme_moove\util\admininfos();
 	    $get_totalactiveusers = $adminifos->get_totalactiveusers();
 	    $get_category_name = $adminifos->get_category_course_name();
-        // $upload_course = $adminifos->upload_course();
+        $upload_course = $adminifos->upload_course();
 
         // Download Tab Word
         $allcourses = $adminifos->allcourses();
@@ -308,12 +308,195 @@ class block_eodoo_dashboard extends block_base {
 
 
                                             <div class="tab-pane fade" id="nav-codes" role="tabpanel" aria-labelledby="nav-codes-tab">
-                                                <h1 class="text-left m-0 mb-3 px-md-3">Codes</h1>
+                                                
+                                              <div class="container">
+                                                  <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                              <tr>
+                                                                <th>Edit/Add Residency</th>
+                                                                <th>Reg. Code</th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                              <tr>
+                                                                <td>Residency 2019</td>
+                                                                <td>MR2019</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Residency 2020</td>
+                                                                <td>MR2020</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Bali 2019</td>
+                                                                <td>BALI2019</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Residency 2021</td>
+                                                                <td>MR2021</td>
+                                                              </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                              <tr>
+                                                                <th>Edit/Add Course</th>
+                                                                <th>Code</th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                              <tr>
+                                                                <td>Course 1</td>
+                                                                <td>EODO1241</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Course 2</td>
+                                                                <td>EODO1242</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Course 3</td>
+                                                                <td>EODO1244</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Course 4</td>
+                                                                <td>EODO1247</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Course 5</td>
+                                                                <td>EODO1251</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Course 6</td>
+                                                                <td>EODO1256</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Course 7</td>
+                                                                <td>EODO1262</td>
+                                                              </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                  </div>
+                                                </div>
+                                                <button type="button" class="btn btn-primary float-right mt-2">Save</button>  
+
                                             </div>
 
+
                                             <div class="tab-pane fade" id="nav-invoices" role="tabpanel" aria-labelledby="nav-invoices-tab">
-                                                <h1 class="text-left m-0 mb-3 px-md-3">Invoices</h1>
+                                                
+
+                                              <div class="container">
+                                                  <div class="row">
+                                                    
+                                                    <div class="col-sm-6">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                              <tr>
+                                                                <th>Residency</th>
+                                                                <th>new</th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                              <tr>
+                                                                <td>MR2020</td>
+                                                                <td>12</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>BALI2019</td>
+                                                                <td>125</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>MR2019</td>
+                                                                <td>40</td>
+                                                              </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <form>
+                                                          <div class="form-group">
+                                                            <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
+                                                              <option>Select residency</option>
+                                                              <option>2</option>
+                                                              <option>3</option>
+                                                              <option>4</option>
+                                                              <option>5</option>
+                                                            </select>
+                                                          </div>
+                                                          <div class="form-group">
+                                                            <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
+                                                              <option>Select course</option>
+                                                              <option>2</option>
+                                                              <option>3</option>
+                                                              <option>4</option>
+                                                              <option>5</option>
+                                                            </select>
+                                                          </div>
+                                                        </form>
+                                                    </div>
+
+                                                  </div>
+                                                  <br><br>
+                                                  <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table class="table table-striped table-responsive">
+                                                            <thead>
+                                                              <tr>
+                                                                <th>Residency</th>
+                                                                <th>Name</th>
+                                                                <th>Course</th>
+                                                                <th>Invoice</th>
+                                                                <th>Issued</th>
+                                                                <th>Download</th>
+                                                                <th>Resent</th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                              <tr>
+                                                                <td>MR2020</td>
+                                                                <td>Norwalk, James C</td>
+                                                                <td>Course 1</td>
+                                                                <td>JamesNorwalk_MR2020_Course1_Exam.pdf</td>
+                                                                <td>25.5.2019</td>
+                                                                <td>8</td>
+                                                                <td>03.06.2019</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>MR2020</td>
+                                                                <td></td>
+                                                                <td>Course 2</td>
+                                                                <td>JamesNorwalk_MR2020_Course2_Exam.pdf</td>
+                                                                <td>25.5.2019</td>
+                                                                <td>8</td>
+                                                                <td>03.06.2019</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>BALI2019</td>
+                                                                <td>Lee, Cathy</td>
+                                                                <td>Course 1</td>
+                                                                <td>LeeCathy_MR2020_Course1_Exam.pdf</td>
+                                                                <td>25.5.2019</td>
+                                                                <td>8</td>
+                                                                <td>03.06.2019</td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                    </div>
+                                                  </div>
+
+                                                  <button type="button" class="btn btn-primary float-right mt-2">Save</button>
+
+                                                </div>
+                                                
                                             </div>
+
 
                                     </div>
                                 </div>
