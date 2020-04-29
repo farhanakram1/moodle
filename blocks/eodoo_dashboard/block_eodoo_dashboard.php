@@ -9,7 +9,7 @@ class block_eodoo_dashboard extends block_base {
         // $this->title = get_string('pluginname', 'block_eodoo_dashboard');
     }
 
-     public function allcourse($allcourses){
+    public function allcourse($allcourses){
         $array = [];
         foreach ($allcourses as $key => $value) {
             $row =  '<tr><td> '.$allcourses[$key]['fullname'].' </td></tr>';
@@ -18,7 +18,26 @@ class block_eodoo_dashboard extends block_base {
         $string_version = implode(',', $array);
         return $string_version;
     }
+
+    public function upload_course($upload_course){
+      $array = [];
+      foreach ($upload_course as $key => $value) {
+         $row =  '<tr>
+                      <td>'.$upload_course[$key]['name'].'</td>
+                      <td>12</td>
+                  </tr>';
+         // $row =  '<tr>
+         //              <td>'.$upload_course[$key]['fullname'].'</td>
+         //          </tr>';
+          array_push($array, $row);
+
+      }
+      $string_version = implode(',', $array);
+       return $string_version;
+    }
    
+
+
     // The PHP tag and the curly bracket for the class definition 
     // will only be closed after there is another function added in the next section.
 
@@ -31,14 +50,19 @@ class block_eodoo_dashboard extends block_base {
 	    $adminifos = new \theme_moove\util\admininfos();
 	    $get_totalactiveusers = $adminifos->get_totalactiveusers();
 	    $get_category_name = $adminifos->get_category_course_name();
+
+        //Upload Tab
         $upload_course = $adminifos->upload_course();
+        $uploadss = $this->upload_course($upload_course);
+          // echo "<pre>";
+          // print_r($uploadss);
+          // die();
+        //Upload Tab
+        
 
         // Download Tab Word
         $allcourses = $adminifos->allcourses();
         $course_down = $this->allcourse($allcourses);
-// echo "<pre>";
-// print_r($course_down);
-// die();
         // Download Tab Word
 	    $get_category_course_count_user = $adminifos->get_category_course_registered_user();
 		
@@ -147,26 +171,16 @@ class block_eodoo_dashboard extends block_base {
                                                     
                                                     <div class="col-sm-6">
                                                         <table class="table table-striped">
-                                                            <thead>
-                                                              <tr>
-                                                                <th>Residency</th>
-                                                                <th>Pending</th>
-                                                              </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                              <tr>
-                                                                <td>MR2020</td>
-                                                                <td>12</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>BALI2019</td>
-                                                                <td>125</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>MR2019</td>
-                                                                <td>40</td>
-                                                              </tr>
-                                                            </tbody>
+                                                          <thead>
+                                                            <tr>
+                                                              <th>Residency</th>
+                                                              <th>Pending</th>
+                                                            </tr>
+                                                          </thead>
+                                                          <tbody>'                                                            
+                                                        .$uploadss.
+
+                                                        '</tbody>
                                                         </table>
                                                     </div>
 

@@ -128,19 +128,16 @@ class admininfos {
     public function upload_course() {
         global $DB;
 
-        $get_courses = "SELECT *
-                        FROM oodo_files
-                        -- INNER JOIN oodo_context ON oodo_files.contextid = oodo_context.id
-                        -- INNER JOIN oodo_resource ON oodo_context.instanceid = oodo_resource.id
-                        -- INNER JOIN oodo_course ON oodo_resource.course = oodo_course.id
-                        INNER JOIN oodo_role_assignments ON oodo_role_assignments.userid = oodo_files.userid
-                        INNER JOIN oodo_role ON oodo_role.id = oodo_role_assignments.roleid AND oodo_role.shortname = 'student'
+        $get_upload = "SELECT *
+                        FROM oodo_course_categories
+                        INNER JOIN oodo_course ON oodo_course.category = oodo_course_categories.id
                         ";
-        $_course_ids = $DB->get_records_sql($get_courses);
+        $_course_ids = $DB->get_records_sql($get_upload);
+        $course_cat = json_decode(json_encode($_course_ids),true);
         // echo "<pre>";
-        // print_r($_course_ids);
+        // print_r($course_cat);
         // die();
-        return $_course_ids;
+        return $course_cat;
     }
 
     /**
