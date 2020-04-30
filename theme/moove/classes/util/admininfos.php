@@ -129,15 +129,33 @@ class admininfos {
         global $DB;
 
         $get_upload = "SELECT *
-                        FROM oodo_course_categories
-                        INNER JOIN oodo_course ON oodo_course.category = oodo_course_categories.id
+                        FROM oodo_user
+                        INNER JOIN oodo_user_enrolments ON oodo_user_enrolments.userid = oodo_user.id
+                        INNER JOIN oodo_enrol ON oodo_enrol.id = oodo_user_enrolments.enrolid
+                        INNER JOIN oodo_course ON oodo_course.id = oodo_enrol.courseid
+                        INNER JOIN oodo_course_categories ON oodo_course.category = oodo_course_categories.id
                         ";
         $_course_ids = $DB->get_records_sql($get_upload);
         $course_cat = json_decode(json_encode($_course_ids),true);
+        return $course_cat;
+    }
+
+    public function accounts() {
+        global $DB;
+        
+        $accounts = "SELECT *
+                        FROM oodo_user
+                        INNER JOIN oodo_user_enrolments ON oodo_user_enrolments.userid = oodo_user.id
+                        INNER JOIN oodo_enrol ON oodo_enrol.id = oodo_user_enrolments.enrolid
+                        INNER JOIN oodo_course ON oodo_course.id = oodo_enrol.courseid
+                        INNER JOIN oodo_course_categories ON oodo_course.category = oodo_course_categories.id
+                        ";
+        $accountsids = $DB->get_records_sql($accounts);
+        $account_cat = json_decode(json_encode($accountsids),true);
         // echo "<pre>";
         // print_r($course_cat);
         // die();
-        return $course_cat;
+        return $account_cat;
     }
 
     /**

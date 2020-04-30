@@ -19,23 +19,109 @@ class block_eodoo_dashboard extends block_base {
         return $string_version;
     }
 
-    public function upload_course($upload_course){
+    // Upload tabs Functions
+
+    public function upload_courses($upload_course){
       $array = [];
       foreach ($upload_course as $key => $value) {
          $row =  '<tr>
                       <td>'.$upload_course[$key]['name'].'</td>
                       <td>12</td>
                   </tr>';
-         // $row =  '<tr>
-         //              <td>'.$upload_course[$key]['fullname'].'</td>
-         //          </tr>';
+          array_push($array, $row);
+      }
+      $string_version = implode(',', $array);
+       return $string_version;
+    }
+    // select_cat
+    public function select_cat($upload_course){
+      $array = [];
+      foreach ($upload_course as $key => $value) {
+         $row =  '<option>'.$upload_course[$key]['name'].'</option>';
           array_push($array, $row);
 
       }
       $string_version = implode(',', $array);
        return $string_version;
     }
-   
+    // select_cat
+
+    // select_course
+    public function select_course($upload_course){
+      $array = [];
+      foreach ($upload_course as $key => $value) {
+         $row =  '<option>'.$upload_course[$key]['fullname'].'</option>';
+          array_push($array, $row);
+
+      }
+      $string_version = implode(',', $array);
+       return $string_version;
+    }
+    // select_course
+
+    // all_course_data
+    public function all_course_data($upload_course){
+      $array = [];
+      foreach ($upload_course as $key => $value) {
+         $row =  '<tr>
+                    <td>'.$upload_course[$key]['name'].'</td>
+                    <td>'.$upload_course[$key]['firstname'].'</td>
+                    <td>'.$upload_course[$key]['fullname'].'</td>
+                    <td>JamesNorwalk_MR2020_Course1_Exam.pdf</td>
+                    <td>25.5.2019</td>
+                    <td>8</td>
+                    <td>03.06.2019</td>
+                  </tr>';
+          array_push($array, $row);
+
+      }
+      $string_version = implode(',', $array);
+       return $string_version;
+    }
+    // select_course
+ // Upload tabs Functions
+
+
+    // Accounts tabs Functions
+    
+    public function upload_accountscourses($upload_course){
+      $array = [];
+      foreach ($upload_course as $key => $value) {
+         $row =  '<tr>
+                      <td>'.$upload_course[$key]['name'].'</td>
+                      <td>'.count($upload_course[$key]['id']).'</td>
+                  </tr>';
+          array_push($array, $row);
+      }
+      $string_version = implode(',', $array);
+       return $string_version;
+    }
+    // select_accountscat
+    public function select_accountscat($upload_course){
+      $array = [];
+      foreach ($upload_course as $key => $value) {
+         $row =  '<option>'.$upload_course[$key]['name'].'</option>';
+          array_push($array, $row);
+
+      }
+      $string_version = implode(',', $array);
+       return $string_version;
+    }
+    // select_accountscat
+
+    // select_accountscourse
+    public function select_accountscourse($upload_course){
+      $array = [];
+      foreach ($upload_course as $key => $value) {
+         $row =  '<option>'.$upload_course[$key]['fullname'].'</option>';
+          array_push($array, $row);
+
+      }
+      $string_version = implode(',', $array);
+       return $string_version;
+    }
+    // select_accountscourse
+ // Accounts tabs Functions
 
 
     // The PHP tag and the curly bracket for the class definition 
@@ -52,12 +138,29 @@ class block_eodoo_dashboard extends block_base {
 	    $get_category_name = $adminifos->get_category_course_name();
 
         //Upload Tab
+        
         $upload_course = $adminifos->upload_course();
-        $uploadss = $this->upload_course($upload_course);
-          // echo "<pre>";
-          // print_r($uploadss);
-          // die();
+
+        $uploadss = $this->upload_courses($upload_course);
+        $select_cat = $this->select_cat($upload_course);
+        $select_course = $this->select_course($upload_course);
+        $all_course_data = $this->all_course_data($upload_course);
+
         //Upload Tab
+
+
+        //Account Tab
+        
+        $accounts = $adminifos->accounts();
+
+        $upload_accountscourses = $this->upload_accountscourses($accounts);
+        $select_accountscat = $this->select_accountscat($accounts);
+        $select_accountscourse = $this->select_accountscourse($accounts);
+          // echo "<pre>";
+          // print_r($accounts);
+          // die();
+
+        //Account Tab
         
 
         // Download Tab Word
@@ -189,19 +292,13 @@ class block_eodoo_dashboard extends block_base {
                                                           <div class="form-group">
                                                             <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
                                                               <option>Select residency</option>
-                                                              <option>2</option>
-                                                              <option>3</option>
-                                                              <option>4</option>
-                                                              <option>5</option>
+                                                             '.$select_cat.'
                                                             </select>
                                                           </div>
                                                           <div class="form-group">
                                                             <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
                                                               <option>Select course</option>
-                                                              <option>2</option>
-                                                              <option>3</option>
-                                                              <option>4</option>
-                                                              <option>5</option>
+                                                              '.$select_course.'
                                                             </select>
                                                           </div>
                                                         </form>
@@ -224,33 +321,7 @@ class block_eodoo_dashboard extends block_base {
                                                               </tr>
                                                             </thead>
                                                             <tbody>
-                                                              <tr>
-                                                                <td>MR2020</td>
-                                                                <td>Norwalk, James C</td>
-                                                                <td>Course 1</td>
-                                                                <td>JamesNorwalk_MR2020_Course1_Exam.pdf</td>
-                                                                <td>25.5.2019</td>
-                                                                <td>8</td>
-                                                                <td>03.06.2019</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>MR2020</td>
-                                                                <td></td>
-                                                                <td>Course 2</td>
-                                                                <td>JamesNorwalk_MR2020_Course2_Exam.pdf</td>
-                                                                <td>25.5.2019</td>
-                                                                <td>8</td>
-                                                                <td>03.06.2019</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>BALI2019</td>
-                                                                <td>Lee, Cathy</td>
-                                                                <td>Course 1</td>
-                                                                <td>LeeCathy_MR2020_Course1_Exam.pdf</td>
-                                                                <td>25.5.2019</td>
-                                                                <td>8</td>
-                                                                <td>03.06.2019</td>
-                                                              </tr>
+                                                              '.$all_course_data.'
                                                             </tbody>
                                                           </table>
                                                     </div>
@@ -276,18 +347,7 @@ class block_eodoo_dashboard extends block_base {
                                                               </tr>
                                                             </thead>
                                                             <tbody>
-                                                              <tr>
-                                                                <td>MR2020</td>
-                                                                <td>12</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>BALI2019</td>
-                                                                <td>125</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>MR2019</td>
-                                                                <td>40</td>
-                                                              </tr>
+                                                              '.$upload_accountscourses.'
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -297,19 +357,13 @@ class block_eodoo_dashboard extends block_base {
                                                           <div class="form-group">
                                                             <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
                                                               <option>Select residency</option>
-                                                              <option>2</option>
-                                                              <option>3</option>
-                                                              <option>4</option>
-                                                              <option>5</option>
+                                                              '.$select_accountscat.'
                                                             </select>
                                                           </div>
                                                           <div class="form-group">
                                                             <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
                                                               <option>Select course</option>
-                                                              <option>2</option>
-                                                              <option>3</option>
-                                                              <option>4</option>
-                                                              <option>5</option>
+                                                              '.$select_accountscourse.'
                                                             </select>
                                                           </div>
                                                         </form>
