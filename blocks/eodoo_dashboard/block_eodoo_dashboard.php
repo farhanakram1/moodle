@@ -6,9 +6,9 @@
 class block_eodoo_dashboard extends block_base {
 
     public function init() {
-        // $this->title = get_string('pluginname', 'block_eodoo_dashboard');
+        $this->title = get_string('pluginname', 'block_eodoo_dashboard');
     }
-
+//Download Taps Functions
     public function allcourse($allcourses){
         $array = [];
         foreach ($allcourses as $key => $value) {
@@ -18,7 +18,8 @@ class block_eodoo_dashboard extends block_base {
         $string_version = implode(',', $array);
         return $string_version;
     }
-
+//Download Taps Functions
+    
     // Upload tabs Functions
 
     public function upload_courses($upload_course){
@@ -123,6 +124,22 @@ class block_eodoo_dashboard extends block_base {
     // select_accountscourse
  // Accounts tabs Functions
 
+ // Codes tabs Functions
+    public function code_category($codes){
+      $array = [];
+      foreach ($codes as $key => $value) {
+         $row =  '<tr>
+                    <td>'.$codes[$key]['name'].'</td>
+                    <td>MR2019</td>
+                  </tr>';
+          array_push($array, $row);
+
+      }
+      $string_version = implode(',', $array);
+       return $string_version;
+    }
+ // Codes tabs Functions
+
 
     // The PHP tag and the curly bracket for the class definition 
     // will only be closed after there is another function added in the next section.
@@ -156,11 +173,18 @@ class block_eodoo_dashboard extends block_base {
         $upload_accountscourses = $this->upload_accountscourses($accounts);
         $select_accountscat = $this->select_accountscat($accounts);
         $select_accountscourse = $this->select_accountscourse($accounts);
+      
+        //Account Tab
+
+        //Codes Tab
+        
+        $codes = $adminifos->codes();
+        $code_category = $this->code_category($codes);
           // echo "<pre>";
           // print_r($accounts);
           // die();
 
-        //Account Tab
+        //Codes Tab
         
 
         // Download Tab Word
@@ -249,7 +273,6 @@ class block_eodoo_dashboard extends block_base {
                                         </div>
                                             
                                             <div class="tab-pane fade" id="nav-downloads" role="tabpanel" aria-labelledby="nav-downloads-tab">
-                                                <h1 class="text-center m-0 mb-3 px-md-3">Download Manager</h1>
                                                 <div class="container">           
                                                   <table class="table table-striped">
                                                     <thead>
@@ -388,22 +411,7 @@ class block_eodoo_dashboard extends block_base {
                                                               </tr>
                                                             </thead>
                                                             <tbody>
-                                                              <tr>
-                                                                <td>Residency 2019</td>
-                                                                <td>MR2019</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>Residency 2020</td>
-                                                                <td>MR2020</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>Bali 2019</td>
-                                                                <td>BALI2019</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>Residency 2021</td>
-                                                                <td>MR2021</td>
-                                                              </tr>
+                                                              '.$code_category.'
                                                             </tbody>
                                                         </table>
                                                     </div>

@@ -158,6 +158,21 @@ class admininfos {
         return $account_cat;
     }
 
+    public function codes() {
+        global $DB;
+        
+        $codes = "SELECT *
+                        FROM oodo_course_categories
+                        INNER JOIN oodo_course ON oodo_course.category = oodo_course_categories.id
+                        ";
+        $codessids = $DB->get_records_sql($codes);
+        $codes_cat = json_decode(json_encode($codessids),true);
+        // echo "<pre>";
+        // print_r($codes_cat);
+        // die();
+        return $codes_cat;
+    }
+
     /**
      * Returns the total of suspended users.
      *
