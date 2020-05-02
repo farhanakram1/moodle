@@ -138,7 +138,80 @@ class block_eodoo_dashboard extends block_base {
       $string_version = implode(',', $array);
        return $string_version;
     }
+
+    public function code_courses($codes){
+      $array = [];
+      foreach ($codes as $key => $value) {
+         $row =  '<tr>
+                    <td>'.$codes[$key]['fullname'].'</td>
+                    <td>'.$codes[$key]['shortname'].'</td>
+                  </tr>';
+          array_push($array, $row);
+
+      }
+      $string_version = implode(',', $array);
+       return $string_version;
+    }
  // Codes tabs Functions
+ 
+ // invoices tabs Functions
+
+    public function invoices_cat($invoices){
+      $array = [];
+      foreach ($invoices as $key => $value) {
+         $row =  '<tr>
+                    <td>'.$invoices[$key]['name'].'</td>
+                    <td>12</td>
+                  </tr>';
+          array_push($array, $row);
+
+      }
+      $string_version = implode(',', $array);
+       return $string_version;
+    }
+
+    public function select_invoice_cat($invoices){
+      $array = [];
+      foreach ($invoices as $key => $value) {
+         $row =  '<option>'.$invoices[$key]['name'].'</option>';
+          array_push($array, $row);
+
+      }
+      $string_version = implode(',', $array);
+       return $string_version;
+    }
+
+    public function select_invoice_course($invoices){
+      $array = [];
+      foreach ($invoices as $key => $value) {
+         $row =  '<option>'.$invoices[$key]['fullname'].'</option>';
+          array_push($array, $row);
+
+      }
+      $string_version = implode(',', $array);
+       return $string_version;
+    }
+
+    public function invoice_course_data($invoices){
+      $array = [];
+      foreach ($invoices as $key => $value) {
+         $row =  '<tr>
+                    <td>'.$invoices[$key]['name'].'</td>
+                    <td>'.$invoices[$key]['firstname'].'</td>
+                    <td>'.$invoices[$key]['fullname'].'</td>
+                    <td>JamesNorwalk_MR2020_Course1_Exam.pdf</td>
+                    <td>25.5.2019</td>
+                    <td>8</td>
+                    <td>03.06.2019</td>
+                  </tr>';
+          array_push($array, $row);
+
+      }
+      $string_version = implode(',', $array);
+       return $string_version;
+    }
+
+ // invoices tabs Functions
 
 
     // The PHP tag and the curly bracket for the class definition 
@@ -167,24 +240,29 @@ class block_eodoo_dashboard extends block_base {
 
 
         //Account Tab
-        
         $accounts = $adminifos->accounts();
 
         $upload_accountscourses = $this->upload_accountscourses($accounts);
         $select_accountscat = $this->select_accountscat($accounts);
         $select_accountscourse = $this->select_accountscourse($accounts);
-      
         //Account Tab
 
         //Codes Tab
-        
         $codes = $adminifos->codes();
         $code_category = $this->code_category($codes);
-          // echo "<pre>";
-          // print_r($accounts);
-          // die();
-
+        $code_courses = $this->code_courses($codes);
         //Codes Tab
+
+        //invoices Tab
+        $invoices = $adminifos->invoices();
+        $invoices_cat = $this->invoices_cat($invoices);
+        $select_invoice_cat = $this->select_invoice_cat($invoices);
+        $select_invoice_course = $this->select_invoice_course($invoices);
+        $invoice_course_data = $this->invoice_course_data($invoices);
+        // echo "<pre>";
+          // print_r($invoices);
+          // die();
+        //invoices Tab
         
 
         // Download Tab Word
@@ -425,34 +503,7 @@ class block_eodoo_dashboard extends block_base {
                                                               </tr>
                                                             </thead>
                                                             <tbody>
-                                                              <tr>
-                                                                <td>Course 1</td>
-                                                                <td>EODO1241</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>Course 2</td>
-                                                                <td>EODO1242</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>Course 3</td>
-                                                                <td>EODO1244</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>Course 4</td>
-                                                                <td>EODO1247</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>Course 5</td>
-                                                                <td>EODO1251</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>Course 6</td>
-                                                                <td>EODO1256</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>Course 7</td>
-                                                                <td>EODO1262</td>
-                                                              </tr>
+                                                              '.$code_courses.'
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -479,18 +530,7 @@ class block_eodoo_dashboard extends block_base {
                                                               </tr>
                                                             </thead>
                                                             <tbody>
-                                                              <tr>
-                                                                <td>MR2020</td>
-                                                                <td>12</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>BALI2019</td>
-                                                                <td>125</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>MR2019</td>
-                                                                <td>40</td>
-                                                              </tr>
+                                                              '.$invoices_cat.'
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -500,19 +540,13 @@ class block_eodoo_dashboard extends block_base {
                                                           <div class="form-group">
                                                             <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
                                                               <option>Select residency</option>
-                                                              <option>2</option>
-                                                              <option>3</option>
-                                                              <option>4</option>
-                                                              <option>5</option>
+                                                              '.$select_invoice_cat.'
                                                             </select>
                                                           </div>
                                                           <div class="form-group">
                                                             <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
                                                               <option>Select course</option>
-                                                              <option>2</option>
-                                                              <option>3</option>
-                                                              <option>4</option>
-                                                              <option>5</option>
+                                                              '.$select_invoice_course.'
                                                             </select>
                                                           </div>
                                                         </form>
@@ -535,33 +569,7 @@ class block_eodoo_dashboard extends block_base {
                                                               </tr>
                                                             </thead>
                                                             <tbody>
-                                                              <tr>
-                                                                <td>MR2020</td>
-                                                                <td>Norwalk, James C</td>
-                                                                <td>Course 1</td>
-                                                                <td>JamesNorwalk_MR2020_Course1_Exam.pdf</td>
-                                                                <td>25.5.2019</td>
-                                                                <td>8</td>
-                                                                <td>03.06.2019</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>MR2020</td>
-                                                                <td></td>
-                                                                <td>Course 2</td>
-                                                                <td>JamesNorwalk_MR2020_Course2_Exam.pdf</td>
-                                                                <td>25.5.2019</td>
-                                                                <td>8</td>
-                                                                <td>03.06.2019</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>BALI2019</td>
-                                                                <td>Lee, Cathy</td>
-                                                                <td>Course 1</td>
-                                                                <td>LeeCathy_MR2020_Course1_Exam.pdf</td>
-                                                                <td>25.5.2019</td>
-                                                                <td>8</td>
-                                                                <td>03.06.2019</td>
-                                                              </tr>
+                                                              '.$invoice_course_data.'
                                                             </tbody>
                                                           </table>
                                                     </div>

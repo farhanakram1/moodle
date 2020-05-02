@@ -152,9 +152,7 @@ class admininfos {
                         ";
         $accountsids = $DB->get_records_sql($accounts);
         $account_cat = json_decode(json_encode($accountsids),true);
-        // echo "<pre>";
-        // print_r($course_cat);
-        // die();
+       
         return $account_cat;
     }
 
@@ -162,15 +160,31 @@ class admininfos {
         global $DB;
         
         $codes = "SELECT *
-                        FROM oodo_course_categories
-                        INNER JOIN oodo_course ON oodo_course.category = oodo_course_categories.id
+                    FROM oodo_user
+                    INNER JOIN oodo_user_enrolments ON oodo_user_enrolments.userid = oodo_user.id
+                    INNER JOIN oodo_enrol ON oodo_enrol.id = oodo_user_enrolments.enrolid
+                    INNER JOIN oodo_course ON oodo_course.id = oodo_enrol.courseid
+                    INNER JOIN oodo_course_categories ON oodo_course.category = oodo_course_categories.id
                         ";
         $codessids = $DB->get_records_sql($codes);
         $codes_cat = json_decode(json_encode($codessids),true);
-        // echo "<pre>";
-        // print_r($codes_cat);
-        // die();
+        
         return $codes_cat;
+    }
+
+    public function invoices() {
+        global $DB;
+
+        $invoices = "SELECT *
+                        FROM oodo_user
+                        INNER JOIN oodo_user_enrolments ON oodo_user_enrolments.userid = oodo_user.id
+                        INNER JOIN oodo_enrol ON oodo_enrol.id = oodo_user_enrolments.enrolid
+                        INNER JOIN oodo_course ON oodo_course.id = oodo_enrol.courseid
+                        INNER JOIN oodo_course_categories ON oodo_course.category = oodo_course_categories.id
+                        ";
+        $invoices_ids = $DB->get_records_sql($invoices);
+        $invoices_cat = json_decode(json_encode($invoices_ids),true);
+        return $invoices_cat;
     }
 
     /**
