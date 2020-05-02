@@ -495,7 +495,7 @@ class block_eodoo_dashboard extends block_base {
                                                     </div>
 
                                                     <div class="col-sm-6">
-                                                        <table class="table table-striped">
+                                                        <table class="table table-striped table-responsive">
                                                             <thead>
                                                               <tr>
                                                                 <th>Edit/Add Course</th>
