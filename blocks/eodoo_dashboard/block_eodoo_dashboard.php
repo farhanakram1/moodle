@@ -160,49 +160,10 @@ class block_eodoo_dashboard extends block_base {
       $array = [];
       foreach ($invoices as $key => $value) {
          $row =  '<tr>
-                    <td>'.$invoices[$key]['name'].'</td>
-                    <td>12</td>
-                  </tr>';
-          array_push($array, $row);
-
-      }
-      $string_version = implode(',', $array);
-       return $string_version;
-    }
-
-    public function select_invoice_cat($invoices){
-      $array = [];
-      foreach ($invoices as $key => $value) {
-         $row =  '<option>'.$invoices[$key]['name'].'</option>';
-          array_push($array, $row);
-
-      }
-      $string_version = implode(',', $array);
-       return $string_version;
-    }
-
-    public function select_invoice_course($invoices){
-      $array = [];
-      foreach ($invoices as $key => $value) {
-         $row =  '<option>'.$invoices[$key]['fullname'].'</option>';
-          array_push($array, $row);
-
-      }
-      $string_version = implode(',', $array);
-       return $string_version;
-    }
-
-    public function invoice_course_data($invoices){
-      $array = [];
-      foreach ($invoices as $key => $value) {
-         $row =  '<tr>
-                    <td>'.$invoices[$key]['name'].'</td>
                     <td>'.$invoices[$key]['firstname'].'</td>
-                    <td>'.$invoices[$key]['fullname'].'</td>
-                    <td>JamesNorwalk_MR2020_Course1_Exam.pdf</td>
-                    <td>25.5.2019</td>
-                    <td>8</td>
-                    <td>03.06.2019</td>
+                    <td>'.$invoices[$key]['lastname'].'</td>
+                    <td>'.$invoices[$key]['user_email'].'</td>
+                    <td>'.$invoices[$key]['discount_code'].'</td>
                   </tr>';
           array_push($array, $row);
 
@@ -210,6 +171,47 @@ class block_eodoo_dashboard extends block_base {
       $string_version = implode(',', $array);
        return $string_version;
     }
+
+    // public function select_invoice_cat($invoices){
+    //   $array = [];
+    //   foreach ($invoices as $key => $value) {
+    //      $row =  '<option>'.$invoices[$key]['name'].'</option>';
+    //       array_push($array, $row);
+
+    //   }
+    //   $string_version = implode(',', $array);
+    //    return $string_version;
+    // }
+
+    // public function select_invoice_course($invoices){
+    //   $array = [];
+    //   foreach ($invoices as $key => $value) {
+    //      $row =  '<option>'.$invoices[$key]['fullname'].'</option>';
+    //       array_push($array, $row);
+
+    //   }
+    //   $string_version = implode(',', $array);
+    //    return $string_version;
+    // }
+
+    // public function invoice_course_data($invoices){
+    //   $array = [];
+    //   foreach ($invoices as $key => $value) {
+    //      $row =  '<tr>
+    //                 <td>'.$invoices[$key]['name'].'</td>
+    //                 <td>'.$invoices[$key]['firstname'].'</td>
+    //                 <td>'.$invoices[$key]['fullname'].'</td>
+    //                 <td>JamesNorwalk_MR2020_Course1_Exam.pdf</td>
+    //                 <td>25.5.2019</td>
+    //                 <td>8</td>
+    //                 <td>03.06.2019</td>
+    //               </tr>';
+    //       array_push($array, $row);
+
+    //   }
+    //   $string_version = implode(',', $array);
+    //    return $string_version;
+    // }
 
  // invoices tabs Functions
 
@@ -256,9 +258,9 @@ class block_eodoo_dashboard extends block_base {
         //invoices Tab
         $invoices = $adminifos->invoices();
         $invoices_cat = $this->invoices_cat($invoices);
-        $select_invoice_cat = $this->select_invoice_cat($invoices);
-        $select_invoice_course = $this->select_invoice_course($invoices);
-        $invoice_course_data = $this->invoice_course_data($invoices);
+        // $select_invoice_cat = $this->select_invoice_cat($invoices);
+        // $select_invoice_course = $this->select_invoice_course($invoices);
+        // $invoice_course_data = $this->invoice_course_data($invoices);
         // echo "<pre>";
           // print_r($invoices);
           // die();
@@ -521,12 +523,14 @@ class block_eodoo_dashboard extends block_base {
                                               <div class="container">
                                                   <div class="row">
                                                     
-                                                    <div class="col-sm-6">
+                                                    <div class="col-sm-12">
                                                         <table class="table table-striped">
                                                             <thead>
                                                               <tr>
-                                                                <th>Residency</th>
-                                                                <th>new</th>
+                                                                <th>First Name</th>
+                                                                <th>Last Name</th>
+                                                                <th>User Email</th>
+                                                                <th>Discount Code</th>
                                                               </tr>
                                                             </thead>
                                                             <tbody>
@@ -535,47 +539,9 @@ class block_eodoo_dashboard extends block_base {
                                                         </table>
                                                     </div>
 
-                                                    <div class="col-sm-6">
-                                                        <form>
-                                                          <div class="form-group">
-                                                            <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
-                                                              <option>Select residency</option>
-                                                              '.$select_invoice_cat.'
-                                                            </select>
-                                                          </div>
-                                                          <div class="form-group">
-                                                            <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
-                                                              <option>Select course</option>
-                                                              '.$select_invoice_course.'
-                                                            </select>
-                                                          </div>
-                                                        </form>
-                                                    </div>
 
                                                   </div>
-                                                  <br><br>
-                                                  <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <table class="table table-striped table-responsive">
-                                                            <thead>
-                                                              <tr>
-                                                                <th>Residency</th>
-                                                                <th>Name</th>
-                                                                <th>Course</th>
-                                                                <th>Invoice</th>
-                                                                <th>Issued</th>
-                                                                <th>Download</th>
-                                                                <th>Resent</th>
-                                                              </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                              '.$invoice_course_data.'
-                                                            </tbody>
-                                                          </table>
-                                                    </div>
-                                                  </div>
-
-                                                  <button type="button" class="btn btn-primary float-right mt-2">Save</button>
+                                                  
 
                                                 </div>
                                                 
