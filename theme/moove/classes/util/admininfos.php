@@ -182,15 +182,13 @@ class admininfos {
         //                 INNER JOIN oodo_course ON oodo_course.id = oodo_enrol.courseid
         //                 INNER JOIN oodo_course_categories ON oodo_course.category = oodo_course_categories.id
         //                 ";
-        $invoices = "SELECT *
+        $invoices = "SELECT DISTINCT *
                         FROM oodo_user
                         INNER JOIN oodo_local_subscribed_user ON oodo_local_subscribed_user.user_email = oodo_user.email
                         ";
         $invoices_ids = $DB->get_records_sql($invoices);
         $invoices_cat = json_decode(json_encode($invoices_ids),true);
-        // echo "<pre>";
-        // print_r($invoices_cat);
-        // die();
+        
         return $invoices_cat;
     }
 

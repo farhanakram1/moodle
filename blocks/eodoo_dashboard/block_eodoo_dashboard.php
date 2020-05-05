@@ -230,20 +230,15 @@ class block_eodoo_dashboard extends block_base {
 	    $get_category_name = $adminifos->get_category_course_name();
 
         //Upload Tab
-        
         $upload_course = $adminifos->upload_course();
-
         $uploadss = $this->upload_courses($upload_course);
         $select_cat = $this->select_cat($upload_course);
         $select_course = $this->select_course($upload_course);
         $all_course_data = $this->all_course_data($upload_course);
-
         //Upload Tab
-
 
         //Account Tab
         $accounts = $adminifos->accounts();
-
         $upload_accountscourses = $this->upload_accountscourses($accounts);
         $select_accountscat = $this->select_accountscat($accounts);
         $select_accountscourse = $this->select_accountscourse($accounts);
