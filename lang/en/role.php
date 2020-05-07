@@ -164,6 +164,7 @@ $string['course:changelockedcustomfields'] = 'Change locked custom fields';
 $string['course:changeshortname'] = 'Change course short name';
 $string['course:changesummary'] = 'Change course summary';
 $string['course:configurecustomfields'] = 'Configure custom fields';
+$string['category:configurecustomfields'] = 'Configure custom fields';
 $string['course:enrolconfig'] = 'Configure enrol instances in courses';
 $string['course:enrolreview'] = 'Review course enrolments';
 $string['course:setforcedlanguage'] = 'Force course language';

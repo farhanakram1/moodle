@@ -42,6 +42,12 @@ if ($hassiteconfig or has_any_capability($capabilities, $systemcontext)) {
             $CFG->wwwroot . '/course/customfield.php',
             array('moodle/course:configurecustomfields')
         )
+    ); 
+    $ADMIN->add('courses',
+        new admin_externalpage('category_customfield', new lang_string('category_customfield', 'admin'),
+            $CFG->wwwroot . '/course/customfieldcategory.php'
+            // array('moodle/category:configurecustomfields')
+        )
     );
     $ADMIN->add('courses',
         new admin_externalpage('addcategory', new lang_string('addcategory', 'admin'),

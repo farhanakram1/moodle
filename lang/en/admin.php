@@ -395,6 +395,7 @@ $string['cookiehttponly'] = 'Only http cookies';
 $string['cookiesecure'] = 'Secure cookies only';
 $string['country'] = 'Default country';
 $string['course_customfield'] = 'Course custom fields';
+$string['category_customfield'] = 'Category custom fields';
 $string['coursecolor'] = 'Colour {$a}';
 $string['coursecolorheading_desc'] = 'Any courses without a course image set in the course settings are displayed on the Dashboard with a patterned course card. The colours used in the pattern may be specified below.';
 $string['coursecolorsettings'] = 'Course card colours';

@@ -1024,6 +1024,14 @@ $capabilities = array(
         'contextlevel' => CONTEXT_SYSTEM,
         'clonepermissionsfrom' => 'moodle/site:config'
     ),
+    'moodle/category:configurecustomfields' => array(
+
+        'riskbitmask' => RISK_SPAM,
+
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'clonepermissionsfrom' => 'moodle/site:config'
+    ),
 
     'moodle/course:renameroles' => array(
         'captype' => 'write',
