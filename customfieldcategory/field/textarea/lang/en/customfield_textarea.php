@@ -15,24 +15,15 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Manage category custom fields
+ * Customfield textarea plugin
  *
- * @package core_course
- * @copyright 2018 Toni Barbera (toni@moodle.com)
- * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   customfield_textarea
+ * @copyright 2018 Toni Barbera <toni@moodle.com>
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-require_once('../config.php');
-require_once($CFG->libdir.'/adminlib.php');
+defined('MOODLE_INTERNAL') || die();
 
-admin_externalpage_setup('category_customfield');
-
-$output = $PAGE->get_renderer('core_customfieldcategory');
-$handler = core_course\customfield\category_handler::create();
-
-$outputpage = new \core_customfieldcategory\output\management($handler);
-
-echo $output->header(),
-     $output->heading(new lang_string('category_customfield', 'admin')),
-     $output->render($outputpage),
-     $output->footer();
+$string['pluginname'] = 'Text area';
+$string['privacy:metadata'] = 'The Text area field type plugin doesn\'t store any personal data; it uses tables defined in core.';
+$string['specificsettings'] = 'Text area field settings';

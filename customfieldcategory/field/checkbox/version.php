@@ -15,24 +15,14 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Manage category custom fields
- *
- * @package core_course
- * @copyright 2018 Toni Barbera (toni@moodle.com)
- * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * Customfield checkbox plugin
+ * @package   customfield_checkbox
+ * @copyright 2018 Toni Barbera <toni@moodle.com>
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-require_once('../config.php');
-require_once($CFG->libdir.'/adminlib.php');
+defined('MOODLE_INTERNAL') || die();
 
-admin_externalpage_setup('category_customfield');
-
-$output = $PAGE->get_renderer('core_customfieldcategory');
-$handler = core_course\customfield\category_handler::create();
-
-$outputpage = new \core_customfieldcategory\output\management($handler);
-
-echo $output->header(),
-     $output->heading(new lang_string('category_customfield', 'admin')),
-     $output->render($outputpage),
-     $output->footer();
+$plugin->component = 'customfield_checkbox';
+$plugin->version   = 2019111800;
+$plugin->requires  = 2019111200;

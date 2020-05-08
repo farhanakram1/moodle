@@ -15,46 +15,48 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Course handler for custom fields
+ * Renderer.
  *
- * @package   core_course
+ * @package   core_customfieldcategory
  * @copyright 2018 David Matamoros <davidmc@moodle.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace core_course\customfieldcategory;
+namespace core_customfieldcategory\output;
 
-defined('MOODLE_INTERNAL') || die;
+defined('MOODLE_INTERNAL') || die();
 
-use core_customfieldcategory\api;
-use core_customfieldcategory\field_controller;
+use plugin_renderer_base;
 
 /**
- * Course handler for custom fields
+ * Renderer class.
  *
- * @package core_course
+ * @package   core_customfieldcategory
  * @copyright 2018 David Matamoros <davidmc@moodle.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class category_handler extends \core_customfieldcategory\handler {
+class renderer extends plugin_renderer_base {
 
-    
     /**
-     * The current user can configure custom fields on this component.
+     * Render custom field management interface.
      *
-     * @return bool true if the current can configure custom fields, false otherwise
+     * @param \core_customfieldcategory\output\management $list
+     * @return string HTML
      */
-    public function can_configure() : bool {
-        return has_capability('moodle/category:configurecustomfields', $this->get_configuration_context());
+    protected function render_management(\core_customfieldcategory\output\management $list) {
+        $context = $list->export_for_template($this);
+
+        return $this->render_from_template('core_customfieldcategory/list', $context);
     }
 
-     /**
-     * Context that should be used for new categories created by this handler
+    /**
+     * Render single custom field value
      *
-     * @return \context the context for configuration
+     * @param \core_customfieldcategory\output\field_data $field
+     * @return string HTML
      */
-    public function get_configuration_context() : \context {
-        return \context_system::instance();
+    protected function render_field_data(\core_customfieldcategory\output\field_data $field) {
+        $context = $field->export_for_template($this);
+        return $this->render_from_template('core_customfieldcategory/field_data', $context);
     }
-
 }

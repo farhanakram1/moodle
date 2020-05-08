@@ -15,24 +15,21 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Manage category custom fields
+ * Customfield date plugin
  *
- * @package core_course
- * @copyright 2018 Toni Barbera (toni@moodle.com)
- * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   customfield_date
+ * @copyright 2018 Daniel Neis Araujo <daniel@moodle.com>
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-require_once('../config.php');
-require_once($CFG->libdir.'/adminlib.php');
+defined('MOODLE_INTERNAL') || die();
 
-admin_externalpage_setup('category_customfield');
-
-$output = $PAGE->get_renderer('core_customfieldcategory');
-$handler = core_course\customfield\category_handler::create();
-
-$outputpage = new \core_customfieldcategory\output\management($handler);
-
-echo $output->header(),
-     $output->heading(new lang_string('category_customfield', 'admin')),
-     $output->render($outputpage),
-     $output->footer();
+/**
+ * Get icon mapping for font-awesome.
+ */
+function customfield_date_get_fontawesome_icon_map() {
+    return [
+        'customfield_date:checked' => 'fa-check-square-o',
+        'customfield_date:notchecked' => 'fa-square-o',
+    ];
+}
