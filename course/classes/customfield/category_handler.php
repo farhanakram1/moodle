@@ -26,8 +26,8 @@ namespace core_course\customfieldcategory;
 
 defined('MOODLE_INTERNAL') || die;
 
-use core_customfieldcategory\api;
-use core_customfieldcategory\field_controller;
+use core_customfield\api;
+use core_customfield\field_controller;
 
 /**
  * Course handler for custom fields
@@ -36,9 +36,15 @@ use core_customfieldcategory\field_controller;
  * @copyright 2018 David Matamoros <davidmc@moodle.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class category_handler extends \core_customfieldcategory\handler {
+class category_handler extends \core_customfield\handler {
 
     
+    public static function create(int $itemid = 0) : \core_customfield\handler {
+        if (static::$singleton === null) {
+            self::$singleton = new static(0);
+        }
+        return self::$singleton;
+    }
     /**
      * The current user can configure custom fields on this component.
      *
