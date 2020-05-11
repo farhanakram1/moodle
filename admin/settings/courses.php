@@ -43,12 +43,12 @@ if ($hassiteconfig or has_any_capability($capabilities, $systemcontext)) {
             array('moodle/course:configurecustomfields')
         )
     ); 
-    $ADMIN->add('courses',
-        new admin_externalpage('category_customfield', new lang_string('category_customfield', 'admin'),
-            $CFG->wwwroot . '/course/customfieldcategory.php'
-            // array('moodle/category:configurecustomfields')
-        )
-    );
+    // $ADMIN->add('courses',
+    //     new admin_externalpage('category_customfield', new lang_string('category_customfield', 'admin'),
+    //         $CFG->wwwroot . '/course/customfieldcategory.php'
+    //         // array('moodle/category:configurecustomfields')
+    //     )
+    // );
     $ADMIN->add('courses',
         new admin_externalpage('addcategory', new lang_string('addcategory', 'admin'),
             new moodle_url('/course/editcategory.php', array('parent' => 0)),

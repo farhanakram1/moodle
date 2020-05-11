@@ -192,6 +192,20 @@ class admininfos {
         return $invoices_cat;
     }
 
+    // Course External Link.
+
+    public function course_external_link(){
+        global $DB;
+
+        $sql = "SELECT DISTINCT * FROM oodo_course_external_links 
+                INNER JOIN oodo_course_categories ON oodo_course_categories.id = oodo_course_external_links.category_id
+                ";
+        $course_external_link = $DB->get_records_sql($sql);
+        $external_link = json_decode(json_encode($course_external_link),true);
+
+        return $external_link;
+    }
+
     /**
      * Returns the total of suspended users.
      *

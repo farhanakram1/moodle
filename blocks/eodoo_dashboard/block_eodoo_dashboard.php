@@ -215,6 +215,26 @@ class block_eodoo_dashboard extends block_base {
 
  // invoices tabs Functions
 
+ // Course External Link Function
+
+    public function external_link($course_external_link){
+      $array = [];
+      foreach ($course_external_link as $key => $value) {
+         $row =  '<tr>
+                    <td>'.$course_external_link[$key]['category_id'].'</td>
+                    <td>'.$course_external_link[$key]['name'].'</td>
+                    <td><a href="'.$course_external_link[$key]['external_link'].'" target="_blank">'.$course_external_link[$key]['external_link'].'</a></td>
+                    <td><a href="" class="btn btn-xs btn-default"><i class="fa fa-edit"></i></a></td>
+                  </tr>';
+          array_push($array, $row);
+
+      }
+      $string_version = implode(',', $array);
+       return $string_version;
+    }
+
+ // Course External Link Function
+
 
     // The PHP tag and the curly bracket for the class definition 
     // will only be closed after there is another function added in the next section.
@@ -266,6 +286,11 @@ class block_eodoo_dashboard extends block_base {
         $allcourses = $adminifos->allcourses();
         $course_down = $this->allcourse($allcourses);
         // Download Tab Word
+
+        // Course External Link
+        $course_external_link = $adminifos->course_external_link();
+        $external_link = $this->external_link($course_external_link);
+        // Course External Link.
 	    $get_category_course_count_user = $adminifos->get_category_course_registered_user();
 		
 	    $this->content         =  new stdClass;
@@ -296,6 +321,10 @@ class block_eodoo_dashboard extends block_base {
 
                         <li class="nav-item col-md-2 p-0 mr-0">
                             <a class="nav-item nav-link py-2" id="nav-invoices-tab" data-toggle="tab" href="#nav-invoices" role="tab" aria-controls="nav-invoices" aria-selected="false">Invoices</a>
+                        </li>
+
+                        <li class="nav-item col-md-2 p-0 mr-0">
+                            <a class="nav-item nav-link py-2" id="nav-external-links-tab" data-toggle="tab" href="#nav-external-links" role="tab" aria-controls="nav-external-links" aria-selected="false">Course External Links</a>
                         </li>
                     </ul>
                 </div>
@@ -541,6 +570,40 @@ class block_eodoo_dashboard extends block_base {
                                                 </div>
                                                 
                                             </div>
+
+
+
+                                            <div class="tab-pane fade" id="nav-external-links" role="tabpanel" aria-labelledby="nav-external-links-tab">
+
+                                              <div class="container">
+                                                <form class="form-inline" action="">
+                                                  <div class="form-group">
+                                                    <input type="text" class="form-control" id="external_link" placeholder="Course External Link" name="external_link">
+                                                  </div>
+                                                  <button type="submit" class="btn btn-default">Save</button>
+                                                </form>
+                                                <div class="row">
+                                                  <div class="col-sm-12">
+                                                      <table class="table table-striped">
+                                                          <thead>
+                                                            <tr>
+                                                              <th>Category ID</th>
+                                                              <th>Category Name</th>
+                                                              <th>Course External Links</th>
+                                                              <th>Action</th>
+                                                            </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                            '.$external_link.'
+                                                          </tbody>
+                                                      </table>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                                
+                                            </div>
+
+
 
 
                                     </div>
