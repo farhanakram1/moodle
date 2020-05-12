@@ -206,6 +206,9 @@ class admininfos {
         return $external_link;
     }
 
+    public function customexternallink(){
+        echo "string";
+    }
     /**
      * Returns the total of suspended users.
      *

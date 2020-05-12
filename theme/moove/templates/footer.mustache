@@ -685,5 +685,21 @@ require(['jquery'], function($) {
         }
         return true;
     }
+
+
+    $('#external_linkss').click(function (event){
+        $.ajax({
+            url: "{{{ config.wwwroot }}}/theme/moove/classes/util/admininfos.php?func=customexternallink",
+            data:{ link_custom : $('#link_custom').val()},
+
+            success: function(data){
+                console.log(data);
+                return false;
+            }
+
+        });
+    });
+
+
 });
 </script>

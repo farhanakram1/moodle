@@ -233,6 +233,21 @@ class block_eodoo_dashboard extends block_base {
        return $string_version;
     }
 
+    // public function form_custom_link(){
+    //    global $DB, $data;
+    //   $external_ = '<form class="form-inline" action="">
+    //                   <div class="form-group">
+    //                     <input type="text" class="form-control" id="external_link" placeholder="Course External Link" name="external_link">
+    //                   </div>
+    //                   <button type="submit" class="btn btn-md btn-default">Save</button>
+    //                 </form>';
+    //   // $data = new stdClass();
+    //   // echo "<pre>";
+    //   // print_r($data);
+    //   // die();           
+    //   return $external_;  
+    // }
+
  // Course External Link Function
 
 
@@ -290,7 +305,9 @@ class block_eodoo_dashboard extends block_base {
         // Course External Link
         $course_external_link = $adminifos->course_external_link();
         $external_link = $this->external_link($course_external_link);
+        // $external_link_custom =  $this->form_custom_link();
         // Course External Link.
+
 	    $get_category_course_count_user = $adminifos->get_category_course_registered_user();
 		
 	    $this->content         =  new stdClass;
@@ -577,11 +594,11 @@ class block_eodoo_dashboard extends block_base {
 
                                               <div class="container">
                                                 <form class="form-inline" action="">
-                                                  <div class="form-group">
-                                                    <input type="text" class="form-control" id="external_link" placeholder="Course External Link" name="external_link">
-                                                  </div>
-                                                  <button type="submit" class="btn btn-default">Save</button>
-                                                </form>
+                                                 <div class="form-group">
+                                                   <input type="text" class="form-control" id="link_custom" placeholder="Course External Link" name="external_link">
+                                                 </div>
+                                                 <button type="submit" class="btn btn-md btn-default" id="external_linkss">Save</button>
+                                               </form>
                                                 <div class="row">
                                                   <div class="col-sm-12">
                                                       <table class="table table-striped">
