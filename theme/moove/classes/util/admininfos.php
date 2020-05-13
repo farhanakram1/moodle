@@ -197,18 +197,20 @@ class admininfos {
     public function course_external_link(){
         global $DB;
 
-        $sql = "SELECT DISTINCT * FROM oodo_course_external_links 
-                INNER JOIN oodo_course_categories ON oodo_course_categories.id = oodo_course_external_links.category_id
+        // $sql = "SELECT DISTINCT * FROM  oodo_course_categories
+        //         LEFT JOIN oodo_course_external_links ON oodo_course_external_links.category_id = oodo_course_categories.id
+        //         ";
+
+        $sql = "SELECT DISTINCT * FROM  oodo_course_categories
                 ";
         $course_external_link = $DB->get_records_sql($sql);
         $external_link = json_decode(json_encode($course_external_link),true);
-
+        // echo "<pre>";
+        // print_r($external_link);
+        // die();
         return $external_link;
     }
 
-    public function customexternallink(){
-        echo "string";
-    }
     /**
      * Returns the total of suspended users.
      *

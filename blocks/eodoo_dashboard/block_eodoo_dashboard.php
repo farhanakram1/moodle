@@ -221,10 +221,16 @@ class block_eodoo_dashboard extends block_base {
       $array = [];
       foreach ($course_external_link as $key => $value) {
          $row =  '<tr>
-                    <td>'.$course_external_link[$key]['category_id'].'</td>
+                    <td>'.$course_external_link[$key]['id'].'</td>
                     <td>'.$course_external_link[$key]['name'].'</td>
-                    <td><a href="'.$course_external_link[$key]['external_link'].'" target="_blank">'.$course_external_link[$key]['external_link'].'</a></td>
-                    <td><a href="" class="btn btn-xs btn-default"><i class="fa fa-edit"></i></a></td>
+                    
+                    <td><form class="form-inline" action="">
+                           <div class="form-group">
+                             <input type="text" class="form-control" id="link_custom" placeholder="Course External Link" name="external_link">
+                           </div>
+                           <button type="submit" class="btn btn-md btn-default" id="external_linkss">Save</button>
+                         </form>
+                    </td>
                   </tr>';
           array_push($array, $row);
 
@@ -593,12 +599,6 @@ class block_eodoo_dashboard extends block_base {
                                             <div class="tab-pane fade" id="nav-external-links" role="tabpanel" aria-labelledby="nav-external-links-tab">
 
                                               <div class="container">
-                                                <form class="form-inline" action="">
-                                                 <div class="form-group">
-                                                   <input type="text" class="form-control" id="link_custom" placeholder="Course External Link" name="external_link">
-                                                 </div>
-                                                 <button type="submit" class="btn btn-md btn-default" id="external_linkss">Save</button>
-                                               </form>
                                                 <div class="row">
                                                   <div class="col-sm-12">
                                                       <table class="table table-striped">
@@ -607,7 +607,6 @@ class block_eodoo_dashboard extends block_base {
                                                               <th>Category ID</th>
                                                               <th>Category Name</th>
                                                               <th>Course External Links</th>
-                                                              <th>Action</th>
                                                             </tr>
                                                           </thead>
                                                           <tbody>

@@ -1816,6 +1816,7 @@ body.drawer-close-left {
     border: 0 !important;
     background-color: #ffffff !important;
     margin-bottom: 0px !important;
+    margin-left: -24px;
     margin-right: 15px;
     border-radius: 3px 3px 0px 0px !important;
 }
