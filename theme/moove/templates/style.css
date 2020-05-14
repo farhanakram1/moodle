@@ -1816,9 +1816,15 @@ body.drawer-close-left {
     border: 0 !important;
     background-color: #ffffff !important;
     margin-bottom: 0px !important;
-    margin-left: -24px;
     margin-right: 15px;
     border-radius: 3px 3px 0px 0px !important;
+}
+.cust-box-tab-admin .nav-tabs.Dash_tabs .nav-item{
+    width: auto !important;
+    flex: auto;
+}
+.cust-box-tab-admin .nav-tabs.Dash_tabs .nav-item a{
+    font-size: 18px !important;
 }
 #page-my-index .bg-blue-brud .dasH_name {
     color: black !important;

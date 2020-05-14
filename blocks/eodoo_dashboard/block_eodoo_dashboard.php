@@ -318,35 +318,34 @@ class block_eodoo_dashboard extends block_base {
 		
 	    $this->content         =  new stdClass;
 	    $this->content->text   = '<section id="region-main" class="cust-box-tab-admin" style="overflow-x: hidden;">    
-            <div class="row">
-                <div class="col-md-12 px-5">
-                    <ul class="row nav nav-tabs {{#is_siteadmin}}remove_border{{/is_siteadmin}}" id="myTab" role="tablist">
+            <div class="row m-0">
+                <div class="col-md-12 p-0">
+                    <ul class="d-flex nav nav-tabs {{#is_siteadmin}}remove_border{{/is_siteadmin}} Dash_tabs" id="myTab" role="tablist">
                                
-                        <li class="nav-item col-md-2 p-0 mr-0">
+                        <li class="nav-item p-0 mr-0">
                             <a class="nav-item nav-link py-2 active" id="nav-overviews-tab" data-toggle="tab" href="#nav-overviews" role="tab" aria-controls="nav-overviews" aria-selected="true">Overview</a>
                         </li>
                                
-                       <li class="nav-item col-md-2 p-0 mr-0">
+                       <li class="nav-item p-0 mr-0">
                             <a class="nav-item nav-link py-2" id="nav-downloads-tab" data-toggle="tab" href="#nav-downloads" role="tab" aria-controls="nav-downloads" aria-selected="false">Downloads</a>
                         </li>
 
-                        <li class="nav-item col-md-2 p-0 mr-0">
+                        <li class="nav-item p-0 mr-0">
                             <a class="nav-item nav-link py-2" id="nav-uploads-tab" data-toggle="tab" href="#nav-uploads" role="tab" aria-controls="nav-uploads" aria-selected="false">Uploads</a>
                         </li>
 
-                        <li class="nav-item col-md-2 p-0 mr-0">
+                        <li class="nav-item p-0 mr-0">
                             <a class="nav-item nav-link py-2" id="nav-accounts-tab" data-toggle="tab" href="#nav-accounts" role="tab" aria-controls="nav-accounts" aria-selected="false">Accounts</a>
                         </li>
 
-                        <li class="nav-item col-md-2 p-0 mr-0">
+                        <li class="nav-item p-0 mr-0">
                             <a class="nav-item nav-link py-2" id="nav-codes-tab" data-toggle="tab" href="#nav-codes" role="tab" aria-controls="nav-codes" aria-selected="false">Codes</a>
                         </li>
 
-                        <li class="nav-item col-md-2 p-0 mr-0">
+                        <li class="nav-item p-0 mr-0">
                             <a class="nav-item nav-link py-2" id="nav-invoices-tab" data-toggle="tab" href="#nav-invoices" role="tab" aria-controls="nav-invoices" aria-selected="false">Invoices</a>
                         </li>
-
-                        <li class="nav-item col-md-2 p-0 mr-0">
+                        <li class="nav-item p-0 mr-0">
                             <a class="nav-item nav-link py-2" id="nav-external-links-tab" data-toggle="tab" href="#nav-external-links" role="tab" aria-controls="nav-external-links" aria-selected="false">Course External Links</a>
                         </li>
                     </ul>
