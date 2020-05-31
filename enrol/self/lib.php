@@ -196,7 +196,7 @@ class enrol_self_plugin extends enrol_plugin {
 
         if (true === $enrolstatus) {
             // This user can self enrol using this instance.
-            $form = new enrol_self_enrol_form(null, $instance);
+            $form = new enrol_self_enrol_form(new moodle_url('/enrol/index.php', array('id' => $course->id)), $instance);
             $instanceid = optional_param('instance', 0, PARAM_INT);
             if ($instance->id == $instanceid) {
                 if ($data = $form->get_data()) {

@@ -1453,12 +1453,10 @@ class core_course_renderer extends plugin_renderer_base {
             }
             $content .= $this->coursecat_courses($chelper, $courses, $coursecat->get_courses_count());
         }
-
         if ($showcoursesauto) {
             // restore the show_courses back to AUTO
             $chelper->set_show_courses(self::COURSECAT_SHOW_COURSES_AUTO);
         }
-
         return $content;
     }
 
@@ -1475,24 +1473,35 @@ class core_course_renderer extends plugin_renderer_base {
      */
     protected function coursecat_category(coursecat_helper $chelper, $coursecat, $depth) {
         // open category tag
+        global $PAGE,$USER,$DB;
         $classes = array('category');
-        if (empty($coursecat->visible)) {
+        $user_info_field = $DB->get_record_sql("SELECT * FROM {user_info_field} WHERE shortname='registrationcode' LIMIT 1");
+        $user_info_data = $DB->get_record_sql("SELECT * FROM {user_info_data} WHERE userid=? and fieldid=?  LIMIT 1", array(intval($USER->id), intval($user_info_field->id)));
+        $user_short_code = strtolower($user_info_data->data);
+        $user_short_code = explode("\r\n",$user_short_code);
+        if (empty($coursecat->visible) || $coursecat->get_courses_count() == 0) {
             $classes[] = 'dimmed_category';
         }
+        $idnumber = strtolower($coursecat->idnumber);
+        $classes[] = $idnumber;
         if ($chelper->get_subcat_depth() > 0 && $depth >= $chelper->get_subcat_depth()) {
             // do not load content
             $categorycontent = '';
-            $classes[] = 'notloaded';
+            if($idnumber != 'singlecourse'){
+                $classes[] = 'notloaded';
+            }
             if ($coursecat->get_children_count() ||
                     ($chelper->get_show_courses() >= self::COURSECAT_SHOW_COURSES_COLLAPSED && $coursecat->get_courses_count())) {
-                $classes[] = 'with_children';
-                $classes[] = 'collapsed';
+                if($idnumber != 'singlecourse'){
+                    $classes[] = 'collapsed';
+                    $classes[] = 'with_children';
+                }
             }
         } else {
             // load category content
             $categorycontent = $this->coursecat_category_content($chelper, $coursecat, $depth);
             $classes[] = 'loaded';
-            if (!empty($categorycontent)) {
+            if (!empty($categorycontent) ) {
                 $classes[] = 'with_children';
                 // Category content loaded with children.
                 $this->categoryexpandedonload = true;
@@ -1502,6 +1511,30 @@ class core_course_renderer extends plugin_renderer_base {
         // Make sure JS file to expand category content is included.
         $this->coursecat_include_js();
 
+        
+        // category name
+        $classes[] = 'eodo-category';
+        
+        $categoryname = $coursecat->get_formatted_name();
+        if(!in_array($idnumber, $user_short_code) && $depth == 1){
+            $category_link = $DB->get_record_sql("SELECT * FROM {course_external_links} WHERE category_id='".$coursecat->id."' LIMIT 1");
+            if(isset($category_link->external_link)){
+                $classes[] = 'not_registered';
+                $categoryname = html_writer::link($category_link->external_link,
+                    $categoryname, array('target' => '_blank'));
+                $categoryname .= html_writer::tag('span', ' (<a href="'.$category_link->external_link.'" target="_blank">Book Course</a>)',
+                    array('title' => 'Book Course', 'class' => 'short-text'));
+            }
+        }
+        $ortho = '';
+        if(in_array($idnumber, $user_short_code) && $depth == 1 & $idnumber != 'singlecourse'){
+            $categoryname .= html_writer::tag('span', ' (Booked)',
+                   array( 'class' => 'short-text'));
+            $classes[] = 'booked';
+        }
+        if(!in_array($idnumber, $user_short_code)){
+            $ortho = 'not_registered';
+        }
         $content = html_writer::start_tag('div', array(
             'class' => join(' ', $classes),
             'data-categoryid' => $coursecat->id,
@@ -1509,27 +1542,22 @@ class core_course_renderer extends plugin_renderer_base {
             'data-showcourses' => $chelper->get_show_courses(),
             'data-type' => self::COURSECAT_TYPE_CATEGORY,
         ));
-
-        // category name
-        $categoryname = $coursecat->get_formatted_name();
-        $categoryname = html_writer::link(new moodle_url('/course/index.php',
-                array('categoryid' => $coursecat->id)),
-                $categoryname);
-        if ($chelper->get_show_courses() == self::COURSECAT_SHOW_COURSES_COUNT
-                && ($coursescount = $coursecat->get_courses_count())) {
-            $categoryname .= html_writer::tag('span', ' ('. $coursescount.')',
-                    array('title' => get_string('numberofcourses'), 'class' => 'numberofcourse'));
-        }
+        
+//        if ($chelper->get_show_courses() == self::COURSECAT_SHOW_COURSES_COUNT
+//                && ($coursescount = $coursecat->get_courses_count())) {
+//            $categoryname .= html_writer::tag('span', ' ('. $coursescount.')',
+//                    array('title' => get_string('numberofcourses'), 'class' => 'numberofcourse'));
+//        }
         $content .= html_writer::start_tag('div', array('class' => 'info'));
 
         $content .= html_writer::tag(($depth > 1) ? 'h4' : 'h3', $categoryname, array('class' => 'categoryname'));
         $content .= html_writer::end_tag('div'); // .info
 
         // add category content to the output
-        $content .= html_writer::tag('div', $categorycontent, array('class' => 'content'));
+        $content .= html_writer::tag('div', $categorycontent, array('class' => 'content '.$ortho));
 
         $content .= html_writer::end_tag('div'); // .category
-
+        
         // Return the course category tree HTML
         return $content;
     }
@@ -1548,7 +1576,7 @@ class core_course_renderer extends plugin_renderer_base {
         if (empty($categorycontent)) {
             return '';
         }
-
+//echo $categorycontent;exit;
         // Start content generation
         $content = '';
         $attributes = $chelper->get_and_erase_attributes('course_category_tree clearfix');

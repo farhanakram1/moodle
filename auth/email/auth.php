@@ -149,6 +149,15 @@ class auth_plugin_email extends auth_plugin_base {
             $PAGE->set_title($emailconfirm);
             $PAGE->set_heading($PAGE->course->fullname);
             echo $OUTPUT->header();
+            $user_info_field = $DB->get_record_sql("SELECT * FROM {user_info_field} WHERE shortname='registrationcode' LIMIT 1");
+            $user_info_data = $DB->get_record_sql("SELECT * FROM {user_info_data} WHERE userid=? and fieldid=?  LIMIT 1", array(intval($user->id), intval($user_info_field->id)));
+            $data = new stdClass();
+            $data->id = $user_info_data->id;
+            $data->userid = intval($user->id);
+            $data->fieldid = intval($user_info_field->id);
+            $data->data = $_SESSION[$user->email];
+            $data->dataformat = 0;
+            $DB->update_record('user_info_data', $data);
             notice(get_string('emailconfirmsent', '', $user->email), "$CFG->wwwroot/index.php");
         } else {
             return true;

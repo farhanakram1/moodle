@@ -1,175 +1,169 @@
 <?php
+
 /**
  * Accounts block
  */
-
 class block_eodoo_dashboard extends block_base {
 
     public function init() {
         $this->title = get_string('pluginname', 'block_eodoo_dashboard');
     }
+
 //Download Taps Functions
-    public function allcourse($allcourses){
+    public function allcourse($allcourses) {
         $array = [];
         foreach ($allcourses as $key => $value) {
-            $row =  '<tr><td> '.$allcourses[$key]['fullname'].' </td></tr>';
+            $row = '<tr><td> ' . $allcourses[$key]['fullname'] . ' </td></tr>';
             array_push($array, $row);
         }
         $string_version = implode(',', $array);
         return $string_version;
     }
+
 //Download Taps Functions
-    
     // Upload tabs Functions
 
-    public function upload_courses($upload_course){
-      $array = [];
-      foreach ($upload_course as $key => $value) {
-         $row =  '<tr>
-                      <td>'.$upload_course[$key]['name'].'</td>
+    public function upload_courses($upload_course) {
+        $array = [];
+        foreach ($upload_course as $key => $value) {
+            $row = '<tr>
+                      <td>' . $upload_course[$key]['name'] . '</td>
                       <td>12</td>
                   </tr>';
-          array_push($array, $row);
-      }
-      $string_version = implode(',', $array);
-       return $string_version;
+            array_push($array, $row);
+        }
+        $string_version = implode(',', $array);
+        return $string_version;
     }
-    // select_cat
-    public function select_cat($upload_course){
-      $array = [];
-      foreach ($upload_course as $key => $value) {
-         $row =  '<option>'.$upload_course[$key]['name'].'</option>';
-          array_push($array, $row);
 
-      }
-      $string_version = implode(',', $array);
-       return $string_version;
-    }
     // select_cat
+    public function select_cat($upload_course) {
+        $array = [];
+        foreach ($upload_course as $key => $value) {
+            $row = '<option>' . $upload_course[$key]['name'] . '</option>';
+            array_push($array, $row);
+        }
+        $string_version = implode(',', $array);
+        return $string_version;
+    }
+
+    // select_cat
+    // select_course
+    public function select_course($upload_course) {
+        $array = [];
+        foreach ($upload_course as $key => $value) {
+            $row = '<option>' . $upload_course[$key]['fullname'] . '</option>';
+            array_push($array, $row);
+        }
+        $string_version = implode(',', $array);
+        return $string_version;
+    }
 
     // select_course
-    public function select_course($upload_course){
-      $array = [];
-      foreach ($upload_course as $key => $value) {
-         $row =  '<option>'.$upload_course[$key]['fullname'].'</option>';
-          array_push($array, $row);
-
-      }
-      $string_version = implode(',', $array);
-       return $string_version;
-    }
-    // select_course
-
     // all_course_data
-    public function all_course_data($upload_course){
-      $array = [];
-      foreach ($upload_course as $key => $value) {
-         $row =  '<tr>
-                    <td>'.$upload_course[$key]['name'].'</td>
-                    <td>'.$upload_course[$key]['firstname'].'</td>
-                    <td>'.$upload_course[$key]['fullname'].'</td>
+    public function all_course_data($upload_course) {
+        $array = [];
+        foreach ($upload_course as $key => $value) {
+            $row = '<tr>
+                    <td>' . $upload_course[$key]['name'] . '</td>
+                    <td>' . $upload_course[$key]['firstname'] . '</td>
+                    <td>' . $upload_course[$key]['fullname'] . '</td>
                     <td>JamesNorwalk_MR2020_Course1_Exam.pdf</td>
                     <td>25.5.2019</td>
                     <td>8</td>
                     <td>03.06.2019</td>
                   </tr>';
-          array_push($array, $row);
-
-      }
-      $string_version = implode(',', $array);
-       return $string_version;
+            array_push($array, $row);
+        }
+        $string_version = implode(',', $array);
+        return $string_version;
     }
+
     // select_course
- // Upload tabs Functions
-
-
+    // Upload tabs Functions
     // Accounts tabs Functions
-    
-    public function upload_accountscourses($upload_course){
-      $array = [];
-      foreach ($upload_course as $key => $value) {
-         $row =  '<tr>
-                      <td>'.$upload_course[$key]['name'].'</td>
-                      <td>'.count($upload_course[$key]['id']).'</td>
+
+    public function upload_accountscourses($upload_course) {
+        $array = [];
+        foreach ($upload_course as $key => $value) {
+            $row = '<tr>
+                      <td>' . $upload_course[$key]['name'] . '</td>
+                      <td>' . count($upload_course[$key]['id']) . '</td>
                   </tr>';
-          array_push($array, $row);
-      }
-      $string_version = implode(',', $array);
-       return $string_version;
+            array_push($array, $row);
+        }
+        $string_version = implode(',', $array);
+        return $string_version;
     }
-    // select_accountscat
-    public function select_accountscat($upload_course){
-      $array = [];
-      foreach ($upload_course as $key => $value) {
-         $row =  '<option>'.$upload_course[$key]['name'].'</option>';
-          array_push($array, $row);
 
-      }
-      $string_version = implode(',', $array);
-       return $string_version;
-    }
     // select_accountscat
+    public function select_accountscat($upload_course) {
+        $array = [];
+        foreach ($upload_course as $key => $value) {
+            $row = '<option>' . $upload_course[$key]['name'] . '</option>';
+            array_push($array, $row);
+        }
+        $string_version = implode(',', $array);
+        return $string_version;
+    }
+
+    // select_accountscat
+    // select_accountscourse
+    public function select_accountscourse($upload_course) {
+        $array = [];
+        foreach ($upload_course as $key => $value) {
+            $row = '<option>' . $upload_course[$key]['fullname'] . '</option>';
+            array_push($array, $row);
+        }
+        $string_version = implode(',', $array);
+        return $string_version;
+    }
 
     // select_accountscourse
-    public function select_accountscourse($upload_course){
-      $array = [];
-      foreach ($upload_course as $key => $value) {
-         $row =  '<option>'.$upload_course[$key]['fullname'].'</option>';
-          array_push($array, $row);
-
-      }
-      $string_version = implode(',', $array);
-       return $string_version;
-    }
-    // select_accountscourse
- // Accounts tabs Functions
-
- // Codes tabs Functions
-    public function code_category($codes){
-      $array = [];
-      foreach ($codes as $key => $value) {
-         $row =  '<tr>
-                    <td>'.$codes[$key]['name'].'</td>
+    // Accounts tabs Functions
+    // Codes tabs Functions
+    public function code_category($codes) {
+        $array = [];
+        foreach ($codes as $key => $value) {
+            $row = '<tr>
+                    <td>' . $codes[$key]['name'] . '</td>
                     <td>MR2019</td>
                   </tr>';
-          array_push($array, $row);
-
-      }
-      $string_version = implode(',', $array);
-       return $string_version;
+            array_push($array, $row);
+        }
+        $string_version = implode(',', $array);
+        return $string_version;
     }
 
-    public function code_courses($codes){
-      $array = [];
-      foreach ($codes as $key => $value) {
-         $row =  '<tr>
-                    <td>'.$codes[$key]['fullname'].'</td>
-                    <td>'.$codes[$key]['shortname'].'</td>
+    public function code_courses($codes) {
+        $array = [];
+        foreach ($codes as $key => $value) {
+            $row = '<tr>
+                    <td>' . $codes[$key]['fullname'] . '</td>
+                    <td>' . $codes[$key]['shortname'] . '</td>
                   </tr>';
-          array_push($array, $row);
-
-      }
-      $string_version = implode(',', $array);
-       return $string_version;
+            array_push($array, $row);
+        }
+        $string_version = implode(',', $array);
+        return $string_version;
     }
- // Codes tabs Functions
- 
- // invoices tabs Functions
 
-    public function invoices_cat($invoices){
-      $array = [];
-      foreach ($invoices as $key => $value) {
-         $row =  '<tr>
-                    <td>'.$invoices[$key]['firstname'].'</td>
-                    <td>'.$invoices[$key]['lastname'].'</td>
-                    <td>'.$invoices[$key]['user_email'].'</td>
-                    <td>'.$invoices[$key]['discount_code'].'</td>
+    // Codes tabs Functions
+    // invoices tabs Functions
+
+    public function invoices_cat($invoices) {
+        $array = [];
+        foreach ($invoices as $key => $value) {
+            $row = '<tr>
+                    <td>' . $invoices[$key]['firstname'] . '</td>
+                    <td>' . $invoices[$key]['lastname'] . '</td>
+                    <td>' . $invoices[$key]['user_email'] . '</td>
+                    <td>' . $invoices[$key]['discount_code'] . '</td>
                   </tr>';
-          array_push($array, $row);
-
-      }
-      $string_version = implode(',', $array);
-       return $string_version;
+            array_push($array, $row);
+        }
+        $string_version = implode(',', $array);
+        return $string_version;
     }
 
     // public function select_invoice_cat($invoices){
@@ -177,23 +171,19 @@ class block_eodoo_dashboard extends block_base {
     //   foreach ($invoices as $key => $value) {
     //      $row =  '<option>'.$invoices[$key]['name'].'</option>';
     //       array_push($array, $row);
-
     //   }
     //   $string_version = implode(',', $array);
     //    return $string_version;
     // }
-
     // public function select_invoice_course($invoices){
     //   $array = [];
     //   foreach ($invoices as $key => $value) {
     //      $row =  '<option>'.$invoices[$key]['fullname'].'</option>';
     //       array_push($array, $row);
-
     //   }
     //   $string_version = implode(',', $array);
     //    return $string_version;
     // }
-
     // public function invoice_course_data($invoices){
     //   $array = [];
     //   foreach ($invoices as $key => $value) {
@@ -207,36 +197,35 @@ class block_eodoo_dashboard extends block_base {
     //                 <td>03.06.2019</td>
     //               </tr>';
     //       array_push($array, $row);
-
     //   }
     //   $string_version = implode(',', $array);
     //    return $string_version;
     // }
+    // invoices tabs Functions
+    // Course External Link Function
 
- // invoices tabs Functions
-
- // Course External Link Function
-
-    public function external_link($course_external_link){
-      $array = [];
-      foreach ($course_external_link as $key => $value) {
-         $row =  '<tr>
-                    <td>'.$course_external_link[$key]['id'].'</td>
-                    <td>'.$course_external_link[$key]['name'].'</td>
+    public function external_link($course_external_link) {
+        global $DB;
+        $array = [];
+        foreach ($course_external_link as $key => $value) {
+            $user_info_field = $DB->get_record_sql("SELECT * FROM {course_external_links} WHERE category_id=".$course_external_link[$key]['id']." LIMIT 1");
+            
+            $row = '<tr>
+                    <td>' . $course_external_link[$key]['id'] . '</td>
+                    <td>' . $course_external_link[$key]['name'] . '</td>
                     
-                    <td><form class="form-inline" action="">
+                    <td>
                            <div class="form-group">
-                             <input type="text" class="form-control" id="link_custom" placeholder="Course External Link" name="external_link">
+                             <input type="text" value="'.$user_info_field->external_link.'" class="form-control" id="link_custom" placeholder="Course External Link" name="external_link[]">
+                             <input type="hidden" class="form-control" value="' . $course_external_link[$key]['id'] . '" name="cat_id[]">
                            </div>
-                           <button type="submit" class="btn btn-md btn-default" id="external_linkss">Save</button>
-                         </form>
                     </td>
                   </tr>';
-          array_push($array, $row);
+            array_push($array, $row);
+        }
 
-      }
-      $string_version = implode(',', $array);
-       return $string_version;
+        $string_version = implode(',', $array);
+        return $string_version;
     }
 
     // public function form_custom_link(){
@@ -253,22 +242,21 @@ class block_eodoo_dashboard extends block_base {
     //   // die();           
     //   return $external_;  
     // }
-
- // Course External Link Function
-
-
+    // Course External Link Function
     // The PHP tag and the curly bracket for the class definition 
     // will only be closed after there is another function added in the next section.
 
     public function get_content() {
-	    
-	    if ($this->content !== null) {
-	      return $this->content;
-	    }
-	 
-	    $adminifos = new \theme_moove\util\admininfos();
-	    $get_totalactiveusers = $adminifos->get_totalactiveusers();
-	    $get_category_name = $adminifos->get_category_course_name();
+
+        if ($this->content !== null) {
+            return $this->content;
+        }
+        if(!is_siteadmin()){
+            return;
+        }
+        $adminifos = new \theme_moove\util\admininfos();
+        $get_totalactiveusers = $adminifos->get_totalactiveusers();
+        $get_category_name = $adminifos->get_category_course_name();
 
         //Upload Tab
         $upload_course = $adminifos->upload_course();
@@ -277,20 +265,17 @@ class block_eodoo_dashboard extends block_base {
         $select_course = $this->select_course($upload_course);
         $all_course_data = $this->all_course_data($upload_course);
         //Upload Tab
-
         //Account Tab
         $accounts = $adminifos->accounts();
         $upload_accountscourses = $this->upload_accountscourses($accounts);
         $select_accountscat = $this->select_accountscat($accounts);
         $select_accountscourse = $this->select_accountscourse($accounts);
         //Account Tab
-
         //Codes Tab
         $codes = $adminifos->codes();
         $code_category = $this->code_category($codes);
         $code_courses = $this->code_courses($codes);
         //Codes Tab
-
         //invoices Tab
         $invoices = $adminifos->invoices();
         $invoices_cat = $this->invoices_cat($invoices);
@@ -298,26 +283,43 @@ class block_eodoo_dashboard extends block_base {
         // $select_invoice_course = $this->select_invoice_course($invoices);
         // $invoice_course_data = $this->invoice_course_data($invoices);
         // echo "<pre>";
-          // print_r($invoices);
-          // die();
+        // print_r($invoices);
+        // die();
         //invoices Tab
-        
-
         // Download Tab Word
         $allcourses = $adminifos->allcourses();
         $course_down = $this->allcourse($allcourses);
         // Download Tab Word
-
         // Course External Link
         $course_external_link = $adminifos->course_external_link();
         $external_link = $this->external_link($course_external_link);
         // $external_link_custom =  $this->form_custom_link();
         // Course External Link.
+        if (isset($_POST['external_link'])) {
+            global $DB;
+            $external_links = $_POST['external_link'];
+            $cat_ids = $_POST['cat_id'];
+            for($i = 0; $i < count($external_links); $i++){
+                $external_links_data = $DB->get_record_sql("SELECT * FROM {course_external_links} WHERE category_id=? LIMIT 1", array(intval($cat_ids[$i])));
+                $data = new stdClass();
+                if(isset($external_links_data->category_id)){
+                    $data->id = $external_links_data->id;
+                    $data->category_id = intval($cat_ids[$i]);
+                    $data->external_link = $external_links[$i];
+                    $data->updated_at  = date('Y-m-d h:i:s');
+                    $DB->update_record('course_external_links', $data);
+                }else{
+                    $data->category_id = intval($cat_ids[$i]);
+                    $data->external_link = $external_links[$i];
+                    $data->created_at  = date('Y-m-d h:i:s');
+                    $DB->insert_record('course_external_links', $data);
+                }
+            }
+        }
+        $get_category_course_count_user = $adminifos->get_category_course_registered_user();
 
-	    $get_category_course_count_user = $adminifos->get_category_course_registered_user();
-		
-	    $this->content         =  new stdClass;
-	    $this->content->text   = '<section id="region-main" class="cust-box-tab-admin" style="overflow-x: hidden;">    
+        $this->content = new stdClass;
+        $this->content->text = '<section id="region-main" class="cust-box-tab-admin" style="overflow-x: hidden;width:100%">    
             <div class="row m-0">
                 <div class="col-md-12 p-0">
                     <ul class="d-flex nav nav-tabs {{#is_siteadmin}}remove_border{{/is_siteadmin}} Dash_tabs" id="myTab" role="tablist">
@@ -352,13 +354,12 @@ class block_eodoo_dashboard extends block_base {
                 </div>
             </div>
         </section>';
-	    $this->content->footer = '<section id="region-main" class="cust-box-tab" style="overflow-x: hidden;">
+        $this->content->footer = '<section id="region-main" class="cust-box-tab" style="overflow-x: hidden;">
                     <div class="card mymaincontent">
                         <div class="row">
                             <div class="col-md-12" style="overflow:hidden;">
-                                <div class="card-body cust-tabs-s-block">
-                                    <div class="tab-content" id="mypublic-tab">
-
+                                <div>
+                                    <div class="tab-content" id="mypublic-tab" style="padding-top:0px">
                                         <div class="tab-pane fade show active" id="nav-overviews" role="tabpanel" aria-labelledby="courses-tab">
                                             <table class="table table-striped">
                                                     <thead>
@@ -372,7 +373,7 @@ class block_eodoo_dashboard extends block_base {
                                                     <tbody>
                                                       <tr>
                                                         <th>Total registered</th>
-                                                        <td>'.$get_totalactiveusers.'</td>
+                                                        <td>' . $get_totalactiveusers . '</td>
                                                         <td>5</td>
                                                         <td>5</td>
                                                       </tr>
@@ -409,7 +410,7 @@ class block_eodoo_dashboard extends block_base {
                                                       </tr>
                                                     </thead>
                                                     <tbody>
-                                                      '.$course_down.'
+                                                      ' . $course_down . '
                                                     </tbody>
                                                   </table>
                                                 </div>
@@ -429,25 +430,24 @@ class block_eodoo_dashboard extends block_base {
                                                               <th>Pending</th>
                                                             </tr>
                                                           </thead>
-                                                          <tbody>'                                                            
-                                                        .$uploadss.
-
-                                                        '</tbody>
+                                                          <tbody>'
+                . $uploadss .
+                '</tbody>
                                                         </table>
                                                     </div>
 
-                                                    <div class="col-sm-6">
+                                                    <div class="col-sm-6" style="margin-top:50px">
                                                         <form>
                                                           <div class="form-group">
                                                             <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
                                                               <option>Select residency</option>
-                                                             '.$select_cat.'
+                                                             ' . $select_cat . '
                                                             </select>
                                                           </div>
                                                           <div class="form-group">
                                                             <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
                                                               <option>Select course</option>
-                                                              '.$select_course.'
+                                                              ' . $select_course . '
                                                             </select>
                                                           </div>
                                                         </form>
@@ -470,7 +470,7 @@ class block_eodoo_dashboard extends block_base {
                                                               </tr>
                                                             </thead>
                                                             <tbody>
-                                                              '.$all_course_data.'
+                                                              ' . $all_course_data . '
                                                             </tbody>
                                                           </table>
                                                     </div>
@@ -496,23 +496,23 @@ class block_eodoo_dashboard extends block_base {
                                                               </tr>
                                                             </thead>
                                                             <tbody>
-                                                              '.$upload_accountscourses.'
+                                                              ' . $upload_accountscourses . '
                                                             </tbody>
                                                         </table>
                                                     </div>
 
-                                                    <div class="col-sm-6">
+                                                    <div class="col-sm-6" style="margin-top:50px">
                                                         <form>
                                                           <div class="form-group">
                                                             <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
                                                               <option>Select residency</option>
-                                                              '.$select_accountscat.'
+                                                              ' . $select_accountscat . '
                                                             </select>
                                                           </div>
                                                           <div class="form-group">
                                                             <select class="form-control" id="exampleFormControlSelect1" style="width: 61%;height: calc(2.5em + .75rem + 2px);border: 1px solid #9c9c9c !important;">
                                                               <option>Select course</option>
-                                                              '.$select_accountscourse.'
+                                                              ' . $select_accountscourse . '
                                                             </select>
                                                           </div>
                                                         </form>
@@ -524,7 +524,7 @@ class block_eodoo_dashboard extends block_base {
                                             </div>
 
 
-                                            <div class="tab-pane fade" id="nav-codes" role="tabpanel" aria-labelledby="nav-codes-tab">
+                                            <div class="tab-pane fade" id="nav-codes" role="tabpanel" aria-labelledby="nav-codes-tab" style="padding:20px;">
                                                 
                                               <div class="container">
                                                   <div class="row">
@@ -537,7 +537,7 @@ class block_eodoo_dashboard extends block_base {
                                                               </tr>
                                                             </thead>
                                                             <tbody>
-                                                              '.$code_category.'
+                                                              ' . $code_category . '
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -551,14 +551,14 @@ class block_eodoo_dashboard extends block_base {
                                                               </tr>
                                                             </thead>
                                                             <tbody>
-                                                              '.$code_courses.'
+                                                              ' . $code_courses . '
                                                             </tbody>
                                                         </table>
                                                     </div>
 
                                                   </div>
                                                 </div>
-                                                <button type="button" class="btn btn-primary float-right mt-2">Save</button>  
+                                                <button style="display:none;" type="button" class="btn btn-primary float-right mt-2">Save</button>  
 
                                             </div>
 
@@ -580,7 +580,7 @@ class block_eodoo_dashboard extends block_base {
                                                               </tr>
                                                             </thead>
                                                             <tbody>
-                                                              '.$invoices_cat.'
+                                                              ' . $invoices_cat . '
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -600,6 +600,7 @@ class block_eodoo_dashboard extends block_base {
                                               <div class="container">
                                                 <div class="row">
                                                   <div class="col-sm-12">
+                                                         <form method="post" class="form-inline" action="" style="padding-bottom: 20px !important;">
                                                       <table class="table table-striped">
                                                           <thead>
                                                             <tr>
@@ -609,9 +610,12 @@ class block_eodoo_dashboard extends block_base {
                                                             </tr>
                                                           </thead>
                                                           <tbody>
-                                                            '.$external_link.'
+                                                            ' . $external_link . '
+                                                            
                                                           </tbody>
                                                       </table>
+                                                      <button type="submit" class="btn btn-primary float-right mt-2" id="external_linkss">Save</button>
+                                                    </form>
                                                   </div>
                                                 </div>
                                               </div>
@@ -629,31 +633,29 @@ class block_eodoo_dashboard extends block_base {
                         </div>
                     </div>
                 </section>';
-	 
-	    return $this->content;
-	}
 
-	public function specialization() {
-	    if (isset($this->config)) {
-	        if (empty($this->config->title)) {
-	            $this->title = get_string('blocksettings', 'block_eodoo_dashboard');            
-	        } else {
-	            $this->title = $this->config->title;
-	        }
-	 
-	        if (empty($this->config->text)) {
-	            $this->config->text = get_string('defaulttext', 'block_eodoo_dashboard');
-	        }    
-	    }
-	}
+        return $this->content;
+    }
 
-	
+    public function specialization() {
+        if (isset($this->config)) {
+            if (empty($this->config->title)) {
+                $this->title = get_string('blocksettings', 'block_eodoo_dashboard');
+            } else {
+                $this->title = $this->config->title;
+            }
+
+            if (empty($this->config->text)) {
+                $this->config->text = get_string('defaulttext', 'block_eodoo_dashboard');
+            }
+        }
+    }
+
     /**
      * Allow the block to have a configuration page
      */
     public function has_config() {
         return true;
     }
-
 
 }

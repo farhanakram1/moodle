@@ -148,22 +148,19 @@ function local_discounts_process_records($records, $nav, $parent = false, global
 function local_discounts_extend_navigation(global_navigation $nav) {
     global $CFG, $DB;
     $context = context_system::instance();
-    $pluginname = get_string('pluginname', 'local_discounts');
-    if (has_capability('local/discountcodes:adddiscountcodes', $context)) {
-        $mainnode = $nav->add(
-            get_string('discountcodeplugin', 'local_discounts'),
-            new moodle_url($CFG->wwwroot . "/local/discounts/discounts.php"),
-            navigation_node::TYPE_CONTAINER,
-            'local_discounts',
-            'local_discounts',
-            new pix_icon('newspaper', $pluginname, 'local_discounts')
-        );
-        $mainnode->nodetype = 0;
-        $mainnode->showinflatnavigation = true;
+    if(is_siteadmin()){
+        $pluginname = get_string('pluginname', 'local_discounts');
+        if (has_capability('local/discountcodes:adddiscountcodes', $context)) {
+            $mainnode = $nav->add(
+                get_string('discountcodeplugin', 'local_discounts'),
+                new moodle_url($CFG->wwwroot . "/local/discounts/discounts.php"),
+                navigation_node::TYPE_CONTAINER,
+                'local_discounts',
+                'local_discounts',
+                new pix_icon('newspaper', $pluginname, 'local_discounts')
+            );
+            $mainnode->nodetype = 0;
+            $mainnode->showinflatnavigation = true;
+        }
     }
-    $today = date('U');
-    $records = $DB->get_records_sql("SELECT * FROM {local_discounts} WHERE deleted=0 " .
-        "AND exp_discount_date <= ? ORDER BY discountorder", array($today));
-
-    local_discounts_process_records($records, $nav, false, $nav);
 }
