@@ -201,7 +201,7 @@ class admininfos {
         //         LEFT JOIN oodo_course_external_links ON oodo_course_external_links.category_id = oodo_course_categories.id
         //         ";
 
-        $sql = "SELECT DISTINCT * FROM  oodo_course_categories
+        $sql = "SELECT DISTINCT * FROM  {course_categories} where parent=0 and visible=1 order by sortorder asc
                 ";
         $course_external_link = $DB->get_records_sql($sql);
         $external_link = json_decode(json_encode($course_external_link),true);

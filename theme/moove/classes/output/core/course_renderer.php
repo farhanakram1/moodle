@@ -1,4 +1,5 @@
 <?php
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -99,26 +100,26 @@ class course_renderer extends \core_course_renderer {
                         $paginationurl->out(false, array('perpage' => $perpage)));
                 if ($paginationallowall) {
                     $pagingbar .= html_writer::tag('div', html_writer::link($paginationurl->out(false, array('perpage' => 'all')),
-                            get_string('showall', '', $totalcount)), array('class' => 'paging paging-showall'));
+                                            get_string('showall', '', $totalcount)), array('class' => 'paging paging-showall'));
                 }
             } else if ($viewmoreurl = $chelper->get_courses_display_option('viewmoreurl')) {
                 // The option for 'View more' link was specified, display more link.
                 $viewmoretext = $chelper->get_courses_display_option('viewmoretext', new \lang_string('viewmore'));
                 $morelink = html_writer::tag('div', html_writer::link($viewmoreurl, $viewmoretext),
-                        array('class' => 'paging paging-morelink'));
+                                array('class' => 'paging paging-morelink'));
             }
         } else if (($totalcount > $CFG->coursesperpage) && $paginationurl && $paginationallowall) {
             // There are more than one page of results and we are in 'view all' mode, suggest to go back to paginated view mode.
             $pagingbar = html_writer::tag(
-                'div',
-                html_writer::link(
-                    $paginationurl->out(
-                        false,
-                        array('perpage' => $CFG->coursesperpage)
-                    ),
-                    get_string('showperpage', '', $CFG->coursesperpage)
-                ),
-                array('class' => 'paging paging-showperpage')
+                            'div',
+                            html_writer::link(
+                                    $paginationurl->out(
+                                            false,
+                                            array('perpage' => $CFG->coursesperpage)
+                                    ),
+                                    get_string('showperpage', '', $CFG->coursesperpage)
+                            ),
+                            array('class' => 'paging paging-showperpage')
             );
         }
 
@@ -198,9 +199,9 @@ class course_renderer extends \core_course_renderer {
 
         // End coursebox.
         $content = html_writer::start_tag('div', array(
-            'class' => $classes,
-            'data-courseid' => $course->id,
-            'data-type' => self::COURSECAT_TYPE_COURSE,
+                    'class' => $classes,
+                    'data-courseid' => $course->id,
+                    'data-type' => self::COURSECAT_TYPE_COURSE,
         ));
 
         $content .= $this->coursecat_coursebox_content($chelper, $course);
@@ -225,80 +226,225 @@ class course_renderer extends \core_course_renderer {
      * @throws \moodle_exception
      */
     protected function coursecat_coursebox_content(coursecat_helper $chelper, $course) {
-        global $CFG, $DB;
+        global $CFG, $DB, $USER;
 
         if ($course instanceof stdClass) {
             $course = new core_course_list_element($course);
         }
 
-        // Course name.
-        $coursename = $chelper->get_course_formatted_name($course);
-        $courselink = new moodle_url('/course/view.php', array('id' => $course->id));
-        $coursenamelink = html_writer::link($courselink, $coursename, array('class' => $course->visible ? '' : 'dimmed'));
 
-        $content = extras::get_course_summary_image($course, $courselink);
+//        $content = extras::get_course_summary_image($course, $courselink);
 
         $theme = \theme_config::load('moove');
 
         // Course instructors.
-        if ($course->has_course_contacts() && !($theme->settings->disableteacherspic)) {
-            $content .= html_writer::start_tag('div', array('class' => 'course-contacts'));
+//        if ($course->has_course_contacts() && !($theme->settings->disableteacherspic)) {
+//            $content .= html_writer::start_tag('div', array('class' => 'course-contacts'));
+//
+//            $instructors = $course->get_course_contacts();
+//            foreach ($instructors as $key => $instructor) {
+//                $name = $instructor['username'];
+//                $url = $CFG->wwwroot . '/user/profile.php?id=' . $key;
+//                $picture = extras::get_user_picture($DB->get_record('user', array('id' => $key)));
+//
+//                $content .= "<a href='{$url}' class='contact' data-toggle='tooltip' title='{$name}'>";
+//                $content .= "<img src='{$picture}' class='rounded-circle' alt='{$name}'/>";
+//                $content .= "</a>";
+//            }
+//
+//            $content .= html_writer::end_tag('div'); // Ends course-contacts.
+//        }
 
-            $instructors = $course->get_course_contacts();
-            foreach ($instructors as $key => $instructor) {
-                $name = $instructor['username'];
-                $url = $CFG->wwwroot.'/user/profile.php?id='.$key;
-                $picture = extras::get_user_picture($DB->get_record('user', array('id' => $key)));
-
-                $content .= "<a href='{$url}' class='contact' data-toggle='tooltip' title='{$name}'>";
-                $content .= "<img src='{$picture}' class='rounded-circle' alt='{$name}'/>";
-                $content .= "</a>";
+        $access = false;
+        // Print enrolmenticons.
+        
+        if (isset($USER->enrol['enrolled'][$course->id])) {
+            if ($USER->enrol['enrolled'][$course->id] > time()) {
+                $access = true;
+                if (isset($USER->enrol['tempguest'][$course->id])) {
+                    unset($USER->enrol['tempguest'][$course->id]);
+                    remove_temp_course_roles($coursecontext);
+                }
+            } else {
+                // Expired.
+                unset($USER->enrol['enrolled'][$course->id]);
             }
-
-            $content .= html_writer::end_tag('div'); // Ends course-contacts.
+        }
+        if (isset($USER->enrol['tempguest'][$course->id])) {
+            if ($USER->enrol['tempguest'][$course->id] == 0) {
+                $access = true;
+            } else if ($USER->enrol['tempguest'][$course->id] > time()) {
+                $access = true;
+            } else {
+                // Expired.
+                unset($USER->enrol['tempguest'][$course->id]);
+                remove_temp_course_roles($coursecontext);
+            }
         }
 
-        $content .= html_writer::start_tag('div', array('class' => 'card-body'));
-        $content .= "<h4 class='card-title'>". $coursenamelink ."</h4>";
+        if (!$access) {
+            // Cache not ok.
+            $until = enrol_get_enrolment_end($coursecontext->instanceid, $USER->id);
+            if ($until !== false) {
+                // Active participants may always access, a timestamp in the future, 0 (always) or false.
+                if ($until == 0) {
+                    $until = ENROL_MAX_TIMESTAMP;
+                }
+                $USER->enrol['enrolled'][$course->id] = $until;
+                $access = true;
+            } else if (core_course_category::can_view_course_info($course)) {
+                $params = array('courseid' => $course->id, 'status' => ENROL_INSTANCE_ENABLED);
+                $instances = $DB->get_records('enrol', $params, 'sortorder, id ASC');
+                $enrols = enrol_get_plugins(true);
+                // First ask all enabled enrol instances in course if they want to auto enrol user.
+                foreach ($instances as $instance) {
+                    if (!isset($enrols[$instance->enrol])) {
+                        continue;
+                    }
+                    // Get a duration for the enrolment, a timestamp in the future, 0 (always) or false.
+                    $until = $enrols[$instance->enrol]->try_autoenrol($instance);
+                    if ($until !== false) {
+                        if ($until == 0) {
+                            $until = ENROL_MAX_TIMESTAMP;
+                        }
+                        $USER->enrol['enrolled'][$course->id] = $until;
+                        $access = true;
+                        break;
+                    }
+                }
+                // If not enrolled yet try to gain temporary guest access.
+                if (!$access) {
+                    foreach ($instances as $instance) {
+                        if (!isset($enrols[$instance->enrol])) {
+                            continue;
+                        }
+                        // Get a duration for the guest access, a timestamp in the future or false.
+                        $until = $enrols[$instance->enrol]->try_guestaccess($instance);
+                        if ($until !== false and $until > time()) {
+                            $USER->enrol['tempguest'][$course->id] = $until;
+                            $access = true;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        $class = '';
+        if ($icons = enrol_get_course_info_icons($course)) {
+            foreach ($icons as $pixicon) {
+//                $content .= $this->render($pixicon);
+            }
+        }
+        if ($access) {
+            $class = 'access';
+        } else {
+            $class = 'noaccess';
+            $enrolinstances = enrol_get_instances($course->id, true);
+            $forms = array();
+            foreach($enrolinstances as $instance) {
+                if (!isset($enrols[$instance->enrol])) {
+                    continue;
+                }
+                $form = $enrols[$instance->enrol]->enrol_page_hook($instance);
+                if ($form) {
+                    $forms[$instance->id] = $form;
+                }
+            }
+        }
+        
+        $context = get_context_instance(CONTEXT_COURSE, $course->id, MUST_EXIST);
+        $enrolled = is_enrolled($context, $USER->id, '', true);
+        if($enrolled){
+            $class = 'access';
+        }
+        $content .= html_writer::start_tag('div', array('id' => 'enrollment-modal-'.$course->id, 'class' => 'modalEnrol'));        
+            $content .= html_writer::start_tag('div', array( 'class' => 'modal-content-course'));
+            $content .= html_writer::start_tag('span', array( 'class' => 'cloaseModal'));
+            $content .= '&times;';
+            $content .= html_writer::end_tag('span');
+            foreach ($forms as $form) {
+                $content .= $form;
+            }
+        if (!$forms) {
+            $content .= html_writer::start_tag('div', array('class' => 'generalbox'));
+            if (isguestuser()) {
+                 $content .= html_writer::start_tag('p', array('class' => 'card-text'));
+                $content .= get_string('noguestaccess', 'enrol');
+                $content .= html_writer::end_tag('p');
+                $content .= html_writer::link(get_login_url(),
+                        'Continue', array('class' => 'card-link btn btn-primary '));
+            } else if ($returnurl) {
+                 $content .= html_writer::start_tag('p', array('class' => 'card-text'));
+                $content .= get_string('notenrollable', 'enrol');
+                $content .= html_writer::end_tag('p');
+                $content .= html_writer::link($returnurl,
+                        'Continue', array('class' => 'card-link btn btn-primary '));
+            } else {
+                $url = get_local_referer(false);
+                if (empty($url)) {
+                    $url = new moodle_url('/index.php');
+                }
+                $content .= html_writer::start_tag('p', array('class' => 'card-text'));
+                $content .= get_string('notenrollable', 'enrol');
+                $content .= html_writer::end_tag('p');
+                $content .= html_writer::link($url,
+                        'Continue', array('class' => 'card-link btn btn-primary '));
+            }
+            $content .= html_writer::end_tag('div');
+        }
+        $content .= html_writer::end_tag('div');        
+        $content .= html_writer::end_tag('div');
+        
+        
+        // Course name.
+        $coursename = $chelper->get_course_formatted_name($course);
+        $courselink = new moodle_url('/course/view.php', array('id' => $course->id));
+        if($class == 'access'){
+            $coursenamelink = html_writer::link($courselink, $coursename, array('class' => $course->visible ? '' : 'dimmed'));
+        }else{
+            $coursenamelink = html_writer::link('#',
+                        $coursename, array('id' => 'open-modal-'.$course->id, 'onclick' => 'open_enrollment_form("'.$course->id.'")','class' => 'card-link '));
+        }
+        $content .= html_writer::start_tag('div', array('class' => 'eodo-course card-body '.$class, 'id' => 'course-link-'.$course->id));
+        $content .= "<h4 class='card-title'>" . $coursenamelink . "</h4>";
 
         // Display course summary.
-        if ($course->has_summary()) {
-            $content .= html_writer::start_tag('p', array('class' => 'card-text'));
-            $content .= $chelper->get_course_formatted_summary($course,
-                array('overflowdiv' => true, 'noclean' => true, 'para' => false));
-            $content .= html_writer::end_tag('p'); // End summary.
-        }
+//        if ($course->has_summary()) {
+//            $content .= html_writer::start_tag('p', array('class' => 'card-text'));
+//            $content .= $chelper->get_course_formatted_summary($course,
+//                    array('overflowdiv' => true, 'noclean' => true, 'para' => false));
+//            $content .= html_writer::end_tag('p'); // End summary.
+//        }
 
         $content .= html_writer::end_tag('div');
 
-        $content .= html_writer::start_tag('div', array('class' => 'card-footer'));
-
-        // Print enrolmenticons.
-        if ($icons = enrol_get_course_info_icons($course)) {
-            foreach ($icons as $pixicon) {
-                $content .= $this->render($pixicon);
-            }
-        }
-
+        $content .= html_writer::start_tag('div', array('class' => 'card-footer', 'style' => 'display:none;'));
         $content .= html_writer::start_tag('div', array('class' => 'pull-right'));
         $content .= html_writer::link(new moodle_url('/course/view.php', array('id' => $course->id)),
-            get_string('access', 'theme_moove'), array('class' => 'card-link btn btn-primary'));
+                        get_string('access', 'theme_moove'), array('class' => 'card-link btn btn-primary ' . $class));
+        $content .= html_writer::link('#',
+                        get_string('access', 'theme_moove'), array('id' => 'open-modal-'.$course->id, 'onclick' => 'open_enrollment_form("'.$course->id.'")','class' => 'card-link btn btn-primary ' . $class));
         $content .= html_writer::end_tag('div'); // End pull-right.
 
         $content .= html_writer::end_tag('div'); // End card-block.
-
         // Display course category if necessary (for example in search results).
         if ($chelper->get_show_courses() == self::COURSECAT_SHOW_COURSES_EXPANDED_WITH_CAT) {
-            require_once($CFG->libdir. '/coursecatlib.php');
+            require_once($CFG->libdir . '/coursecatlib.php');
             if ($cat = core_course_category::get($course->category, IGNORE_MISSING)) {
                 $content .= html_writer::start_tag('div', array('class' => 'coursecat'));
-                $content .= get_string('category').': '.
-                    html_writer::link(new moodle_url('/course/index.php', array('categoryid' => $cat->id)),
-                        $cat->get_formatted_name(), array('class' => $cat->visible ? '' : 'dimmed'));
+                $content .= get_string('category') . ': ' .
+                        html_writer::link(new moodle_url('/course/index.php', array('categoryid' => $cat->id)),
+                                $cat->get_formatted_name(), array('class' => $cat->visible ? '' : 'dimmed'));
                 $content .= html_writer::end_tag('div'); // End coursecat.
             }
         }
-
+        $script = 'var btn = document.getElementById("open-modal-'.$course->id.'");'
+                . 'function open_enrollment_form(course_id){'
+                . 'var modal = document.getElementById("enrollment-modal-'.$course->id.'");'
+                . 'modal.style.display = "block";'
+                . '}';
+//        $content .= html_writer::script($script);
         return $content;
     }
+
 }

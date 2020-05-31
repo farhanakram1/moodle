@@ -80,6 +80,7 @@ if (\core_auth\digital_consent::is_age_digital_consent_verification_enabled()) {
 
 if(count($_POST) > 0){
     global $DB;
+    session_start();
     $user_email = $DB->get_record('user', array('email' =>  $_POST['email']));
     $user_username = $DB->get_record('user', array('username' =>  $_POST['username']));
     if (empty($user_email) && empty($user_username)) {
@@ -87,6 +88,7 @@ if(count($_POST) > 0){
             'email' => $_POST['email'],
             'source' => $_POST['token']
         );
+        $_SESSION[$_POST['email']] = $_POST['registrationcode'];
         $sandbox = get_config('local_stripsignup', 'sandbox');
         if($sandbox == 1){
             \Stripe\Stripe::setApiKey(get_config('local_stripsignup','sandbox_secretkey'));
@@ -160,7 +162,6 @@ if ($mform_signup->is_cancelled()) {
     $user = signup_setup_new_user($user);
     // Plugins can perform post sign up actions once data has been validated.
     core_login_post_signup_requests($user);
-    
     $authplugin->user_signup($user, true); // prints notice and link to login/index.php
     exit; //never reached
 }
