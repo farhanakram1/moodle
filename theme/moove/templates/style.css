@@ -18,7 +18,7 @@
 .brud_s .breadcrumb li:first-child a {
     color: white !important;
 }
-
+  
 #page-admin-tool-dataprivacy-createdatarequest h2, #page-admin-roles-check h3 label, .pagelayout-admin .card-body div > h3, .pagelayout-admin .card-body div > h2 {
     color: white !important;
 }
@@ -916,8 +916,10 @@ body.drawer-close-left {
     font-weight: bold;
     text-transform: uppercase;
     padding: 30px 30px 30px 23px;
-    background-color: #008ec2;
     color: white;
+}
+#page-admin-search .card-body #adminsettings{
+    background: #FFF;border-radius: 4px;padding: 20px;
 }
 #page-admin-search .nav.nav-tabs {
     margin-left: 23px;
@@ -1215,13 +1217,125 @@ body.drawer-close-left {
     top: -7px;  
 
 }
+header#page-header .d-none{
+    display:none;
+}
+header#page-header .context-header-settings-menu {
+	position: absolute;
+	right: 0;
+	top: 20px;
+	z-index: 999;
+}
+header#page-header#page-header .card{
+    border: none !important;
+    background: transparent;
+}
+header#page-header#page-header .pt-3{
+    padding: 0 !important;
+}
+#page-site-index .card-body .generalbox a{
+    color: #FFF;
+} 
+#page-site-index  header#page-header a.dropdown-toggle{
+    color:#FFF !important;
+}
+#page-user-profile section#region-main{
+   margin-top: 45px; 
+}
+.short-text{
+    font-size:12px;
+}
+#page-site-index .course_category_tree .collapsible-actions{
+    display: none;
+}
+.course_category_tree .category > .info > .categoryname{
+    background-image: none !important;
+}
+.eodo-category h3 a{
+    text-decoration: none !important;
+}
+.not_registered .categoryname{
+    padding: 20px 30px !important;
+    background-color: rgba(138, 207, 252, 0.7) !important;
+    margin-bottom: 20px;
+    border-radius: 8px !important;
+    border: 1px solid #ececec;
+    background-position: 10px;
+    color: #FFF !important;
+}
+.dimmed_category .categoryname {
+	padding: 20px 30px !important;
+	background-color: #C6c6c6 !important;
+	margin-bottom: 20px;
+	border-radius: 8px !important;
+	border: 1px solid #ececec;
+	background-position: 10px;
+	color: #FFF !important;
+        
+}
+.not_registered .categoryname a,.dimmed_category .categoryname a{
+    color: #FFF !important;
+}
+.booked .categoryname{
+    background-color: #5DC53D !important;
+    padding: 20px 30px !important;
+    margin-bottom: 20px;
+    border-radius: 8px !important;
+    border: 1px solid #ececec;
+    background-position: 10px;
+    color: #FFF !important;
+}
+.booked .content .courses{
+    clear: both;
+}
+.not_registered .content{
+    display: none !important;
+}
+.singlecourse .categoryname{
+    background-color: transparent !important;
+    border: none !important;
+    padding-left: 15px !important;
+}
+.booked .subcategories h4.categoryname{
+    background-color: #5DC53D !important;
+    padding: 10px 20px !important;
+    margin-bottom: 20px;
+    border-radius: 8px !important;
+    border: 1px solid #ececec;
+    background-position: 10px;
+    color: #FFF !important;
+    font-size: 20px;
+}
+.booked .subcategories .category{
+    margin-right: 30px;
+}
+.singlecourse .categoryname a{
+    color:#000 !important;
+}
+.access{
+    background-color: #5DC53D !important;
+}
+.noaccess{
+    background-color: rgba(138, 207, 252, 0.7) !important;
+}
 
+.not-available{
+    background-color: #C6c6c6 !important;
+}
+.eodo-course .card-title{
+    text-align: center;
+}
+.eodo-course .card-title a{
+    text-decoration: none;
+    color:#FFF !important;
+}
 #page-grade-report-user-index #region-main > div > .card-body,
 #page-grade-report-singleview-index #region-main > div > .card-body,
 #page-grade-report-outcomes-index #region-main > div > .card-body,
 #page-grade-report-history-index #region-main > div > .card-body,
 #page-grade-edit-scale-index #region-main > div > .card-body,
-#page-grade-edit-letter-index #region-main > div > .card-body
+#page-grade-edit-letter-index #region-main > div > .card-body,
+#page-course-admin .card-body
 {
     background-color: white!important;
     margin-top: 25px!important;
@@ -1431,17 +1545,93 @@ body.drawer-close-left {
 }
 
 #page-my-index #region-main-box {
-    background-color: #f4f7fb!important;
+    background-color: #f4f7fb !important;
 }
 
 #page-my-index #region-main-box.student_dash{
-    background-color: #fff !important;
     margin-bottom: 50px;
 }
+#page-my-index #region-main-box{
+    padding: 0;
+}
+#page-my-index #region-main-box .card-body.cust-tabs-s{
+    padding: 0px !important;
+}
+.block_eodoo_dashboard h5 {
+	display: none !important;
+}
+#page-my-index #region-main-box section.block div.card-body {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important;
+}
+
+#page-my-index #region-main-box section.block_eodoo_dashboard div.card-body {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-item {
+	width: 100% !important;
+	border: 0 !important;
+	background-color: transparent !important;
+	margin-bottom: 0px !important;
+	margin-right: 15px;
+	border-radius: 3px 3px 0px 0px !important;
+}
 #page-my-index #region-main-box .overviews-dasH .card.dashboard-card {
-    background-color: #dedede52 !important;
+    background-color: #dedede !important;
     padding: 15px!important;
     display: inline-block!important;
+}
+#enrollment-form{
+    display:none;
+}
+
+/* Course Modal */
+.modalEnrol {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content-course {
+  background-color: #fefefe;
+  margin: 25% auto !important; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  position: relative;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.cloaseModal {
+  color: #aaa;
+  font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.cloaseModal:hover,
+.cloaseModal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Course Modal */
+
+.block_eodoo_dashboard  #link_custom{
+    width:100%;
+    border-radius: 4px;
 }
 #page-my-index #region-main-box section > .card-body {
     background-color: #fff !important;
@@ -1454,6 +1644,13 @@ body.drawer-close-left {
     float: left!important;
     width: 33%!important;
     margin-right: 10px!important;
+}
+
+#page-my-index #region-main-box section.block_eodoo_dashboard > .card-body{
+    background-color:  transparent !important;
+}
+#page-my-index #region-main-box section.block_eodoo_dashboard .footer .cust-box-tab{
+    background: #FFF !important;
 }
 #page-my-index #region-main .overviews-dasH .card.dashboard-card > .card-body {
     float: left!important;
@@ -1693,12 +1890,12 @@ body.drawer-close-left {
 }
 #page-site-index #frontpage-category-combo .info > h3 > a,
 #page-site-index #frontpage-category-combo .info > h4 > a {
-    color: black !important;
+    color: black;
     text-decoration: none;
 }
 #page-site-index #frontpage-category-combo .info > h3 > a:hover,
 #page-site-index #frontpage-category-combo .info > h4 > a:hover {
-    color: #008ec2 !important;
+    color: #008ec2;
     text-decoration: underline;
 }
 
@@ -1710,15 +1907,15 @@ body.drawer-close-left {
 }
 #page-site-index #region-main-box #frontpage-available-course-list .card-footer,
 #page-site-index #region-main-box #frontpage-category-combo .card-footer {
-    background-color: #ffffff00!important;
+    background-color: #ffff00!important;
 }
 #page-site-index #region-main-box #frontpage-category-combo .info>.categoryname {
-    padding: 10px 30px!important;
-    background-color: #ececec!important;
-    margin-bottom: 20px!important;
-    border-radius: 10px 10px 0 0!important;
-    border: 1px solid #ececec!important;
-    background-position: 10px!important;
+    padding: 10px 30px;
+    background-color: #ececec;
+    margin-bottom: 20px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #ececec;
+    background-position: 10px;
 }
 
 
@@ -2177,6 +2374,25 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-grade-edit-scale-edit #id_description_editor {
         width: 100%!important;
     }
+    #eodo-signup .form-group {
+            width: 50%;
+            float: left;
+            padding: 0 15px;
+            margin-bottom: 0 !important;
+            margin-right: 1%;
+    }
+    #eodo-signup #fitem_id_registrationcode {
+            width: 36%;
+    }
+    #eodo-signup #fitem_id_country {
+	width: 33%;
+    }
+    #eodo-signup #fitem_id_cc_payment {
+	width: 65%;
+    }
+    #eodo-signup #fitem_id_cc_discount_code {
+	width: 33%;
+    }
     .card-deck {
         flex-flow: column !important;
     }
@@ -2389,6 +2605,13 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
+    
+    #eodo-signup .form-group {
+            width: 90% !important;
+            float: left;
+            padding: 0 15px;
+            margin-bottom: 0 !important;
+    }
     .pagination-sm .page-link {
         padding: .25rem 4px!important;
     }
