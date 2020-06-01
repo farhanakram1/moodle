@@ -1234,7 +1234,7 @@ header#page-header#page-header .pt-3{
     padding: 0 !important;
 }
 #page-site-index .card-body .generalbox a{
-    color: #FFF;
+    /*color: #FFF;*/
 } 
 #page-site-index  header#page-header a.dropdown-toggle{
     color:#FFF !important;
@@ -1295,6 +1295,9 @@ header#page-header#page-header .pt-3{
     background-color: transparent !important;
     border: none !important;
     padding-left: 15px !important;
+}
+.singlecourse h3 span{
+    color:#000 !important;
 }
 .booked .subcategories h4.categoryname{
     background-color: #5DC53D !important;
