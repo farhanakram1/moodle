@@ -1474,11 +1474,19 @@ class core_course_renderer extends plugin_renderer_base {
     protected function coursecat_category(coursecat_helper $chelper, $coursecat, $depth) {
         // open category tag
         global $PAGE,$USER,$DB;
+        
         $classes = array('category');
         $user_info_field = $DB->get_record_sql("SELECT * FROM {user_info_field} WHERE shortname='registrationcode' LIMIT 1");
         $user_info_data = $DB->get_record_sql("SELECT * FROM {user_info_data} WHERE userid=? and fieldid=?  LIMIT 1", array(intval($USER->id), intval($user_info_field->id)));
         $user_short_code = strtolower($user_info_data->data);
         $user_short_code = explode("\r\n",$user_short_code);
+        $roleassignments = $DB->get_record_sql('SELECT roleid FROM {role_assignments} WHERE userid=? ', array(intval($USER->id)));
+        $show_student = false;
+        foreach ($roleassignments as $roleassignment){
+           if($roleassignment > 4){
+               $show_student = true;
+           }
+        }
         if (empty($coursecat->visible) || $coursecat->get_courses_count() == 0) {
             $classes[] = 'dimmed_category';
         }
@@ -1519,18 +1527,24 @@ class core_course_renderer extends plugin_renderer_base {
         if(!in_array($idnumber, $user_short_code) && $depth == 1){
             $category_link = $DB->get_record_sql("SELECT * FROM {course_external_links} WHERE category_id='".$coursecat->id."' LIMIT 1");
             if(isset($category_link->external_link)){
-                $classes[] = 'not_registered';
+                if($show_student){
+                    $classes[] = 'not_registered';
+                
                 $categoryname = html_writer::link($category_link->external_link,
                     $categoryname, array('target' => '_blank'));
                 $categoryname .= html_writer::tag('span', ' (<a href="'.$category_link->external_link.'" target="_blank">Book Course</a>)',
                     array('title' => 'Book Course', 'class' => 'short-text'));
+                }
             }
         }
         $ortho = '';
         if(in_array($idnumber, $user_short_code) && $depth == 1 & $idnumber != 'singlecourse'){
-            $categoryname .= html_writer::tag('span', ' (Booked)',
-                   array( 'class' => 'short-text'));
-            $classes[] = 'booked';
+           if($show_student){
+                   
+                $categoryname .= html_writer::tag('span', ' (Booked)',
+                       array( 'class' => 'short-text'));
+                $classes[] = 'booked';
+           }
         }
         if(!in_array($idnumber, $user_short_code)){
             $ortho = 'not_registered';
@@ -1557,7 +1571,6 @@ class core_course_renderer extends plugin_renderer_base {
         $content .= html_writer::tag('div', $categorycontent, array('class' => 'content '.$ortho));
 
         $content .= html_writer::end_tag('div'); // .category
-        
         // Return the course category tree HTML
         return $content;
     }

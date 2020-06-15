@@ -48,7 +48,7 @@
 {
     color: white!important;
 }
-#page-local-discounts-edit h1.page__title, #page-local-discounts-discounts h1.discount__title, #page-admin-report-backups-index h2, #page-local-pages-edit .page__title, #page-admin-local-pages-pages .page__title{
+#page-calendar-export h2, #page-local-discounts-edit h1.page__title, #page-local-discounts-discounts h1.discount__title, #page-admin-report-backups-index h2, #page-local-pages-edit .page__title, #page-admin-local-pages-pages .page__title{
     color: #FFF !important;
     margin-bottom: 10px !important;
     margin-top: 5px !important;
@@ -97,8 +97,15 @@
 #page-mod-assign-grader .graDers a:first-child {
     font-size:16px !important;
 }
-
-
+.show-course{
+    background: #1CA4FC;
+}
+#page-calendar-view .calendar_event_course h3{
+    color: #FFF !important;
+}
+#page-mod-attendance-view .card-body,
+#page-calendar-export .mform,
+#page-calendar-managesubscriptions .card-body,
 #page-course-management #coursecat-management, 
 #page-admin-tool-dataprivacy-createdatarequest .createrequestform, 
 #page-admin-tool-dataprivacy-datarequests .card-body, 
@@ -130,7 +137,8 @@
 .pagelayout-admin  .card-body [data-region="managetemplates"],
 .pagelayout-admin  .card-body [data-region="managecompetencies"],
 .pagelayout-admin  .card-body div > fieldset,
-#page-course-management .card-body, #page-badges-newbadge .card-body {
+#page-course-management .card-body, #page-badges-newbadge .card-body,
+#page-mod-attendance-view .card-body{
     background-color: white;
     padding: 20px 25px;
     border-radius: 5px;
@@ -1317,15 +1325,30 @@ header#page-header#page-header .pt-3{
 }
 .access{
     background-color: #5DC53D !important;
+    border-color:#5DC53D !important;
 }
 .noaccess{
     background-color: rgba(138, 207, 252, 0.7) !important;
+    border-color: rgba(138, 207, 252, 0.7) !important;
+}
+.noaccess-grey{
+    background: #C6c6c6;
+    border-color: #C6c6c6 !important;
 }
 
-.not-available{
-    background-color: #C6c6c6 !important;
+.eodo-course{
+    border:1px solid #1CA4FC;
+    border-radius: 3px;
 }
 .eodo-course .card-title{
+    text-align: center;
+}
+.start_course{
+    background: #1ca4fc !important;
+    border-color: #1ca4fc !important;
+}
+.eodo-course-text{
+    color:#FFF !important;
     text-align: center;
 }
 .eodo-course .card-title a{

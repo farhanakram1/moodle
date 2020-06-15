@@ -231,8 +231,20 @@ class course_renderer extends \core_course_renderer {
         if ($course instanceof stdClass) {
             $course = new core_course_list_element($course);
         }
+        if(is_siteadmin()){
+             $show_student = true;
+        }else{
+            $roleassignments = $DB->get_record_sql('SELECT roleid FROM {role_assignments} WHERE userid=? ', array(intval($USER->id)));
 
 
+            $show_student = false;
+            foreach ($roleassignments as $roleassignment){
+               if($roleassignment < 5){
+                   $show_student = true;
+               }
+            }
+        }
+        
 //        $content = extras::get_course_summary_image($course, $courselink);
 
         $theme = \theme_config::load('moove');
@@ -338,7 +350,11 @@ class course_renderer extends \core_course_renderer {
         if ($access) {
             $class = 'access';
         } else {
-            $class = 'noaccess';
+            if(!$show_student){
+                $class = 'noaccess';
+            }else{
+                $class = 'show-course';
+            }
             $enrolinstances = enrol_get_instances($course->id, true);
             $forms = array();
             foreach($enrolinstances as $instance) {
@@ -399,15 +415,35 @@ class course_renderer extends \core_course_renderer {
         // Course name.
         $coursename = $chelper->get_course_formatted_name($course);
         $courselink = new moodle_url('/course/view.php', array('id' => $course->id));
-        if($class == 'access'){
+        if(time() < $course->startdate || $course->visible  == 0){
+            $class = 'noaccess-grey';
+            $string = 'unavailable';
+        }
+        $percentage = \core_completion\progress::get_course_progress_percentage($course, $USER->id);
+        
+        if($percentage == 0 && $class == 'access'){
+            $access_class = 'start_course';
+            $string = 'ready';
+        }
+        if($percentage > 0 && $class == 'access'){
+            $string = 'downloaded';
+        }
+        if($show_student){
             $coursenamelink = html_writer::link($courselink, $coursename, array('class' => $course->visible ? '' : 'dimmed'));
         }else{
-            $coursenamelink = html_writer::link('#',
-                        $coursename, array('id' => 'open-modal-'.$course->id, 'onclick' => 'open_enrollment_form("'.$course->id.'")','class' => 'card-link '));
+            if($class == 'access'){
+                $coursenamelink = html_writer::link($courselink, $coursename, array('class' => $course->visible ? '' : 'dimmed'));
+            }else if($class == 'noaccess-grey'){
+                $coursenamelink = html_writer::link('#',
+                            $coursename, array('class' => 'card-link '));
+            }else{
+                $coursenamelink = html_writer::link('#',
+                            $coursename, array('id' => 'open-modal-'.$course->id, 'onclick' => 'open_enrollment_form("'.$course->id.'")','class' => 'card-link '));
+                $string = 'unlock';
+            }
         }
-        $content .= html_writer::start_tag('div', array('class' => 'eodo-course card-body '.$class, 'id' => 'course-link-'.$course->id));
+        $content .= html_writer::start_tag('div', array('class' => 'eodo-course card-body '.$class." ".$access_class, 'id' => 'course-link-'.$course->id));
         $content .= "<h4 class='card-title'>" . $coursenamelink . "</h4>";
-
         // Display course summary.
 //        if ($course->has_summary()) {
 //            $content .= html_writer::start_tag('p', array('class' => 'card-text'));
@@ -415,7 +451,9 @@ class course_renderer extends \core_course_renderer {
 //                    array('overflowdiv' => true, 'noclean' => true, 'para' => false));
 //            $content .= html_writer::end_tag('p'); // End summary.
 //        }
-
+        $content .= html_writer::start_tag('p', array('class' => 'card-text eodo-course-text'));
+        $content .= $string;
+        $content .= html_writer::end_tag('p');
         $content .= html_writer::end_tag('div');
 
         $content .= html_writer::start_tag('div', array('class' => 'card-footer', 'style' => 'display:none;'));
