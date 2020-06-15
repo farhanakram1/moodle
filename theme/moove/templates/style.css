@@ -53,11 +53,35 @@
     margin-bottom: 10px !important;
     margin-top: 5px !important;
 }
-#page-login-confirm .card-body, #page-local-discounts-edit .mform, #page-local-discounts-discounts .custompages-list, #page-user-editadvanced .mform, #page-course-view-topics .card-body, #page-admin-tool-dbtransfer-index .card-body, #page-admin-tool-xmldb-index .card-body, #page-admin-tool-templatelibrary-index [data-region="list-templates"], #page-admin-tool-phpunit-index .generalbox, #page-admin-tool-generator-maketestplan .card-body, #page-admin-tool-generator-maketestcourse .card-body, #page-admin-tool-behat-index .card-body, #page-admin-thirdpartylibs .card-body, #page-admin-purgecaches .card-body, #page-admin-webservice-testclient .card-body, #page-admin-tool-spamcleaner-index .card-body, #page-admin-tool-monitor-managerules .card-body, #page-admin-report-security-index .card-body, #page-admin-report-questioninstances-index .card-body, #page-admin-report-performance-index .card-body, #page-admin-report-loglive-index .card-body, #page-admin-report-log-index .card-body, #page-admin-report-insights-insights .card-body, #page-admin-report-eventlist-index .mform, #page-admin-report-configlog-index .card-body, #page-admin-report-backups-index .generalbox, #page-admin-comment-index .card-body, #page-admin-tool-oauth2-issuers .card-body, #page-admin-tool-messageinbound-index .card-body,#page-admin-tool-task-scheduledtasks .card-body, #page-admin-setting-themesettingmoove .card-body, #page-admin-setting-themesettingclassic .card-body, #page-admin-setting-themesettingboost .card-body, #page-admin-theme-index .card-body, #page-admin-setting-cachestores .card-body, #page-admin-cache-testperformance .card-body, #page-admin-cache-admin .card-body, #page-admin-blocks .card-body .no-overflow, #page-admin-tool-availabilityconditions-index .card-body .no-overflow, #page-admin-tools .card-body .no-overflow, #page-admin-mod-lti-typessettings .mform, #page-admin-mod-lti-toolconfigure #main-content-container, #page-admin-setting-assignfeedback_editpdf .card-body, #page-admin-setting-assignfeedbackplugins .card-body, #page-admin-filters .card-body, #page-local-pages-edit .mform, #page-admin-local-pages-pages .custompages-list, #page-admin-setting-local_pages #adminsettings, #page-admin-localplugins .card-body .no-overflow,#page-admin-qtypes .card-body .no-overflow, #page-admin-reports .card-body .no-overflow,#page-admin-repository-recent .mform, #page-admin-repository-local .mform, #page-admin-repository-upload .mform, #page-admin-repository-url .mform, #page-admin-repository-wikimedia .mform, #page-admin-repository-user .mform, #page-admin-repository-areafiles .mform, #page-admin-repository-recent .mform, #page-admin-repository .generalbox, #page-admin-searchareas .card-body, #page-admin-searchareas .card-body, #page-admin-setting-editortinymce #adminsettings, #page-admin-setting-editoratto #adminsettings, #page-admin-webservice-tokens .mform, #page-admin-webservice-service .card-body, #page-admin-webservice-documentation .card-body, #page-admin-modules  .card-body .no-overflow,#page-admin-mod-assign-adminmanageplugins .card-body .no-overflow, #page-admin-setting-assignsubmissionplugins #adminsettings, #page-admin-setting-modassignfolder #adminsettings, #page-admin-plugins .card-body, #page-admin-tool-installaddon-index .card-body, #page-admin-grade-edit-letter-index .mform, #page-admin-grade-edit-letter-index .table-responsive, #page-admin-grade-edit-scale-edit .card-body, #page-admin-grade-edit-scale-index .card-body,#page-admin-tool-uploadcourse-index .mform, #page-backup-backupfilesedit .card-body, #page-backup-restorefile .card-body, #page-course-edit .mform, #page-course-editcategory .mform, #page-admin-customfield-edit .mform, #page-admin-course-customfield #customfield_catlist, #page-course-management .coursesearchbox, #page-admin-tool-dataprivacy-pluginregistry .card-body, #page-admin-roles-check .generalbox, #page-admin-tool-lpimportcsv-index .card-body, #page-admin-tool-lpmigrate-frameworks .card-body, #page-admin-registration-index .card-body,#page-admin-tool-analytics-index .card-body{
+#page-login-confirm .card-body,#page-admin-setting-authsettings .card-body,#page-admin-setting-antivirussettings .card-body,#page-admin-setting-tools .card-body,#page-admin-setting-modsettings .card-body,#page-admin-setting-modules .card-body,#page-admin-setting-gradereports .card-body,#page-admin-setting-grades .card-body,#page-admin-setting-backups .card-body,#page-admin-setting-courses .card-body,#page-admin-setting-privacy .card-body,#page-admin-setting-roles .card-body,#page-admin-setting-accounts .card-body,#page-admin-setting-users .card-body,#page-admin-setting-frontpage .card-body,#page-admin-setting-security .card-body,#page-admin-setting-messaging .card-body,#page-admin-setting-language .card-body,#page-admin-setting-location .card-body,#page-admin-setting-h5p .card-body,#page-admin-setting-badges .card-body,#page-admin-setting-analytics .card-body,#page-admin-setting-competencies .card-body, #page-local-discounts-edit .mform, #page-local-discounts-discounts .custompages-list, #page-user-editadvanced .mform, #page-course-view-topics .card-body, #page-admin-tool-dbtransfer-index .card-body, #page-admin-tool-xmldb-index .card-body, #page-admin-tool-templatelibrary-index [data-region="list-templates"], #page-admin-tool-phpunit-index .generalbox, #page-admin-tool-generator-maketestplan .card-body, #page-admin-tool-generator-maketestcourse .card-body, #page-admin-tool-behat-index .card-body, #page-admin-thirdpartylibs .card-body, #page-admin-purgecaches .card-body, #page-admin-webservice-testclient .card-body, #page-admin-tool-spamcleaner-index .card-body, #page-admin-tool-monitor-managerules .card-body, #page-admin-report-security-index .card-body, #page-admin-report-questioninstances-index .card-body, #page-admin-report-performance-index .card-body, #page-admin-report-loglive-index .card-body, #page-admin-report-log-index .card-body, #page-admin-report-insights-insights .card-body, #page-admin-report-eventlist-index .mform, #page-admin-report-configlog-index .card-body, #page-admin-report-backups-index .generalbox, #page-admin-comment-index .card-body, #page-admin-tool-oauth2-issuers .card-body, #page-admin-tool-messageinbound-index .card-body,#page-admin-tool-task-scheduledtasks .card-body, #page-admin-setting-themesettingmoove .card-body, #page-admin-setting-themesettingclassic .card-body, #page-admin-setting-themesettingboost .card-body, #page-admin-theme-index .card-body, #page-admin-setting-cachestores .card-body, #page-admin-cache-testperformance .card-body, #page-admin-cache-admin .card-body, #page-admin-blocks .card-body .no-overflow, #page-admin-tool-availabilityconditions-index .card-body .no-overflow, #page-admin-tools .card-body .no-overflow, #page-admin-mod-lti-typessettings .mform, #page-admin-mod-lti-toolconfigure #main-content-container, #page-admin-setting-assignfeedback_editpdf .card-body, #page-admin-setting-assignfeedbackplugins .card-body, #page-admin-filters .card-body, #page-local-pages-edit .mform, #page-admin-local-pages-pages .custompages-list, #page-admin-setting-local_pages #adminsettings, #page-admin-localplugins .card-body .no-overflow,#page-admin-qtypes .card-body .no-overflow, #page-admin-reports .card-body .no-overflow,#page-admin-repository-recent .mform, #page-admin-repository-local .mform, #page-admin-repository-upload .mform, #page-admin-repository-url .mform, #page-admin-repository-wikimedia .mform, #page-admin-repository-user .mform, #page-admin-repository-areafiles .mform, #page-admin-repository-recent .mform, #page-admin-repository .generalbox, #page-admin-searchareas .card-body, #page-admin-searchareas .card-body, #page-admin-setting-editortinymce #adminsettings, #page-admin-setting-editoratto #adminsettings, #page-admin-webservice-tokens .mform, #page-admin-webservice-service .card-body, #page-admin-webservice-documentation .card-body, #page-admin-modules  .card-body .no-overflow,#page-admin-mod-assign-adminmanageplugins .card-body .no-overflow, #page-admin-setting-assignsubmissionplugins #adminsettings, #page-admin-setting-modassignfolder #adminsettings, #page-admin-plugins .card-body, #page-admin-tool-installaddon-index .card-body, #page-admin-grade-edit-letter-index .mform, #page-admin-grade-edit-letter-index .table-responsive, #page-admin-grade-edit-scale-edit .card-body, #page-admin-grade-edit-scale-index .card-body,#page-admin-tool-uploadcourse-index .mform, #page-backup-backupfilesedit .card-body, #page-backup-restorefile .card-body, #page-course-edit .mform, #page-course-editcategory .mform, #page-admin-customfield-edit .mform, #page-admin-course-customfield #customfield_catlist, #page-course-management .coursesearchbox, #page-admin-tool-dataprivacy-pluginregistry .card-body, #page-admin-roles-check .generalbox, #page-admin-tool-lpimportcsv-index .card-body, #page-admin-tool-lpmigrate-frameworks .card-body, #page-admin-registration-index .card-body,#page-admin-tool-analytics-index .card-body{
     background: #FFF;
     margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 5px;
+}
+#page-admin-setting-analytics .card-body h2,
+#page-admin-setting-courses .card-body h2,
+#page-admin-setting-antivirussettings .card-body h2,
+#page-admin-setting-modsettings .card-body h2,
+#page-admin-setting-authsettings .card-body h2,
+#page-admin-setting-tools .card-body h2,
+#page-admin-setting-gradereports .card-body h2,
+#page-admin-setting-modules .card-body h2,
+#page-admin-setting-grades .card-body h2,
+#page-admin-setting-backups .card-body h2,
+#page-admin-setting-badges .card-body h2,
+#page-admin-setting-privacy .card-body h2,
+#page-admin-setting-roles .card-body h2,
+#page-admin-setting-security .card-body h2,
+#page-admin-setting-users .card-body h2,
+#page-admin-setting-accounts .card-body h2,
+#page-admin-setting-frontpage .card-body h2,
+#page-admin-setting-h5p .card-body h2,
+#page-admin-setting-language .card-body h2,
+#page-admin-setting-messaging .card-body h2,
+#page-admin-setting-location .card-body h2,
+#page-admin-setting-competencies h2{
+    color: #0090c2 !important;
 }
 #page-course-view-topics .card-body .page-header-headings h2{
     margin-top: 20px;
@@ -1451,7 +1475,7 @@ header#page-header#page-header .pt-3{
 }
 
 #page-admin-search .tab-content{
-    background: #fdfdfd;
+    background: #24def0;
     line-height: 25px;
     border: 1px solid #ddd;
     border-top:2px solid #008ec2;
@@ -1464,19 +1488,19 @@ header#page-header#page-header .pt-3{
 
 #page-admin-search .tab-content .setting_Links h4 a{
     font-size: 21px!important;
-    color: #000!important;
+    color: #fff!important;
 }
 #page-admin-search .tab-content .setting_Links h4 > a:hover{
-    color: #008ec2!important;
+    color: #000!important;
     text-decoration: none;
-    border-bottom: 2px solid #008ec2!important;
+    border-bottom: 2px solid #000!important;
 }
 
 #page-admin-search .tab-content .setting_Links ul li > a,
 #page-my-index .cust-tabs-s .my_block ul > li > div > a,
 #page-my-index .cust-tabs-s .my_block .footer a
 {
-    color: #000!important;
+    color: #fff!important;
     text-decoration: none;
     font-weight: lighter;
     font-size: 15px;
@@ -1485,12 +1509,12 @@ header#page-header#page-header .pt-3{
 #page-my-index .cust-tabs-s .my_block ul > li > div > a:hover,
 #page-my-index .cust-tabs-s .my_block .footer a:hover
 {
-    color: #008ec2!important;
-    border-bottom: 1px solid #008ec2!important;
+    color: #000!important;
+    border-bottom: 1px solid #000!important;
 }
 #page-admin-search .tab-content .setting_Links ul li:before {
     content: "•";
-    color: #000;
+    color: #fff;
     display: inline-block;
     width: 1em;
     font-size: 18px;
@@ -2324,6 +2348,16 @@ form.logselecform select {
     margin-bottom: 9px!important;
 }
 
+.btn-secondary {
+    color: #f6f7fb !important;
+    background-color: #231f20 !important;
+    border-color: #231f20 !important;
+}
+.btn-secondary:hover{
+    color: #f6f7fb !important;
+    background-color: #0090c2 !important;
+    border-color: #21def0 !important;   
+}
 
 
 @media (max-width: 767px){
