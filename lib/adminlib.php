@@ -6964,7 +6964,7 @@ class admin_setting_manageeditors extends admin_setting {
         $table->head  = array($txt->name, $txt->enable, $txt->updown, $txt->settings, $struninstall);
         $table->colclasses = array('leftalign', 'centeralign', 'centeralign', 'centeralign', 'centeralign');
         $table->id = 'editormanagement';
-        $table->attributes['class'] = 'admintable generaltable';
+        $table->attributes['class'] = 'admintable generaltable table table-responsive';
         $table->data  = array();
 
         // iterate through auth plugins and add to the display table
@@ -7140,7 +7140,7 @@ class admin_setting_manageantiviruses extends admin_setting {
         $table->head  = array($txt->name, $txt->enable, $txt->updown, $txt->settings, $struninstall);
         $table->colclasses = array('leftalign', 'centeralign', 'centeralign', 'centeralign', 'centeralign');
         $table->id = 'antivirusmanagement';
-        $table->attributes['class'] = 'admintable generaltable';
+        $table->attributes['class'] = 'admintable generaltable table table-responsive';
         $table->data  = array();
 
         // Iterate through auth plugins and add to the display table.
@@ -8142,7 +8142,7 @@ class admin_setting_managemediaplayers extends admin_setting {
         $table->colclasses = array('leftalign', 'leftalign', 'centeralign',
             'centeralign', 'centeralign', 'centeralign', 'centeralign');
         $table->id = 'mediaplayerplugins';
-        $table->attributes['class'] = 'admintable generaltable';
+        $table->attributes['class'] = 'admintable generaltable table table-responsive';
         $table->data  = array();
 
         // Iterate through media plugins and add to the display table.
@@ -9537,7 +9537,7 @@ class admin_setting_webservicesoverview extends admin_setting {
             get_string('description'));
         $table->colclasses = array('leftalign step', 'leftalign status', 'leftalign description');
         $table->id = 'onesystemcontrol';
-        $table->attributes['class'] = 'admintable wsoverview generaltable';
+        $table->attributes['class'] = 'admintable wsoverview generaltable table table-responsive';
         $table->data = array();
 
         $return .= $brtag . get_string('onesystemcontrollingdescription', 'webservice')
@@ -9847,7 +9847,7 @@ class admin_setting_managewebserviceprotocols extends admin_setting {
         $table->head  = array($strprotocol, $strversion, $strenable, $strsettings);
         $table->colclasses = array('leftalign', 'centeralign', 'centeralign', 'centeralign', 'centeralign');
         $table->id = 'webserviceprotocols';
-        $table->attributes['class'] = 'admintable generaltable';
+        $table->attributes['class'] = 'admintable generaltable table table-responsive';
         $table->data  = array();
 
         // iterate through auth plugins and add to the display table
@@ -10759,7 +10759,7 @@ class admin_setting_searchsetupinfo extends admin_setting {
         $table->head = array(get_string('step', 'search'), get_string('status'));
         $table->colclasses = array('leftalign step', 'leftalign status');
         $table->id = 'searchsetup';
-        $table->attributes['class'] = 'admintable generaltable';
+        $table->attributes['class'] = 'admintable generaltable table table-responsive';
         $table->data = array();
 
         $return .= $brtag . get_string('searchsetupdescription', 'search') . $brtag . $brtag;
