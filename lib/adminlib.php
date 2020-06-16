@@ -6186,7 +6186,7 @@ class admin_setting_manageenrols extends admin_setting {
         $table->head  = array(get_string('name'), $strusage, $strversion, $strenable, $strup.'/'.$strdown, $strsettings, $strtest, $struninstall);
         $table->colclasses = array('leftalign', 'centeralign', 'centeralign', 'centeralign', 'centeralign', 'centeralign', 'centeralign', 'centeralign');
         $table->id = 'courseenrolmentplugins';
-        $table->attributes['class'] = 'admintable generaltable';
+        $table->attributes['class'] = 'admintable generaltable table table-responsive';
         $table->data  = array();
 
         // Iterate through enrol plugins and add to the display table.
@@ -7282,7 +7282,7 @@ class admin_setting_managelicenses extends admin_setting {
         $table->head  = array($txt->name, $txt->enable);
         $table->colclasses = array('leftalign', 'centeralign');
         $table->id = 'availablelicenses';
-        $table->attributes['class'] = 'admintable generaltable';
+        $table->attributes['class'] = 'admintable generaltable tabel table-responsive';
         $table->data  = array();
 
         foreach ($licenses as $value) {
