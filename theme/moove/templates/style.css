@@ -1906,7 +1906,7 @@ hr{
 #page-admin-setting-qtypesettings .card-body #adminsettings{
     margin-top: 20px !important;
 }
-#page-mod-attendance-take .card-body, #page-enrol-index .card-body, #page-mod-chat-view .card-body, #page-mod-chat-mod .mform, #page-course-editsection .mform, 
+#page-mod-attendance-take .card-body, #page-enrol-index .card-body,#page-admin-roles-usersroles .card-body,#page-blog-external_blogs .card-body, #page-mod-chat-view .card-body, #page-mod-chat-mod .mform, #page-course-editsection .mform, 
 #page-mod-scheduler-view .card-body, #page-mod-scheduler-mod .mform, #page-course-view-social .card-body, 
 #page-mod-assign-submit .card-body, #page-mod-attendance-tempusers .card-body, 
 #page-mod-attendance-preferences .card-body, #page-mod-attendance-export .card-body, #page-mod-attendance-report .card-body, 
@@ -1986,6 +1986,8 @@ hr{
 #page-grade-import-csv-index .card-body div > h2,
 #page-grade-import-direct-index .card-body div > h2,
 #page-grade-export-ods-index .card-body div > h2,
+#page-blog-external_blogs .card-body div > h2,
+#page-admin-roles-usersroles .card-body div > h2,
 #page-grade-export-xls-index .card-body div > h2,
 #page-grade-export-txt-index .card-body div > h2
 {
@@ -2243,8 +2245,7 @@ hr{
 #page-user-course .card-body div > h2,
 #page-user-calendar .card-body div > h2,
 #page-blog-preferences .card-body div > h2,
-#page-message-edit .card-body div > h2, 
-#page-blog-external_blogs .card-body div > h2, 
+#page-message-edit .card-body div > h2,  
 #page-blog-external_blog_edit .card-body div > h2, 
 #page-badges-preferences .card-body div > h2, 
 #page-badges-mybackpack .card-body div > h2, 
@@ -2905,6 +2906,8 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-notes-index #region-main > div > .card-body,
     #page-admin-tool-dataprivacy-summary #region-main > div > .card-body,
     #page-admin-roles-permissions #region-main > div > .card-body,
+    #page-admin-roles-usersroles #region-main > div > .card-body,
+    #page-blog-external_blogs #region-main > div > .card-body,
     #page-badges-mybadges .card-body,
     #page-message-notificationpreferences .preferences-page-container,
     #page-user-editor form.mform,
