@@ -1244,6 +1244,7 @@ body.drawer-close-left {
     border-top-color: #008ec2;
 
 }
+
 .cust-tabs-s .tab-content {
     float: left;
     height: auto;
@@ -1610,14 +1611,38 @@ hr{
 /*#page-my-index .small-box>.admin_Record{
     min-height: 130px!important;
 }*/
-#page-my-index .small-box{
+#page-my-index .small-box,
+#page-message-index .small-box{
     margin-left: 5px!important;
     width: 100% !important;
 } 
+#page-message-index .small-box {
+    border-radius: 0;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+#page-message-index .bg-1 {
+    background-color: #1e88e5;
+}
+#page-message-index .bg-2 {
+    background-color: #7460ee;
+}
+#page-message-index .bg-3 {
+    background-color: #26c6da;
+}
+#page-message-index .bg-4 {
+    background-color: #2f3d4a;
+}
+#page-message-index .small-box>.inner {
+    padding: 10px;
+}
 .block-myoverview.block-cards.overviews-dasH button{
     font-size: 12px;
 }
-#page-my-index .small-box>.admin_Record h3{
+#page-my-index .small-box>.admin_Record h3,
+#page-message-index .small-box>.admin_Record h3{
     font-size: 20px!important;
     font-weight: 600!important;
     margin-top: 25px!important;
@@ -1642,16 +1667,30 @@ hr{
     margin-top: -30px;
 }
 
-#page-my-index .small-box h3 {
+#page-my-index .small-box h3,
+#page-message-index .small-box h3 {
     z-index: 9;
     white-space: inherit!important;
     text-align: center;
     position: relative;
 }
-#page-my-index .small-box p {;
-                             text-align: center;
+#page-my-index .small-box p,
+#page-message-index .small-box p {
+    text-align: center;
 }
-
+#page-message-index .small-box h3, #page-message-index .small-box p {
+    z-index: 5;
+    color: #fff;
+}
+#page-message-index .small-box .icon {
+    transition: all .3s linear;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    z-index: 0;
+    font-size: 48px;
+    color: rgba(0,0,0,.15);
+}
 #page-my-index #region-main-box {
     background-color: #f4f7fb !important;
 }
