@@ -152,92 +152,94 @@
         {{>core/action_menu}}
         {{/newmodelmenu}}
     </div>
-    <table id="predictionmodelslist" class="generaltable fullwidth">
-        <caption>{{#str}}analyticmodels, tool_analytics{{/str}}</caption>
-        <thead>
-            <tr>
-                <th scope="col">{{#str}}modelname, tool_analytics{{/str}}</th>
-                <th scope="col">{{#str}}enabled, tool_analytics{{/str}}</th>
-                <th scope="col">{{#str}}indicators, tool_analytics{{/str}}</th>
-                <th scope="col">{{#str}}modeltimesplitting, tool_analytics{{/str}}</th>
-                <th scope="col">{{#str}}insights, tool_analytics{{/str}}</th>
-                <th scope="col">{{#str}}actions{{/str}}</th>
-            </tr>
-        </thead>
-        <tbody>
-        {{#models}}
-            <tr data-model-name="{{modelname}}">
-                <td>
-                    {{#name}}
-                        <span class="model-name">{{>core/inplace_editable}}</span>
-                    {{/name}}
-                    <div>
-                        <small class="target-class">{{targetclass}}</small>
-                        {{#targethelp}}
-                            {{>core/help_icon}}
-                        {{/targethelp}}
-                    </div>
-                </td>
-                <td>
-                    {{#enabled}}
-                        {{#pix}}i/checked, core, {{#str}}yes{{/str}}{{/pix}}
-                    {{/enabled}}
-                    {{^enabled}}
-                        {{#str}}no{{/str}}
-                    {{/enabled}}
-                </td>
-                <td>
-                    <a data-widget="toggle"
-                           title="{{#str}} clicktohideshow {{/str}}"
-                           aria-expanded="false"
-                           aria-controls="indicators-{{id}}"
-                           role="button"
-                           href="">
-                        {{#str}} indicatorsnum, tool_analytics, {{indicatorsnum}} {{/str}}
-                    </a>
-                    <ul class="hidden" id="indicators-{{id}}">
-                    {{#indicators}}
-                        <li>
-                            {{name}}
-                            {{#help}}
+    <div class="table-responsive">
+        <table id="predictionmodelslist" class="generaltable fullwidth">
+            <caption>{{#str}}analyticmodels, tool_analytics{{/str}}</caption>
+            <thead>
+                <tr>
+                    <th scope="col">{{#str}}modelname, tool_analytics{{/str}}</th>
+                    <th scope="col">{{#str}}enabled, tool_analytics{{/str}}</th>
+                    <th scope="col">{{#str}}indicators, tool_analytics{{/str}}</th>
+                    <th scope="col">{{#str}}modeltimesplitting, tool_analytics{{/str}}</th>
+                    <th scope="col">{{#str}}insights, tool_analytics{{/str}}</th>
+                    <th scope="col">{{#str}}actions{{/str}}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#models}}
+                <tr data-model-name="{{modelname}}">
+                    <td>
+                        {{#name}}
+                            <span class="model-name">{{>core/inplace_editable}}</span>
+                        {{/name}}
+                        <div>
+                            <small class="target-class">{{targetclass}}</small>
+                            {{#targethelp}}
                                 {{>core/help_icon}}
-                            {{/help}}
-                        </li>
-                    {{/indicators}}
-                    </ul>
-                </td>
-                <td>
-                    {{#timesplitting}}
-                        {{timesplitting}}
-                        {{#timesplittinghelp}}
-                            {{>core/help_icon}}
-                        {{/timesplittinghelp}}
-                    {{/timesplitting}}
-                    {{^timesplitting}}
-                        {{#str}}notdefined, tool_analytics{{/str}}
-                        {{#timesplittinghelp}}
-                            {{>core/help_icon}}
-                        {{/timesplittinghelp}}
-                    {{/timesplitting}}
-                </td>
-                <td>
-                    {{! models_list renderer is responsible of sending one or the other}}
-                    {{#insights}}
-                        {{> core/single_select }}
-                    {{/insights}}
-                    {{#noinsights}}
-                        {{.}}
-                    {{/noinsights}}
-                </td>
-                <td>
-                    {{#actions}}
-                        {{> core/action_menu}}
-                    {{/actions}}
-                </td>
-            </tr>
-        {{/models}}
-        </tbody>
-    </table>
+                            {{/targethelp}}
+                        </div>
+                    </td>
+                    <td>
+                        {{#enabled}}
+                            {{#pix}}i/checked, core, {{#str}}yes{{/str}}{{/pix}}
+                        {{/enabled}}
+                        {{^enabled}}
+                            {{#str}}no{{/str}}
+                        {{/enabled}}
+                    </td>
+                    <td>
+                        <a data-widget="toggle"
+                               title="{{#str}} clicktohideshow {{/str}}"
+                               aria-expanded="false"
+                               aria-controls="indicators-{{id}}"
+                               role="button"
+                               href="">
+                            {{#str}} indicatorsnum, tool_analytics, {{indicatorsnum}} {{/str}}
+                        </a>
+                        <ul class="hidden" id="indicators-{{id}}">
+                        {{#indicators}}
+                            <li>
+                                {{name}}
+                                {{#help}}
+                                    {{>core/help_icon}}
+                                {{/help}}
+                            </li>
+                        {{/indicators}}
+                        </ul>
+                    </td>
+                    <td>
+                        {{#timesplitting}}
+                            {{timesplitting}}
+                            {{#timesplittinghelp}}
+                                {{>core/help_icon}}
+                            {{/timesplittinghelp}}
+                        {{/timesplitting}}
+                        {{^timesplitting}}
+                            {{#str}}notdefined, tool_analytics{{/str}}
+                            {{#timesplittinghelp}}
+                                {{>core/help_icon}}
+                            {{/timesplittinghelp}}
+                        {{/timesplitting}}
+                    </td>
+                    <td>
+                        {{! models_list renderer is responsible of sending one or the other}}
+                        {{#insights}}
+                            {{> core/single_select }}
+                        {{/insights}}
+                        {{#noinsights}}
+                            {{.}}
+                        {{/noinsights}}
+                    </td>
+                    <td>
+                        {{#actions}}
+                            {{> core/action_menu}}
+                        {{/actions}}
+                    </td>
+                </tr>
+            {{/models}}
+            </tbody>
+        </table>
+    </div>
 </div>
 {{#js}}
 require(['jquery'], function($) {
