@@ -1531,7 +1531,7 @@ header#page-header#page-header .pt-3{
 }
 #page-admin-search .tab-content .row{
     background: #fff;
-    box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3);
+    /*box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3);*/
 }
 #page-admin-search .tab-content .list-unstyled{
     padding: 20px !important;
@@ -1545,6 +1545,7 @@ header#page-header#page-header .pt-3{
 }
 hr{
     margin-bottom: 0rem !important;
+    border: none !important;
 }
 #page-admin-search .tab-content .setting_Links h4 > a:hover{
     color: #000!important;
@@ -1570,7 +1571,7 @@ hr{
     border-bottom: 1px solid #000!important;
 }
 #page-admin-search .tab-content .setting_Links ul li:before {
-    content: "•";
+    content: "\2713";
     color: #000;
     display: inline-block;
     width: 1em;
@@ -2289,7 +2290,7 @@ hr{
 }
 
 table tr td {
-    white-space: nowrap;
+    /*white-space: nowrap;*/
 }
 
 #page-message-index #region-main {

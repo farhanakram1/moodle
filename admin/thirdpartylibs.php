@@ -40,7 +40,7 @@ foreach ($plugintypes as $type => $ignored) {
         $files[$type.'_'.$plugin] = $path;
     }
 }
-
+echo html_writer::start_tag('div', array('class' => 'table-responsive'));
 $table = new html_table();
 $table->head = array(
     get_string('thirdpartylibrary', 'core_admin'), get_string('version'),
@@ -72,5 +72,5 @@ foreach ($files as $component => $xmlpath) {
 }
 
 echo html_writer::table($table);
-
+echo html_writer::end_tag('div');
 echo $OUTPUT->footer();
