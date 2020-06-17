@@ -41,9 +41,9 @@
     margin: 0 !important;
 }
 #page-admin-setting-competencysettings h2{
-    color: #000 !important;
+    color: #fff !important;
 }
-#page-admin-tool-dbtransfer-index h2, #page-admin-tool-xmldb-index h2, #page-admin-tool-phpunit-index .generalbox h2, #page-admin-tool-phpunit-index .generalbox h3, #page-admin-tool-generator-maketestplan h2, #page-admin-tool-generator-maketestcourse h2, #page-admin-tool-behat-index h2, #page-admin-thirdpartylibs h2, #page-admin-purgecaches h2, #page-admin-webservice-testclient h2, #page-admin-tool-spamcleaner-index h2, #page-admin-tool-monitor-managerules h2, #page-admin-report-security-index h2, #page-admin-report-questioninstances-index h2, #page-admin-report-performance-index h2, #page-admin-report-loglive-index h2, #page-admin-report-log-index h2, #page-admin-report-insights-insights h2, #page-admin-report-configlog-index h2, #page-admin-comment-index h2, #page-admin-tool-oauth2-issuers h2, #page-admin-tool-task-scheduledtasks h2, #page-admin-setting-themesettingmoove h2, #page-admin-setting-themesettingclassic h2, #page-admin-setting-themesettingboost h2, #page-admin-theme-index h2, #page-admin-theme-index h3, #page-admin-setting-cachestores h2, #page-admin-setting-cachestores h3, #page-admin-cache-testperformance h2, #page-admin-cache-testperformance h3, #page-admin-cache-admin h2, #page-admin-cache-admin h3, #page-admin-setting-assignfeedback_editpdf h2, #page-admin-setting-assignfeedback_editpdf h3, #page-admin-setting-assignfeedbackplugins h2, #page-admin-setting-assignfeedbackplugins h3, #page-admin-filters h2, #page-admin-webservice-documentation h2, #page-admin-plugins h2, #page-admin-tool-installaddon-index h2, #page-admin-grade-edit-scale-index h2, #page-admin-grade-edit-scale-index h3, #page-backup-restorefile h2, #page-course-management .coursesearchbox h2, #page-course-management .card-header, #page-admin-tool-dataprivacy-datarequests h2, #page-admin-tool-dataprivacy-pluginregistry h2, #page-admin-roles-check h3, #page-cohort-upload h2, #page-cohort-edit h2, #page-admin-user-profile-index h2, #page-admin-user-profile-index h3, #page-admin-user h2, #page-badges-backpacks h2,#page-admin-tool-lpimportcsv-index h2, #page-admin-tool-lpmigrate-frameworks h2, #page-admin-registration-index h2{
+#page-admin-tool-dbtransfer-index h2,#page-badges-index .card-body h2 ,#page-admin-tool-xmldb-index h2, #page-admin-tool-phpunit-index .generalbox h2, #page-admin-tool-phpunit-index .generalbox h3, #page-admin-tool-generator-maketestplan h2, #page-admin-tool-generator-maketestcourse h2, #page-admin-tool-behat-index h2, #page-admin-thirdpartylibs h2, #page-admin-purgecaches h2, #page-admin-webservice-testclient h2, #page-admin-tool-spamcleaner-index h2, #page-admin-tool-monitor-managerules h2, #page-admin-report-security-index h2, #page-admin-report-questioninstances-index h2, #page-admin-report-performance-index h2, #page-admin-report-loglive-index h2, #page-admin-report-log-index h2, #page-admin-report-insights-insights h2, #page-admin-report-configlog-index h2, #page-admin-comment-index h2, #page-admin-tool-oauth2-issuers h2, #page-admin-tool-task-scheduledtasks h2, #page-admin-setting-themesettingmoove h2, #page-admin-setting-themesettingclassic h2, #page-admin-setting-themesettingboost h2, #page-admin-theme-index h2, #page-admin-theme-index h3, #page-admin-setting-cachestores h2, #page-admin-setting-cachestores h3, #page-admin-cache-testperformance h2, #page-admin-cache-testperformance h3, #page-admin-cache-admin h2, #page-admin-cache-admin h3, #page-admin-setting-assignfeedback_editpdf h2, #page-admin-setting-assignfeedback_editpdf h3, #page-admin-setting-assignfeedbackplugins h2, #page-admin-setting-assignfeedbackplugins h3, #page-admin-filters h2, #page-admin-webservice-documentation h2, #page-admin-plugins h2, #page-admin-tool-installaddon-index h2, #page-admin-grade-edit-scale-index h2, #page-admin-grade-edit-scale-index h3, #page-backup-restorefile h2, #page-course-management .coursesearchbox h2, #page-course-management .card-header, #page-admin-tool-dataprivacy-datarequests h2, #page-admin-tool-dataprivacy-pluginregistry h2, #page-admin-roles-check h3, #page-cohort-upload h2, #page-cohort-edit h2, #page-admin-user-profile-index h2, #page-admin-user-profile-index h3, #page-admin-user h2, #page-badges-backpacks h2,#page-admin-tool-lpimportcsv-index h2, #page-admin-tool-lpmigrate-frameworks h2, #page-admin-registration-index h2{
     color: #000 !important;
 }
 #page-admin-roles-assign h2, #page-admin-roles-assign h3,
@@ -62,7 +62,13 @@
     margin-bottom: 50px;
     border-radius: 5px;
 }
-
+#page-badges-index .card-body{
+    background-color: white;
+    padding: 20px 25px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
 #page-admin-setting-analytics .card-body h2,
 #page-admin-course-pending .card-body h2,
 #page-admin-tool-cohortroles-index .card-body h2,
