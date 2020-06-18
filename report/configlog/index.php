@@ -94,7 +94,7 @@ $table = new html_table();
 $table->head  = array($hcolumns['timemodified'], $fullnamedisplay, $hcolumns['plugin'], $hcolumns['name'], $hcolumns['value'], $hcolumns['oldvalue']);
 $table->colclasses = array('leftalign date', 'leftalign name', 'leftalign plugin', 'leftalign setting', 'leftalign newvalue', 'leftalign originalvalue');
 $table->id = 'configchanges';
-$table->attributes['class'] = 'admintable generaltable';
+$table->attributes['class'] = 'admintable generaltable table-responsive';
 $table->data  = array();
 
 if ($sort == 'firstname' or $sort == 'lastname') {

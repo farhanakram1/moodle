@@ -2777,7 +2777,11 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-admin-tool-templatelibrary-index #selectcomponent {
         width: 204px;
     }
-    
+    #page-admin-comment-index #commentstable,
+    #page-admin-report-backups-index .backup-report{
+        display: block;
+        overflow-x: auto;
+    }
     #eodo-signup .form-group {
             width: 90% !important;
             float: left;
