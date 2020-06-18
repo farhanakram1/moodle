@@ -2774,6 +2774,10 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 
 @media screen and (max-width: 575px) {
     
+    #page-admin-tool-templatelibrary-index #selectcomponent {
+        width: 204px;
+    }
+    
     #eodo-signup .form-group {
             width: 90% !important;
             float: left;
