@@ -54,7 +54,7 @@ $stredit = get_string('edit');
 $table = new html_table();
 $table->head  = array($strissue, $strvalue, $strcomments, $stredit);
 $table->colclasses = array('mdl-left issue', 'mdl-left value', 'mdl-left comments', 'mdl-left config');
-$table->attributes = array('class' => 'admintable performancereport generaltable');
+$table->attributes = array('class' => 'admintable performancereport generaltable table-responsive');
 $table->id = 'performanceissuereporttable';
 $table->data  = array();
 
