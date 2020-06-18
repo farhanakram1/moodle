@@ -26,6 +26,13 @@
     margin-top: 30px;
     line-height: 1.5rem;
 } 
+.form-item.row{
+    border-bottom: 1px solid #e3e4e8 !important;
+    margin-bottom: 10px !important;
+}
+.form-item.row:last-child{
+    border-bottom: 0px !important;
+}
 .cust-box-tab .nav-tabs.remove_border{
     border-bottom: 0px !important;
 }
@@ -2481,6 +2488,15 @@ form.logselecform select {
 
 
 @media (max-width: 767px){
+
+    #page-my-index .btn-secondary:hover, #page-my-index .btn-secondary, #region-main .btn-secondary{
+        padding: 5px 12px !important;
+        margin-right: 3px;
+    }
+    #page-admin-setting-coursecolors .admin_colourpicker {
+        transform: scale(.8);
+        transform-origin: top left;
+    }
     #page-grade-report-grader-index .nav-tabs .nav-link{
         margin-bottom: 20px!important;
     }
@@ -2786,6 +2802,11 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 
 @media screen and (max-width: 575px) {
     
+    .admin_colourpicker {
+        transform: scale(.9);
+        transform-origin: top left;
+    }
+
     #page-admin-setting-messageinbound_mailsettings #adminsettings .form-control[size] {
         width: -webkit-fill-available;
     }
@@ -3115,5 +3136,25 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-my-index .btn-secondary{
         font-size: 13px;
         margin-bottom: 11px;
+    }
+    .form-control input,
+    .form-control textarea,
+    .form-control[size]
+    {
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 410px) {
+    .admin_colourpicker {
+        width: 100% !important;
+    }
+    .admin_colourpicker img{
+        width: 100% !important;
+    }
+    .admin_colourpicker .previewcolour,
+    .admin_colourpicker .currentcolour{
+        width: 50% !important;
+        float: left !important;
+        margin-left: 0px !important;
     }
 }
