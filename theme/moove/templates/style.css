@@ -1973,6 +1973,8 @@ hr{
 #page-admin-tool-filetypes-index .card-body,
 #page-admin-environment .card-body,
 #page-admin-tasklogs .card-body,
+#page-admin-tool-usertours-configure .card-body,
+#page-admin-tag-manage .card-body,
 #page-admin-modules 
 {
     background-color: white;
@@ -2006,6 +2008,7 @@ hr{
 #page-admin-tool-filetypes-index .card-body div > h2,
 #page-admin-environment .card-body div > h2,
 #page-admin-tasklogs .card-body div > h2,
+#page-admin-tool-usertours-configure .card-body div > h2,
 #page-grade-export-txt-index .card-body div > h2
 {
     color: black !important;
@@ -2783,14 +2786,23 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 
 @media screen and (max-width: 575px) {
     
+    #page-admin-setting-messageinbound_mailsettings #adminsettings .form-control[size] {
+        width: -webkit-fill-available;
+    }
     #page-admin-tool-templatelibrary-index #selectcomponent,
     #page-admin-report-questioninstances-index #menuqtype {
         width: 204px;
     }
-    #page-admin-setting-systempaths .form-inline input[type=text]{
+    #page-admin-setting-systempaths .form-inline input[type=text],
+    #page-admin-setting-themesettings input#id_s__themelist{
         width: 207px;
     }
+    #page-admin-setting-themesettingboost .admin_colourpicker .colourdialogue {
+        width: 235px;
+    }
     #page-admin-comment-index #commentstable,
+    #page-admin-tag-manage .tag-collections-table,
+    #page-admin-tag-manage .tag-areas-table,
     #page-admin-report-backups-index .backup-report{
         display: block;
         overflow-x: auto;
