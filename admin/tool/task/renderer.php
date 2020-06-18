@@ -60,7 +60,7 @@ class tool_task_renderer extends plugin_renderer_base {
             get_string('default', 'tool_task'),
         ];
 
-        $table->attributes['class'] = 'admintable generaltable';
+        $table->attributes['class'] = 'admintable generaltable table-responsive';
         $table->colclasses = [];
 
         if (!$showloglink) {

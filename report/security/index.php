@@ -103,7 +103,7 @@ if ($issue and ($result = $issue(true))) {
     $table = new html_table();
     $table->head  = array($strissue, $strstatus, $strdesc);
     $table->colclasses = array('leftalign issue', 'leftalign status', 'leftalign desc');
-    $table->attributes = array('class'=>'admintable securityreport generaltable');
+    $table->attributes = array('class'=>'admintable securityreport generaltable table-responsive');
     $table->id = 'securityreporttable';
     $table->data  = array();
 

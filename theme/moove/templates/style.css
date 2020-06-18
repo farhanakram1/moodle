@@ -1968,7 +1968,11 @@ hr{
 #page-mod-assign-overrides #assignoverrides,
 #page-site-index #frontpage-available-course-list,
 #page-site-index #frontpage-category-combo,
-#page-blog-edit form.mform
+#page-blog-edit form.mform,
+#page-admin-tool-monitor-edit form.mform,
+#page-admin-tool-filetypes-index .card-body,
+#page-admin-environment .card-body,
+#page-admin-tasklogs .card-body,
 #page-admin-modules 
 {
     background-color: white;
@@ -1999,6 +2003,9 @@ hr{
 #page-blog-external_blogs .card-body div > h2,
 #page-admin-roles-usersroles .card-body div > h2,
 #page-grade-export-xls-index .card-body div > h2,
+#page-admin-tool-filetypes-index .card-body div > h2,
+#page-admin-environment .card-body div > h2,
+#page-admin-tasklogs .card-body div > h2,
 #page-grade-export-txt-index .card-body div > h2
 {
     color: black !important;
@@ -2076,7 +2083,9 @@ hr{
     border: 1px solid #ececec;
     background-position: 10px;
 }
-
+#page-admin-setting-messageinbound_mailsettings select#id_s__messageinbound_hostssl{
+    width: 100% !important;
+}
 
 
 #page-admin-roles-permissions .capabilitysearchui.form-inline {
@@ -2778,6 +2787,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-admin-report-questioninstances-index #menuqtype {
         width: 204px;
     }
+    #page-admin-setting-systempaths .form-inline input[type=text]{
+        width: 207px;
+    }
     #page-admin-comment-index #commentstable,
     #page-admin-report-backups-index .backup-report{
         display: block;
@@ -2902,6 +2914,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     }
 
     #page-user-edit form.mform, 
+    #page-admin-tool-monitor-edit form.mform, 
     #page-login-change_password form.mform,
     #page-user-language form.mform,
     #page-user-forum form.mform,

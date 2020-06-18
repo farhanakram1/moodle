@@ -260,7 +260,7 @@ function print_user_list($users_rs, $keywords) {
     foreach ($users_rs as $rs){
         foreach ($rs as $user) {
             if (!$count) {
-                echo '<table class="table table-bordered" border="1" width="100%" id="data-grid"><tr><th>&nbsp;</th>
+                echo '<table class="table table-bordered table-responsive" border="1" width="100%" id="data-grid"><tr><th>&nbsp;</th>
                     <th>'.get_string('user', 'admin').'</th><th>'.get_string('spamdesc', 'tool_spamcleaner').'</th>
                     <th>'.get_string('spamoperation', 'tool_spamcleaner').'</th></tr>';
             }
