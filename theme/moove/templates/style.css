@@ -1057,6 +1057,7 @@ body.drawer-close-left {
 #page-cohort-edit .nav-tabs .nav-link.active, 
 #page-cohort-upload .nav-tabs .nav-link.active, 
 #page-admin-roles-allow .nav-tabs .nav-link.active, 
+#page-admin-roles-define .nav-tabs .nav-link.active, 
 #page-admin-roles-manage .nav-tabs .nav-link.active, 
 #page-admin-cohort-index .nav-tabs .nav-link.active, 
 #page-grade-report-user-index .nav-tabs .nav-link.active,
@@ -1111,6 +1112,7 @@ body.drawer-close-left {
 #page-cohort-edit .nav-tabs .nav-link,
 #page-cohort-upload .nav-tabs .nav-link, 
 #page-admin-roles-allow .nav-tabs .nav-link, 
+#page-admin-roles-define .nav-tabs .nav-link, 
 #page-admin-roles-manage .nav-tabs .nav-link, 
 #page-admin-cohort-index .nav-tabs .nav-link,
 #page-grade-report-user-index .nav-tabs .nav-link,
@@ -1191,6 +1193,9 @@ body.drawer-close-left {
 #page-admin-roles-allow .nav-tabs .nav-link:hover,
 #page-admin-roles-allow .nav-tabs .nav-link:active,
 #page-admin-roles-allow .nav-tabs .nav-link:focus,
+#page-admin-roles-define .nav-tabs .nav-link:hover,
+#page-admin-roles-define .nav-tabs .nav-link:active,
+#page-admin-roles-define .nav-tabs .nav-link:focus,
 #page-admin-roles-manage .nav-tabs .nav-link:hover,
 #page-admin-roles-manage .nav-tabs .nav-link:active,
 #page-admin-roles-manage .nav-tabs .nav-link:focus,
@@ -2519,7 +2524,9 @@ form.logselecform select {
 
 
 @media (max-width: 767px){
-
+    #region-main{
+        overflow-x: hidden !important;
+    }
     #page-my-index .btn-secondary:hover, #page-my-index .btn-secondary, #region-main .btn-secondary{
         padding: 5px 12px !important;
         margin-right: 3px;
@@ -2939,6 +2946,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-cohort-edit .nav-tabs .nav-link,
     #page-cohort-upload .nav-tabs .nav-link,
     #page-admin-roles-allow .nav-tabs .nav-link,
+    #page-admin-roles-define .nav-tabs .nav-link,
     #page-admin-roles-manage .nav-tabs .nav-link,
     #page-admin-cohort-index .nav-tabs .nav-link,
     #page-grade-report-user-index .nav-tabs .nav-link,
