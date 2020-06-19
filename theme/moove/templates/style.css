@@ -3157,4 +3157,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         float: left !important;
         margin-left: 0px !important;
     }
+    #page-navbar .breadcrumb{
+        padding-left: 15px !important;
+    }
 }
