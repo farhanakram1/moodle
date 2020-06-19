@@ -132,7 +132,7 @@ class core_message_renderer extends plugin_renderer_base {
 
         // Display users outputs table
         $table = new html_table();
-        $table->attributes['class'] = 'generaltable';
+        $table->attributes['class'] = 'generaltable table-responsive';
         $table->data        = array();
         $table->head        = array('');
 

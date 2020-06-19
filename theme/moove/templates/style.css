@@ -671,14 +671,13 @@ h4.contact_heading {
 }
 #region-main .btn-primary {
     color: #fff!important;
-    background-color: #1177d1!important;
-    border-color: #1177d1!important;
     background-color: #008ec2!important;
     border-radius: 5px!important;
     padding: 8px 30px!important;
     font-size: 16px!important;
+    border:2px solid #fff !important;
     /*border-color: #008ec2!important;*/
-    border-color: #fff !important;
+    /*border-color: #fff !important;*/
 }
 
 span.red {
@@ -1057,6 +1056,7 @@ body.drawer-close-left {
 #page-cohort-edit .nav-tabs .nav-link.active, 
 #page-cohort-upload .nav-tabs .nav-link.active, 
 #page-admin-roles-allow .nav-tabs .nav-link.active, 
+#page-mod-scheduler-view .nav-tabs .nav-link.active, 
 #page-admin-roles-define .nav-tabs .nav-link.active, 
 #page-admin-roles-manage .nav-tabs .nav-link.active, 
 #page-admin-cohort-index .nav-tabs .nav-link.active, 
@@ -1112,6 +1112,7 @@ body.drawer-close-left {
 #page-cohort-edit .nav-tabs .nav-link,
 #page-cohort-upload .nav-tabs .nav-link, 
 #page-admin-roles-allow .nav-tabs .nav-link, 
+#page-mod-scheduler-view .nav-tabs .nav-link, 
 #page-admin-roles-define .nav-tabs .nav-link, 
 #page-admin-roles-manage .nav-tabs .nav-link, 
 #page-admin-cohort-index .nav-tabs .nav-link,
@@ -1143,6 +1144,7 @@ body.drawer-close-left {
     border-top-right-radius: 5px;
     margin-right: 7px;
     position: relative !important;
+    text-decoration: none !important;
 }
 #page-admin-setting-modsettingattendance .nav-tabs .nav-link.active,
 #page-admin-setting-modsettingattendance .nav-tabs .nav-link:hover,
@@ -1193,6 +1195,9 @@ body.drawer-close-left {
 #page-admin-roles-allow .nav-tabs .nav-link:hover,
 #page-admin-roles-allow .nav-tabs .nav-link:active,
 #page-admin-roles-allow .nav-tabs .nav-link:focus,
+#page-mod-scheduler-view .nav-tabs .nav-link:hover,
+#page-mod-scheduler-view .nav-tabs .nav-link:active,
+#page-mod-scheduler-view .nav-tabs .nav-link:focus,
 #page-admin-roles-define .nav-tabs .nav-link:hover,
 #page-admin-roles-define .nav-tabs .nav-link:active,
 #page-admin-roles-define .nav-tabs .nav-link:focus,
@@ -2007,6 +2012,7 @@ hr{
 #page-user-editor form.mform,
 #page-mod-assign-mod form.mform,
 #page-mod-assign-overrideedit form.mform,
+#page-admin-tool-lp-editcompetencyframework form.mform,
 #page-filter-manage .filters-Manage,
 #page-mod-assign-overrides #assignoverrides,
 #page-site-index #frontpage-available-course-list,
@@ -2383,6 +2389,7 @@ hr{
 #page-blog-preferences #fgroup_id_buttonar,
 #page-mod-assign-mod #fgroup_id_buttonar,
 #page-mod-assign-overrideedit #fgroup_id_buttonar,
+#page-admin-tool-lp-editcompetencyframework #fgroup_id_buttonar,
 #page-user-editor #fgroup_id_buttonar{
     margin-top: 10px;
 }
@@ -2524,6 +2531,12 @@ form.logselecform select {
 
 
 @media (max-width: 767px){
+    #id_s_analytics_levelinstitution {
+        width: 100% !important;
+    }
+    #page-admin-tool-capability-index #fitem_id_capability select {
+        min-width: 100% !important;
+    }
     #region-main{
         overflow-x: hidden !important;
     }
@@ -2545,7 +2558,17 @@ form.logselecform select {
     body.drawer-open-left {
         margin-left: 0px !important;
     }
+     #page-admin-tool-dataprivacy-pluginregistry .type-expand h3,
+    #page-admin-tool-dataprivacy-pluginregistry .component-expand h4 {
+        font-size: 17px !important;
+    }
 }
+
+
+
+
+
+
 body.drawer-open-left #nav-drawer-footer {
     display: none;
 }
@@ -2603,8 +2626,21 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #region-main .w-50-s .btn-primary {
         padding: 5px 70px!important;
     }
+     #page-admin-tool-dataprivacy-pluginregistry .type-expand h3,
+    #page-admin-tool-dataprivacy-pluginregistry .component-expand h4 {
+        font-size: 20px !important;
+    }
 }
 @media screen and (max-width: 991px) {
+    .role_Admin.generaltable td {
+        padding: .75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+        width: 100% !important;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }
     #page-grade-edit-scale-edit #id_description_editor {
         width: 100%!important;
     }
@@ -2839,6 +2875,14 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
+    #page-mod-scheduler-view .pagination{
+        width: 100%;
+    }
+    #page-my-index .btn-secondary:hover, #page-my-index .btn-secondary, #region-main .btn-secondary {
+        width: 100%;
+        padding: 5px 7px !important;
+        font-size: 10px !important;
+    }
     #page-navbar .breadcrumb{
         padding-left: 15px !important;
     }
@@ -2946,6 +2990,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-cohort-edit .nav-tabs .nav-link,
     #page-cohort-upload .nav-tabs .nav-link,
     #page-admin-roles-allow .nav-tabs .nav-link,
+    #page-mod-scheduler-view .nav-tabs .nav-link,
     #page-admin-roles-define .nav-tabs .nav-link,
     #page-admin-roles-manage .nav-tabs .nav-link,
     #page-admin-cohort-index .nav-tabs .nav-link,
@@ -3027,6 +3072,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-user-editor form.mform,
     #page-mod-assign-mod form.mform,
     #page-mod-assign-overrideedit form.mform,
+    #page-admin-tool-lp-editcompetencyframework form.mform,
     #page-filter-manage .filters-Manage,
     #page-mod-assign-overrides #assignoverrides,
     #page-site-index #frontpage-available-course-list,
@@ -3064,7 +3110,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         font-size: 20px;
     }
     .pad_logo .menubar {
-        margin-top: -10px;
+        /*margin-top: -10px;*/
     }
     .page-local-pages-about-us-1 .container.about-page-s {
         padding: 20px 25px 20px 40px;
