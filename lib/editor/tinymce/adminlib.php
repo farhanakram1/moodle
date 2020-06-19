@@ -118,7 +118,7 @@ class tiynce_subplugins_settings extends admin_setting {
         $subplugins = core_component::get_plugin_list('tinymce');
 
         $return = $OUTPUT->heading(get_string('subplugintype_tinymce_plural', 'editor_tinymce'), 3, 'main', true);
-        $return .= $OUTPUT->box_start('generalbox tinymcesubplugins');
+        $return .= $OUTPUT->box_start('generalbox tinymcesubplugins table-responsive');
 
         $table = new html_table();
         $table->head  = array($strname, $strbuttons, $strversion, $strenable, $strsettings, $struninstall);

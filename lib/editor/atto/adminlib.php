@@ -200,7 +200,7 @@ class editor_atto_subplugins_setting extends admin_setting {
         $table->head  = array($strname, $strversion, $strtoolbarconfig, $strsettings, $struninstall);
         $table->align = array('left', 'left', 'center', 'center', 'center', 'center');
         $table->data  = array();
-        $table->attributes['class'] = 'admintable generaltable';
+        $table->attributes['class'] = 'admintable generaltable table-responsive';
 
         // Iterate through subplugins.
         foreach ($subplugins as $name => $dir) {
