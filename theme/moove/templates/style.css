@@ -2801,7 +2801,12 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
-    
+    #page-navbar .breadcrumb{
+        padding-left: 15px !important;
+    }
+    .form-item .form-setting .defaultsnext>input {
+        width: 100% !important;
+    }
     .admin_colourpicker {
         transform: scale(.9);
         transform-origin: top left;
@@ -3157,7 +3162,5 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         float: left !important;
         margin-left: 0px !important;
     }
-    #page-navbar .breadcrumb{
-        padding-left: 15px !important;
-    }
+
 }
