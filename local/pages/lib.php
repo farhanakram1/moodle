@@ -149,17 +149,19 @@ function local_pages_extend_navigation(global_navigation $nav) {
     global $CFG, $DB;
     $context = context_system::instance();
     $pluginname = get_string('pluginname', 'local_pages');
-    if (has_capability('local/pages:addpages', $context)) {
-        $mainnode = $nav->add(
-            get_string('pagesplugin', 'local_pages'),
-            new moodle_url($CFG->wwwroot . "/local/pages/pages.php"),
-            navigation_node::TYPE_CONTAINER,
-            'local_pages',
-            'local_pages',
-            new pix_icon('newspaper', $pluginname, 'local_pages')
-        );
-        $mainnode->nodetype = 0;
-        $mainnode->showinflatnavigation = true;
+    if(is_siteadmin()){
+        if (has_capability('local/pages:addpages', $context)) {
+            $mainnode = $nav->add(
+                get_string('pagesplugin', 'local_pages'),
+                new moodle_url($CFG->wwwroot . "/local/pages/pages.php"),
+                navigation_node::TYPE_CONTAINER,
+                'local_pages',
+                'local_pages',
+                new pix_icon('newspaper', $pluginname, 'local_pages')
+            );
+            $mainnode->nodetype = 0;
+            $mainnode->showinflatnavigation = true;
+        }
     }
     $today = date('U');
     $records = $DB->get_records_sql("SELECT * FROM {local_pages} WHERE deleted=0 AND onmenu=1 " .
