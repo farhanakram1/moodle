@@ -53,6 +53,9 @@
 #page-admin-tool-dbtransfer-index h2,#page-badges-index .card-body h2 ,#page-admin-tool-xmldb-index h2, #page-admin-tool-phpunit-index .generalbox h2, #page-admin-tool-phpunit-index .generalbox h3, #page-admin-tool-generator-maketestplan h2, #page-admin-tool-generator-maketestcourse h2, #page-admin-tool-behat-index h2, #page-admin-thirdpartylibs h2, #page-admin-purgecaches h2, #page-admin-webservice-testclient h2, #page-admin-tool-spamcleaner-index h2, #page-admin-tool-monitor-managerules h2, #page-admin-report-security-index h2, #page-admin-report-questioninstances-index h2, #page-admin-report-performance-index h2, #page-admin-report-loglive-index h2, #page-admin-report-log-index h2, #page-admin-report-insights-insights h2, #page-admin-report-configlog-index h2, #page-admin-comment-index h2, #page-admin-tool-oauth2-issuers h2, #page-admin-tool-task-scheduledtasks h2, #page-admin-setting-themesettingmoove h2, #page-admin-setting-themesettingclassic h2, #page-admin-setting-themesettingboost h2, #page-admin-theme-index h2, #page-admin-theme-index h3, #page-admin-setting-cachestores h2, #page-admin-setting-cachestores h3, #page-admin-cache-testperformance h2, #page-admin-cache-testperformance h3, #page-admin-cache-admin h2, #page-admin-cache-admin h3, #page-admin-setting-assignfeedback_editpdf h2, #page-admin-setting-assignfeedback_editpdf h3, #page-admin-setting-assignfeedbackplugins h2, #page-admin-setting-assignfeedbackplugins h3, #page-admin-filters h2, #page-admin-webservice-documentation h2, #page-admin-plugins h2, #page-admin-tool-installaddon-index h2, #page-admin-grade-edit-scale-index h2, #page-admin-grade-edit-scale-index h3, #page-backup-restorefile h2, #page-course-management .coursesearchbox h2, #page-course-management .card-header, #page-admin-tool-dataprivacy-datarequests h2, #page-admin-tool-dataprivacy-pluginregistry h2, #page-admin-roles-check h3, #page-cohort-upload h2, #page-admin-cohort-index h2, #page-cohort-edit h2, #page-admin-user-profile-index h2, #page-admin-user-profile-index h3, #page-admin-user h2, #page-badges-backpacks h2,#page-admin-tool-lpimportcsv-index h2, #page-admin-tool-lpmigrate-frameworks h2, #page-admin-registration-index h2{
     color: #000 !important;
 }
+.registeration_code_info{
+    clear: both;margin-left: 3px;top: 10px;position: relative;
+}
 #page-admin-roles-assign h2, #page-admin-roles-assign h3,
 #page-admin-tool-lp-editplan h2, #page-admin-tool-lp-editplan h3
 {
@@ -756,16 +759,20 @@ span.red {
     display: none !important;
 }
 #eodo-signup #fitem_id_city{
-    width: 35%;
+    width: 55%;
 }
 #eodo-signup input[placeholder]{
     font-size: 12px;
 }
 #eodo-signup  #fitem_id_country{
-    width: 43%;
+    width: 55%;
 }
 #eodo-signup #fitem_id_registrationcode{
-    width: 37%;
+    margin-top: -25px;
+    width: 105%;
+}
+#eodo-signup #fitem_id_registrationcode .form-inline{
+    margin-bottom: 0 !important;
 }
 #eodo-signup #id_submitbutton{
     display:none;
@@ -790,15 +797,16 @@ span.red {
     color: #373a3c !important;
     font-size: 25px !important;
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 50px;
     text-align: left;
-    padding-left: 32px;
-    padding-bottom: 20px;
+    padding-left:0px;
+    padding-bottom: 10px;
 }
+
 #eodo-signup  #fitem_id_passwordpolicyinfo{
     display: none !important; 
 }
-#eodo-signup #id_error {
+#id_error {
 	margin-left: 15px;
 	height: 25px;
 	font-size: 14px;
@@ -1708,7 +1716,18 @@ hr{
     color: white;
     font-size: 25px;
 }
-
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+#page-local-pages-index header#page-header{
+    display:none;
+}
+#page-admin-search .brud_s{
+    display: none;
+}
 .brud_s {
     background-color: #1ea2d4;
     float: right;
@@ -2645,17 +2664,17 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         width: 100%!important;
     }
     #eodo-signup .form-group {
-            width: 50%;
+            width: 50% !important;
             float: left;
             padding: 0 15px;
             margin-bottom: 0 !important;
             margin-right: 1%;
     }
     #eodo-signup #fitem_id_registrationcode {
-            width: 36%;
+            width: 100% !important;
     }
     #eodo-signup #fitem_id_country {
-	width: 33%;
+	width: 55%;
     }
     #eodo-signup #fitem_id_cc_payment {
 	width: 65%;

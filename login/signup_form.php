@@ -83,7 +83,7 @@ class login_signup_form extends moodleform implements renderable, templatable {
 
         $mform->addElement('text', 'registrationcode', get_string('registrationcode'), 'maxlength="120" placeholder="'.get_string('registrationcode').'" ');
         
-        $mform->addElement('html', '<p style="clear: both;margin-left: 20px;">'.get_string('registeration_code_eodo').'</p>');
+        $mform->addElement('html', '<p class="registeration_code_info">'.get_string('registeration_code_eodo').'</p>');
         $mform->addElement('html', '<h4> '.get_string('one_time_payment').' </h4>');
         
         // echo "<pre>";

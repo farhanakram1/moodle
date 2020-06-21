@@ -355,6 +355,9 @@ function theme_moove_delete_menuitems(\flat_navigation $flatnav) {
             $flatnav->remove($item->key, \navigation_node::TYPE_COURSE);
         }
     }
+    
+        $flatnav->remove('mycourses');
+        $flatnav->remove('privatefiles');
 }
 
 /**
@@ -405,8 +408,11 @@ function theme_moove_add_coursesections_to_navigation(\flat_navigation $flatnav)
     if ($mycourses) {
         $flatnav->remove($mycourses->key);
 
-        $flatnav->add($mycourses, 'privatefiles');
+//        $flatnav->add($mycourses, 'privatefiles');
+        $flatnav->remove('privatefiles');
     }
+        $flatnav->remove('mycourses');
+        $flatnav->remove('privatefiles');
 }
 
 /**
