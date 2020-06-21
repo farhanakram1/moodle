@@ -3091,50 +3091,50 @@ class global_navigation extends navigation_node {
                 $mycategory->visible = $coursecat->visible;
 
                 // Add this category to the nav tree.
-                $this->add_category($mycategory, $parent, self::TYPE_MY_CATEGORY);
+//                $this->add_category($mycategory, $parent, self::TYPE_MY_CATEGORY);
             }
         }
 
-        // Go through each course now and add it to the nav block, and the flatnav if applicable.
-        foreach ($courses as $course) {
-            $node = $this->add_course($course, false, self::COURSE_MY);
-            if ($node) {
-                $node->showinflatnavigation = false;
-                // Check if we should also add this to the flat nav as well.
-                if (isset($flatnavcourses[$course->id])) {
-                    $node->showinflatnavigation = true;
-                }
-            }
-        }
-
-        // Go through each course in the flatnav now.
-        foreach ($flatnavcourses as $course) {
-            // Check if we haven't already added it.
-            if (!isset($courses[$course->id])) {
-                // Ok, add it to the flatnav only.
-                $node = $this->add_course($course, false, self::COURSE_MY);
-                $node->display = false;
-                $node->showinflatnavigation = true;
-            }
-        }
+//        // Go through each course now and add it to the nav block, and the flatnav if applicable.
+//        foreach ($courses as $course) {
+//            $node = $this->add_course($course, false, self::COURSE_MY);
+//            if ($node) {
+//                $node->showinflatnavigation = false;
+//                // Check if we should also add this to the flat nav as well.
+//                if (isset($flatnavcourses[$course->id])) {
+//                    $node->showinflatnavigation = true;
+//                }
+//            }
+//        }
+//
+//        // Go through each course in the flatnav now.
+//        foreach ($flatnavcourses as $course) {
+//            // Check if we haven't already added it.
+//            if (!isset($courses[$course->id])) {
+//                // Ok, add it to the flatnav only.
+//                $node = $this->add_course($course, false, self::COURSE_MY);
+//                $node->display = false;
+//                $node->showinflatnavigation = true;
+//            }
+//        }
 
         $showmorelinkinnav = $numtotalcourses > $numshowncourses;
         $showmorelinkinflatnav = $numtotalflatnavcourses > $numshownflatnavcourses;
         // Show a link to the course page if there are more courses the user is enrolled in.
-        if ($showmorelinkinnav || $showmorelinkinflatnav) {
-            // Adding hash to URL so the link is not highlighted in the navigation when clicked.
-            $url = new moodle_url('/my/');
-            $parent = $this->rootnodes['mycourses'];
-            $coursenode = $parent->add(get_string('morenavigationlinks'), $url, self::TYPE_CUSTOM, null, self::COURSE_INDEX_PAGE);
-
-            if ($showmorelinkinnav) {
-                $coursenode->display = true;
-            }
-
-            if ($showmorelinkinflatnav) {
-                $coursenode->showinflatnavigation = true;
-            }
-        }
+//        if ($showmorelinkinnav || $showmorelinkinflatnav) {
+//            // Adding hash to URL so the link is not highlighted in the navigation when clicked.
+//            $url = new moodle_url('/my/');
+//            $parent = $this->rootnodes['mycourses'];
+//            $coursenode = $parent->add(get_string('morenavigationlinks'), $url, self::TYPE_CUSTOM, null, self::COURSE_INDEX_PAGE);
+//
+//            if ($showmorelinkinnav) {
+//                $coursenode->display = true;
+//            }
+//
+//            if ($showmorelinkinflatnav) {
+//                $coursenode->showinflatnavigation = true;
+//            }
+//        }
     }
 }
 
