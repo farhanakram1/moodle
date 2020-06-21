@@ -508,6 +508,11 @@ class mod_scheduler_renderer extends plugin_renderer_base {
                                      array('what' => 'viewbooking', 'appointmentid' => $slot->appointmentid));
                     $button = new single_button($buttonurl, get_string('viewbooking', 'scheduler'));
                     $actions .= $this->render($button);
+                    
+//                    $buttonurl = new moodle_url($slottable->actionurl,
+//                                     array('what' => 'cancelbooking', 'slotid' => $slot->slotid));
+//                    $button = new single_button($buttonurl, get_string('cancelbooking', 'scheduler'));
+//                    $actions .= $this->render($button);
                 }
                 if ($slot->cancancel) {
                     $buttonurl = new moodle_url($slottable->actionurl,
@@ -621,8 +626,9 @@ class mod_scheduler_renderer extends plugin_renderer_base {
 
         $table = new html_table();
         $table->head  = array( get_string('date', 'scheduler'), get_string('start', 'scheduler'),
-                        get_string('end', 'scheduler'), get_string('location', 'scheduler'),
-                        get_string('comments', 'scheduler'), s($booker->scheduler->get_teacher_name()),
+                        get_string('end', 'scheduler'), 
+//                        get_string('location', 'scheduler'),
+//                        get_string('comments', 'scheduler'), s($booker->scheduler->get_teacher_name()),
                         get_string('groupsession', 'scheduler'), '');
         $table->align = array ('left', 'left', 'left', 'left', 'left', 'left', 'left', 'left');
         $table->id = 'slotbookertable';
@@ -662,10 +668,10 @@ class mod_scheduler_renderer extends plugin_renderer_base {
             $rowdata[] = $starttimestr;
             $rowdata[] = $endtimestr;
 
-            $rowdata[] = format_string($slot->location);
+//            $rowdata[] = format_string($slot->location);
 
-            $rowdata[] = $this->format_notes($slot->notes, $slot->notesformat, $booker->scheduler->get_context(),
-                                             'slotnote', $slot->slotid);
+//            $rowdata[] = $this->format_notes($slot->notes, $slot->notesformat, $booker->scheduler->get_context(),
+//                                             'slotnote', $slot->slotid);
 
             $rowdata[] = $this->user_profile_link($booker->scheduler, $slot->teacher);
 

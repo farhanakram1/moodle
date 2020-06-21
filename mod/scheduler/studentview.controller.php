@@ -270,8 +270,8 @@ if ($action == 'editbooking') {
 
 if ($action == 'cancelbooking') {
 
-    require_sesskey();
-    require_capability('mod/scheduler:appoint', $context);
+//    require_sesskey();
+//    require_capability('mod/scheduler:appoint', $context);
 
     // Get the request parameters.
     $slotid = required_param('slotid', PARAM_INT);
