@@ -669,7 +669,7 @@ class mod_assign_renderer extends plugin_renderer_base {
             }
             $o .= $this->output->box_end();
         }
-        $o .= $this->output->box_start('boxaligncenter submissionsummarytable');
+        $o .= $this->output->box_start('boxalignce  nter submissionsummarytable table-responsive');
 
         $t = new html_table();
 

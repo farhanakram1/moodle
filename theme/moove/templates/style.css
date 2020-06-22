@@ -3300,5 +3300,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         float: left !important;
         margin-left: 0px !important;
     }
-
+    .path-mod-assign div.fileuploadsubmission {
+        min-width: 0px !important;
+    }
 }
