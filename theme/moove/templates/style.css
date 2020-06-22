@@ -2554,9 +2554,6 @@ form.logselecform select {
 
 
 @media (max-width: 767px){
-    .user-t-pro .node_category li.editprofile a {
-        padding: 6px 6px!important;
-    }
     #id_s_analytics_levelinstitution {
         width: 100% !important;
     }
@@ -2662,6 +2659,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     }
 }
 @media screen and (max-width: 991px) {
+    .user-t-pro .node_category li.editprofile a {
+        padding: 6px 6px!important;
+    }
     .role_Admin.generaltable td {
         padding: .75rem;
         vertical-align: top;
