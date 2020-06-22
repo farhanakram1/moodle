@@ -79,6 +79,11 @@
     margin-top: 30px;
     margin-bottom: 20px;
 }
+.title_examorganizer{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 #page-admin-setting-analytics .card-body h2,
 #page-admin-course-pending .card-body h2,
 #page-admin-tool-cohortroles-index .card-body h2,
@@ -2615,6 +2620,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     margin-bottom: 20px!important; 
 }    
 @media (min-width: 768px){
+    .title_examorganizer{
+        font-size: 14px;
+    }
     #page-course-index-category #region-main-box {
         padding-left: 0 !important;
         padding-right: 0 !important;
@@ -3271,6 +3279,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         width: 50% !important;
         float: left !important;
         margin-left: 0px !important;
+    }
+    .title_examorganizer{
+        font-size: 14px;
     }
 
 }
