@@ -2624,11 +2624,15 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         padding-right: 0 !important;
     }
 
-    #page-course-index-category #region-main  .card > .card-body {
+    #page-course-index-category #region-main  .card > .card-body,
+    #page-course-search #region-main  .card > .card-body {
         background: #FFF;
         margin-top: 50px;
         margin-bottom: 50px;
         border-radius: 5px;
+    }
+    #page-course-search #region-main  .card > .card-body h2{
+        color: #018ec3;
     }
     body#page-course-switchrole{
         margin-left: 70px;
