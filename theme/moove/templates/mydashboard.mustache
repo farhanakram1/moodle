@@ -161,12 +161,12 @@
                                             <h1 class="text-left m-0 mb-3 px-md-3">{{{ examorganizer }}}</h1>
 
                                             {{# get_courses_examorganizer}}
-                                            <div class="card" id="card1">
-                                                <div class="content">
-                                                    <div class="col-md-3 col-sm-6 courseimage">
-                                                        {{{ courseimage }}}
-                                                        <h4 class="title_examorganizer">{{{ fullname }}}</h4>
-                                                    </div>
+                                            <div class="card-body row course-m-box">
+                                                <div class="col-md-3 col-sm-6 courseimage">
+                                                    {{{ courseimage }}}
+                                                </div>
+                                                <div class="media-body col-md-9 col-sm-6 course_Text">
+                                                    <a href="{{ link }}"><h5 class="mt-4">{{{ fullname }}}</h5></a>
                                                 </div>
                                             </div>
                                              {{/ get_courses_examorganizer}}
