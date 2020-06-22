@@ -87,23 +87,23 @@
                 <section id="region-main" class="cust-box-tab" style="overflow-x: hidden;">    
                     <div class="card mymaincontent">
                     <div class="row">
-                    <div class="col-md-12 px-5">
+                    <div class="col-md-12">
                           <ul class="row nav nav-tabs remove_border {{#is_siteadmin}}remove_border{{/is_siteadmin}}" id="myTab" role="tablist">
                                             {{# hascourses }}
                                                 <li class="nav-item col-md-3 p-0">
-                                                    <a class="nav-item nav-link py-2 active" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="true">{{{ overview }}}</a>
+                                                    <a class="nav-item nav-link py-2 active tab_mb" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="true">{{{ overview }}}</a>
                                                 </li>
                                             {{/ hascourses }}
 
                                             {{# courses_examorganizer }}
                                            <li class="nav-item col-md-3 p-0">
-                                                <a class="nav-item nav-link py-2" id="nav-examorganizer-tab" data-toggle="tab" href="#nav-examorganizer" role="tab" aria-controls="nav-examorganizer" aria-selected="false">{{{ examorganizer }}}</a>
+                                                <a class="nav-item nav-link py-2 tab_mb" id="nav-examorganizer-tab" data-toggle="tab" href="#nav-examorganizer" role="tab" aria-controls="nav-examorganizer" aria-selected="false">{{{ examorganizer }}}</a>
                                             </li>
                                             {{/ courses_examorganizer }}
                                             
                                             {{# hascourses }}
                                             <li class="nav-item col-md-3 p-0">
-                                                <a class="nav-item nav-link py-2" id="nav-bookcourses-tab" data-toggle="tab" href="#nav-bookcourses" role="tab" aria-controls="nav-bookcourses" aria-selected="false">{{{ bookcourses }}}</a>
+                                                <a class="nav-item nav-link py-2 tab_mb" id="nav-bookcourses-tab" data-toggle="tab" href="#nav-bookcourses" role="tab" aria-controls="nav-bookcourses" aria-selected="false">{{{ bookcourses }}}</a>
                                             </li>
                                             {{/ hascourses }}
                                         </ul>
@@ -114,7 +114,7 @@
                                         <div class="tab-content" id="mypublic-tab">
                                             {{# hascourses }}
                                                 <div class="tab-pane fade show active" id="nav-overview" role="tabpanel" aria-labelledby="courses-tab">
-                                                    <h1 class="text-left m-0 mb-3 px-md-3">{{{ overview }}}</h1>
+                                                    <h1 class="text-left m-0 mb-3">{{{ overview }}}</h1>
                                                     {{# courses }}
                                                         <div id="course-{{ id }}" class="card mt-1 course-m-box">
                                                             <div class="card-body row">
@@ -158,7 +158,7 @@
                                             
                                             {{# courses_examorganizer }}
                                             <div class="tab-pane fade" id="nav-examorganizer" role="tabpanel" aria-labelledby="nav-examorganizer-tab">
-                                            <h1 class="text-left m-0 mb-3 px-md-3">{{{ examorganizer }}}</h1>
+                                            <h1 class="text-left m-0 mb-3">{{{ examorganizer }}}</h1>
 
                                             {{# get_courses_examorganizer}}
                                             <div class="card-body row course-m-box">
@@ -167,6 +167,7 @@
                                                 </div>
                                                 <div class="media-body col-md-9 col-sm-6 course_Text">
                                                     <a href="{{ link }}"><h5 class="mt-4">{{{ fullname }}}</h5></a>
+                                                     {{# startdate }}<small>{{#str}}startedon, theme_moove{{/str}}: {{#userdate}} {{startdate}}, %A, %d %B %Y {{/userdate}}</small>{{/ startdate }}
                                                 </div>
                                             </div>
                                              {{/ get_courses_examorganizer}}
@@ -175,7 +176,7 @@
                                             {{!  ExamOrganizer Tab }}
 
                                             <div class="tab-pane fade" id="nav-bookcourses" role="tabpanel" aria-labelledby="nav-bookcourses-tab">
-                                             <h1 class="text-left m-0 mb-3 px-md-3">{{{ bookcourses }}}</h1>
+                                             <h1 class="text-left m-0 mb-3">{{{ bookcourses }}}</h1>
                                             </div>
 
                                         </div>
