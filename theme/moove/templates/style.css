@@ -3278,7 +3278,8 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     .brud_s {
         background-color: #75ebf7;
         float: right;
-        padding: 5px 6px;
+        /*padding: 5px 6px;*/
+        padding: 5px 14px;
         font-size: 9px;
         margin-bottom: 20px;
         margin-top: -10px;
