@@ -213,6 +213,7 @@
 #page-admin-user-profile-index .card-body,
 #page-admin-user-editadvanced .card-body, 
 #page-admin-user-user_bulk .card-body, 
+#page-admin-tool-monitor-index .card-body, 
 #page-admin-user .card-body, 
 #page-admin-message .card-body, 
 #page-admin-tool-langimport-index .langimport, 
@@ -583,6 +584,11 @@ body {
 #region-main-box .card{
     background-color: transparent !important;
     border: 0!important;
+}
+#page-local-pages-pages .card .card-body h1{
+    color: #FFF;
+    margin-bottom: 50px !important;
+    margin-top: 0px !important;
 }
 #region-main-box .card .card-body h1{
     color: #FFF;
@@ -1486,7 +1492,7 @@ header#page-header#page-header .pt-3{
 }
 .eodo-course .card-title a{
     text-decoration: none;
-    color:#FFF !important;
+    color:#018ec3 !important;
 }
 #page-grade-report-user-index #region-main > div > .card-body,
 #page-grade-report-singleview-index #region-main > div > .card-body,
@@ -2044,6 +2050,7 @@ hr{
 #page-admin-tasklogs .card-body,
 #page-admin-tool-usertours-configure .card-body,
 #page-admin-tag-manage .card-body,
+#page-user-files .card-body,
 #page-admin-modules 
 {
     background-color: white;
@@ -2914,6 +2921,19 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
+    .eodo-course .card-title a{
+        color:white !important;
+    }
+    .custompages-list-element .custompages_submenu h4 {
+        background: #f1f1f1;
+        padding: 5px;
+        margin: -5px -5px -1px -20px;
+    }
+    .custompages-list-element .custompages-add {
+        background: #f1f1f1;
+        padding: 5px;
+        margin: -6px -5px -1px -6px;
+    }
     #page-user-profile #region-main-box{
         padding: 0px !important;
     }
@@ -3317,5 +3337,4 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     .path-mod-assign div.fileuploadsubmission {
         min-width: 0px !important;
     }
-
 }
