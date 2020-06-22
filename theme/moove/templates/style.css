@@ -3214,7 +3214,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     }
     #region-main .card-body {
         /*padding: 15px 15px !important;*/
-        padding: 15px 0px !important;
+        padding: 15px 5px !important;
     }
     #page.container-fluid {
         padding: 1rem!important;
