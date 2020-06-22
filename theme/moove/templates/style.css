@@ -2921,6 +2921,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
+    .eodo-course .card-title a{
+        color:white !important;
+    }
     .custompages-list-element .custompages_submenu h4 {
         background: #f1f1f1;
         padding: 5px;
