@@ -2902,6 +2902,15 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
+    #page-user-profile #region-main-box{
+        padding: 0px !important;
+    }
+    #page-user-profile .nav-tabs .nav-link{
+        border: 1px solid #cdd2d8 !important;  
+    }
+    #page-user-profile .nav-tabs .nav-link.active{
+        border: 1px solid white !important;
+    }
     #page-mod-scheduler-view .pagination{
         width: 100%;
     }
@@ -3204,7 +3213,8 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         margin-top: 0px!important;
     }
     #region-main .card-body {
-        padding: 15px 15px !important;
+        /*padding: 15px 15px !important;*/
+        padding: 15px 0px !important;
     }
     #page.container-fluid {
         padding: 1rem!important;
