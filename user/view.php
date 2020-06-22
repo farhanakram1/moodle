@@ -177,7 +177,7 @@ if ($node = $PAGE->settingsnav->get('courseadmin')) {
 
 echo $OUTPUT->header();
 
-echo '<div class="userprofile">';
+echo '<div class="userprofile user-t-pro">';
 $headerinfo = array('heading' => fullname($user), 'user' => $user, 'usercontext' => $usercontext);
 echo $OUTPUT->context_header($headerinfo, 2);
 
