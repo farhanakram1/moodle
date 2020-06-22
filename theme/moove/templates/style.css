@@ -584,6 +584,11 @@ body {
     background-color: transparent !important;
     border: 0!important;
 }
+#page-local-pages-pages .card .card-body h1{
+    color: #FFF;
+    margin-bottom: 100px;
+    margin-top: 0px !important;
+}
 #region-main-box .card .card-body h1{
     color: #FFF;
     margin-bottom: 100px;
@@ -2915,6 +2920,16 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
+    .custompages-list-element .custompages_submenu h4 {
+        background: #f1f1f1;
+        padding: 5px;
+        margin: -5px -5px -1px -20px;
+    }
+    .custompages-list-element .custompages-add {
+        background: #f1f1f1;
+        padding: 5px;
+        margin: -6px -5px -1px -6px;
+    }
     #page-user-profile #region-main-box{
         padding: 0px !important;
     }
@@ -3318,5 +3333,4 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     .path-mod-assign div.fileuploadsubmission {
         min-width: 0px !important;
     }
-
 }
