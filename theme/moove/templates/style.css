@@ -2908,6 +2908,16 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-user-profile .nav-tabs .nav-link{
         border: 1px solid #cdd2d8 !important;  
     }
+    #page-user-profile .nav-tabs .nav-item{
+        margin-bottom: -30px !important;
+    }
+    #page-user-profile .cust-tabs-s .nav-tabs .nav-link.active::after{
+        border-top-color: #ffffff;
+    }
+    .course_Text h5 {
+        padding-top: 10px;
+        font-size: 18px;
+    }
     #page-user-profile .nav-tabs .nav-link.active{
         border: 1px solid white !important;
     }
