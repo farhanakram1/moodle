@@ -28,7 +28,7 @@ require_once $CFG->libdir.'/gradelib.php';
 require_once $CFG->dirroot.'/grade/lib.php';
 require_once $CFG->dirroot.'/grade/report/overview/lib.php';
 
-global $DB;
+global $DB,$USER;
 // Get the profile userid.
 $userid = optional_param('id', $USER->id, PARAM_INT);
 $user = $DB->get_record('user', ['id' => $userid], '*', MUST_EXIST);
@@ -101,8 +101,27 @@ $themesettings = new \theme_moove\util\theme_settings();
 
 $templatecontext = array_merge($templatecontext, $themesettings->footer_items());
 
+$roleassignments = $DB->get_record_sql('SELECT roleid FROM {role_assignments} WHERE userid=? ', array(intval($USER->id)));
+$show_student = false;
+foreach ($roleassignments as $roleassignment){
+   if($roleassignment > 4){
+       $show_student = true;
+       $user_info_field = $DB->get_record_sql("SELECT * FROM {user_info_field} WHERE shortname='registrationcode' LIMIT 1");
+       $user_info_data = $DB->get_record_sql("SELECT * FROM {user_info_data} WHERE userid=? and fieldid=?  LIMIT 1", array(intval($USER->id), intval($user_info_field->id)));
+       $user_short_code = strtolower($user_info_data->data);
+       $user_short_codes = explode("\r\n",$user_short_code);
+       foreach ($user_short_codes as $user_short_code){  
+            $category = $DB->get_record_sql("SELECT * FROM {course_categories} WHERE idnumber='?' LIMIT 1",array($user_short_code));
+            echo $category->name;
+       }
+   }
+}
+
 $usercourses = \theme_moove\util\extras::user_courses_with_progress($user);
 $templatecontext['hascourses'] = (count($usercourses)) ? true : false;
+if($templatecontext['hascourses']){
+    
+}
 $templatecontext['courses'] = array_values($usercourses);
 
 $templatecontext['firstname'] = $user->firstname;
