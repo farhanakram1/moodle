@@ -1613,7 +1613,8 @@ header#page-header#page-header .pt-3{
 #page-admin-search .tab-content .list-unstyled{
     padding: 20px !important;
 }
-#page-admin-search .tab-content .setting_Links h4 a{
+#page-admin-search .tab-content .setting_Links h4 a,
+#page-course-admin .tab-content .setting_Links h4 a{
     font-size: 21px!important;
     color: #008ec2 !important;
     display: inline-block;
@@ -1624,14 +1625,22 @@ hr{
     margin-bottom: 0rem !important;
     border: none !important;
 }
-#page-admin-search .tab-content .setting_Links h4 > a:hover{
+#page-admin-search .tab-content .setting_Links h4 > a:hover,
+#page-course-admin .tab-content .setting_Links h4 > a:hover{
     color: #000!important;
     text-decoration: none;
     /*border-bottom: 2px solid #000!important;*/
     /*padding-left: 0px;*/
 }
-
+#page-course-admin .tab-content .setting_Links h4 > a{
+    text-decoration: none !important;
+}
+#page-course-admin .tab-content .setting_Links h4,
+#page-course-admin .tab-content .setting_Links ul li{
+    margin-top: 10px !important;
+}
 #page-admin-search .tab-content .setting_Links ul li > a,
+#page-course-admin .tab-content .setting_Links ul li > a,
 #page-my-index .cust-tabs-s .my_block ul > li > div > a,
 #page-my-index .cust-tabs-s .my_block .footer a
 {
@@ -1641,13 +1650,15 @@ hr{
     font-size: 15px;
 }
 #page-admin-search .tab-content .setting_Links ul li > a:hover,
+#page-course-admin .tab-content .setting_Links ul li > a:hover,
 #page-my-index .cust-tabs-s .my_block ul > li > div > a:hover,
 #page-my-index .cust-tabs-s .my_block .footer a:hover
 {
     color: #000!important;
     border-bottom: 1px solid #000!important;
 }
-#page-admin-search .tab-content .setting_Links ul li:before {
+#page-admin-search .tab-content .setting_Links ul li:before,
+#page-course-admin .tab-content .setting_Links ul li:before {
     content: "\2713";
     color: #000;
     display: inline-block;
