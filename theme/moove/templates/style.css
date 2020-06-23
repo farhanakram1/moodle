@@ -2195,6 +2195,7 @@ hr{
 #page-enrol-otherusers .card-body,
 #page-group-grouping .card-body,
 #page-course-reset .card-body,
+#page-enrol-manual-manage .card-body,
 #page-admin-modules 
 {
     background-color: white;
@@ -3122,10 +3123,12 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
-    #page-admin-roles-assign .container {
+    #page-admin-roles-assign .container,
+    #page-enrol-manual-manage .container{
         max-width: 98% !important;
     }
-    #page-admin-roles-assign form > div {
+    #page-admin-roles-assign form > div,
+    #page-enrol-manual-manage form > div {
         overflow: scroll !important;
     }
     .eodo-course .card-title a{
