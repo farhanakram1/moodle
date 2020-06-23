@@ -2196,6 +2196,9 @@ hr{
 #page-group-grouping .card-body,
 #page-course-reset .card-body,
 #page-enrol-manual-manage .card-body,
+#page-group-autogroup .card-body,
+#page-group-group .card-body,
+#page-group-import .card-body,
 #page-admin-modules 
 {
     background-color: white;
