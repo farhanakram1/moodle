@@ -2158,6 +2158,7 @@ hr{
 #page-group-index .card-body,
 #page-group-overview .card-body,
 #page-group-groupings .card-body,
+#page-question-type-multichoice .card-body,
 #page-question-export .card-body,
 #page-question-import .card-body,
 #page-question-category .card-body,
@@ -3464,7 +3465,8 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         font-size: 28px!important;
     }
     #region-main .btn-primary {
-        padding: 7px 25px!important;
+        /*padding: 7px 25px!important;*/
+        padding: 7px 7px!important;
         font-size: 11px!important;
     }
     .page-local-pages-about-us-1 #page.container-fluid {
