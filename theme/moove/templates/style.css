@@ -30,6 +30,9 @@
     border-bottom: 1px solid #e3e4e8 !important;
     margin-bottom: 10px !important;
 }
+#participantsform .no-overflow {
+    overflow: auto !important;
+}
 .form-item.row:last-child{
     border-bottom: 0px !important;
 }
@@ -1100,6 +1103,7 @@ body.drawer-close-left {
 #page-grade-import-xml-index .nav-tabs .nav-link.active,
 #page-grade-export-ods-index .nav-tabs .nav-link.active,
 #page-grade-export-xls-index .nav-tabs .nav-link.active,
+#page-group-index .nav-tabs .nav-link.active,
 #page-grade-export-xml-index .nav-tabs .nav-link.active,
 #page-course-admin .nav-tabs .nav-link.active,
 #page-grade-export-txt-index .nav-tabs .nav-link.active
@@ -1145,6 +1149,7 @@ body.drawer-close-left {
 #page-grade-import-xml-index .nav-tabs .nav-link,
 #page-grade-export-ods-index .nav-tabs .nav-link,
 #page-grade-export-xls-index .nav-tabs .nav-link,
+#page-group-index .nav-tabs .nav-link,
 #page-grade-export-xml-index .nav-tabs .nav-link,
 #page-course-admin .nav-tabs .nav-link,
 #page-grade-export-txt-index .nav-tabs .nav-link
@@ -1191,6 +1196,9 @@ body.drawer-close-left {
 #page-grade-export-xls-index .nav-tabs .nav-link:hover,
 #page-grade-export-xls-index .nav-tabs .nav-link:active,
 #page-grade-export-xls-index .nav-tabs .nav-link:focus,
+#page-group-index .nav-tabs .nav-link:hover,
+#page-group-index .nav-tabs .nav-link:active,
+#page-group-index .nav-tabs .nav-link:focus,
 #page-grade-export-xml-index .nav-tabs .nav-link:hover,
 #page-grade-export-xml-index .nav-tabs .nav-link:active,
 #page-grade-export-xml-index .nav-tabs .nav-link:focus,
@@ -2068,6 +2076,7 @@ hr{
 #page-admin-tool-usertours-configure .card-body,
 #page-admin-tag-manage .card-body,
 #page-user-files .card-body,
+#page-group-index .card-body,
 #page-admin-modules 
 {
     background-color: white;
@@ -3109,6 +3118,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-grade-import-xml-index .nav-tabs .nav-link,
     #page-grade-export-ods-index .nav-tabs .nav-link,
     #page-grade-export-xls-index .nav-tabs .nav-link,
+    #page-group-index .nav-tabs .nav-link,
     #page-grade-export-xml-index .nav-tabs .nav-link,
     #page-grade-export-txt-index .nav-tabs .nav-link
     {
