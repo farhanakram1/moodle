@@ -10,6 +10,9 @@
     border-color: #cfd5da00!important;
     color: #f7f7d8 !important;
 }
+.breadcrumb-item+.breadcrumb-item::before{
+    color: white !important;
+}
 .brud_s .breadcrumb li::after, .brud_s .breadcrumb li>*::after{
     display:none!important;
 }
