@@ -2139,6 +2139,7 @@ hr{
 #page-group-overview .card-body,
 #page-group-groupings .card-body,
 #page-course-completion .card-body,
+#page-course-bulkcompletion .card-body,
 #page-enrol-otherusers .card-body,
 #page-admin-modules 
 {
@@ -3141,10 +3142,10 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         overflow-x: auto;
     }
     #eodo-signup .form-group {
-            width: 90% !important;
-            float: left;
-            padding: 0 15px;
-            margin-bottom: 0 !important;
+        width: 90% !important;
+        float: left;
+        padding: 0 15px;
+        margin-bottom: 0 !important;
     }
     .pagination-sm .page-link {
         padding: .25rem 4px!important;
