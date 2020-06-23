@@ -8,6 +8,7 @@
     background-color: #ced4da00!important;
     padding: 0 !important;
     border-color: #cfd5da00!important;
+    color: #f7f7d8 !important;
 }
 .brud_s .breadcrumb li::after, .brud_s .breadcrumb li>*::after{
     display:none!important;

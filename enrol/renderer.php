@@ -658,7 +658,7 @@ class course_enrolment_other_users_table extends course_enrolment_table {
      */
     public function __construct(course_enrolment_manager $manager) {
         parent::__construct($manager);
-        $this->attributes = array('class'=>'userenrolment otheruserenrolment');
+        $this->attributes = array('class'=>'userenrolment otheruserenrolment table-responsive');
     }
 
     /**
