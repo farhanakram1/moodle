@@ -1100,6 +1100,7 @@ body.drawer-close-left {
 #page-grade-export-ods-index .nav-tabs .nav-link.active,
 #page-grade-export-xls-index .nav-tabs .nav-link.active,
 #page-grade-export-xml-index .nav-tabs .nav-link.active,
+#page-course-admin .nav-tabs .nav-link.active,
 #page-grade-export-txt-index .nav-tabs .nav-link.active
 {
 
@@ -1144,6 +1145,7 @@ body.drawer-close-left {
 #page-grade-export-ods-index .nav-tabs .nav-link,
 #page-grade-export-xls-index .nav-tabs .nav-link,
 #page-grade-export-xml-index .nav-tabs .nav-link,
+#page-course-admin .nav-tabs .nav-link,
 #page-grade-export-txt-index .nav-tabs .nav-link
 {
     border: 1px solid transparent;
@@ -1182,6 +1184,9 @@ body.drawer-close-left {
 #page-grade-export-txt-index .nav-tabs .nav-link:hover,
 #page-grade-export-txt-index .nav-tabs .nav-link:active,
 #page-grade-export-txt-index .nav-tabs .nav-link:focus,
+#page-course-admin .nav-tabs .nav-link:hover,
+#page-course-admin .nav-tabs .nav-link:active,
+#page-course-admin .nav-tabs .nav-link:focus,
 #page-grade-export-xls-index .nav-tabs .nav-link:hover,
 #page-grade-export-xls-index .nav-tabs .nav-link:active,
 #page-grade-export-xls-index .nav-tabs .nav-link:focus,
