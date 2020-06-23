@@ -20,7 +20,7 @@
 }
   
 #page-admin-tool-dataprivacy-createdatarequest h2, #page-admin-roles-check h3 label, .pagelayout-admin .card-body div > h3, .pagelayout-admin .card-body div > h2 {
-    color: white !important;
+    color: black !important;
 }
 .singlebutton{
     margin-top: 30px;
@@ -79,6 +79,7 @@
     margin-top: 30px;
     margin-bottom: 20px;
 }
+
 #page-admin-setting-analytics .card-body h2,
 #page-admin-course-pending .card-body h2,
 #page-admin-tool-cohortroles-index .card-body h2,
