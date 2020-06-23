@@ -1104,6 +1104,8 @@ body.drawer-close-left {
 #page-grade-export-ods-index .nav-tabs .nav-link.active,
 #page-grade-export-xls-index .nav-tabs .nav-link.active,
 #page-group-index .nav-tabs .nav-link.active,
+#page-group-overview .nav-tabs .nav-link.active,
+#page-group-groupings .nav-tabs .nav-link.active,
 #page-grade-export-xml-index .nav-tabs .nav-link.active,
 #page-course-admin .nav-tabs .nav-link.active,
 #page-grade-export-txt-index .nav-tabs .nav-link.active
@@ -1150,6 +1152,8 @@ body.drawer-close-left {
 #page-grade-export-ods-index .nav-tabs .nav-link,
 #page-grade-export-xls-index .nav-tabs .nav-link,
 #page-group-index .nav-tabs .nav-link,
+#page-group-overview .nav-tabs .nav-link,
+#page-group-groupings .nav-tabs .nav-link,
 #page-grade-export-xml-index .nav-tabs .nav-link,
 #page-course-admin .nav-tabs .nav-link,
 #page-grade-export-txt-index .nav-tabs .nav-link
@@ -1199,6 +1203,12 @@ body.drawer-close-left {
 #page-group-index .nav-tabs .nav-link:hover,
 #page-group-index .nav-tabs .nav-link:active,
 #page-group-index .nav-tabs .nav-link:focus,
+#page-group-overview .nav-tabs .nav-link:hover,
+#page-group-overview .nav-tabs .nav-link:active,
+#page-group-overview .nav-tabs .nav-link:focus,
+#page-group-groupings .nav-tabs .nav-link:hover,
+#page-group-groupings .nav-tabs .nav-link:active,
+#page-group-groupings .nav-tabs .nav-link:focus,
 #page-grade-export-xml-index .nav-tabs .nav-link:hover,
 #page-grade-export-xml-index .nav-tabs .nav-link:active,
 #page-grade-export-xml-index .nav-tabs .nav-link:focus,
@@ -2077,6 +2087,8 @@ hr{
 #page-admin-tag-manage .card-body,
 #page-user-files .card-body,
 #page-group-index .card-body,
+#page-group-overview .card-body,
+#page-group-groupings .card-body,
 #page-admin-modules 
 {
     background-color: white;
@@ -3119,6 +3131,8 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-grade-export-ods-index .nav-tabs .nav-link,
     #page-grade-export-xls-index .nav-tabs .nav-link,
     #page-group-index .nav-tabs .nav-link,
+    #page-group-overview .nav-tabs .nav-link,
+    #page-group-groupings .nav-tabs .nav-link,
     #page-grade-export-xml-index .nav-tabs .nav-link,
     #page-grade-export-txt-index .nav-tabs .nav-link
     {
