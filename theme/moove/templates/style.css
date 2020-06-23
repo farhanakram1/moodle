@@ -10,11 +10,11 @@
     border-color: #cfd5da00!important;
     color: #fbfefd !important;
 }
-.context-header-settings-menu .dropdown-toggle>.icon, 
+/*.context-header-settings-menu .dropdown-toggle>.icon, 
 #region-main-settings-menu .dropdown-toggle>.icon,
 .dropdown-toggle::after{
     color: white !important;
-}
+}*/
 .breadcrumb-item+.breadcrumb-item::before{
     color: white !important;
 }
