@@ -8,7 +8,7 @@
     background-color: #ced4da00!important;
     padding: 0 !important;
     border-color: #cfd5da00!important;
-    color: #f7f7d8 !important;
+    color: #fbfefd !important;
 }
 .breadcrumb-item+.breadcrumb-item::before{
     color: white !important;
@@ -2745,7 +2745,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 991px) {
-    #page-admin-setting-modsettingattendance .nav-tabs .nav-link,
+#page-admin-setting-modsettingattendance .nav-tabs .nav-link,
 #page-admin-modules .nav-tabs .nav-link,
 .cust-tabs-s .nav-tabs .nav-link,
 #page-mod-lesson-report .nav-tabs .nav-link,
