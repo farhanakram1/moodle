@@ -29,7 +29,8 @@
 }
 
 #page-admin-tool-dataprivacy-createdatarequest h2, #page-admin-roles-check h3 label, .pagelayout-admin .card-body div > h3, .pagelayout-admin .card-body div > h2 {
-    color: black !important;
+    /*color: black !important;*/
+    color: #008ec2 !important;
 }
 .singlebutton{
     margin-top: 30px;
@@ -243,6 +244,7 @@
 #page-admin-setting-local_discounts  .card-body form#adminsettings,
 #page-course-management .card-body, #page-badges-newbadge .card-body,
 #page-mod-attendance-view .card-body,
+#page-admin-setting-badgesettings .card-body,
 #page-admin-qtypes .no-overflow,
 #page-admin-qbehaviours .no-overflow,
 #page-admin-mod-glossary-formats .card-body{
