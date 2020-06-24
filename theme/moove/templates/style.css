@@ -234,8 +234,10 @@
 #page-h5p-libraries .generalbox,
 #page-h5p-libraries form, 
 #page-badges-backpacks .card-body div,
-.pagelayout-admin  .card-body [data-region="managetemplates"],
-.pagelayout-admin  .card-body [data-region="managecompetencies"],
+/*.pagelayout-admin  .card-body [data-region="managetemplates"],*/
+#page-admin-tool-lp-learningplans  .card-body,
+/*.pagelayout-admin  .card-body [data-region="managecompetencies"],*/
+#page-admin-tool-lp-competencyframeworks  .card-body [data-region="managecompetencies"],
 .pagelayout-admin  .card-body div > fieldset,
 #page-admin-setting-local_discounts  .card-body form#adminsettings,
 #page-course-management .card-body, #page-badges-newbadge .card-body,
@@ -2132,7 +2134,7 @@ hr{
 #page-mod-feedback-view .card-body, #page-mod-feedback-mod .mform, 
 #page-mod-quiz-mod .mform, 
 #page-mod-resource-view .card-body, 
-#page-mod-resource-mod .mform, 
+#page-mod-resource-mod .card-body, 
 #page-course-view-singleactivity .card-body, #page-admin-setting-qtypesettings .card-body #adminsettings, #page-mod-forum-view .card-body, #page-course-view-periods .card-body, #page-user-edit form.mform, 
 #page-login-change_password form.mform,
 #page-user-language form.mform,
