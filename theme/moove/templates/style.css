@@ -3593,7 +3593,8 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 410px) {
-    #page-admin-tool-lp-edittemplate h2{
+    #page-admin-tool-lp-edittemplate .card-body h2,
+    #page-admin-tool-lp-edittemplate .card-body h3{
         font-size: 17px !important;
     }
     #page-course-management .dropdown-item span.menu-action-text{
