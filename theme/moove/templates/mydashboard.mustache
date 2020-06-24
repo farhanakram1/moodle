@@ -87,7 +87,7 @@
                    
                 <section id="region-main" class="cust-box-tab" style="overflow-x: hidden;">    
                     <div class="card mymaincontent">
-                    <div class="row">
+                    <div class="row" {{#is_siteadmin}} style="display:none"{{/is_siteadmin}}>
                     <div class="col-md-12">
 
                           <ul class="row nav nav-tabs remove_border {{#is_siteadmin}}remove_border{{/is_siteadmin}}" id="myTab" role="tablist">
