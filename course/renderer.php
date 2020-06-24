@@ -1480,11 +1480,14 @@ class core_course_renderer extends plugin_renderer_base {
         $user_info_data = $DB->get_record_sql("SELECT * FROM {user_info_data} WHERE userid=? and fieldid=?  LIMIT 1", array(intval($USER->id), intval($user_info_field->id)));
         $user_short_code = strtolower($user_info_data->data);
         $user_short_code = explode("\r\n",$user_short_code);
-        $roleassignments = $DB->get_record_sql('SELECT roleid FROM {role_assignments} WHERE userid=? ', array(intval($USER->id)));
+        $roleassignments = $DB->get_records_sql('SELECT roleid FROM {role_assignments} WHERE userid=? ', array(intval($USER->id)));
         $show_student = false;
+        $teachers_admin = false;
         foreach ($roleassignments as $roleassignment){
-           if($roleassignment > 4){
+           if($roleassignment->roleid > 4){
                $show_student = true;
+           }else{
+               $teachers_admin = true;
            }
         }
         if (empty($coursecat->visible) || $coursecat->get_courses_count() == 0) {
@@ -1527,7 +1530,8 @@ class core_course_renderer extends plugin_renderer_base {
         if(!in_array($idnumber, $user_short_code) && $depth == 1){
             $category_link = $DB->get_record_sql("SELECT * FROM {course_external_links} WHERE category_id='".$coursecat->id."' LIMIT 1");
             if(isset($category_link->external_link)){
-                if($show_student){
+                if($show_student && !$teachers_admin){
+                    
                     $classes[] = 'not_registered';
                 
                 $categoryname = html_writer::link($category_link->external_link,
@@ -1539,7 +1543,7 @@ class core_course_renderer extends plugin_renderer_base {
         }
         $ortho = '';
         if(in_array($idnumber, $user_short_code) && $depth == 1 & $idnumber != 'singlecourse'){
-           if($show_student){
+           if($show_student && !$teachers_admin){
                    
                 $categoryname .= html_writer::tag('span', ' (Booked)',
                        array( 'class' => 'short-text'));
@@ -1549,6 +1553,9 @@ class core_course_renderer extends plugin_renderer_base {
         if(!in_array($idnumber, $user_short_code)){
             $ortho = 'not_registered';
         }
+        if($teachers_admin)
+            $ortho = '';
+        
         $content = html_writer::start_tag('div', array(
             'class' => join(' ', $classes),
             'data-categoryid' => $coursecat->id,
