@@ -1044,7 +1044,7 @@ body.drawer-close-left {
     font-weight: bold;
     text-transform: uppercase;
     padding: 30px 30px 30px 23px;
-    color: white;
+    color: white !important;
 }
 #page-admin-search .card-body #adminsettings{
     background: #FFF;border-radius: 4px;padding: 20px;
