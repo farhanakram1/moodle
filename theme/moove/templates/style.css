@@ -2652,6 +2652,10 @@ table tr td {
     border-color: #008ec2 !important;
     background-color: #008ec2 !important;
 }
+.model_btn .dropdown-menu {
+    background-color: #008ec2 !important;
+    border: 1px solid white !important;
+}
 #coursesearch {
     margin-top: 1em!important;
     background-color: white!important;
