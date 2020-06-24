@@ -91,11 +91,23 @@
                     <div class="col-md-12">
 
                           <ul class="row nav nav-tabs remove_border {{#is_siteadmin}}remove_border{{/is_siteadmin}}" id="myTab" role="tablist">
-                                            {{# hascourses }}
+                                            
                                                 <li class="nav-item col-md-3 p-0">
-                                                    <a class="nav-item nav-link py-2 active tab_mb" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="true">{{{ overview }}}</a>
+                                                    <a class="nav-item nav-link py-2 active tab_mb" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="true">
+                                                        {{# hascourses }}
+                                                            {{{ overview }}}
+                                                        {{/ hascourses }}
+                                                    
+                                                        {{# show_full_course}}
+                                                            {{{ heading_full_course }}}
+                                                        {{/ show_full_course }}
+                                                        
+                                                        {{# show_teacher_course}}
+                                                            {{{ heading_full_course }}}
+                                                        {{/ show_teacher_course}}
+                                                    </a>
                                                 </li>
-                                            {{/ hascourses }}
+                                            
 
                                             {{# courses_examorganizer }}
                                            <li class="nav-item col-md-3 p-0">
@@ -108,76 +120,43 @@
                                                 <a class="nav-item nav-link py-2 tab_mb" id="nav-bookcourses-tab" data-toggle="tab" href="#nav-bookcourses" role="tab" aria-controls="nav-bookcourses" aria-selected="false">{{{ bookcourses }}}</a>
                                             </li>
                                             {{/ hascourses }}
+                                            
                                         </ul>
                     </div>
-                    <div class="col-md-12" style="overflow:hidden;">
+                    <div class="col-md-12" style="overflow:hidden;padding: 0;margin-bottom: 20px;">
                     <div class="card-body cust-tabs-s">
                                       
                                         <div class="tab-content" id="mypublic-tab">
-                                            {{# hascourses }}
+                                            
                                                 <div class="tab-pane fade show active" id="nav-overview" role="tabpanel" aria-labelledby="courses-tab">
-                                                    <h1 class="text-left m-0 mb-3">{{{ overview }}}</h1>
-                                                    {{# courses }}
-                                                        <div id="course-{{ id }}" class="card mt-1 course-m-box">
-                                                            <div class="card-body row">
-                                                                <div class="col-md-3 col-sm-6 courseimage">
-                                                                    {{{ courseimage }}}
-                                                                </div>
+                                                    {{# show_full_course}}
+                                                        {{{ course_cat }}}
+                                                    {{/ show_full_course }} 
 
-                                                                <div class="media-body col-md-9 col-sm-6 course_Text">
-                                                                    <a href="{{ link }}"><h5 class="mt-0">{{{ fullname }}}</h5></a>
-                                                                    {{# startdate }}<small>{{#str}}startedon, theme_moove{{/str}}: {{#userdate}} {{startdate}}, %A, %d %B %Y {{/userdate}}</small>{{/ startdate }}
+                                                    {{# show_teacher_course}}
+                                                          {{{ teacher_courses }}}  
+                                                    {{/ show_teacher_course }} 
 
-                                                                    <div class="mt-1">
-                                                                        {{{ summary }}}
-                                                                    </div>
-                                                                </div>
-                                                                {{# enablecompletion }}
-                                                                    <div class="col-md-3 d-none d-md-block d-lg-block d-xl-block text-right">
-                                                                        <div class="progress-circle" data-progress="{{ progress }}"></div>
-                                                                    </div>
-                                                                {{/ enablecompletion }}
-                                                            </div>
-                                                        </div>
-                                                    {{/ courses }}
-                                                    
-                                                    {{#hasregionmainsettingsmenu}}
-                                                        <div class="region_main_settings_menu_proxy"></div>
-                                                    {{/hasregionmainsettingsmenu}}
-                                                {{{ output.course_content_header }}}
-                                                {{{ output.main_content }}}
-                                                {{{ output.course_content_footer }}}
+                                                    {{# hascourses }}
+                                                        {{#hasregionmainsettingsmenu}}
+                                                            <div class="region_main_settings_menu_proxy"></div>
+                                                        {{/hasregionmainsettingsmenu}}
+                                                        {{{ output.course_content_header }}}
+                                                        {{{ output.main_content }}}
+                                                        {{{ output.course_content_footer }}}
+                                                    {{/ hascourses }}
                                                 </div>
-                                            {{/ hascourses }}
-                                            <div class="tab-pane fade pt-1 {{^hascourses}}active show{{/hascourses}}" id="details" role="tabpanel" aria-labelledby="details-tab">
-                                                {{#hasregionmainsettingsmenu}}
-                                                    <div class="region_main_settings_menu_proxy"></div>
-                                                {{/hasregionmainsettingsmenu}}
-                                                {{{ output.course_content_header }}}
-                                                {{{ output.main_content }}}
-                                                {{{ output.course_content_footer }}}
-                                            </div>
                                             
                                             {{# courses_examorganizer }}
                                             <div class="tab-pane fade" id="nav-examorganizer" role="tabpanel" aria-labelledby="nav-examorganizer-tab">
-                                            {{{ exame_orginser }}}
-                                            {{# get_courses_examorganizer}}
-                                            <div class="card-body row course-m-box">
-                                                <div class="col-md-3 col-sm-6 courseimage">
-                                                    {{{ courseimage }}}
-                                                </div>
-                                                <div class="media-body col-md-9 col-sm-6 course_Text">
-                                                    <a href="{{ link }}"><h5 class="mt-4">{{{ fullname }}}</h5></a>
-                                                     {{# startdate }}<small>{{#str}}startedon, theme_moove{{/str}}: {{#userdate}} {{startdate}}, %A, %d %B %Y {{/userdate}}</small>{{/ startdate }}
-                                                </div>
-                                            </div>
-                                             {{/ get_courses_examorganizer}}
+                                                {{{ exame_orginser }}}
+                                            
                                             </div>
                                             {{/ courses_examorganizer}}
                                             {{!  ExamOrganizer Tab }}
 
                                             <div class="tab-pane fade" id="nav-bookcourses" role="tabpanel" aria-labelledby="nav-bookcourses-tab">
-                                             {{{ course_cat }}}
+                                                {{{ course_cat }}}
                                             </div>
 
                                         </div>
@@ -185,6 +164,15 @@
                     </div>
                     </div>
 
+                                            <div class="tab-pane fade pt-1 {{^hascourses}}active show{{/hascourses}}" id="details" role="tabpanel" aria-labelledby="details-tab">
+                                                   
+                                                {{#hasregionmainsettingsmenu}}
+                                                    <div class="region_main_settings_menu_proxy"></div>
+                                                {{/hasregionmainsettingsmenu}}
+                                                {{{ output.course_content_header }}}
+                                                {{{ output.main_content }}}
+                                                {{{ output.course_content_footer }}}
+                                            </div>
 
                         
                     </div>
