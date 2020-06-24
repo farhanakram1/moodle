@@ -267,6 +267,11 @@
 #page-admin-setting-userpolicies .card-body,
 #page-admin-setting-userdefaultpreferences .card-body,
 #page-admin-setting-usermanagement .card-body,
+#page-admin-setting-moodleservices .card-body,
+#page-admin-setting-optionalsubsystems .card-body,
+#page-admin-setting-analyticssite .card-body,
+#page-admin-setting-analyticssettings .card-body,
+#page-admin-setting-competencysettings .card-body,
 #page-admin-mod-glossary-formats .card-body{
     background-color: white;
     padding: 20px 25px;
@@ -2886,6 +2891,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 991px) {
+    .custom-select {
+        width: 100% !important;
+    }
 #page-admin-setting-modsettingattendance .nav-tabs .nav-link,
 #page-admin-modules .nav-tabs .nav-link,
 .cust-tabs-s .nav-tabs .nav-link,
@@ -3193,9 +3201,6 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
-    .custom-select {
-        width: 100% !important;
-    }
     #page-admin-tool-lp-edittemplate .card-body h2,
     #page-admin-tool-lp-editcompetencyframework .card-body h2,
     #page-admin-tool-lp-edittemplate .card-body h3,
