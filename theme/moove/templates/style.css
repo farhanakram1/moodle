@@ -264,6 +264,9 @@
 #page-admin-tool-dataprivacy-purposes .card-body,
 #page-admin-tool-dataprivacy-editpurpose .card-body,
 #page-admin-tool-dataprivacy-datadeletion .card-body,
+#page-admin-setting-userpolicies .card-body,
+#page-admin-setting-userdefaultpreferences .card-body,
+#page-admin-setting-usermanagement .card-body,
 #page-admin-mod-glossary-formats .card-body{
     background-color: white;
     padding: 20px 25px;
@@ -3190,6 +3193,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
+    .custom-select {
+        width: 100% !important;
+    }
     #page-admin-tool-lp-edittemplate .card-body h2,
     #page-admin-tool-lp-editcompetencyframework .card-body h2,
     #page-admin-tool-lp-edittemplate .card-body h3,
