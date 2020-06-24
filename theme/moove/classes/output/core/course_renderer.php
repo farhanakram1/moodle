@@ -234,18 +234,22 @@ class course_renderer extends \core_course_renderer {
         if(is_siteadmin()){
              $show_student = true;
         }else{
-            $roleassignments = $DB->get_record_sql('SELECT roleid FROM {role_assignments} WHERE userid=? ', array(intval($USER->id)));
+            $roleassignments = $DB->get_records_sql('SELECT roleid FROM {role_assignments} WHERE userid=? ', array(intval($USER->id)));
 
 
             $show_student = false;
+            $show_teacher = false;
             foreach ($roleassignments as $roleassignment){
-               if($roleassignment < 5){
+               if($roleassignment->roleid < 5){
                    $show_student = true;
                }
+               if($roleassignment->roleid > 1 && $roleassignment->roleid < 5){
+                    $show_teacher = true;
+                }
+              
             }
         }
-        
-//        $content = extras::get_course_summary_image($course, $courselink);
+//      $content = extras::get_course_summary_image($course, $courselink);
 
         $theme = \theme_config::load('moove');
 
@@ -424,6 +428,9 @@ class course_renderer extends \core_course_renderer {
         if($percentage == 0 && $class == 'access'){
             $access_class = 'start_course';
             $string = 'ready';
+        }else if($show_teacher){
+            $class = 'noaccess-grey';
+            $show_student = false;
         }
         if($percentage > 0 && $class == 'access'){
             $string = 'downloaded';
