@@ -257,8 +257,12 @@
 #page-admin-setting-gradessettings .card-body,
 #page-admin-setting-automated .card-body,
 #page-admin-setting-frontpagesettings .card-body,
-#page-admin-qtypes .no-overflow,
-#page-admin-qbehaviours .no-overflow,
+#page-admin-tool-dataprivacy-categories .card-body,
+#page-admin-tool-dataprivacy-editcategory .card-body,
+#page-admin-qtypes .card-body,
+#page-admin-qbehaviours .card-body,
+#page-admin-tool-dataprivacy-purposes .card-body,
+#page-admin-tool-dataprivacy-datadeletion .card-body,
 #page-admin-mod-glossary-formats .card-body{
     background-color: white;
     padding: 20px 25px;
