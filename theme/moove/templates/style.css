@@ -238,7 +238,8 @@
 #page-admin-tool-lp-learningplans  .card-body,
 /*.pagelayout-admin  .card-body [data-region="managecompetencies"],*/
 #page-admin-tool-lp-competencyframeworks  .card-body,
-.pagelayout-admin  .card-body div > fieldset,
+/*.pagelayout-admin  .card-body div > fieldset,*/
+#page-admin-setting-backpacksettings .card-body,
 #page-admin-setting-local_discounts  .card-body form#adminsettings,
 #page-course-management .card-body, #page-badges-newbadge .card-body,
 #page-mod-attendance-view .card-body,
