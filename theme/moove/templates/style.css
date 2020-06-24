@@ -219,9 +219,9 @@
 #page-admin-roles-allow .card-body, 
 #page-admin-roles-manage .card-body, 
 #page-admin-roles-admins #assignform, 
-#page-admin-tool-uploaduser-picture .mform, 
-#page-admin-tool-lp-editplan .mform, 
-#page-admin-tool-uploaduser-index .mform, 
+#page-admin-tool-uploaduser-picture .card-body, 
+#page-admin-tool-lp-editplan .card-body, 
+#page-admin-tool-uploaduser-index .card-body, 
 #page-cohort-upload .card-body, 
 #page-cohort-edit .card-body, 
 #page-admin-cohort-index .card-body,
@@ -250,6 +250,7 @@
 #page-course-management .card-body, #page-badges-newbadge .card-body,
 #page-mod-attendance-view .card-body,
 #page-admin-setting-badgesettings .card-body,
+#page-admin-setting-frontpagesettings .card-body,
 #page-admin-qtypes .no-overflow,
 #page-admin-qbehaviours .no-overflow,
 #page-admin-mod-glossary-formats .card-body{
@@ -2258,7 +2259,8 @@ hr{
 #page-admin-tool-usertours-configure .card-body div > h2,
 #page-grade-export-txt-index .card-body div > h2
 {
-    color: black !important;
+    /*color: black !important;*/
+    color: #008ec2 !important;
 }
 #page-admin-modules .card-body, #page-mod-lesson-view #region-main .card-body,
 #page-grade-report-grader-index #region-main .card-body,
