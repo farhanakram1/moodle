@@ -692,8 +692,8 @@ require(['jquery'], function($) {
 
 
 });
-function open_enrollment_form(course_id){
-    var modal = document.getElementById("enrollment-modal-"+course_id);
+function open_enrollment_form(course_id,exam_orginzer){
+    var modal = document.getElementById("enrollment-modal-"+course_id+"-"+exam_orginzer);
     var span = document.getElementsByClassName("close")[0];
     modal.style.display = "block";
 }

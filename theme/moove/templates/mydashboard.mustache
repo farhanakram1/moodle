@@ -89,6 +89,7 @@
                     <div class="card mymaincontent">
                     <div class="row">
                     <div class="col-md-12">
+
                           <ul class="row nav nav-tabs remove_border {{#is_siteadmin}}remove_border{{/is_siteadmin}}" id="myTab" role="tablist">
                                             {{# hascourses }}
                                                 <li class="nav-item col-md-3 p-0">
@@ -159,8 +160,7 @@
                                             
                                             {{# courses_examorganizer }}
                                             <div class="tab-pane fade" id="nav-examorganizer" role="tabpanel" aria-labelledby="nav-examorganizer-tab">
-                                            <h1 class="text-left m-0 mb-3">{{{ examorganizer }}}</h1>
-
+                                            {{{ exame_orginser }}}
                                             {{# get_courses_examorganizer}}
                                             <div class="card-body row course-m-box">
                                                 <div class="col-md-3 col-sm-6 courseimage">
@@ -177,7 +177,7 @@
                                             {{!  ExamOrganizer Tab }}
 
                                             <div class="tab-pane fade" id="nav-bookcourses" role="tabpanel" aria-labelledby="nav-bookcourses-tab">
-                                             <h1 class="text-left m-0 mb-3">{{{ bookcourses }}}</h1>
+                                             {{{ course_cat }}}
                                             </div>
 
                                         </div>
