@@ -54,7 +54,7 @@ class extras {
 
         $chelper = new \coursecat_helper();
 
-        $courses = enrol_get_users_courses($user->id, true, '*', 'visible DESC, fullname ASC, sortorder ASC');
+        $courses = enrol_get_users_courses($user->id, true, '*', 'sortorder ASC , fullname ASC, visible DESC');
 
         foreach ($courses as $course) {
             $course->fullname = strip_tags($chelper->get_course_formatted_name($course));
@@ -92,7 +92,15 @@ class extras {
 
         return array_values($courses);
     }
-
+    
+    /**
+     * Return Courses with all deep categories
+     * @param Array $category Parent Category Array
+     * @param array $student_enroll_numbers Student Enrolled Category ID Numbers
+     * 
+     * @return html Courses Details
+     */
+    
     /**
      * Returns the first course's summary issue
      *
@@ -269,4 +277,93 @@ class extras {
 
         return $headerbuttons;
     }
+    
+//    public function course_by_categories($cat_id) {
+//        global $DB;
+//        $courses = $DB->get_records('course', array('category' => $cat_id), '*', $sort='order by sortorder asc', MUST_EXIST);
+//        $course_html = '';
+//        foreach ($courses as $course){
+//            $chelper = new \coursecat_helper();
+//            $chelper->set_show_courses(self::COURSECAT_SHOW_COURSES_EXPANDED);
+//            $course_render = new \course_renderer;
+//            $course_html .= $this->coursecat_coursebox_content($chelper, $course);
+//        }
+//    }
+//    
+//    protected function coursecat_coursebox_content(coursecat_helper $chelper, $course) {
+//        global $CFG;
+//        if ($chelper->get_show_courses() < self::COURSECAT_SHOW_COURSES_EXPANDED) {
+//            return '';
+//        }
+//        if ($course instanceof stdClass) {
+//            $course = new core_course_list_element($course);
+//        }
+//        $content = '';
+//
+//        // display course summary
+//        if ($course->has_summary()) {
+//            $content .= html_writer::start_tag('div', array('class' => 'summary'));
+//            $content .= $chelper->get_course_formatted_summary($course,
+//                    array('overflowdiv' => true, 'noclean' => true, 'para' => false));
+//            $content .= html_writer::end_tag('div'); // .summary
+//        }
+//
+//        // display course overview files
+//        $contentimages = $contentfiles = '';
+//        foreach ($course->get_course_overviewfiles() as $file) {
+//            $isimage = $file->is_valid_image();
+//            $url = file_encode_url("$CFG->wwwroot/pluginfile.php",
+//                    '/'. $file->get_contextid(). '/'. $file->get_component(). '/'.
+//                    $file->get_filearea(). $file->get_filepath(). $file->get_filename(), !$isimage);
+//            if ($isimage) {
+//                $contentimages .= html_writer::tag('div',
+//                        html_writer::empty_tag('img', array('src' => $url)),
+//                        array('class' => 'courseimage'));
+//            } else {
+//                $image = $this->output->pix_icon(file_file_icon($file, 24), $file->get_filename(), 'moodle');
+//                $filename = html_writer::tag('span', $image, array('class' => 'fp-icon')).
+//                        html_writer::tag('span', $file->get_filename(), array('class' => 'fp-filename'));
+//                $contentfiles .= html_writer::tag('span',
+//                        html_writer::link($url, $filename),
+//                        array('class' => 'coursefile fp-filename-icon'));
+//            }
+//        }
+//        $content .= $contentimages. $contentfiles;
+//
+//        // Display course contacts. See core_course_list_element::get_course_contacts().
+//        if ($course->has_course_contacts()) {
+//            $content .= html_writer::start_tag('ul', array('class' => 'teachers'));
+//            foreach ($course->get_course_contacts() as $coursecontact) {
+//                $rolenames = array_map(function ($role) {
+//                    return $role->displayname;
+//                }, $coursecontact['roles']);
+//                $name = implode(", ", $rolenames).': '.
+//                        html_writer::link(new moodle_url('/user/view.php',
+//                                array('id' => $coursecontact['user']->id, 'course' => SITEID)),
+//                            $coursecontact['username']);
+//                $content .= html_writer::tag('li', $name);
+//            }
+//            $content .= html_writer::end_tag('ul'); // .teachers
+//        }
+//
+//        // display course category if necessary (for example in search results)
+//        if ($chelper->get_show_courses() == self::COURSECAT_SHOW_COURSES_EXPANDED_WITH_CAT) {
+//            if ($cat = core_course_category::get($course->category, IGNORE_MISSING)) {
+//                $content .= html_writer::start_tag('div', array('class' => 'coursecat'));
+//                $content .= get_string('category').': '.
+//                        html_writer::link(new moodle_url('/course/index.php', array('categoryid' => $cat->id)),
+//                                $cat->get_formatted_name(), array('class' => $cat->visible ? '' : 'dimmed'));
+//                $content .= html_writer::end_tag('div'); // .coursecat
+//            }
+//        }
+//
+//        // Display custom fields.
+//        if ($course->has_custom_fields()) {
+//            $handler = core_course\customfield\course_handler::create();
+//            $customfields = $handler->display_custom_fields_data($course->get_custom_fields());
+//            $content .= \html_writer::tag('div', $customfields, ['class' => 'customfields-container']);
+//        }
+//
+//        return $content;
+//    }
 }

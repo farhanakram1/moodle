@@ -225,7 +225,7 @@ class course_renderer extends \core_course_renderer {
      * @throws \dml_exception
      * @throws \moodle_exception
      */
-    protected function coursecat_coursebox_content(coursecat_helper $chelper, $course) {
+    public function coursecat_coursebox_content(coursecat_helper $chelper, $course,$exam_orginzer='') {
         global $CFG, $DB, $USER;
 
         if ($course instanceof stdClass) {
@@ -373,7 +373,7 @@ class course_renderer extends \core_course_renderer {
         if($enrolled){
             $class = 'access';
         }
-        $content .= html_writer::start_tag('div', array('id' => 'enrollment-modal-'.$course->id, 'class' => 'modalEnrol'));        
+        $content .= html_writer::start_tag('div', array('id' => 'enrollment-modal-'.$course->id.'-'.$exam_orginzer, 'class' => 'modalEnrol'));        
             $content .= html_writer::start_tag('div', array( 'class' => 'modal-content-course'));
             $content .= html_writer::start_tag('span', array( 'class' => 'cloaseModal'));
             $content .= '&times;';
@@ -438,7 +438,7 @@ class course_renderer extends \core_course_renderer {
                             $coursename, array('class' => 'card-link '));
             }else{
                 $coursenamelink = html_writer::link('#',
-                            $coursename, array('id' => 'open-modal-'.$course->id, 'onclick' => 'open_enrollment_form("'.$course->id.'")','class' => 'card-link '));
+                            $coursename, array('id' => 'open-modal-'.$course->id, 'onclick' => 'open_enrollment_form('.$course->id.',"'.$exam_orginzer.'")','class' => 'card-link '));
                 $string = 'unlock';
             }
         }
@@ -461,26 +461,28 @@ class course_renderer extends \core_course_renderer {
         $content .= html_writer::link(new moodle_url('/course/view.php', array('id' => $course->id)),
                         get_string('access', 'theme_moove'), array('class' => 'card-link btn btn-primary ' . $class));
         $content .= html_writer::link('#',
-                        get_string('access', 'theme_moove'), array('id' => 'open-modal-'.$course->id, 'onclick' => 'open_enrollment_form("'.$course->id.'")','class' => 'card-link btn btn-primary ' . $class));
+                        get_string('access', 'theme_moove'), array('id' => 'open-modal-'.$course->id.'-'.$exam_orginzer, 'onclick' => 'open_enrollment_form('.$course->id.',"'.$exam_orginzer.'")','class' => 'card-link btn btn-primary ' . $class));
         $content .= html_writer::end_tag('div'); // End pull-right.
 
         $content .= html_writer::end_tag('div'); // End card-block.
         // Display course category if necessary (for example in search results).
-        if ($chelper->get_show_courses() == self::COURSECAT_SHOW_COURSES_EXPANDED_WITH_CAT) {
-            require_once($CFG->libdir . '/coursecatlib.php');
-            if ($cat = core_course_category::get($course->category, IGNORE_MISSING)) {
-                $content .= html_writer::start_tag('div', array('class' => 'coursecat'));
-                $content .= get_string('category') . ': ' .
-                        html_writer::link(new moodle_url('/course/index.php', array('categoryid' => $cat->id)),
-                                $cat->get_formatted_name(), array('class' => $cat->visible ? '' : 'dimmed'));
-                $content .= html_writer::end_tag('div'); // End coursecat.
+        if(empty($exam_orginzer)){
+            if ($chelper->get_show_courses() == self::COURSECAT_SHOW_COURSES_EXPANDED_WITH_CAT) {
+                require_once($CFG->libdir . '/coursecatlib.php');
+                if ($cat = core_course_category::get($course->category, IGNORE_MISSING)) {
+                    $content .= html_writer::start_tag('div', array('class' => 'coursecat'));
+                    $content .= get_string('category') . ': ' .
+                            html_writer::link(new moodle_url('/course/index.php', array('categoryid' => $cat->id)),
+                                    $cat->get_formatted_name(), array('class' => $cat->visible ? '' : 'dimmed'));
+                    $content .= html_writer::end_tag('div'); // End coursecat.
+                }
             }
         }
-        $script = 'var btn = document.getElementById("open-modal-'.$course->id.'");'
-                . 'function open_enrollment_form(course_id){'
-                . 'var modal = document.getElementById("enrollment-modal-'.$course->id.'");'
-                . 'modal.style.display = "block";'
-                . '}';
+//        $script = 'var btn = document.getElementById("open-modal-'.$course->id.'-'.$exam_orginzer.'");'
+//                . 'function open_enrollment_form(course_id){'
+//                . 'var modal = document.getElementById("enrollment-modal-'.$course->id.'-'.$exam_orginzer.'");'
+//                . 'modal.style.display = "block";'
+//                . '}';
 //        $content .= html_writer::script($script);
         return $content;
     }
