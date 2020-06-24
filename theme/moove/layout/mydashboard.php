@@ -26,6 +26,7 @@ defined('MOODLE_INTERNAL') || die();
 
 require_once $CFG->libdir.'/gradelib.php';
 require_once $CFG->dirroot.'/grade/lib.php';
+require_once $CFG->dirroot.'/course/renderer.php';
 require_once $CFG->dirroot.'/grade/report/overview/lib.php';
 
 global $DB,$USER;
@@ -63,14 +64,100 @@ if ($draweropenright && $hasblocks) {
 }
 
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
-$regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
+//$regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
+
+$cor_course_render = new core_course_renderer($PAGE, 'dashboard');
+//$templatecontext['courses_examorganizer_courses'] = $cor_course_render->course_category(0);
+$roleassignments = $DB->get_record_sql('SELECT roleid FROM {role_assignments} WHERE userid=? ', array(intval($USER->id)));
+$show_student = false;
+$user_roles = array();
+$course_cat = $cor_course_render->course_category(0);
+foreach ($roleassignments as $roleassignment){
+    $user_roles[] = $roleassignment;
+}
+   if(in_array(5, $user_roles)){
+       $show_student = true;
+       $user_info_field = $DB->get_record_sql("SELECT * FROM {user_info_field} WHERE shortname='registrationcode' LIMIT 1");
+       $user_info_data = $DB->get_record_sql("SELECT * FROM {user_info_data} WHERE userid=? and fieldid=?  LIMIT 1", array(intval($USER->id), intval($user_info_field->id)));
+       $user_short_code = strtolower($user_info_data->data);
+       $user_short_codes = explode("\r\n",$user_short_code);
+       $exam_organizers = '';
+                
+       $chelper = new \coursecat_helper();
+       $chelper->set_show_courses(30);$q = 0;
+            
+       foreach ($user_short_codes as $short_code){  
+           $exam_organizers .= '<div class="category  eodo-category">';
+            $exam_organizers .= '<div class="info2">';
+            $category = $DB->get_record_sql("SELECT * FROM {course_categories} WHERE idnumber Like '%".$short_code."%' LIMIT 1");
+            $exam_organizers .= '<h3 class="categoryname">'.$category->name.'</h3>';
+            $child_categories = $DB->get_records_sql("SELECT * FROM {course_categories} WHERE parent='".$category->id."' and path Like '%".$category->id."%' and coursecount > 0 order by sortorder asc");
+            $course_html = '';
+            $sub_categories = array();
+            foreach ($child_categories as $child_category){
+                $sub_categories[] = '"'.$child_category->id.'"';
+            }
+            if(count($child_categories) > 1){
+                $sub_categories = implode(',', $sub_categories);
+
+                $courses = $DB->get_records_sql("SELECT * FROM {course} WHERE category IN(".$sub_categories.") order by sortorder asc");
+                $i = 0;
+                $course_html = '<div class="card-deck mt-2"> ';
+                foreach ($courses as $course){
+                    if($i > 3){
+                        $i = 0;
+                        $course_html .= '<div class="card-deck mt-2">';
+                    }
+                    $course_html .= '<div class="card collapsed organizers" data-courseid="'.$course->id.'">';
+                    $course_html .= '<br/>';
+                    $course_html .= \theme_moove\output\core\course_renderer::coursecat_coursebox_content($chelper, $course,'examp_orginizer');
+                    $course_html .=  "</div>";
+                    if($i == 3){
+                        $course_html .= "</div>";
+                    }
+                    $i++;
+                }
+                $course_html .= "</div>";
+                $exam_organizers .= '<div class="course"> '. $course_html
+                        . "</div>";
+            }
+            $courses = $DB->get_records('course', array('category' => $category->id), $sort='sortorder asc','*');
+            $i = 0;
+            $course_html = '<div class="card-deck mt-2"> ';
+            foreach ($courses as $course){
+                if($i > 3){
+                    $i = 0;
+                    $course_html .= '<div class="card-deck mt-2">';
+                }
+                $course_html .= '<div class="card collapsed organizers" data-courseid="'.$course->id.'">';
+                $course_html .= \theme_moove\output\core\course_renderer::coursecat_coursebox_content($chelper, $course,'examp_orginizer');
+                $course_html .=  "</div>";
+                if($i == 3){
+                    $course_html .= "</div>";
+                }
+                $i++;
+                
+            }
+            $course_html .= "</div>";
+            $exam_organizers .= '<div class="course"> '. $course_html
+                    . "</div>";
+                            
+            $exam_organizers .= '</div>';
+            $exam_organizers .= '</div>';
+            $q++;
+       }
+   }
+//$exame_orginser = '';
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
     'sidepreblocks' => $blockshtml,
+    'course_cat' => $course_cat,
     'hasblocks' => $hasblocks,
     'bodyattributes' => $bodyattributes,
     'hasdrawertoggle' => true,
+    'exame_orginser' => $exam_organizers,
+    'show_student' => $show_student,
     'navdraweropen' => $navdraweropen,
     'draweropenright' => $draweropenright,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
@@ -101,22 +188,10 @@ $themesettings = new \theme_moove\util\theme_settings();
 
 $templatecontext = array_merge($templatecontext, $themesettings->footer_items());
 
-$roleassignments = $DB->get_record_sql('SELECT roleid FROM {role_assignments} WHERE userid=? ', array(intval($USER->id)));
-$show_student = false;
-foreach ($roleassignments as $roleassignment){
-   if($roleassignment > 4){
-       $show_student = true;
-       $user_info_field = $DB->get_record_sql("SELECT * FROM {user_info_field} WHERE shortname='registrationcode' LIMIT 1");
-       $user_info_data = $DB->get_record_sql("SELECT * FROM {user_info_data} WHERE userid=? and fieldid=?  LIMIT 1", array(intval($USER->id), intval($user_info_field->id)));
-       $user_short_code = strtolower($user_info_data->data);
-       $user_short_codes = explode("\r\n",$user_short_code);
-       foreach ($user_short_codes as $user_short_code){  
-            $category = $DB->get_record_sql("SELECT * FROM {course_categories} WHERE idnumber='?' LIMIT 1",array($user_short_code));
-            echo $category->name;
-       }
-   }
-}
 
+
+//$cor_course_render = new core_course_renderer($PAGE, 'course');
+//$templatecontext['courses_examorganizer_courses'] = $cor_course_render->course_category(0);
 $usercourses = \theme_moove\util\extras::user_courses_with_progress($user);
 $templatecontext['hascourses'] = (count($usercourses)) ? true : false;
 if($templatecontext['hascourses']){

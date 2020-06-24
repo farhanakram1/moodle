@@ -1498,7 +1498,19 @@ header#page-header#page-header .pt-3{
 }
 .eodo-course .card-title a{
     text-decoration: none;
-    color:#018ec3 !important;
+    color:#FFF !important;
+}
+.eodo-category h3{
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+.course .organizers,#nav-bookcourses .card-deck .card{
+    flex-basis: calc(25% - .5rem) !important;
+    flex-shrink:0 !important;
+    flex-grow:0 !important;
+}
+#nav-bookcourses #coursesearch{
+    display:none !important;;
 }
 #page-grade-report-user-index #region-main > div > .card-body,
 #page-grade-report-singleview-index #region-main > div > .card-body,
