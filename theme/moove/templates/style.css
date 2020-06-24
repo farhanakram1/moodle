@@ -2309,6 +2309,19 @@ hr{
 #page-admin-setting-authsettingemail .card-body,
 #page-admin-setting-blocksettingactivity_results .card-body,
 #page-admin-setting-authsettingmanual .card-body,
+#page-admin-setting-blocksettingmyoverview .card-body,
+#page-admin-setting-blocksettingcourse_list .card-body,
+#page-admin-setting-blocksettingeodoo_dashboard .card-body,
+#page-admin-setting-blocksettinghtml .card-body,
+#page-admin-setting-blocksettingonline_users .card-body,
+#page-admin-setting-blocksettingrecentlyaccessedcourses .card-body,
+#page-admin-setting-blocksettingsection_links .card-body,
+#page-admin-setting-blocksettingrss_client .card-body,
+#page-admin-setting-blocksettingstarredcourses .card-body,
+#page-admin-setting-cachestore_apcu_settings .card-body,
+#page-admin-setting-cachestore_memcached_settings .card-body,
+#page-admin-setting-cachestore_mongodb_settings .card-body,
+#page-admin-setting-cachestore_redis_settings .card-body,
 #page-admin-modules 
 {
     background-color: white;
