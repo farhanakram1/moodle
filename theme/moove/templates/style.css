@@ -1574,7 +1574,7 @@ header#page-header#page-header .pt-3{
     border-color: rgba(138, 207, 252, 0.7) !important;
 }
 .noaccess-grey{
-    background: #C6c6c6;
+    background: #C6c6c6 !important;
     border-color: #C6c6c6 !important;
 }
 
@@ -2315,7 +2315,10 @@ hr{
 #page-site-index #region-main-box #frontpage-category-combo .card-footer {
     background-color: #ffff00!important;
 }
-#page-site-index #region-main-box #frontpage-category-combo .info>.categoryname {
+#mypublic-tab{
+    border: 1px solid #dddddd;background: #FFF;padding: 20px 40px;
+}
+#page-my-index .course_category_tree .category.with_children > .info > .categoryname, #page-site-index #region-main-box #frontpage-category-combo .info>.categoryname {
     padding: 10px 30px;
     background-color: #ececec;
     margin-bottom: 20px;
@@ -2414,7 +2417,7 @@ hr{
     background-color: #dddddd !important;
     margin-bottom: 0px !important;
     margin-right: 15px;
-    border-radius: 3px 3px 0px 0px !important;
+    border-radius: 5px 5px 0px 0px !important;
 }
 .cust-box-tab-admin .nav-tabs .nav-item {
     width: 100% !important;
@@ -2439,7 +2442,7 @@ hr{
     color: #ffffff !important;
     background-color: #008ec2 !important;
     border-color: transparent !important;
-    border-radius: 10px 10px 0px 0px !important;
+    border-radius: 5px 5px 0px 0px !important;
 }
 .cust-box-tab .nav-tabs .tab_mb.active, .cust-box-tab  .nav-tabs .nav-item.show .tab_mb{
     margin-bottom: 0px !important;
@@ -2794,9 +2797,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 
     #page-course-index-category #region-main  .card > .card-body,
     #page-course-search #region-main  .card > .card-body {
-        background: #FFF;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        /*background: #FFF;*/
+/*        margin-top: 50px;
+        margin-bottom: 50px;*/
         border-radius: 5px;
     }
     #page-course-search #region-main  .card > .card-body h2{
