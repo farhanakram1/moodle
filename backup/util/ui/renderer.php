@@ -819,7 +819,7 @@ class core_backup_renderer extends plugin_renderer_base {
         }
 
         $output .= html_writer::tag('div', $countstr, array('class' => 'ics-totalresults'));
-        $output .= html_writer::start_tag('div', array('class' => 'ics-results'));
+        $output .= html_writer::start_tag('div', array('class' => 'ics-results table-responsive'));
 
         $table = new html_table();
         $table->head = array('', get_string('shortnamecourse'), get_string('fullnamecourse'));

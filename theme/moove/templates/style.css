@@ -8,6 +8,15 @@
     background-color: #ced4da00!important;
     padding: 0 !important;
     border-color: #cfd5da00!important;
+    color: #fbfefd !important;
+}
+/*.context-header-settings-menu .dropdown-toggle>.icon, 
+#region-main-settings-menu .dropdown-toggle>.icon,
+.dropdown-toggle::after{
+    color: white !important;
+}*/
+.breadcrumb-item+.breadcrumb-item::before{
+    color: white !important;
 }
 .brud_s .breadcrumb li::after, .brud_s .breadcrumb li>*::after{
     display:none!important;
@@ -29,6 +38,9 @@
 .form-item.row{
     border-bottom: 1px solid #e3e4e8 !important;
     margin-bottom: 10px !important;
+}
+#participantsform .no-overflow {
+    overflow: auto !important;
 }
 .form-item.row:last-child{
     border-bottom: 0px !important;
@@ -66,7 +78,7 @@
     margin-bottom: 10px !important;
     margin-top: 5px !important;
 }
-#page-login-confirm .card-body,#page-admin-setting-modltifolder .card-body,#page-admin-course-pending .card-body,#page-admin-tool-unsuproles-index .card-body,#page-admin-tool-cohortroles-index .card-body,#page-admin-tool-lpimportcsv-export .card-body,#page-admin-tool-customlang-index .card-body,#page-admin-setting-experimental .card-body,#page-admin-setting-development .card-body,#page-admin-setting-reports .card-body,#page-admin-setting-email .card-body,#page-admin-setting-taskconfig .card-body,#page-admin-setting-server .card-body,#page-admin-setting-themesettings .card-body,#page-admin-setting-themes .card-body,#page-admin-setting-appearance .card-body,#page-admin-setting-webservicesettings .card-body,#page-admin-setting-editorsettings .card-body,#page-admin-setting-searchplugins .card-body,#page-admin-setting-repositorysettings .card-body,#page-admin-setting-reportplugins .card-body,#page-admin-setting-qbehavioursettings .card-body,#page-admin-setting-mediaplayers .card-body,#page-admin-setting-mlbackendsettings .card-body,#page-admin-setting-logging .card-body,#page-admin-setting-localplugins .card-body,#page-admin-setting-licensesettings .card-body,#page-admin-setting-filtersettings .card-body,#page-admin-setting-enrolments .card-body,#page-admin-setting-fileconverterplugins .card-body,#page-admin-setting-dataformatsettings .card-body,#page-admin-setting-customfieldsettings .card-body,#page-admin-setting-formatsettings .card-body,#page-admin-setting-cache .card-body,#page-admin-setting-availabilitysettings .card-body,#page-admin-setting-blocksettings .card-body,#page-admin-setting-mobileapp .card-body,#page-admin-setting-authsettings .card-body,#page-admin-setting-antivirussettings .card-body,#page-admin-setting-tools .card-body,#page-admin-setting-modsettings .card-body,#page-admin-setting-modules .card-body,#page-admin-setting-gradereports .card-body,#page-admin-setting-grades .card-body,#page-admin-setting-backups .card-body,#page-admin-setting-courses .card-body,#page-admin-setting-privacy .card-body,#page-admin-setting-roles .card-body,#page-admin-setting-accounts .card-body,#page-admin-setting-users .card-body,#page-admin-setting-frontpage .card-body,#page-admin-setting-security .card-body,#page-admin-setting-messaging .card-body,#page-admin-setting-language .card-body,#page-admin-setting-location .card-body,#page-admin-setting-h5p .card-body,#page-admin-setting-badges .card-body,#page-admin-setting-analytics .card-body,#page-admin-setting-competencies .card-body, #page-local-discounts-edit .mform, #page-local-discounts-discounts .custompages-list, #page-user-editadvanced .mform, #page-course-view-topics .card-body, #page-admin-tool-dbtransfer-index .card-body, #page-admin-tool-xmldb-index .card-body, #page-admin-tool-templatelibrary-index [data-region="list-templates"], #page-admin-tool-phpunit-index .generalbox, #page-admin-tool-generator-maketestplan .card-body, #page-admin-tool-generator-maketestcourse .card-body, #page-admin-tool-behat-index .card-body, #page-admin-thirdpartylibs .card-body, #page-admin-purgecaches .card-body, #page-admin-webservice-testclient .card-body, #page-admin-tool-spamcleaner-index .card-body, #page-admin-tool-monitor-managerules .card-body, #page-admin-report-security-index .card-body, #page-admin-report-questioninstances-index .card-body, #page-admin-report-performance-index .card-body, #page-admin-report-loglive-index .card-body, #page-admin-report-log-index .card-body, #page-admin-report-insights-insights .card-body, #page-admin-report-eventlist-index .mform, #page-admin-report-configlog-index .card-body, #page-admin-report-backups-index .generalbox, #page-admin-comment-index .card-body, #page-admin-tool-oauth2-issuers .card-body, #page-admin-tool-messageinbound-index .card-body,#page-admin-tool-task-scheduledtasks .card-body, #page-admin-setting-themesettingmoove .card-body, #page-admin-setting-themesettingclassic .card-body, #page-admin-setting-themesettingboost .card-body, #page-admin-theme-index .card-body, #page-admin-setting-cachestores .card-body, #page-admin-cache-testperformance .card-body, #page-admin-cache-admin .card-body, #page-admin-blocks .card-body .no-overflow, #page-admin-tool-availabilityconditions-index .card-body .no-overflow, #page-admin-tools .card-body .no-overflow, #page-admin-mod-lti-typessettings .mform, #page-admin-mod-lti-toolconfigure #main-content-container, #page-admin-setting-assignfeedback_editpdf .card-body, #page-admin-setting-assignfeedbackplugins .card-body, #page-admin-filters .card-body, #page-local-pages-edit .mform, #page-admin-local-pages-pages .custompages-list, #page-admin-setting-local_pages #adminsettings, #page-admin-localplugins .card-body .no-overflow,#page-admin-qtypes .card-body .no-overflow, #page-admin-reports .card-body .no-overflow,#page-admin-repository-recent .mform, #page-admin-repository-local .mform, #page-admin-repository-upload .mform, #page-admin-repository-url .mform, #page-admin-repository-wikimedia .mform, #page-admin-repository-user .mform, #page-admin-repository-areafiles .mform, #page-admin-repository-recent .mform, #page-admin-repository .generalbox, #page-admin-searchareas .card-body, #page-admin-searchareas .card-body, #page-admin-setting-editortinymce #adminsettings, #page-admin-setting-editoratto #adminsettings, #page-admin-webservice-tokens .mform, #page-admin-webservice-service .card-body, #page-admin-webservice-documentation .card-body, #page-admin-modules  .card-body .no-overflow,#page-admin-mod-assign-adminmanageplugins .card-body .no-overflow, #page-admin-setting-assignsubmissionplugins #adminsettings, #page-admin-setting-modassignfolder #adminsettings, #page-admin-plugins .card-body, #page-admin-tool-installaddon-index .card-body, #page-admin-grade-edit-letter-index .mform, #page-admin-grade-edit-letter-index .table-responsive, #page-admin-grade-edit-scale-edit .card-body, #page-admin-grade-edit-scale-index .card-body,#page-admin-tool-uploadcourse-index .mform, #page-backup-backupfilesedit .card-body, #page-backup-restorefile .card-body, #page-course-edit .mform, #page-course-editcategory .mform, #page-admin-customfield-edit .mform, #page-admin-course-customfield #customfield_catlist, #page-course-management .coursesearchbox, #page-admin-tool-dataprivacy-pluginregistry .card-body, #page-admin-roles-check .generalbox, #page-admin-tool-lpimportcsv-index .card-body, #page-admin-tool-lpmigrate-frameworks .card-body, #page-admin-registration-index .card-body,#page-admin-tool-analytics-index .card-body{
+#page-login-confirm .card-body,#page-admin-setting-modltifolder .card-body,#page-admin-course-pending .card-body,#page-admin-tool-unsuproles-index .card-body,#page-admin-tool-cohortroles-index .card-body,#page-admin-tool-lpimportcsv-export .card-body,#page-admin-tool-customlang-index .card-body,#page-admin-setting-experimental .card-body,#page-admin-setting-development .card-body,#page-admin-setting-reports .card-body,#page-admin-setting-email .card-body,#page-admin-setting-taskconfig .card-body,#page-admin-setting-server .card-body,#page-admin-setting-themesettings .card-body,#page-admin-setting-themes .card-body,#page-admin-setting-appearance .card-body,#page-admin-setting-webservicesettings .card-body,#page-admin-setting-editorsettings .card-body,#page-admin-setting-searchplugins .card-body,#page-admin-setting-repositorysettings .card-body,#page-admin-setting-reportplugins .card-body,#page-admin-setting-qbehavioursettings .card-body,#page-admin-setting-mediaplayers .card-body,#page-admin-setting-mlbackendsettings .card-body,#page-admin-setting-logging .card-body,#page-admin-setting-localplugins .card-body,#page-admin-setting-licensesettings .card-body,#page-admin-setting-filtersettings .card-body,#page-admin-setting-enrolments .card-body,#page-admin-setting-fileconverterplugins .card-body,#page-admin-setting-dataformatsettings .card-body,#page-admin-setting-customfieldsettings .card-body,#page-admin-setting-formatsettings .card-body,#page-admin-setting-cache .card-body,#page-admin-setting-availabilitysettings .card-body,#page-admin-setting-blocksettings .card-body,#page-admin-setting-mobileapp .card-body,#page-admin-setting-authsettings .card-body,#page-admin-setting-antivirussettings .card-body,#page-admin-setting-tools .card-body,#page-admin-setting-modsettings .card-body,#page-admin-setting-modules .card-body,#page-admin-setting-gradereports .card-body,#page-admin-setting-grades .card-body,#page-admin-setting-backups .card-body,#page-admin-setting-courses .card-body,#page-admin-setting-privacy .card-body,#page-admin-setting-roles .card-body,#page-admin-setting-accounts .card-body,#page-admin-setting-users .card-body,#page-admin-setting-frontpage .card-body,#page-admin-setting-security .card-body,#page-admin-setting-messaging .card-body,#page-admin-setting-language .card-body,#page-admin-setting-location .card-body,#page-admin-setting-h5p .card-body,#page-admin-setting-badges .card-body,#page-admin-setting-analytics .card-body,#page-admin-setting-competencies .card-body, #page-local-discounts-edit .mform, #page-local-discounts-discounts .custompages-list, #page-user-editadvanced .mform, #page-course-view-topics .card-body, #page-admin-tool-dbtransfer-index .card-body, #page-admin-tool-xmldb-index .card-body, #page-admin-tool-templatelibrary-index [data-region="list-templates"], #page-admin-tool-phpunit-index .generalbox, #page-admin-tool-generator-maketestplan .card-body, #page-admin-tool-generator-maketestcourse .card-body, #page-admin-tool-behat-index .card-body, #page-admin-thirdpartylibs .card-body, #page-admin-purgecaches .card-body, #page-admin-webservice-testclient .card-body, #page-admin-tool-spamcleaner-index .card-body, #page-admin-tool-monitor-managerules .card-body, #page-admin-report-security-index .card-body, #page-admin-report-questioninstances-index .card-body, #page-admin-report-performance-index .card-body, #page-admin-report-loglive-index .card-body, #page-admin-report-log-index .card-body, #page-admin-report-insights-insights .card-body, #page-admin-report-eventlist-index .mform, #page-admin-report-configlog-index .card-body, #page-admin-report-backups-index .generalbox, #page-admin-comment-index .card-body, #page-admin-tool-oauth2-issuers .card-body, #page-admin-tool-messageinbound-index .card-body,#page-admin-tool-task-scheduledtasks .card-body, #page-admin-setting-themesettingmoove .card-body, #page-admin-setting-themesettingclassic .card-body, #page-admin-setting-themesettingboost .card-body, #page-admin-theme-index .card-body, #page-admin-setting-cachestores .card-body, #page-admin-cache-testperformance .card-body, #page-admin-cache-admin .card-body, #page-admin-blocks .card-body .no-overflow, #page-admin-tool-availabilityconditions-index .card-body .no-overflow, #page-admin-tools .card-body .no-overflow, #page-admin-mod-lti-typessettings .mform, #page-admin-mod-lti-toolconfigure #main-content-container, #page-admin-setting-assignfeedback_editpdf .card-body, #page-admin-setting-assignfeedbackplugins .card-body, #page-admin-filters .card-body, #page-local-pages-edit .mform, #page-admin-local-pages-pages .custompages-list, #page-admin-setting-local_pages #adminsettings, #page-admin-localplugins .card-body .no-overflow,#page-admin-qtypes .card-body .no-overflow, #page-admin-reports .card-body .no-overflow,#page-admin-repository-recent .mform, #page-admin-repository-local .mform, #page-admin-repository-upload .mform, #page-admin-repository-url .mform, #page-admin-repository-wikimedia .mform, #page-admin-repository-user .mform, #page-admin-repository-areafiles .mform, #page-admin-repository-recent .mform, #page-admin-repository .generalbox, #page-admin-searchareas .card-body, #page-admin-searchareas .card-body, #page-admin-setting-editortinymce #adminsettings, #page-admin-setting-editoratto #adminsettings, #page-admin-webservice-tokens .mform, #page-admin-webservice-service .card-body, #page-admin-webservice-documentation .card-body, #page-admin-modules  .card-body .no-overflow,#page-admin-mod-assign-adminmanageplugins .card-body .no-overflow, #page-admin-setting-assignsubmissionplugins #adminsettings, #page-admin-setting-modassignfolder #adminsettings, #page-admin-plugins .card-body, #page-admin-tool-installaddon-index .card-body, #page-admin-grade-edit-letter-index .mform, #page-admin-grade-edit-letter-index .table-responsive, #page-admin-grade-edit-scale-edit .card-body, #page-admin-grade-edit-scale-index .card-body,#page-admin-tool-uploadcourse-index .mform, #page-backup-backupfilesedit .card-body, #page-backup-restorefile .card-body, #page-course-edit .card-body, #page-course-editcategory .mform, #page-admin-customfield-edit .mform, #page-admin-course-customfield #customfield_catlist, #page-course-management .coursesearchbox, #page-admin-tool-dataprivacy-pluginregistry .card-body, #page-admin-roles-check .card-body, #page-admin-tool-lpimportcsv-index .card-body, #page-admin-tool-lpmigrate-frameworks .card-body, #page-admin-registration-index .card-body,#page-admin-tool-analytics-index .card-body{
     background: #FFF;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -149,7 +161,7 @@
 #page-course-view-topics .card-body .page-header-headings h2{
     margin-top: 20px;
 }
-#page-login-confirm .card-body, #page-local-discounts-edit .mform, #page-local-discounts-discounts .custompages-list, #page-user-editadvanced .mform,  #page-admin-tool-templatelibrary-index [data-region="list-templates"], #page-admin-tool-phpunit-index .generalbox, #page-admin-report-eventlist-index .mform,  #page-admin-report-backups-index .generalbox, #page-admin-blocks .card-body .no-overflow, #page-admin-tool-availabilityconditions-index .card-body .no-overflow, #page-admin-tools .card-body .no-overflow, #page-admin-mod-lti-typessettings .mform, #page-admin-mod-lti-toolconfigure #main-content-container, #page-local-pages-edit .mform, #page-admin-local-pages-pages .custompages-list, #page-admin-setting-local_pages #adminsettings, #page-admin-localplugins .card-body .no-overflow, #page-admin-qtypes .card-body .no-overflow, #page-admin-reports  .card-body .no-overflow,#page-admin-repository-recent .mform, #page-admin-repository-local .mform, #page-admin-repository-upload .mform, #page-admin-repository-url .mform, #page-admin-repository-wikimedia .mform, #page-admin-repository-user .mform,  #page-admin-repository-areafiles .mform, #page-admin-repository-recent .mform, #page-admin-repository .generalbox, #page-admin-setting-editortinymce #adminsettings, #page-admin-setting-editoratto #adminsettings, #page-admin-webservice-tokens .mform, #page-admin-modules  .card-body .no-overflow, #page-admin-mod-assign-adminmanageplugins .card-body .no-overflow, #page-admin-setting-assignsubmissionplugins #adminsettings, #page-admin-setting-modassignfolder #adminsettings, #page-admin-grade-edit-letter-index .mform, #page-admin-grade-edit-letter-index .table-responsive, #page-admin-tool-uploadcourse-index .mform, #page-course-edit .mform, #page-course-editcategory .mform, #page-admin-customfield-edit .mform, #page-admin-course-customfield #customfield_catlist{
+#page-login-confirm .card-body, #page-local-discounts-edit .mform, #page-local-discounts-discounts .custompages-list, #page-user-editadvanced .mform,  #page-admin-tool-templatelibrary-index [data-region="list-templates"], #page-admin-tool-phpunit-index .generalbox, #page-admin-report-eventlist-index .mform,  #page-admin-report-backups-index .generalbox, #page-admin-blocks .card-body .no-overflow, #page-admin-tool-availabilityconditions-index .card-body .no-overflow, #page-admin-tools .card-body .no-overflow, #page-admin-mod-lti-typessettings .mform, #page-admin-mod-lti-toolconfigure #main-content-container, #page-local-pages-edit .mform, #page-admin-local-pages-pages .custompages-list, #page-admin-setting-local_pages #adminsettings, #page-admin-localplugins .card-body .no-overflow, #page-admin-qtypes .card-body .no-overflow, #page-admin-reports  .card-body .no-overflow,#page-admin-repository-recent .mform, #page-admin-repository-local .mform, #page-admin-repository-upload .mform, #page-admin-repository-url .mform, #page-admin-repository-wikimedia .mform, #page-admin-repository-user .mform,  #page-admin-repository-areafiles .mform, #page-admin-repository-recent .mform, #page-admin-repository .generalbox, #page-admin-setting-editortinymce #adminsettings, #page-admin-setting-editoratto #adminsettings, #page-admin-webservice-tokens .mform, #page-admin-modules  .card-body .no-overflow, #page-admin-mod-assign-adminmanageplugins .card-body .no-overflow, #page-admin-setting-assignsubmissionplugins #adminsettings, #page-admin-setting-modassignfolder #adminsettings, #page-admin-grade-edit-letter-index .mform, #page-admin-grade-edit-letter-index .table-responsive, #page-admin-tool-uploadcourse-index .mform, #page-course-edit .card-body, #page-course-editcategory .mform, #page-admin-customfield-edit .mform, #page-admin-course-customfield #customfield_catlist{
     padding: 20px;
     margin-top: 20px;
 }
@@ -1100,6 +1112,23 @@ body.drawer-close-left {
 #page-grade-import-xml-index .nav-tabs .nav-link.active,
 #page-grade-export-ods-index .nav-tabs .nav-link.active,
 #page-grade-export-xls-index .nav-tabs .nav-link.active,
+#page-group-index .nav-tabs .nav-link.active,
+#page-group-overview .nav-tabs .nav-link.active,
+#page-mod-attendance-tempusers .nav-tabs .nav-link.active,
+#page-mod-attendance-preferences .nav-tabs .nav-link.active,
+#page-mod-attendance-export .nav-tabs .nav-link.active,
+#page-mod-attendance-report .nav-tabs .nav-link.active,
+#page-mod-attendance-sessions .nav-tabs .nav-link.active,
+#page-mod-attendance-manage .nav-tabs .nav-link.active,
+#page-course-completion .nav-tabs .nav-link.active,
+#page-course-bulkcompletion .nav-tabs .nav-link.active,
+#page-group-groupings .nav-tabs .nav-link.active,
+#page-course-editbulkcompletion .nav-tabs .nav-link.active,
+#page-course-editdefaultcompletion .nav-tabs .nav-link.active,
+#page-question-export .nav-tabs .nav-link.active,
+#page-question-import .nav-tabs .nav-link.active,
+#page-question-category .nav-tabs .nav-link.active,
+#page-question-edit .nav-tabs .nav-link.active,
 #page-grade-export-xml-index .nav-tabs .nav-link.active,
 #page-course-admin .nav-tabs .nav-link.active,
 #page-grade-export-txt-index .nav-tabs .nav-link.active
@@ -1145,6 +1174,23 @@ body.drawer-close-left {
 #page-grade-import-xml-index .nav-tabs .nav-link,
 #page-grade-export-ods-index .nav-tabs .nav-link,
 #page-grade-export-xls-index .nav-tabs .nav-link,
+#page-group-index .nav-tabs .nav-link,
+#page-group-overview .nav-tabs .nav-link,
+#page-mod-attendance-tempusers .nav-tabs .nav-link,
+#page-mod-attendance-preferences .nav-tabs .nav-link,
+#page-mod-attendance-export .nav-tabs .nav-link,
+#page-mod-attendance-report .nav-tabs .nav-link,
+#page-mod-attendance-sessions .nav-tabs .nav-link,
+#page-mod-attendance-manage .nav-tabs .nav-link,
+#page-course-completion .nav-tabs .nav-link,
+#page-course-bulkcompletion .nav-tabs .nav-link,
+#page-group-groupings .nav-tabs .nav-link,
+#page-course-editbulkcompletion .nav-tabs .nav-link,
+#page-course-editdefaultcompletion .nav-tabs .nav-link,
+#page-question-export .nav-tabs .nav-link,
+#page-question-import .nav-tabs .nav-link,
+#page-question-category .nav-tabs .nav-link,
+#page-question-edit .nav-tabs .nav-link,
 #page-grade-export-xml-index .nav-tabs .nav-link,
 #page-course-admin .nav-tabs .nav-link,
 #page-grade-export-txt-index .nav-tabs .nav-link
@@ -1191,6 +1237,57 @@ body.drawer-close-left {
 #page-grade-export-xls-index .nav-tabs .nav-link:hover,
 #page-grade-export-xls-index .nav-tabs .nav-link:active,
 #page-grade-export-xls-index .nav-tabs .nav-link:focus,
+#page-group-index .nav-tabs .nav-link:hover,
+#page-group-index .nav-tabs .nav-link:active,
+#page-group-index .nav-tabs .nav-link:focus,
+#page-group-overview .nav-tabs .nav-link:hover,
+#page-group-overview .nav-tabs .nav-link:active,
+#page-group-overview .nav-tabs .nav-link:focus,
+#page-mod-attendance-tempusers .nav-tabs .nav-link:hover,
+#page-mod-attendance-tempusers .nav-tabs .nav-link:active,
+#page-mod-attendance-tempusers .nav-tabs .nav-link:focus,
+#page-mod-attendance-preferences .nav-tabs .nav-link:hover,
+#page-mod-attendance-preferences .nav-tabs .nav-link:active,
+#page-mod-attendance-preferences .nav-tabs .nav-link:focus,
+#page-mod-attendance-export .nav-tabs .nav-link:hover,
+#page-mod-attendance-export .nav-tabs .nav-link:active,
+#page-mod-attendance-export .nav-tabs .nav-link:focus,
+#page-mod-attendance-report .nav-tabs .nav-link:hover,
+#page-mod-attendance-report .nav-tabs .nav-link:active,
+#page-mod-attendance-report .nav-tabs .nav-link:focus,
+#page-mod-attendance-sessions .nav-tabs .nav-link:hover,
+#page-mod-attendance-sessions .nav-tabs .nav-link:active,
+#page-mod-attendance-sessions .nav-tabs .nav-link:focus,
+#page-mod-attendance-manage .nav-tabs .nav-link:hover,
+#page-mod-attendance-manage .nav-tabs .nav-link:active,
+#page-mod-attendance-manage .nav-tabs .nav-link:focus,
+#page-course-completion .nav-tabs .nav-link:hover,
+#page-course-completion .nav-tabs .nav-link:active,
+#page-course-completion .nav-tabs .nav-link:focus,
+#page-course-bulkcompletion .nav-tabs .nav-link:hover,
+#page-course-bulkcompletion .nav-tabs .nav-link:active,
+#page-course-bulkcompletion .nav-tabs .nav-link:focus,
+#page-group-groupings .nav-tabs .nav-link:hover,
+#page-group-groupings .nav-tabs .nav-link:active,
+#page-group-groupings .nav-tabs .nav-link:focus,
+#page-course-editbulkcompletion .nav-tabs .nav-link:hover,
+#page-course-editbulkcompletion .nav-tabs .nav-link:active,
+#page-course-editbulkcompletion .nav-tabs .nav-link:focus,
+#page-course-editdefaultcompletion .nav-tabs .nav-link:hover,
+#page-course-editdefaultcompletion .nav-tabs .nav-link:active,
+#page-course-editdefaultcompletion .nav-tabs .nav-link:focus,
+#page-question-export .nav-tabs .nav-link:hover,
+#page-question-export .nav-tabs .nav-link:active,
+#page-question-export .nav-tabs .nav-link:focus,
+#page-question-import .nav-tabs .nav-link:hover,
+#page-question-import .nav-tabs .nav-link:active,
+#page-question-import .nav-tabs .nav-link:focus,
+#page-question-category .nav-tabs .nav-link:hover,
+#page-question-category .nav-tabs .nav-link:active,
+#page-question-category .nav-tabs .nav-link:focus,
+#page-question-edit .nav-tabs .nav-link:hover,
+#page-question-edit .nav-tabs .nav-link:active,
+#page-question-edit .nav-tabs .nav-link:focus,
 #page-grade-export-xml-index .nav-tabs .nav-link:hover,
 #page-grade-export-xml-index .nav-tabs .nav-link:active,
 #page-grade-export-xml-index .nav-tabs .nav-link:focus,
@@ -2023,7 +2120,7 @@ hr{
 #page-mod-assign-submit .card-body, #page-mod-attendance-tempusers .card-body, 
 #page-mod-attendance-preferences .card-body, #page-mod-attendance-export .card-body, #page-mod-attendance-report .card-body, 
 #page-mod-attendance-sessions .card-body, #page-mod-attendance-manage .card-body, #page-mod-attendance-mod .mform, 
-#page-enrol-editinstance  .mform, #page-enrol-instances .card-body, #page-course-view-remuiformat .card-body, #page-mod-forum-post .mform,
+#page-enrol-editinstance  .card-body, #page-enrol-instances .card-body, #page-course-view-remuiformat .card-body, #page-mod-forum-post .mform,
 #page-mod-assign-editsubmission .card-body,
 #page-mod-feedback-import .card-body,
 #page-mod-feedback-show_nonrespondents .card-body,
@@ -2068,7 +2165,7 @@ hr{
 #page-mod-assign-mod form.mform,
 #page-mod-assign-overrideedit form.mform,
 #page-admin-tool-lp-editcompetencyframework form.mform,
-#page-filter-manage .filters-Manage,
+#page-filter-manage .card-body,
 #page-mod-assign-overrides #assignoverrides,
 #page-site-index #frontpage-available-course-list,
 #page-site-index #frontpage-category-combo,
@@ -2080,6 +2177,41 @@ hr{
 #page-admin-tool-usertours-configure .card-body,
 #page-admin-tag-manage .card-body,
 #page-user-files .card-body,
+#page-group-index .card-body,
+#page-group-overview .card-body,
+#page-group-groupings .card-body,
+#page-course-editbulkcompletion .card-body,
+#page-course-editdefaultcompletion .card-body,
+#page-question-type-multichoice .card-body,
+#page-question-export .card-body,
+#page-question-import .card-body,
+#page-question-category .card-body,
+#page-question-edit .card-body,
+#page-course-completion .card-body,
+#page-question-type-shortanswer .card-body,
+#page-question-type-numerical .card-body,
+#page-question-type-essay .card-body,
+#page-question-type-calculated .card-body,
+#page-question-type-calculatedmulti .card-body,
+#page-question-type-calculatedsimple .card-body,
+#page-question-type-ddwtos .card-body,
+#page-question-type-ddmarker .card-body,
+#page-question-type-match .card-body,
+#page-question-type-truefalse .card-body,
+#page-question-type-ddimageortext .card-body,
+#page-question-type-multianswer .card-body,
+#page-question-type-randomsamatch .card-body,
+#page-question-type-gapselect .card-body,
+#page-question-type-description .card-body,
+#page-course-bulkcompletion .card-body,
+#page-enrol-otherusers .card-body,
+#page-group-grouping .card-body,
+#page-course-reset .card-body,
+#page-enrol-manual-manage .card-body,
+#page-group-autogroup .card-body,
+#page-group-group .card-body,
+#page-group-import .card-body,
+#page-group-members .card-body,
 #page-admin-modules 
 {
     background-color: white;
@@ -2701,6 +2833,62 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 991px) {
+#page-admin-setting-modsettingattendance .nav-tabs .nav-link,
+#page-admin-modules .nav-tabs .nav-link,
+.cust-tabs-s .nav-tabs .nav-link,
+#page-mod-lesson-report .nav-tabs .nav-link,
+#page-mod-lesson-essay .nav-tabs .nav-link,
+#page-mod-lesson-edit .nav-tabs .nav-link,
+#page-grade-report-grader-index .nav-tabs .nav-link,
+#page-grade-edit-tree-index .nav-tabs .nav-link,
+#page-grade-edit-settings-index .nav-tabs .nav-link,
+#page-grade-report-grader-preferences .nav-tabs .nav-link,
+#page-cohort-index .nav-tabs .nav-link,
+#page-cohort-edit .nav-tabs .nav-link,
+#page-cohort-upload .nav-tabs .nav-link, 
+#page-admin-roles-allow .nav-tabs .nav-link, 
+#page-mod-scheduler-view .nav-tabs .nav-link, 
+#page-admin-roles-define .nav-tabs .nav-link, 
+#page-admin-roles-manage .nav-tabs .nav-link, 
+#page-admin-cohort-index .nav-tabs .nav-link,
+#page-grade-report-user-index .nav-tabs .nav-link,
+#page-grade-report-overview-index .nav-tabs .nav-link,
+#page-grade-report-singleview-index .nav-tabs .nav-link,
+#page-grade-report-outcomes-index .nav-tabs .nav-link,
+#page-grade-report-history-index .nav-tabs .nav-link,
+#page-grade-edit-scale-index .nav-tabs .nav-link,
+#page-grade-edit-letter-index .nav-tabs .nav-link,
+#page-mod-lesson-view .nav-tabs .nav-link,
+#page-grade-import-csv-index .nav-tabs .nav-link,
+#page-grade-import-direct-index .nav-tabs .nav-link,
+#page-grade-import-xml-index .nav-tabs .nav-link,
+#page-grade-export-ods-index .nav-tabs .nav-link,
+#page-grade-export-xls-index .nav-tabs .nav-link,
+#page-group-index .nav-tabs .nav-link,
+#page-group-overview .nav-tabs .nav-link,
+#page-mod-attendance-tempusers .nav-tabs .nav-link,
+#page-mod-attendance-preferences .nav-tabs .nav-link,
+#page-mod-attendance-export .nav-tabs .nav-link,
+#page-mod-attendance-report .nav-tabs .nav-link,
+#page-mod-attendance-sessions .nav-tabs .nav-link,
+#page-mod-attendance-manage .nav-tabs .nav-link,
+#page-course-completion .nav-tabs .nav-link,
+#page-course-bulkcompletion .nav-tabs .nav-link,
+#page-group-groupings .nav-tabs .nav-link,
+#page-course-editbulkcompletion .nav-tabs .nav-link,
+#page-course-editdefaultcompletion .nav-tabs .nav-link,
+#page-question-export .nav-tabs .nav-link,
+#page-question-import .nav-tabs .nav-link,
+#page-question-category .nav-tabs .nav-link,
+#page-question-edit .nav-tabs .nav-link,
+#page-grade-export-xml-index .nav-tabs .nav-link,
+#page-course-admin .nav-tabs .nav-link,
+#page-grade-export-txt-index .nav-tabs .nav-link
+    {
+        padding: 10px 5px!important;
+        font-size: 11px!important;
+        margin-bottom: 20px!important;
+    }
     .user-t-pro .node_category li.editprofile a {
         padding: 6px 6px!important;
     }
@@ -2938,6 +3126,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-grade-export-xml-index legend a,
     #page-grade-report-grader-preferences legend a,
     #page-blog-edit legend a,
+    #page-course-completion legend a,
     #page-message-notificationpreferences .preferences-page-container h2,
     #page-admin-tool-dataprivacy-summary .card-header h3,
     #page-user-forum legend a {
@@ -2950,10 +3139,14 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
-    #page-admin-roles-assign .container {
+    #page-admin-roles-assign .container,
+    #page-group-members .container,
+    #page-enrol-manual-manage .container{
         max-width: 98% !important;
     }
-    #page-admin-roles-assign form > div {
+    #page-admin-roles-assign form > div,
+    #page-group-members form > div,
+    #page-enrol-manual-manage form > div {
         overflow: scroll !important;
     }
     .eodo-course .card-title a{
@@ -3030,10 +3223,10 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         overflow-x: auto;
     }
     #eodo-signup .form-group {
-            width: 90% !important;
-            float: left;
-            padding: 0 15px;
-            margin-bottom: 0 !important;
+        width: 90% !important;
+        float: left;
+        padding: 0 15px;
+        margin-bottom: 0 !important;
     }
     .pagination-sm .page-link {
         padding: .25rem 4px!important;
@@ -3092,37 +3285,58 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-mod-assign-mod .card-body div > h2{
         font-size: 13px !important;
     }
-    .cust-tabs-s .nav-tabs .nav-link,
-    #page-mod-lesson-report .nav-tabs .nav-link,
-    #page-mod-lesson-essay .nav-tabs .nav-link,
-    #page-mod-lesson-edit .nav-tabs .nav-link,
-    #page-grade-report-grader-index .nav-tabs .nav-link,
-    #page-grade-edit-tree-index .nav-tabs .nav-link,
-    #page-grade-edit-settings-index .nav-tabs .nav-link,
-    #page-grade-report-grader-preferences .nav-tabs .nav-link,
-    #page-cohort-index .nav-tabs .nav-link,
-    #page-cohort-edit .nav-tabs .nav-link,
-    #page-cohort-upload .nav-tabs .nav-link,
-    #page-admin-roles-allow .nav-tabs .nav-link,
-    #page-mod-scheduler-view .nav-tabs .nav-link,
-    #page-admin-roles-define .nav-tabs .nav-link,
-    #page-admin-roles-manage .nav-tabs .nav-link,
-    #page-admin-cohort-index .nav-tabs .nav-link,
-    #page-grade-report-user-index .nav-tabs .nav-link,
-    #page-grade-report-overview-index .nav-tabs .nav-link,
-    #page-grade-report-singleview-index .nav-tabs .nav-link,
-    #page-grade-report-outcomes-index .nav-tabs .nav-link,
-    #page-grade-report-history-index .nav-tabs .nav-link,
-    #page-grade-edit-scale-index .nav-tabs .nav-link,
-    #page-grade-edit-letter-index .nav-tabs .nav-link,
-    #page-mod-lesson-view .nav-tabs .nav-link,
-    #page-grade-import-csv-index .nav-tabs .nav-link,
-    #page-grade-import-direct-index .nav-tabs .nav-link,
-    #page-grade-import-xml-index .nav-tabs .nav-link,
-    #page-grade-export-ods-index .nav-tabs .nav-link,
-    #page-grade-export-xls-index .nav-tabs .nav-link,
-    #page-grade-export-xml-index .nav-tabs .nav-link,
-    #page-grade-export-txt-index .nav-tabs .nav-link
+
+#page-admin-setting-modsettingattendance .nav-tabs .nav-link,
+#page-admin-modules .nav-tabs .nav-link,
+.cust-tabs-s .nav-tabs .nav-link,
+#page-mod-lesson-report .nav-tabs .nav-link,
+#page-mod-lesson-essay .nav-tabs .nav-link,
+#page-mod-lesson-edit .nav-tabs .nav-link,
+#page-grade-report-grader-index .nav-tabs .nav-link,
+#page-grade-edit-tree-index .nav-tabs .nav-link,
+#page-grade-edit-settings-index .nav-tabs .nav-link,
+#page-grade-report-grader-preferences .nav-tabs .nav-link,
+#page-cohort-index .nav-tabs .nav-link,
+#page-cohort-edit .nav-tabs .nav-link,
+#page-cohort-upload .nav-tabs .nav-link, 
+#page-admin-roles-allow .nav-tabs .nav-link, 
+#page-mod-scheduler-view .nav-tabs .nav-link, 
+#page-admin-roles-define .nav-tabs .nav-link, 
+#page-admin-roles-manage .nav-tabs .nav-link, 
+#page-admin-cohort-index .nav-tabs .nav-link,
+#page-grade-report-user-index .nav-tabs .nav-link,
+#page-grade-report-overview-index .nav-tabs .nav-link,
+#page-grade-report-singleview-index .nav-tabs .nav-link,
+#page-grade-report-outcomes-index .nav-tabs .nav-link,
+#page-grade-report-history-index .nav-tabs .nav-link,
+#page-grade-edit-scale-index .nav-tabs .nav-link,
+#page-grade-edit-letter-index .nav-tabs .nav-link,
+#page-mod-lesson-view .nav-tabs .nav-link,
+#page-grade-import-csv-index .nav-tabs .nav-link,
+#page-grade-import-direct-index .nav-tabs .nav-link,
+#page-grade-import-xml-index .nav-tabs .nav-link,
+#page-grade-export-ods-index .nav-tabs .nav-link,
+#page-grade-export-xls-index .nav-tabs .nav-link,
+#page-group-index .nav-tabs .nav-link,
+#page-group-overview .nav-tabs .nav-link,
+#page-mod-attendance-tempusers .nav-tabs .nav-link,
+#page-mod-attendance-preferences .nav-tabs .nav-link,
+#page-mod-attendance-export .nav-tabs .nav-link,
+#page-mod-attendance-report .nav-tabs .nav-link,
+#page-mod-attendance-sessions .nav-tabs .nav-link,
+#page-mod-attendance-manage .nav-tabs .nav-link,
+#page-course-completion .nav-tabs .nav-link,
+#page-course-bulkcompletion .nav-tabs .nav-link,
+#page-group-groupings .nav-tabs .nav-link,
+#page-course-editbulkcompletion .nav-tabs .nav-link,
+#page-course-editdefaultcompletion .nav-tabs .nav-link,
+#page-question-export .nav-tabs .nav-link,
+#page-question-import .nav-tabs .nav-link,
+#page-question-category .nav-tabs .nav-link,
+#page-question-edit .nav-tabs .nav-link,
+#page-grade-export-xml-index .nav-tabs .nav-link,
+#page-course-admin .nav-tabs .nav-link,
+#page-grade-export-txt-index .nav-tabs .nav-link
     {
         padding: 10px 5px!important;
         font-size: 11px!important;
@@ -3304,7 +3518,8 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         font-size: 28px!important;
     }
     #region-main .btn-primary {
-        padding: 7px 25px!important;
+        /*padding: 7px 25px!important;*/
+        padding: 7px 7px!important;
         font-size: 11px!important;
     }
     .page-local-pages-about-us-1 #page.container-fluid {

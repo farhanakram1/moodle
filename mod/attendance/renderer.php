@@ -70,7 +70,7 @@ class mod_attendance_renderer extends plugin_renderer_base {
         $filtertable->data[0][] = $this->render_view_controls($fcontrols);
 
         $o = html_writer::table($filtertable);
-        $o = $this->output->container($o, 'attfiltercontrols');
+        $o = $this->output->container($o, 'attfiltercontrols table-responsive');
 
         return $o;
     }
