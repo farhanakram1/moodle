@@ -2268,6 +2268,19 @@ hr{
 #page-admin-setting-restoregeneralsettings .card-body,
 #page-admin-setting-asyncgeneralsettings .card-body,
 #page-admin-setting-gradereporthistory .card-body,
+#page-admin-setting-gradereportoverview .card-body,
+#page-admin-setting-gradereportuser .card-body,
+#page-admin-setting-gradereportgrader .card-body,
+#page-admin-setting-managemodulescommon .card-body,
+#page-admin-setting-modassignfolder .card-body,
+#page-admin-setting-modsettingdata .card-body,
+#page-admin-setting-modsettingassign .card-body,
+#page-admin-setting-assignsubmissionplugins .card-body,
+#page-admin-setting-assignsubmission_file .card-body,
+#page-admin-setting-assignsubmission_onlinetext .card-body,
+#page-admin-setting-assignfeedback_offline .card-body,
+#page-admin-setting-assignfeedback_comments .card-body,
+#page-mod-assign-feedback-editpdf-testgs .card-body,
 #page-admin-modules 
 {
     background-color: white;
