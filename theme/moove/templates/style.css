@@ -2322,6 +2322,13 @@ hr{
 #page-admin-setting-cachestore_memcached_settings .card-body,
 #page-admin-setting-cachestore_mongodb_settings .card-body,
 #page-admin-setting-cachestore_redis_settings .card-body,
+#page-admin-setting-manageformats .card-body,
+#page-admin-setting-formatsettingremuiformat .card-body,
+#page-admin-setting-formatsettingsingleactivity .card-body,
+#page-admin-setting-managecustomfields .card-body,
+#page-admin-setting-managedataformats .card-body,
+#page-admin-setting-managefileconverterplugins .card-body,
+#page-admin-setting-manageenrols .card-body,
 #page-admin-modules 
 {
     background-color: white;
