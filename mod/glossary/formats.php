@@ -67,7 +67,8 @@ $yes = get_string("yes");
 $no  = get_string("no");
 
 echo '<form method="post" action="formats.php" id="form">';
-echo '<table width="90%" align="center" class="generalbox">';
+echo '<div class="table-responsive">';
+echo '<table width="100%" align="center" class="generalbox">';
 ?>
 <tr>
     <td colspan="3" align="center"><strong>
@@ -294,7 +295,7 @@ foreach ($glossarytabs as $tabkey => $tabvalue) {
 <input type="hidden" name="mode"    value="edit" />
 <?php
 
-echo '</table></form>';
+echo '</table></div></form>';
 
 echo $OUTPUT->footer();
 ?>
