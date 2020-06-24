@@ -2166,7 +2166,7 @@ hr{
 #page-user-editor form.mform,
 #page-mod-assign-mod form.mform,
 #page-mod-assign-overrideedit form.mform,
-#page-admin-tool-lp-editcompetencyframework form.mform,
+#page-admin-tool-lp-editcompetencyframework .card-body,
 #page-filter-manage .card-body,
 #page-mod-assign-overrides #assignoverrides,
 #page-site-index #frontpage-available-course-list,
@@ -3145,6 +3145,12 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
+    #page-admin-tool-lp-edittemplate .card-body h2,
+    #page-admin-tool-lp-editcompetencyframework .card-body h2,
+    #page-admin-tool-lp-edittemplate .card-body h3,
+    #page-admin-tool-lp-editcompetencyframework .card-body h3{
+        font-size: 17px !important;
+    }
     #page-course-index-category .eodo-category h3{
         color: white !important;
     }
@@ -3409,7 +3415,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     #page-user-editor form.mform,
     #page-mod-assign-mod form.mform,
     #page-mod-assign-overrideedit form.mform,
-    #page-admin-tool-lp-editcompetencyframework form.mform,
+    #page-admin-tool-lp-editcompetencyframework .card-body,
     #page-filter-manage .filters-Manage,
     #page-mod-assign-overrides #assignoverrides,
     #page-site-index #frontpage-available-course-list,
@@ -3593,10 +3599,7 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 410px) {
-    #page-admin-tool-lp-edittemplate .card-body h2,
-    #page-admin-tool-lp-edittemplate .card-body h3{
-        font-size: 17px !important;
-    }
+    
     #page-course-management .dropdown-item span.menu-action-text{
         font-size: 12px !important;
     }
