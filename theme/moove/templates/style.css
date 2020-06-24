@@ -2231,6 +2231,7 @@ hr{
 #page-group-members .card-body,
 #page-admin-setting-qtypesettingmultichoice .card-body,
 #page-admin-setting-qdefaultsetting .card-body,
+#page-notes-edit .card-body,
 #page-admin-modules 
 {
     background-color: white;
@@ -2532,6 +2533,7 @@ hr{
 #page-blog-external_blog_edit .card-body div > h2, 
 #page-badges-preferences .card-body div > h2, 
 #page-badges-mybackpack .card-body div > h2, 
+#page-notes-edit .card-body div > h2, 
 #page-blog-edit .card-body div > h2, 
 #page-user-forum .card-body div > h2{
     color:#008ec2 !important;
