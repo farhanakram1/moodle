@@ -2722,6 +2722,10 @@ form.logselecform select {
 
 
 @media (max-width: 767px){
+    #page-course-management .d-flex {
+        width: 100%;
+        text-align: justify !important;
+    }
     #id_s_analytics_levelinstitution {
         width: 100% !important;
     }
@@ -3571,6 +3575,18 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         width: 100% !important;
     }
 }
+
+@media (min-width: 320px) and (max-width: 475px){
+    #page-course-management .d-flex {
+        display: block !important;
+        width: 100%;
+        font-size: 14px;
+    }
+    #page-course-management #course-category-listings .listitem>div .idnumber{
+        margin-right: 0px !important;
+    }
+}
+
 @media screen and (max-width: 410px) {
     .admin_colourpicker {
         width: 100% !important;
