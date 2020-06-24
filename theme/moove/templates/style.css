@@ -2647,6 +2647,11 @@ table tr td {
 .moodle-actionmenu .dropdown a {
     color: #313f40!important;
 }
+.model_btn .moodle-actionmenu .dropdown a {
+    color: white !important;
+    border-color: #008ec2 !important;
+    background-color: #008ec2 !important;
+}
 #coursesearch {
     margin-top: 1em!important;
     background-color: white!important;
