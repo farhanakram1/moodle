@@ -1639,7 +1639,7 @@ header#page-header#page-header .pt-3{
 }
 .eodo-course .card-title a{
     text-decoration: none;
-    color:#0090c2;
+    color:#FFF !important;
 }
 .eodo-category h3{
     margin-top: 20px !important;
