@@ -139,7 +139,7 @@ class core_course_management_renderer extends plugin_renderer_base {
         $listing = core_course_category::top()->get_children();
 
         $attributes = array(
-                'class' => 'ml-1 list-unstyled',
+                'class' => 'ml-1 list-unstyled course_managment',
                 'role' => 'tree',
                 'aria-labelledby' => 'category-listing-title'
         );
