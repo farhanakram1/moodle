@@ -251,6 +251,7 @@
 #page-mod-attendance-view .card-body,
 #page-admin-setting-badgesettings .card-body,
 #page-admin-setting-gradecategorysettings .card-body,
+#page-admin-setting-backupgeneralsettings .card-body,
 #page-admin-setting-gradeitemsettings .card-body,
 #page-admin-setting-importgeneralsettings .card-body,
 #page-admin-setting-gradessettings .card-body,
@@ -2149,20 +2150,20 @@ hr{
 #page-mod-quiz-mod .mform, 
 #page-mod-resource-view .card-body, 
 #page-mod-resource-mod .card-body, 
-#page-course-view-singleactivity .card-body, #page-admin-setting-qtypesettings .card-body #adminsettings, #page-mod-forum-view .card-body, #page-course-view-periods .card-body, #page-user-edit form.mform, 
-#page-login-change_password form.mform,
-#page-user-language form.mform,
-#page-user-forum form.mform,
+#page-course-view-singleactivity .card-body, #page-admin-setting-qtypesettings .card-body, #page-mod-forum-view .card-body, #page-course-view-periods .card-body, #page-user-edit form.mform, 
+#page-login-change_password .card-body,
+#page-user-language .card-body,
+#page-user-forum .card-body,
 #page-admin-tool-lp-edittemplate .card-body,
-#page-user-course form.mform,
-#page-user-calendar form.mform,
-#page-blog-preferences form.mform,
-#page-blog-external_blog_edit form.mform,
-#page-grade-edit-tree-category form.mform,
-#page-grade-edit-scale-edit form.mform,
-#page-grade-edit-tree-item form.mform,
-#page-badges-mybackpack form.mform,
-#page-badges-preferences form.mform,
+#page-user-course .card-body,
+#page-user-calendar .card-body,
+#page-blog-preferences .card-body,
+#page-blog-external_blog_edit .card-body,
+#page-grade-edit-tree-category .card-body,
+#page-grade-edit-scale-edit .card-body,
+#page-grade-edit-tree-item .card-body,
+#page-badges-mybackpack .card-body,
+#page-badges-preferences .card-body,
 #page-mod-forum-user #region-main > div > .card-body,
 #page-blog-index #region-main > div > .card-body,
 #page-admin-tool-lp-plans #region-main > div > .card-body,
@@ -2185,7 +2186,7 @@ hr{
 #page-mod-assign-overrides #assignoverrides,
 #page-site-index #frontpage-available-course-list,
 #page-site-index #frontpage-category-combo,
-#page-blog-edit form.mform,
+#page-blog-edit .card-body,
 #page-admin-tool-monitor-edit form.mform,
 #page-admin-tool-filetypes-index .card-body,
 #page-admin-environment .card-body,
@@ -2228,6 +2229,8 @@ hr{
 #page-group-group .card-body,
 #page-group-import .card-body,
 #page-group-members .card-body,
+#page-admin-setting-qtypesettingmultichoice .card-body,
+#page-admin-setting-qdefaultsetting .card-body,
 #page-admin-modules 
 {
     background-color: white;
@@ -2485,6 +2488,7 @@ hr{
 #page-grade-report-overview-index #region-main > div > .card-body .no-overflow > h3,
 #page-message-notificationpreferences .preferences-page-container h2{
     font-weight: bold;
+    color: #008ec2 !important;
 }
 .blog_entry .audience {
     margin-bottom: 25px !important;
@@ -2530,7 +2534,7 @@ hr{
 #page-badges-mybackpack .card-body div > h2, 
 #page-blog-edit .card-body div > h2, 
 #page-user-forum .card-body div > h2{
-    color:white!important;
+    color:#008ec2 !important;
 }
 #page-blog-external_blogs .boxaligncenter > a {
     color: black;
@@ -3406,21 +3410,21 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         font-size: 18px;
     }
 
-    #page-user-edit form.mform, 
-    #page-admin-tool-monitor-edit form.mform, 
-    #page-login-change_password form.mform,
-    #page-user-language form.mform,
-    #page-user-forum form.mform,
-    #page-admin-tool-lp-edittemplate form.mform,
-    #page-user-course form.mform,
-    #page-user-calendar form.mform,
-    #page-blog-preferences form.mform,
-    #page-blog-external_blog_edit form.mform,
-    #page-grade-edit-tree-category form.mform,
-    #page-grade-edit-scale-edit form.mform,
-    #page-grade-edit-tree-item form.mform,
-    #page-badges-mybackpack form.mform,
-    #page-badges-preferences form.mform,
+    #page-user-edit .card-body, 
+    #page-admin-tool-monitor-edit .card-body, 
+    #page-login-change_password .card-body,
+    #page-user-language .card-body,
+    #page-user-forum .card-body,
+    #page-admin-tool-lp-edittemplate .card-body,
+    #page-user-course .card-body,
+    #page-user-calendar .card-body,
+    #page-blog-preferences .card-body,
+    #page-blog-external_blog_edit .card-body,
+    #page-grade-edit-tree-category .card-body,
+    #page-grade-edit-scale-edit .card-body,
+    #page-grade-edit-tree-item .card-body,
+    #page-badges-mybackpack .card-body,
+    #page-badges-preferences .card-body,
     #page-mod-forum-user #region-main > div > .card-body,
     #page-blog-index #region-main > div > .card-body,
     #page-admin-tool-lp-plans #region-main > div > .card-body,
