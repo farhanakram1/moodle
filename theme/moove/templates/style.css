@@ -2027,9 +2027,7 @@ hr{
     position: relative !important !important;
     text-decoration: none !important !important;
 }
-.block_eodoo_dashboard .cust-box-tab-admin nav > ul > li {
-    padding: 0 6px 13px 0 !important;
-}
+
 .block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link:hover,
 .block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link:active,
 .block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link:focus 
