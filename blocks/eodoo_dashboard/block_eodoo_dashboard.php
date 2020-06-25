@@ -361,6 +361,7 @@ class block_eodoo_dashboard extends block_base {
                                 <div>
                                     <div class="tab-content" id="mypublic-tab" style="padding-top:0px">
                                         <div class="tab-pane fade show active" id="nav-overviews" role="tabpanel" aria-labelledby="courses-tab">
+                                        <div class="table-responsive">
                                             <table class="table table-striped">
                                                     <thead>
                                                       <tr>
@@ -397,10 +398,12 @@ class block_eodoo_dashboard extends block_base {
                                                       </tr>
                                                     </tbody>
                                                 </table>
+                                                </div>
                                         </div>
                                             
                                             <div class="tab-pane fade" id="nav-downloads" role="tabpanel" aria-labelledby="nav-downloads-tab">
-                                                <div class="container">           
+                                                <div class="container">  
+                                                <div class="table-responsive">         
                                                   <table class="table table-striped">
                                                     <thead>
                                                       <tr>
@@ -414,6 +417,7 @@ class block_eodoo_dashboard extends block_base {
                                                     </tbody>
                                                   </table>
                                                 </div>
+                                                </div>
 
                                             </div>
 
@@ -423,6 +427,7 @@ class block_eodoo_dashboard extends block_base {
                                                   <div class="row">
                                                     
                                                     <div class="col-sm-6">
+                                                    <div class="table-responsive">
                                                         <table class="table table-striped">
                                                           <thead>
                                                             <tr>
@@ -434,6 +439,7 @@ class block_eodoo_dashboard extends block_base {
                 . $uploadss .
                 '</tbody>
                                                         </table>
+                                                    </div>
                                                     </div>
 
                                                     <div class="col-sm-6" style="margin-top:50px">
@@ -457,6 +463,7 @@ class block_eodoo_dashboard extends block_base {
                                                   <br><br>
                                                   <div class="row">
                                                     <div class="col-sm-12">
+                                                    <div class="table-responsive">
                                                         <table class="table table-striped table-responsive">
                                                             <thead>
                                                               <tr>
@@ -474,6 +481,7 @@ class block_eodoo_dashboard extends block_base {
                                                             </tbody>
                                                           </table>
                                                     </div>
+                                                    </div>
                                                   </div>
 
                                                   <button type="button" class="btn btn-primary float-right mt-2">Save</button>
@@ -488,6 +496,7 @@ class block_eodoo_dashboard extends block_base {
                                                   <div class="row">
                                                     
                                                     <div class="col-sm-6">
+                                                    <div class="table-responsive">
                                                         <table class="table table-striped">
                                                             <thead>
                                                               <tr>
@@ -499,6 +508,7 @@ class block_eodoo_dashboard extends block_base {
                                                               ' . $upload_accountscourses . '
                                                             </tbody>
                                                         </table>
+                                                    </div>
                                                     </div>
 
                                                     <div class="col-sm-6" style="margin-top:50px">
@@ -529,6 +539,7 @@ class block_eodoo_dashboard extends block_base {
                                               <div class="container">
                                                   <div class="row">
                                                     <div class="col-sm-6">
+                                                    <div class="table-responsive">
                                                         <table class="table table-striped">
                                                             <thead>
                                                               <tr>
@@ -541,8 +552,10 @@ class block_eodoo_dashboard extends block_base {
                                                             </tbody>
                                                         </table>
                                                     </div>
+                                                    </div>
 
                                                     <div class="col-sm-6">
+                                                    <div class="table-responsive">
                                                         <table class="table table-striped table-responsive">
                                                             <thead>
                                                               <tr>
@@ -554,6 +567,7 @@ class block_eodoo_dashboard extends block_base {
                                                               ' . $code_courses . '
                                                             </tbody>
                                                         </table>
+                                                    </div>
                                                     </div>
 
                                                   </div>
@@ -570,6 +584,7 @@ class block_eodoo_dashboard extends block_base {
                                                   <div class="row">
                                                     
                                                     <div class="col-sm-12">
+                                                    <div class="table-responsive">
                                                         <table class="table table-striped">
                                                             <thead>
                                                               <tr>
@@ -583,6 +598,7 @@ class block_eodoo_dashboard extends block_base {
                                                               ' . $invoices_cat . '
                                                             </tbody>
                                                         </table>
+                                                    </div>
                                                     </div>
 
 
@@ -601,6 +617,7 @@ class block_eodoo_dashboard extends block_base {
                                                 <div class="row">
                                                   <div class="col-sm-12">
                                                          <form method="post" class="form-inline" action="" style="padding-bottom: 20px !important;">
+                                                         <div class="table-responsive">
                                                       <table class="table table-striped">
                                                           <thead>
                                                             <tr>
@@ -614,6 +631,7 @@ class block_eodoo_dashboard extends block_base {
                                                             
                                                           </tbody>
                                                       </table>
+                                                      </div>
                                                       <button type="submit" class="btn btn-primary float-right mt-2" id="external_linkss">Save</button>
                                                     </form>
                                                   </div>
