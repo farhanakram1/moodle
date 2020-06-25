@@ -3101,6 +3101,12 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 1200px) {
+    .block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link
+    {
+        padding: 10px 5px!important;
+        margin-top: 16px;
+        font-size: 11px!important;
+    }
     .w-50-s input#id_submitbutton {
         margin-left: 0%;
     }
