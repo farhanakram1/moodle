@@ -1999,6 +1999,48 @@ hr{
     background: #cdd2d8 !important;
     position: relative !important;
 }
+.block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link.active
+{
+
+    border: none !important;
+    background: #008ec2 !important;
+    color: #fff !important;
+    border-radius: 0 !important;
+    border-top-left-radius: 0px; !important
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+}
+.block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link
+{
+    border: 1px solid transparent !important;
+    border: none !important;
+    padding: 10px 14px !important;
+    color: #000 !important;
+    background: #cdd2d8 !important;
+    border-radius: 0 !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    margin-right: 20px !important;
+    position: relative !important !important;
+    text-decoration: none !important !important;
+}
+.block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link:hover,
+.block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link:active,
+.block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link:focus 
+{
+    border: none !important;
+    background: #008ec2 !important;
+    color: #fff !important;
+    border-radius: 0 !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    transition: background 0.20s linear !important;
+}
 /*.block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-item {
 	width: 100% !important;
 	border: 0 !important;
@@ -2621,33 +2663,33 @@ hr{
     text-align: center !important;
     font-size: 20px;
 }
-.cust-box-tab-admin .nav-tabs .nav-link {
+/*.cust-box-tab-admin .nav-tabs .nav-link {
     border: 1px solid transparent !important;
     color: black !important; 
     text-align: center !important;
     font-size: 20px;
-}
+}*/
 
-.cust-box-tab .nav-tabs .nav-item {
-    /*width: 100% !important;*/
+/*.cust-box-tab .nav-tabs .nav-item {
+    width: 100% !important;
     border: 0 !important;
     background-color: #dddddd !important;
     margin-bottom: 0px !important;
     margin-right: 15px;
     border-radius: 5px 5px 0px 0px !important;
-}
-.cust-box-tab-admin .nav-tabs .nav-item {
-    /*width: 100% !important;*/
-   /* border: 0 !important;
+}*/
+/*.cust-box-tab-admin .nav-tabs .nav-item {
+    width: 100% !important;
+    border: 0 !important;
     background-color: #ffffff !important;
     margin-bottom: 0px !important;
     margin-right: 15px;
-    border-radius: 3px 3px 0px 0px !important;*/
-}
-.cust-box-tab-admin .nav-tabs.Dash_tabs .nav-item{
+    border-radius: 3px 3px 0px 0px !important;
+}*/
+/*.cust-box-tab-admin .nav-tabs.Dash_tabs .nav-item{
     width: auto !important;
     flex: auto;
-}
+}*/
 .cust-box-tab-admin .nav-tabs.Dash_tabs .nav-item a{
     font-size: 18px !important;
 }
@@ -2655,29 +2697,29 @@ hr{
     color: black !important;
     font-size: 21px !important;
 }
-.cust-box-tab .nav-tabs .nav-link.active, .cust-box-tab  .nav-tabs .nav-item.show .nav-link {
+/*.cust-box-tab .nav-tabs .nav-link.active, .cust-box-tab  .nav-tabs .nav-item.show .nav-link {
     color: #ffffff !important;
     background-color: #008ec2 !important;
     border-color: transparent !important;
     border-radius: 5px 5px 0px 0px !important;
-}
+}*/
 .cust-box-tab .nav-tabs .tab_mb.active, .cust-box-tab  .nav-tabs .nav-item.show .tab_mb{
     margin-bottom: 0px !important;
 }
-.cust-box-tab-admin .nav-tabs .nav-link.active, .cust-box-tab-admin  .nav-tabs .nav-item.show .nav-link {
+/*.cust-box-tab-admin .nav-tabs .nav-link.active, .cust-box-tab-admin  .nav-tabs .nav-item.show .nav-link {
     color: #ffffff !important;
     background-color: #008ec2 !important;
     border-color: transparent !important;
     border-radius: 10px 10px 0px 0px !important;
-}
+}*/
 .cust-box-tab  .nav-tabs {
     border-bottom: 1px solid #dee2e6 !important;
     margin-top: 20px !important;
 }
-.cust-box-tab-admin  .nav-tabs {
+/*.cust-box-tab-admin  .nav-tabs {
     border-bottom: 1px solid #dee2e6 !important;
     margin-top: 20px !important;
-}
+}*/
 #page-login-change_password legend,
 #page-mod-forum-user #region-main > div > .card-body > div > h2,
 #page-blog-index #region-main > div > .card-body > div > h2,

@@ -319,7 +319,7 @@ class block_eodoo_dashboard extends block_base {
         $get_category_course_count_user = $adminifos->get_category_course_registered_user();
 
         $this->content = new stdClass;
-        $this->content->text = '<section id="region-main" class="cust-box-tab-admin" style="overflow-x: hidden;width:100%">    
+        $this->content->text = '<section id="region-mains" class="cust-box-tab-admin" style="width:100%">    
             <div class="row m-0">
                 <div class="col-md-12">
                     <ul class="d-flex nav nav-tabs {{#is_siteadmin}}remove_border{{/is_siteadmin}} Dash_tabs" id="myTab" role="tablist">
