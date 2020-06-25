@@ -2396,6 +2396,18 @@ hr{
 #page-admin-setting-ajax .card-body,
 #page-admin-setting-additionalhtml .card-body,
 #page-admin-setting-templates .card-body,
+#page-admin-setting-systempaths .card-body,
+#page-admin-setting-supportcontact .card-body,
+#page-admin-setting-sessionhandling .card-body,
+#page-admin-setting-http .card-body,
+#page-admin-setting-maintenancemode .card-body,
+#page-admin-setting-cleanup .card-body,
+#page-admin-setting-performance .card-body,
+#page-admin-setting-updatenotifications .card-body,
+#page-admin-setting-taskprocessing .card-body,
+#page-admin-setting-tasklogging .card-body,
+#page-admin-setting-outgoingmailconfig .card-body,
+#page-admin-setting-messageinbound_mailsettings .card-body,
 #page-admin-modules 
 {
     background-color: white;
