@@ -2027,6 +2027,9 @@ hr{
     position: relative !important !important;
     text-decoration: none !important !important;
 }
+.block_eodoo_dashboard .cust-box-tab-admin nav > ul > li {
+    padding: 0 6px 13px 0 !important;
+}
 .block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link:hover,
 .block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link:active,
 .block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link:focus 
@@ -2040,6 +2043,14 @@ hr{
     border-top-left-radius: 5px !important;
     border-top-right-radius: 5px !important;
     transition: background 0.20s linear !important;
+}
+.block_eodoo_dashboard .cust-box-tab-admin nav > ul > li a.nav-link.active:after {
+    content: "" !important;
+    position: absolute !important;
+    bottom: -15px !important;
+    left: 42% !important;
+    border: 7px solid transparent !important;
+    border-top-color: #008ec2 !important;
 }
 /*.block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-item {
 	width: 100% !important;
@@ -2690,9 +2701,9 @@ hr{
     width: auto !important;
     flex: auto;
 }*/
-.cust-box-tab-admin .nav-tabs.Dash_tabs .nav-item a{
+/*.cust-box-tab-admin .nav-tabs.Dash_tabs .nav-item a{
     font-size: 18px !important;
-}
+}*/
 #page-my-index .bg-blue-brud .dasH_name {
     color: black !important;
     font-size: 21px !important;
@@ -3173,6 +3184,12 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         font-size: 11px!important;
         margin-bottom: 20px!important;
     }
+.block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link
+    {
+        padding: 10px 5px!important;
+        font-size: 11px!important;
+        margin-bottom: 20px!important;
+    }
     .user-t-pro .node_category li.editprofile a {
         padding: 6px 6px!important;
     }
@@ -3219,9 +3236,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     .cust-box-tab .nav-tabs .nav-link{
         font-size: 14px;
     }
-    .cust-box-tab-admin .nav-tabs .nav-link{
+    /*.cust-box-tab-admin .nav-tabs .nav-link{
         font-size: 14px;
-    }
+    }*/
     #page-login-signup .card-title h3 {
         font-size: 25px !important;
     }
@@ -3319,17 +3336,17 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         margin: 0 auto;
         margin-bottom: 10px !important;
     }
-    .cust-box-tab-admin .nav-tabs .nav-item {
+   /* .cust-box-tab-admin .nav-tabs .nav-item {
         width: 90% !important;
         margin: 0 auto;
         margin-bottom: 10px !important;
-    }
+    }*/
     .cust-box-tab .nav-tabs .nav-link {
         padding: 20px 15px !important;
     }
-    .cust-box-tab-admin .nav-tabs .nav-link {
+  /*  .cust-box-tab-admin .nav-tabs .nav-link {
         padding: 20px 15px !important;
-    }
+    }*/
     div.editor_atto_toolbar {
         margin-top: 12px;
     }
@@ -3634,6 +3651,12 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 #page-grade-export-xml-index .nav-tabs .nav-link,
 #page-course-admin .nav-tabs .nav-link,
 #page-grade-export-txt-index .nav-tabs .nav-link
+    {
+        padding: 10px 5px!important;
+        font-size: 11px!important;
+        margin-bottom: 20px!important;
+    }
+.block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link
     {
         padding: 10px 5px!important;
         font-size: 11px!important;
