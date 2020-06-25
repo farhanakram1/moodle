@@ -321,7 +321,7 @@ class block_eodoo_dashboard extends block_base {
         $this->content = new stdClass;
         $this->content->text = '<section id="region-main" class="cust-box-tab-admin" style="overflow-x: hidden;width:100%">    
             <div class="row m-0">
-                <div class="col-md-12 p-0">
+                <div class="col-md-12">
                     <ul class="d-flex nav nav-tabs {{#is_siteadmin}}remove_border{{/is_siteadmin}} Dash_tabs" id="myTab" role="tablist">
                                
                         <li class="nav-item p-0 mr-0">
