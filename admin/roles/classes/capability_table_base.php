@@ -85,6 +85,7 @@ abstract class core_role_capability_table_base {
             $PAGE->requires->js_init_call('M.core_role.init_cap_table_filter', array($this->id, $this->context->id), false,
                 $jsmodule);
         }
+        echo '<div class="table-responsive">';
         echo '<table class="' . implode(' ', $this->classes) . '" id="' . $this->id . '">' . "\n<thead>\n";
         echo '<tr><th class="name" align="left" scope="col">' . get_string('capability', 'core_role') . '</th>';
         $this->add_header_cells();
@@ -125,7 +126,7 @@ abstract class core_role_capability_table_base {
         }
 
         // End of the table.
-        echo "</tbody>\n</table>\n";
+        echo "</tbody>\n</table></div>\n";
     }
 
     /**
