@@ -1914,7 +1914,7 @@ hr{
 	display: flex;
 	flex-wrap: wrap;
 	margin-right: 0px;
-	margin-left: 0px;
+	/*margin-left: 0px;*/
 }
 #page-local-pages-index header#page-header{
     display:none;
