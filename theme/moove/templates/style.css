@@ -2050,6 +2050,69 @@ hr{
     border: 7px solid transparent !important;
     border-top-color: #008ec2 !important;
 }
+
+
+#page-my-index .cust-box-tab nav > ul > li a.nav-link.active, 
+#page-my-index .cust-box-tab ul > li a.nav-link {
+    border-radius: 0;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    padding: 10px 10px !important;
+    color: #000 !important;
+    background: #cdd2d8 !important;
+    position: relative !important;
+}
+#page-my-index .cust-box-tab .nav-tabs .nav-link.active
+{
+
+    border: none !important;
+    background: #008ec2 !important;
+    color: #fff !important;
+    border-radius: 0 !important;
+    border-top-left-radius: 0px; !important
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+}
+#page-my-index .cust-box-tab .nav-tabs .nav-link
+{
+    border: 1px solid transparent !important;
+    border: none !important;
+    padding: 10px 14px !important;
+    color: #000 !important;
+    background: #cdd2d8 !important;
+    border-radius: 0 !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    margin-right: 20px !important;
+    position: relative !important !important;
+    text-decoration: none !important !important;
+}
+
+#page-my-index .cust-box-tab .nav-tabs .nav-link:hover,
+#page-my-index .cust-box-tab .nav-tabs .nav-link:active,
+#page-my-index .cust-box-tab .nav-tabs .nav-link:focus 
+{
+    border: none !important;
+    background: #008ec2 !important;
+    color: #fff !important;
+    border-radius: 0 !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    transition: background 0.20s linear !important;
+}
+#page-my-index .cust-box-tab nav > ul > li a.nav-link.active:after {
+    content: "" !important;
+    position: absolute !important;
+    bottom: -15px !important;
+    left: 42% !important;
+    border: 7px solid transparent !important;
+    border-top-color: #008ec2 !important;
+}
 /*.block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-item {
 	width: 100% !important;
 	border: 0 !important;
