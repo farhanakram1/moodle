@@ -1857,6 +1857,7 @@ hr{
     margin-left: 0 !important;
     margin-top: 0;
     display: inline-block;
+    padding-right: 9px;
 }
 #page-my-index .p-a-1 {
     padding: 0rem!important;
@@ -3164,6 +3165,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 1200px) {
+    #page-my-index #mypublic-tab .buttons {
+        margin-left: 18px !important;
+    }
     .block_eodoo_dashboard .cust-box-tab-admin .nav-tabs .nav-link
     {
         margin-top: 16px;
