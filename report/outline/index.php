@@ -118,6 +118,7 @@ $filterform->display();
 
 echo $OUTPUT->container(get_string('computedfromlogs', 'admin', userdate($minlog)), 'loginfo');
 
+echo html_writer::start_tag('div', array('class' => 'table-responsive'));
 $outlinetable = new html_table();
 $outlinetable->attributes['class'] = 'generaltable boxaligncenter';
 $outlinetable->cellpadding = 5;
@@ -296,7 +297,7 @@ foreach ($modinfo->sections as $sectionnum=>$section) {
     }
 }
 echo html_writer::table($outlinetable);
-
+echo html_writer::end_tag('div');
 echo $OUTPUT->footer();
 
 
