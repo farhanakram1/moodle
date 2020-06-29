@@ -1,0 +1,1517 @@
+[17-Feb-2020 07:53:26 America/Chicago] Default exception handler: error/generalexceptionmessage Debug: 
+Error code: generalexceptionmessage
+$a contents: syntax error, unexpected '='
+* line 6534 of /lib/moodlelib.php: ParseError thrown
+* line 29 of /config.php: call to require_once()
+* line 30 of /index.php: call to require_once()
+
+[17-Feb-2020 07:54:41 America/Chicago] Default exception handler: error/generalexceptionmessage Debug: 
+Error code: generalexceptionmessage
+$a contents: syntax error, unexpected '='
+* line 6534 of /lib/moodlelib.php: ParseError thrown
+* line 29 of /config.php: call to require_once()
+* line 30 of /index.php: call to require_once()
+
+[24-Feb-2020 09:18:47 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[25-Feb-2020 10:54:26 Europe/Berlin] PHP Notice:  Undefined variable: placethatprovides in /home4/yasir/public_html/clients/abrarlc/moodle/theme/moove/layout/frontpage.php on line 229
+[25-Feb-2020 10:54:31 Europe/Berlin] PHP Notice:  Undefined variable: placethatprovides in /home4/yasir/public_html/clients/abrarlc/moodle/theme/moove/layout/frontpage.php on line 229
+[25-Feb-2020 10:54:34 Europe/Berlin] PHP Notice:  Undefined variable: placethatprovides in /home4/yasir/public_html/clients/abrarlc/moodle/theme/moove/layout/frontpage.php on line 229
+[25-Feb-2020 17:47:29 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[25-Feb-2020 17:47:30 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[25-Feb-2020 17:47:31 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[25-Feb-2020 17:47:31 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:25:34 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:25:35 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:25:36 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:25:59 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:31:49 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:31:53 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:31:54 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:32:05 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:41:15 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:41:21 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:41:26 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:43:09 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:44:47 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:57:51 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:57:59 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 09:58:07 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:00:57 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:01:13 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:01:15 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:01:16 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:01:17 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:02:36 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:23:53 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:23:55 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:23:57 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:24:41 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:29:38 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:30:30 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:30:35 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:30:41 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:30:46 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:34:21 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:34:22 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:34:23 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:34:24 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:34:34 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:34:35 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:34:36 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:34:37 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:36:00 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:36:03 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:36:05 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:36:18 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:36:20 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:36:21 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:37:18 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:37:18 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:37:19 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:38:18 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:38:19 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:38:20 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:39:23 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:39:23 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:39:24 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:40:18 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:40:18 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:40:19 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:41:18 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:41:19 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:41:19 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:42:18 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:42:19 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:42:19 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:43:19 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:43:20 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:43:28 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:44:32 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:44:34 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:44:35 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:45:18 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:45:19 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:45:19 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:46:21 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:46:24 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:46:27 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:47:19 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:47:19 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:47:20 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:48:20 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:48:22 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:48:23 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:49:24 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:49:30 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:49:35 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:49:41 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:49:44 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:49:49 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:49:59 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:50:03 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:50:15 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:50:23 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:50:32 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:50:45 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:51:00 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:51:07 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:51:30 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:51:37 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:51:44 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:51:53 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:52:02 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:52:09 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:52:15 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:52:23 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:52:26 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:52:30 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:52:42 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:52:46 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:52:48 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:53:09 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:53:11 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:53:14 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:53:22 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:53:24 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:53:27 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:53:47 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:53:50 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:53:53 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:54:10 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:54:14 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:54:57 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:55:03 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:55:08 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 10:57:58 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:58:00 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:58:01 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:59:30 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:59:31 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 10:59:33 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:00:03 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:00:10 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:00:15 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:04:42 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:04:48 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:04:54 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:05:38 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:05:42 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:05:47 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:06:39 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:06:47 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:06:55 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:07:42 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:07:48 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:07:54 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:08:36 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:08:39 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:08:41 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:08:44 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:08:44 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:08:47 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:09:30 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:09:32 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:09:33 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:09:36 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:09:37 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:09:38 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:14:10 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:14:11 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:14:12 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:14:42 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:14:46 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:14:48 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:15:46 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:15:48 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:15:48 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:16:46 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:16:52 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:16:58 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:17:44 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:17:47 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:17:50 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:19:21 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:19:27 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:19:33 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:19:40 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:19:48 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:20:52 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:20:55 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:20:58 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:21:46 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:21:49 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:21:52 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:22:44 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:22:44 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:22:45 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:22:49 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:22:50 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:22:51 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 57 of /local/pages/lib.php: call to send_file_not_found()
+* line 5009 of /lib/filelib.php: call to local_pages_pluginfile()
+* line 44 of /pluginfile.php: call to file_pluginfile()
+
+[26-Feb-2020 11:22:56 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:22:56 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:22:57 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:23:03 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:23:51 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:23:52 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:23:52 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:23:54 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:23:55 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:23:55 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:23:57 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:24:02 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:24:44 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:24:45 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:24:45 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:24:53 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:24:54 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:24:56 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:24:56 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:25:20 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:25:20 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:25:24 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:25:24 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:25:30 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:25:31 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:25:37 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:25:37 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:25:41 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:25:41 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:25:44 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:25:44 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:25:52 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:25:55 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:26:23 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:26:28 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:26:34 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:26:36 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:26:39 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
+[26-Feb-2020 11:26:44 Europe/Berlin] Default exception handler: Sorry, the requested file could not be found Debug: 
+Error code: filenotfound
+* line 494 of /lib/setuplib.php: moodle_exception thrown
+* line 2074 of /lib/filelib.php: call to print_error()
+* line 81 of /draftfile.php: call to send_file_not_found()
+
