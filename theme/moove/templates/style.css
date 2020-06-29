@@ -3168,6 +3168,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 1200px) {
+    #page-report-participation-index .participationselectform div label[for=menuinstanceid] {
+        margin-bottom: 20px !important;
+    }
     #page-my-index #mypublic-tab .buttons {
         margin-left: 18px !important;
     }
