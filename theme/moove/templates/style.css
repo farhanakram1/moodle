@@ -2157,7 +2157,7 @@ hr{
 /* Modal Content/Box */
 .modal-content-course {
   background-color: #fefefe;
-  margin: 25% auto !important; /* 15% from the top and centered */
+  margin: 24% auto !important; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   position: relative;
