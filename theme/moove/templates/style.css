@@ -2089,7 +2089,8 @@ hr{
     border-top-right-radius: 0px !important;
     border-top-left-radius: 5px !important;
     border-top-right-radius: 5px !important;
-    margin-right: 20px !important;
+    /*margin-right: 20px !important;*/
+    margin-right: 12px !important;
     position: relative !important !important;
     text-decoration: none !important !important;
 }
