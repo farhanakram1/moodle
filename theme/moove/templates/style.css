@@ -73,7 +73,8 @@
 #page-admin-roles-assign h2, #page-admin-roles-assign h3,
 #page-admin-tool-lp-editplan h2, #page-admin-tool-lp-editplan h3
 {
-    color: white!important;
+    /*color: white!important;*/
+    color: #008ec2 !important;
 }
 #page-calendar-export h2, #page-local-discounts-edit h1.page__title, #page-local-discounts-discounts h1.discount__title, #page-admin-report-backups-index h2, #page-local-pages-edit .page__title, #page-admin-local-pages-pages .page__title{
     color: #008ec2 !important;
@@ -157,7 +158,8 @@
 }
 
 #page-admin-roles-assign .card-body{
-    background: #24def0;
+    /*background: #24def0;*/
+    background: #fff;
     margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 5px;
