@@ -734,7 +734,8 @@ h4.contact_heading {
 .gecko #top-footer , .gecko #page-footer{
     display:none;
 }
-#region-main .btn-primary {
+#region-main .btn-primary,
+#page-admin-mod-glossary-formats .generalbox td > input[type=submit] {
     color: #fff!important;
     background-color: #008ec2!important;
     border-radius: 5px!important;
