@@ -3932,7 +3932,8 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
     h4.contact_heading {
         font-size: 28px!important;
     }
-    #region-main .btn-primary {
+    #region-main .btn-primary,
+    #page-admin-mod-glossary-formats .generalbox td > input[type=submit] {
         /*padding: 7px 25px!important;*/
         padding: 7px 7px!important;
         font-size: 11px!important;
