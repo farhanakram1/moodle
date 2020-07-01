@@ -90,22 +90,31 @@ p.D-D-l.mb-0 a {
         <div class="col-lg-4 col-md-6 contact">
             <h3>{{#str}}stayintouch, theme_moove{{/str}}</h3>
             <div class="b-line"></div>
-            <h4>{{{getintouchcontent}}}</h4>
+            {{#getintouchcontent}}
+                <h4>{{{getintouchcontent}}}</h4>
+            {{/getintouchcontent}}
             <ul>
-                
+                {{#website}}
                     <li>
                         <i class="slicon-globe"></i>
-                        <a href="http://conecti.me" target="_blank">http://conecti.me</a>
+                        <a href="{{{website}}}" target="_blank">{{{website}}}</a>
                     </li>
+                {{/website}}
+                
+                {{#mobile}}    
                     <li>
                         <i class="slicon-phone"></i>
-                        <a href="tel:+55 (98) 00123-45678" target="_blank">Mobile : +55 (98) 00123-45678</a>
+                        <a href="{{{mobile}}}" target="_blank">{{{mobile}}}</a>
                     </li>
+                {{/mobile}}    
+                
+                {{#mail}}    
                     <li>
                         <i class="slicon-envelope"></i>
-                        <a href="mailto:willianmano@conecti.me" target="_blank">willianmano@conecti.me</a>
+                        <a href="mailto:{{{mail}}}" target="_blank">{{{mail}}}</a>
                     </li>
-                
+                {{/mail}}
+
             </ul>
         </div>
         <div class="col-lg-4 col-md-6 contact">
@@ -119,15 +128,15 @@ p.D-D-l.mb-0 a {
         </ul>
         </div>
         <div class="col-lg-4 col-md-6 social">
- <h3 class="text-left">Connect With Us</h3>
- <div class="b-line"></div>
- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <div class="input-group mb-3 subscribe-b">
-  <input type="email" class="form-control" placeholder="Email Address">
-  <div class="input-group-append">
-    <button class="btn btn-success" type="submit">Go</button>
-  </div>
-</div>
+         <h3 class="text-left">{{#str}}connectwithus, theme_moove{{/str}}</h3>
+         <div class="b-line"></div>
+         <p>{{{footercontent}}}</p>
+                <div class="input-group mb-3 subscribe-b label_hide">
+          <input type="email" class="form-control" placeholder="Email Address">
+          <div class="input-group-append">
+            <button class="btn btn-success" type="submit">Go</button>
+          </div>
+        </div>
           <ul class="pl-0">
              
                 <li>
@@ -181,7 +190,9 @@ p.D-D-l.mb-0 a {
       <div class="container">
          <div class="row">
             <div class="col-sm-6 col-12 text-white text-sm-left">
-            <p class="R-R mb-0"> 2020 Spring. All Rights Reserved.</p>
+            {{#footercopyright}}
+                <p class="R-R mb-0">{{{footercopyright}}}</p>
+            {{/footercopyright}}
             </div>
             <div class="col-sm-6 col-12 text-sm-right text-center text-white">
                 <p class="D-D-l mb-0">Designed & Developed by <a href="https://leadconcept.com/" target="_blank">LEADconcept</a></p>

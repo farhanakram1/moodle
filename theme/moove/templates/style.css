@@ -15,6 +15,9 @@
 .dropdown-toggle::after{
     color: white !important;
 }*/
+#page-login-signup .label_hide label {
+    display: none !important;
+}
 .breadcrumb-item+.breadcrumb-item::before{
     color: white !important;
 }

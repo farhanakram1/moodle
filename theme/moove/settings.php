@@ -894,6 +894,24 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Footer Content.
+    $name = 'theme_moove/footercontent';
+    $title = get_string('footercontent', 'theme_moove');
+    $description = get_string('footercontentdesc', 'theme_moove');
+    $default = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Footer Copy Right.
+    $name = 'theme_moove/footercopyright';
+    $title = get_string('footercopyright', 'theme_moove');
+    $description = get_string('footercopyrightdesc', 'theme_moove');
+    $default = '2020 Spring. All Rights Reserved.';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Facebook url setting.
     $name = 'theme_moove/facebook';
     $title = get_string('facebook', 'theme_moove');

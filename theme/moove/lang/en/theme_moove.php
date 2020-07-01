@@ -43,6 +43,7 @@ $string['search_forums'] = 'Search on course forums';
 $string['platform_access'] = 'Access to the platform';
 $string['readmore'] = 'Read More';
 $string['stayintouch'] = 'Stay in touch';
+$string['connectwithus'] = 'Connect With Us';
 $string['madewitmoodle'] = 'Proudly made with';
 $string['madeby'] = 'Made with';
 $string['by'] = 'by';
@@ -164,6 +165,11 @@ $string['placethatprovidesdesc'] = 'Add Place That Provides';
 
 $string['placethatcontent'] = 'Home Place That Content';
 $string['placethatcontentdesc'] = 'Add Place That Content';
+
+$string['footercontent'] = 'Footer Heading';
+$string['footercontentdesc'] = 'Enter Footer Heading Text';
+$string['footercopyright'] = 'Footer Copyright';
+$string['footercopyrightdesc'] = 'Enter Footer Copyright Text';
 
 $string['bannerheading'] = 'Banner Heading';
 $string['bannerheadingdesc'] = 'Enter Banner Heading Text';

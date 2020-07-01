@@ -33,4 +33,8 @@ $templatecontext = [
     'bodyattributes' => $bodyattributes
 ];
 
+// Footer Data Show
+$themesettings = new \theme_moove\util\theme_settings();
+$templatecontext = array_merge($templatecontext, $themesettings->footer_items());
+
 echo $OUTPUT->render_from_template('theme_moove/login', $templatecontext);
