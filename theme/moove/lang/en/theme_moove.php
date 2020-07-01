@@ -170,6 +170,8 @@ $string['footercontent'] = 'Footer Heading';
 $string['footercontentdesc'] = 'Enter Footer Heading Text';
 $string['footercopyright'] = 'Footer Copyright';
 $string['footercopyrightdesc'] = 'Enter Footer Copyright Text';
+$string['footerdesigndevelop'] = 'Footer DesignDevelop';
+$string['footerdesigndevelopdesc'] = 'Enter Footer DesignDevelop Text';
 
 $string['bannerheading'] = 'Banner Heading';
 $string['bannerheadingdesc'] = 'Enter Banner Heading Text';

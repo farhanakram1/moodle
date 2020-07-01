@@ -912,6 +912,15 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Design And Develop.
+    $name = 'theme_moove/footerdesigndevelop';
+    $title = get_string('footerdesigndevelop', 'theme_moove');
+    $description = get_string('footerdesigndevelopdesc', 'theme_moove');
+    $default = '2020 Spring. All Rights Reserved.';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Facebook url setting.
     $name = 'theme_moove/facebook';
     $title = get_string('facebook', 'theme_moove');
