@@ -18,6 +18,9 @@
 #page-login-signup .label_hide label {
     display: none !important;
 }
+#page-site-index .data_hide{
+    display: none !important;
+}
 .breadcrumb-item+.breadcrumb-item::before{
     color: white !important;
 }
