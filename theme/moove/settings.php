@@ -287,7 +287,7 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // HowItWorksImage.
+    // HowItWorksImage
     $name = 'theme_moove/howitworkimg';
     $title = get_string('howitworkimg', 'theme_moove');
     $description = get_string('howitworkimgdesc', 'theme_moove');
