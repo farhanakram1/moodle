@@ -2786,7 +2786,8 @@ hr{
     font-size: 18px !important;
 }*/
 #page-my-index .bg-blue-brud .dasH_name {
-    color: black !important;
+    color: #fff !important;
+    /*color: black !important;*/
     font-size: 21px !important;
 }
 /*.cust-box-tab .nav-tabs .nav-link.active, .cust-box-tab  .nav-tabs .nav-item.show .nav-link {
