@@ -2088,7 +2088,8 @@ hr{
     background: #cdd2d8 !important;
     position: relative !important;
 }
-#page-my-index .cust-box-tab .nav-tabs .nav-link.active
+#page-my-index .cust-box-tab .nav-tabs .nav-link.active,
+#page-message-index .cust-box-tab .nav-tabs .nav-link.active,
 {
 
     border: none !important;
