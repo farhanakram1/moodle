@@ -3567,6 +3567,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
+    #page-login-signup #eodo-signup h4 {
+        font-size: 17px !important;
+    }
     .subscription_amount {
         width: unset !important;
     }
