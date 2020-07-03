@@ -3100,9 +3100,6 @@ form.logselecform select {
 
 
 @media (max-width: 767px){
-    #page-mod-scheduler-view .studentlist .studentselect {
-        margin-right: 5px;
-    }
     #page-course-management .d-flex {
         width: 100%;
         text-align: justify !important;
@@ -3228,6 +3225,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 991px) {
+    #page-mod-scheduler-view .studentlist .studentselect {
+        margin-right: 5px;
+    }
     .custom-select {
         width: 100% !important;
     }
