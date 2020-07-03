@@ -291,6 +291,7 @@
 #page-admin-setting-httpsecurity .card-body,
 #page-admin-setting-notifications .card-body,
 #page-admin-setting-mobilesettings .card-body,
+#page-course-index-category .card-body,
 #page-admin-mod-glossary-formats .card-body{
     background-color: white;
     padding: 20px 25px;
