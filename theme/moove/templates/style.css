@@ -4028,6 +4028,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media (min-width: 320px) and (max-width: 475px){
+    #page-enrol-index #region-main .generalbox {
+        width: 100% !important;
+    }
     #page-course-management .d-flex {
         display: block !important;
         width: 100%;
