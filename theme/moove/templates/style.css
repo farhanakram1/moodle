@@ -3566,6 +3566,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
+    .subscription_amount {
+        width: unset !important;
+    }
     #page-admin-tool-lp-edittemplate .card-body h2,
     #page-admin-tool-lp-editcompetencyframework .card-body h2,
     #page-admin-tool-lp-edittemplate .card-body h3,
