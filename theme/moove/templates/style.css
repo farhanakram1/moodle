@@ -3554,6 +3554,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media screen and (max-width: 575px) {
+    #page-mod-scheduler-view .studentlist .studentselect {
+        margin-right: 5px;
+    }
     #page-admin-tool-lp-edittemplate .card-body h2,
     #page-admin-tool-lp-editcompetencyframework .card-body h2,
     #page-admin-tool-lp-edittemplate .card-body h3,
