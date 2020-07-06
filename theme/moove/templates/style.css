@@ -2600,6 +2600,7 @@ hr{
 #page-grade-grading-pick .card-body,
 #page-grade-grading-form-rubric-edit .card-body,
 #page-grade-grading-form-guide-edit .card-body,
+#page-mod-forum-export .card-body,
 #page-admin-modules 
 {
     background-color: white;
@@ -2638,6 +2639,7 @@ hr{
 #page-mod-forum-view .card-body div > h2,
 #page-mod-forum-report-summary-index .card-body div > h2,
 #page-mod-forum-subscribers .card-body div > h2,
+#page-mod-forum-export .card-body div > h2,
 #page-admin-tool-usertours-configure .card-body div > h2,
 #page-grade-grading-manage #region-main .card-body div > h2,
 #page-grade-export-txt-index .card-body div > h2
