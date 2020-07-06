@@ -9386,13 +9386,13 @@ class admin_setting_manageexternalservices extends admin_setting {
          if (!empty($services)) {
             $return .= $OUTPUT->heading(get_string('servicesbuiltin', 'webservice'), 3, 'main');
 
-
+            $return .= $OUTPUT->box_start('table-responsive');
 
             $table = new html_table();
             $table->head  = array($strservice, $strplugin, $strfunctions, $strusers, $stredit);
             $table->colclasses = array('leftalign service', 'leftalign plugin', 'centeralign functions', 'centeralign users', 'centeralign ');
             $table->id = 'builtinservices';
-            $table->attributes['class'] = 'admintable externalservices generaltable table-responsive';
+            $table->attributes['class'] = 'admintable externalservices generaltable';
             $table->data  = array();
 
             // iterate through auth plugins and add to the display table
