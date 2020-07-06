@@ -3994,6 +3994,12 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
         /*padding: 15px 15px !important;*/
         padding: 15px 5px !important;
     }
+    #page-admin-search #region-main .card-body {
+        background-color: #fff !important;
+    }
+    #page-admin-search #region-main .card-body div > h2 {
+        color: #008ec2 !important;
+    }
     #page.container-fluid {
         padding: 1rem!important;
     }
