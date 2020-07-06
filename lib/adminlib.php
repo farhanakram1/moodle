@@ -9841,13 +9841,13 @@ class admin_setting_managewebserviceprotocols extends admin_setting {
         }
 
         $return = $OUTPUT->heading(get_string('actwebserviceshhdr', 'webservice'), 3, 'main');
-        $return .= $OUTPUT->box_start('generalbox webservicesui');
+        $return .= $OUTPUT->box_start('generalbox webservicesui table-responsive');
 
         $table = new html_table();
         $table->head  = array($strprotocol, $strversion, $strenable, $strsettings);
         $table->colclasses = array('leftalign', 'centeralign', 'centeralign', 'centeralign', 'centeralign');
         $table->id = 'webserviceprotocols';
-        $table->attributes['class'] = 'admintable generaltable table table-responsive';
+        $table->attributes['class'] = 'admintable generaltable';
         $table->data  = array();
 
         // iterate through auth plugins and add to the display table
