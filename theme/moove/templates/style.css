@@ -15,6 +15,9 @@
 .dropdown-toggle::after{
     color: white !important;
 }*/
+#page-mod-forum-view .Search_from {
+    margin-top: 31px !important;
+}
 #page-login-signup .label_hide label {
     display: none !important;
 }
