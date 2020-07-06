@@ -9427,7 +9427,7 @@ class admin_setting_manageexternalservices extends admin_setting {
         // Custom services
         $return .= $OUTPUT->heading(get_string('servicescustom', 'webservice'), 3, 'main');
         $services = $DB->get_records_select('external_services', 'component IS NULL', null, 'name');
-
+        $return .= $OUTPUT->box_start('table-responsive');
         $table = new html_table();
         $table->head  = array($strservice, $strdelete, $strfunctions, $strusers, $stredit);
         $table->colclasses = array('leftalign service', 'leftalign plugin', 'centeralign functions', 'centeralign users', 'centeralign ');
