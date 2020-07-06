@@ -1987,7 +1987,8 @@ hr{
     color: rgba(0,0,0,.15);
 }
 #page-my-index #region-main-box {
-    background-color: #f4f7fb !important;
+    /*background-color: #f4f7fb !important;*/
+    background-color: #ffffff !important;
 }
 
 #page-my-index #region-main-box.student_dash{
