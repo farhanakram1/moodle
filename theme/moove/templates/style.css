@@ -2593,6 +2593,7 @@ hr{
 #page-mod-forum-mod .card-body,
 #page-mod-forum-report-summary-index .card-body,
 #page-mod-forum-discuss .card-body,
+#page-mod-forum-subscribers .card-body,
 #page-admin-modules 
 {
     background-color: white;
@@ -2628,6 +2629,8 @@ hr{
 #page-admin-tasklogs .card-body div > h2,
 #page-mod-resource-view .card-body div > h2,
 #page-mod-forum-discuss .card-body div > h2,
+#page-mod-forum-view .card-body div > h2,
+#page-mod-forum-subscribers .card-body div > h2,
 #page-admin-tool-usertours-configure .card-body div > h2,
 #page-grade-grading-manage #region-main .card-body div > h2,
 #page-grade-export-txt-index .card-body div > h2
