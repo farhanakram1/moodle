@@ -6757,13 +6757,13 @@ class admin_setting_manageauths extends admin_setting {
         }
 
         $return = $OUTPUT->heading(get_string('actauthhdr', 'auth'), 3, 'main');
-        $return .= $OUTPUT->box_start('generalbox authsui');
+        $return .= $OUTPUT->box_start('generalbox authsui table-responsive');
 
         $table = new html_table();
         $table->head  = array($txt->name, $txt->users, $txt->enable, $txt->updown, $txt->settings, $txt->testsettings, $txt->uninstall);
         $table->colclasses = array('leftalign', 'centeralign', 'centeralign', 'centeralign', 'centeralign', 'centeralign', 'centeralign');
         $table->data  = array();
-        $table->attributes['class'] = 'admintable generaltable table-responsive';
+        $table->attributes['class'] = 'admintable generaltable';
         $table->id = 'manageauthtable';
 
         //add always enabled plugins first
@@ -6958,13 +6958,13 @@ class admin_setting_manageeditors extends admin_setting {
         }
         $editors_available = array_reverse($editors_available, true);
         $return = $OUTPUT->heading(get_string('acteditorshhdr', 'editor'), 3, 'main', true);
-        $return .= $OUTPUT->box_start('generalbox editorsui');
+        $return .= $OUTPUT->box_start('generalbox editorsui table-responsive');
 
         $table = new html_table();
         $table->head  = array($txt->name, $txt->enable, $txt->updown, $txt->settings, $struninstall);
         $table->colclasses = array('leftalign', 'centeralign', 'centeralign', 'centeralign', 'centeralign');
         $table->id = 'editormanagement';
-        $table->attributes['class'] = 'admintable generaltable table table-responsive';
+        $table->attributes['class'] = 'admintable generaltable';
         $table->data  = array();
 
         // iterate through auth plugins and add to the display table
@@ -7276,13 +7276,13 @@ class admin_setting_managelicenses extends admin_setting {
 
         $return = $OUTPUT->heading(get_string('availablelicenses', 'admin'), 3, 'main', true);
 
-        $return .= $OUTPUT->box_start('generalbox editorsui');
+        $return .= $OUTPUT->box_start('generalbox editorsui table-responsive');
 
         $table = new html_table();
         $table->head  = array($txt->name, $txt->enable);
         $table->colclasses = array('leftalign', 'centeralign');
         $table->id = 'availablelicenses';
-        $table->attributes['class'] = 'admintable generaltable tabel table-responsive';
+        $table->attributes['class'] = 'admintable generaltable';
         $table->data  = array();
 
         foreach ($licenses as $value) {
