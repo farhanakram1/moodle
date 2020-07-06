@@ -2325,7 +2325,7 @@ hr{
     padding-left: 5px;
 }
 #page-course-editsection  h2, #page-mod-forum-post .intro, #page-mod-forum-post h2{
-    color:#FFF !important;
+    color:#008ec2 !important;
 }
 #page-course-delete .alert h2, #page-enrol-instances h2, #page-course-management .course-detail #course-detail-title{
     color:#008ec2 !important;
