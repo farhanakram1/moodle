@@ -7134,13 +7134,13 @@ class admin_setting_manageantiviruses extends admin_setting {
         }
         $antivirusesavailable = array_reverse($antivirusesavailable, true);
         $return = $OUTPUT->heading(get_string('actantivirushdr', 'antivirus'), 3, 'main', true);
-        $return .= $OUTPUT->box_start('generalbox antivirusesui');
+        $return .= $OUTPUT->box_start('generalbox antivirusesui table-responsive');
 
         $table = new html_table();
         $table->head  = array($txt->name, $txt->enable, $txt->updown, $txt->settings, $struninstall);
         $table->colclasses = array('leftalign', 'centeralign', 'centeralign', 'centeralign', 'centeralign');
         $table->id = 'antivirusmanagement';
-        $table->attributes['class'] = 'admintable generaltable table table-responsive';
+        $table->attributes['class'] = 'admintable generaltable';
         $table->data  = array();
 
         // Iterate through auth plugins and add to the display table.
