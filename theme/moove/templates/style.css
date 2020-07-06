@@ -4054,6 +4054,9 @@ nav.navbar ul.navbar-nav li .dropdown-menu .dropdown-item {
 }
 
 @media (min-width: 320px) and (max-width: 475px){
+    .Popover {
+        padding: 0.5rem 1.75rem !important;
+    }
     #page-enrol-index #region-main .generalbox {
         width: 100% !important;
     }
