@@ -9432,7 +9432,7 @@ class admin_setting_manageexternalservices extends admin_setting {
         $table->head  = array($strservice, $strdelete, $strfunctions, $strusers, $stredit);
         $table->colclasses = array('leftalign service', 'leftalign plugin', 'centeralign functions', 'centeralign users', 'centeralign ');
         $table->id = 'customservices';
-        $table->attributes['class'] = 'admintable externalservices generaltable table-responsive';
+        $table->attributes['class'] = 'admintable externalservices generaltable';
         $table->data  = array();
 
         // iterate through auth plugins and add to the display table
