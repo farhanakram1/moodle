@@ -68,7 +68,7 @@ class report_eventlist_renderer extends plugin_renderer_base {
             'legacyevent',
             'since'
             ), 'report_eventlist');
-        $html .= html_writer::start_div('report-eventlist-data-table', array('id' => 'report-eventlist-table'));
+        $html .= html_writer::start_div('report-eventlist-data-table table-responsive', array('id' => 'report-eventlist-table'));
         $html .= html_writer::end_div();
 
         $html .= $this->output->footer();
