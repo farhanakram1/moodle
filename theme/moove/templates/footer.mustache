@@ -209,7 +209,11 @@ p.D-D-l.mb-0 a {
 <script>
 require(['jquery'], function($) {  
     $(document).ready(function() {
-        
+        $(".upload_category_box_main").change(function(){
+            var idnumber = $(this).children("option:selected").val();
+            $('.upload_category_box').hide();
+            $('.'+idnumber).show();
+        });
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
           if ($(event.target).attr('class') == 'modalEnrol') {
@@ -708,4 +712,15 @@ function open_enrollment_form(course_id,exam_orginzer){
     var span = document.getElementsByClassName("close")[0];
     modal.style.display = "block";
 }
+
+ 
+        function changeCourse(e){
+            var class_number = e.options[e.selectedIndex].value;
+            if(class_number == 'Select Courses'){
+                $('.courses-sections').show();
+            }else{
+                $('.courses-sections').hide();
+                $('.course-'+class_number).show();
+            }
+        }
 </script>
