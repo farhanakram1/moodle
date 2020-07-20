@@ -331,7 +331,7 @@ class block_eodoo_dashboard extends block_base {
                                 $assign_grade = $DB->get_record_sql('SELECT * FROM {assign_grades} WHERE assignment='.$section->instance.' and userid='.$assignment_submission->userid.' ORDER BY `assignment` ASC ');
                                 $time_corrected = '';
                                 $style = '';
-                                if($assign_grade->grader=='2'){
+                                if($assign_grade->grader != '-1'){
                                     $time_corrected = date('d.m.Y',$assign_grade->timemodified);
                                 }else{
                                    $style = 'color:red'; 
