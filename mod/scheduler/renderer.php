@@ -498,10 +498,10 @@ class mod_scheduler_renderer extends plugin_renderer_base {
             if ($slottable->showactions) {
                 $actions = '';
                 if ($slot->canedit) {
-                    $buttonurl = new moodle_url($slottable->actionurl,
-                                     array('what' => 'editbooking', 'appointmentid' => $slot->appointmentid));
-                    $button = new single_button($buttonurl, get_string('editbooking', 'scheduler'));
-                    $actions .= $this->render($button);
+//                    $buttonurl = new moodle_url($slottable->actionurl,
+//                                     array('what' => 'editbooking', 'appointmentid' => $slot->appointmentid));
+//                    $button = new single_button($buttonurl, get_string('editbooking', 'scheduler'));
+//                    $actions .= $this->render($button);
                 }
                 if ($slot->canview) {
                     $buttonurl = new moodle_url($slottable->actionurl,

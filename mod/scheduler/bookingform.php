@@ -85,7 +85,7 @@ class scheduler_booking_form extends moodleform {
                                 array('rows' => 3, 'columns' => 60), $this->noteoptions);
             $mform->setType('studentnote', PARAM_RAW); // Must be PARAM_RAW for rich text editor content.
             if ($scheduler->usestudentnotes == 2) {
-                $mform->addRule('studentnote_editor', get_string('notesrequired', 'scheduler'), 'required');
+//                $mform->addRule('studentnote_editor', get_string('notesrequired', 'scheduler'), 'required');
             }
         }
 
