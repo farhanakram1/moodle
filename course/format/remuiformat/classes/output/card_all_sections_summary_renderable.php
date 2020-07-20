@@ -106,7 +106,7 @@ class format_remuiformat_card_all_sections_summary implements renderable, templa
      * @return Object
      */
     private function get_card_format_context(&$export, $renderer, $editing, $rformat) {
-        global $OUTPUT;
+        global $OUTPUT, $DB,$USER;
         $coursecontext = context_course::instance($this->course->id);
         $modinfo = get_fast_modinfo($this->course);
         $sections = $modinfo->get_section_info_all();
@@ -147,12 +147,34 @@ class format_remuiformat_card_all_sections_summary implements renderable, templa
                 $imgurl = $this->courseformatdatacommontrait->get_dummy_image_for_id($this->course->id);
             }
             $export->generalsection['coursemainimage'] = $imgurl;
+            
             $percentage = progress::get_course_progress_percentage($this->course);
             if (!is_null($percentage)) {
                 $percentage = floor($percentage);
                 $export->generalsection['percentage'] = $percentage;
             }
-
+            $number_of_sessions = $DB->get_record_sql('SELECT * from {customfield_data} where instanceid = '.$this->course->id);
+            $number_of_sessions = (int)$number_of_sessions->intvalue;
+            if($number_of_sessions > 0){
+                $sql = 'SELECT count(*) as total_attended_sessions FROM {scheduler} s
+                        LEFT JOIN {scheduler_slots} ss
+                        ON s.id = ss.schedulerid
+                        LEFT JOIN {scheduler_appointment} sa 
+                        ON ss.id = sa.slotid
+                        WHERE s.course = '.$this->course->id.' and sa.attended = 1 and sa.studentid = '.$USER->id;
+                $attended_sessions = $DB->get_record_sql($sql);
+                $attended_sessions = (int)$attended_sessions->total_attended_sessions;
+                if($attended_sessions > $number_of_sessions){
+                    $attended_sessions = $number_of_sessions;
+                }
+                $percentChange = ($attended_sessions / $number_of_sessions) * 100;
+                $export->generalsection['percentage'] = $percentChange;
+                if($percentChange == 100){
+                    $export->generalsection['scheduler_sessions'] = 'All Sessions Completed';
+                }else{
+                    $export->generalsection['scheduler_sessions'] = 'Attended Sessions: '.$attended_sessions;
+                }
+            }
             // Get the all activities count from the all sections.
             $sectionmods = array();
             for ($i = 0; $i < count($sections); $i++) {
@@ -169,7 +191,7 @@ class format_remuiformat_card_all_sections_summary implements renderable, templa
                     }
                 }
             }
-            foreach ($sectionmods as $mod) {
+            foreach ($sectionmods as $mod) {    
                 $output['activitylist'][] = $mod['count'].' '.$mod['name'];
             }
             $export->activitylist = $output['activitylist'];
@@ -191,7 +213,7 @@ class format_remuiformat_card_all_sections_summary implements renderable, templa
     }
 
     private function get_activities_details($section, $displayoptions = array()) {
-        global $PAGE;
+        global $PAGE,$DB;
         $modinfo = get_fast_modinfo($this->course);
         $output = array();
         $completioninfo = new \completion_info($this->course);
@@ -231,6 +253,22 @@ class format_remuiformat_card_all_sections_summary implements renderable, templa
                 $availstatus = $this->courserenderer->course_section_cm_availability($mod, $modnumber);
                 if ($availstatus != "") {
                     $activitydetails->availstatus = $availstatus;
+                }
+                $download_files = $DB->get_records_sql('SELECT * FROM {context} oc, {files} of WHERE oc.id = of.contextid and oc.instanceid=' . $mod->id . ' and of.filesize != 0 and of.component = "mod_assign" ');
+                $downloads = '<div class="download_assignments"><b>Download Assignment</b><br/>';
+                foreach ($download_files as $download_file) {
+                    $file_link = new moodle_url('/pluginfile.php/' . $download_file->contextid . '/' . $download_file->component . '/' . $download_file->filearea . '/0/' . $download_file->filename . '?forcedownload=1');
+                    $downloads .= '<a href="' . $file_link . '"> ' . $download_file->filename . '</a><br/>';
+                }
+                $downloads .= '</div>';
+                $activitydetails->downloads = $downloads;
+                if(count($download_files) > 0){
+                $submission_link = new moodle_url('/mod/assign/view.php');
+                $activitydetails->submissions  = '<form method="get" action="'.$submission_link.'">
+                                        <input type="hidden" name="id" value="'.$mod->id.'">
+                                        <input type="hidden" name="action" value="editsubmission">
+                                    <button type="submit" class="btn btn-secondary" id="single_button" title="">Add submission</button>
+                                </form>';
                 }
                 if ($PAGE->user_is_editing()) {
                     $editactions = course_get_cm_edit_actions($mod, $mod->indent, $section->section);

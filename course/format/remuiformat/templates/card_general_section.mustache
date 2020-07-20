@@ -91,8 +91,9 @@
                         {{/percentage}}
                         <ul class="general-activities-list-group">
                             {{#activitylist}}
-                                <li class="general-activities-list-group-item">{{ . }}</li>
+                                <li style="display:none;" class="general-activities-list-group-item">{{ . }}</li>
                             {{/activitylist}}
+                            <li class="general-activities-list-group-item">{{{scheduler_sessions}}}</li>
                         </ul>
                     </div>
                     {{#resumeactivityurl}}
@@ -108,7 +109,7 @@
         {{/activityexists}}
         <ul class="generalsecactivitiesmain row justify-content-start text-center showhidecardactivity">
             {{#activities}}
-                <li class="activity first-section-activity generalsecactivities col-12 col-sm-6 col-md-4 col-lg-4 col-xlq-2 justify-content-center list-unstyled" id="module-{{id}}">
+                <li class="activity first-section-activity generalsecactivities col-12 col-sm-6 col-md-6 col-lg-6 col-xlq-2 justify-content-center list-unstyled" id="module-{{id}}">
                     <div class="generalsecactivitiescontent">
                         {{#editing}}
                             {{{leftside}}}
@@ -122,6 +123,10 @@
                             </div>
                             {{{availstatus}}}
                         {{! </div> }}
+                            
+                        {{{downloads}}}
+                        
+                        {{{ submissions }}}
                     </div>
                 </li>
             {{/activities}}
