@@ -93,6 +93,55 @@ class extras {
         return array_values($courses);
     }
     
+    public static function user_upcoming_events($user) {
+        global $USER, $CFG;
+
+        if (($USER->id !== $user->id) && !is_siteadmin($USER->id)) {
+            return [];
+        }
+
+        require_once($CFG->dirroot.'/course/renderer.php');
+
+        $chelper = new \coursecat_helper();
+
+        $courses = enrol_get_users_courses($user->id, true, '*', 'sortorder ASC , fullname ASC, visible DESC');
+
+        foreach ($courses as $course) {
+            $course->fullname = strip_tags($chelper->get_course_formatted_name($course));
+
+            $courseobj = new \core_course_list_element($course);
+            $completion = new \completion_info($course);
+
+            // First, let's make sure completion is enabled.
+            if ($completion->is_enabled()) {
+                $percentage = \core_completion\progress::get_course_progress_percentage($course, $user->id);
+
+                if (!is_null($percentage)) {
+                    $percentage = floor($percentage);
+                }
+
+                if (is_null($percentage)) {
+                    $percentage = 0;
+                }
+
+                // Add completion data in course object.
+                $course->completed = $completion->is_course_complete($user->id);
+                $course->progress  = $percentage;
+            }
+
+            $course->link = $CFG->wwwroot."/course/view.php?id=".$course->id;
+
+            // Summary.
+            $course->summary = strip_tags($chelper->get_course_formatted_summary(
+                $courseobj,
+                array('overflowdiv' => false, 'noclean' => false, 'para' => false)
+            ));
+
+            $course->courseimage = self::get_course_summary_image($courseobj, $course->link);
+        }
+
+        return array_values($courses);
+    }
     /**
      * Return Courses with all deep categories
      * @param Array $category Parent Category Array
