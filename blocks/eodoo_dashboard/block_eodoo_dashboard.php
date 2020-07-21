@@ -481,9 +481,6 @@ class block_eodoo_dashboard extends block_base {
                             <a class="nav-item nav-link py-2" id="nav-accounts-tab" data-toggle="tab" href="#nav-accounts" role="tab" aria-controls="nav-accounts" aria-selected="false">Accounts</a>
                         </li>
 
-                        <li class="nav-item p-0 mr-0">
-                            <a class="nav-item nav-link py-2" id="nav-codes-tab" data-toggle="tab" href="#nav-codes" role="tab" aria-controls="nav-codes" aria-selected="false">Codes</a>
-                        </li>
 
                         <li class="nav-item p-0 mr-0">
                             <a class="nav-item nav-link py-2" id="nav-invoices-tab" data-toggle="tab" href="#nav-invoices" role="tab" aria-controls="nav-invoices" aria-selected="false">Invoices</a>
@@ -625,40 +622,6 @@ class block_eodoo_dashboard extends block_base {
                                             </div>
 
 
-                                            <div class="tab-pane fade" id="nav-codes" role="tabpanel" aria-labelledby="nav-codes-tab" style="padding:20px;">
-                                                
-                                              <div class="container">
-                                                  <div class="row">
-                                                    <div class="col-sm-6">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-striped">
-                                                            <thead>
-                                                              <tr>
-                                                                <th>Edit/Add Residency</th>
-                                                                <th>Reg. Code</th>
-                                                              </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                              ' . $code_category . '
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <div class="row">
-
-
-                                                    <div class="col-sm-6">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-striped table-responsive">
-                                                            '.$account_user_sections.'
-                                                        </table>
-                                                    </div>
-                                                    </div>
-
-                                                  </div>
-                                                </div>
-                                                <button style="display:none;" type="button" class="btn btn-primary float-right mt-2">Save</button>  
-
-                                            </div>
 
 
                                             <div class="tab-pane fade" id="nav-invoices" role="tabpanel" aria-labelledby="nav-invoices-tab">

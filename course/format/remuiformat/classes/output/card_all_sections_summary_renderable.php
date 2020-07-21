@@ -255,20 +255,20 @@ class format_remuiformat_card_all_sections_summary implements renderable, templa
                     $activitydetails->availstatus = $availstatus;
                 }
                 $download_files = $DB->get_records_sql('SELECT * FROM {context} oc, {files} of WHERE oc.id = of.contextid and oc.instanceid=' . $mod->id . ' and of.filesize != 0 and of.component = "mod_assign" ');
-                $downloads = '<div class="download_assignments"><b>Download Assignment</b><br/>';
-                foreach ($download_files as $download_file) {
-                    $file_link = new moodle_url('/pluginfile.php/' . $download_file->contextid . '/' . $download_file->component . '/' . $download_file->filearea . '/0/' . $download_file->filename . '?forcedownload=1');
-                    $downloads .= '<a href="' . $file_link . '"> ' . $download_file->filename . '</a><br/>';
-                }
-                $downloads .= '</div>';
-                $activitydetails->downloads = $downloads;
                 if(count($download_files) > 0){
-                $submission_link = new moodle_url('/mod/assign/view.php');
-                $activitydetails->submissions  = '<form method="get" action="'.$submission_link.'">
-                                        <input type="hidden" name="id" value="'.$mod->id.'">
-                                        <input type="hidden" name="action" value="editsubmission">
-                                    <button type="submit" class="btn btn-secondary" id="single_button" title="">Add submission</button>
-                                </form>';
+                    $downloads = '<div class="download_assignments"><b>Download Assignment</b><br/>';
+                    foreach ($download_files as $download_file) {
+                        $file_link = new moodle_url('/pluginfile.php/' . $download_file->contextid . '/' . $download_file->component . '/' . $download_file->filearea . '/0/' . $download_file->filename . '?forcedownload=1');
+                        $downloads .= '<a href="' . $file_link . '"> ' . $download_file->filename . '</a><br/>';
+                    }
+                    $downloads .= '</div>';
+                    $activitydetails->downloads = $downloads;
+                    $submission_link = new moodle_url('/mod/assign/view.php');
+                    $activitydetails->submissions  = '<form method="get" action="'.$submission_link.'">
+                                            <input type="hidden" name="id" value="'.$mod->id.'">
+                                            <input type="hidden" name="action" value="editsubmission">
+                                        <button type="submit" class="btn btn-secondary" id="single_button" title="">Add submission</button>
+                                    </form>';
                 }
                 if ($PAGE->user_is_editing()) {
                     $editactions = course_get_cm_edit_actions($mod, $mod->indent, $section->section);

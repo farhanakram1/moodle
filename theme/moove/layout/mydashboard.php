@@ -62,7 +62,9 @@
     if ($draweropenright && $hasblocks) {
         $extraclasses[] = 'drawer-open-right';
     }
-
+    $arthodentent_courses = 0;
+    $clinical_sessions = 0;
+    $typodent_sessions = 0;
     $bodyattributes = $OUTPUT->body_attributes($extraclasses);
     //$regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 
@@ -107,42 +109,34 @@
 
                     $courses = $DB->get_records_sql("SELECT * FROM {course} WHERE category IN(" . $sub_categories . ") order by sortorder asc");
                     $i = 0;
-                    $course_html = '<div class="card-deck mt-2"> ';
                     foreach ($courses as $course) {
-                        if ($i > 3) {
-                            $i = 0;
-                            $course_html .= '<div class="card-deck mt-2">';
-                        }
+                        
+                        
+                        $course_html .= '<div class="course-deck mt-2" style="float:left;">';
                         $course_html .= '<div class="card collapsed organizers" data-courseid="' . $course->id . '">';
                         $course_html .= '<br/>';
                         $course_html .= \theme_moove\output\core\course_renderer::coursecat_coursebox_content($chelper, $course, 'examp_orginizer');
                         $course_html .= "</div>";
-                        if ($i == 3) {
-                            $course_html .= "</div>";
-                        }
+                        
+                        $course_html .= "</div>";
                         $i++;
                     }
-                    $course_html .= "</div>";
                     $exam_organizers .= '<div class="course"> ' . $course_html
                             . "</div>";
                 }
                 $courses = $DB->get_records('course', array('category' => $category->id), $sort = 'sortorder asc', '*');
                 $i = 0;
-                $course_html = '<div class="card-deck mt-2"> ';
+                $course_html = '';
                 foreach ($courses as $course) {
-                    if ($i > 3) {
-                        $i = 0;
-                        $course_html .= '<div class="card-deck mt-2">';
-                    }
+                    
+                    $course_html .= '<div class="course-deck  mt-2">';
                     $course_html .= '<div class="card collapsed organizers" data-courseid="' . $course->id . '">';
+                    $course_html .= '<br/>';
                     $course_html .= \theme_moove\output\core\course_renderer::coursecat_coursebox_content($chelper, $course, 'examp_orginizer');
                     $course_html .= "</div>";
-                    if ($i == 3) {
-                        $course_html .= "</div>";
-                    }
+                    $course_html .= "</div>";
                     $i++;
                 }
-                $course_html .= "</div>";
                 $exam_organizers .= '<div class="course"> ' . $course_html
                         . "</div>";
 
@@ -241,6 +235,9 @@
     //$cor_course_render = new core_course_renderer($PAGE, 'course');
     //$templatecontext['courses_examorganizer_courses'] = $cor_course_render->course_category(0);
     $usercourses = \theme_moove\util\extras::user_courses_with_progress($user);
+    foreach($usercourses as $usercourse){
+//        print_r($usercourse);
+    }
     $templatecontext['hascourses'] = $show_student;
     if ($templatecontext['hascourses']) {
 

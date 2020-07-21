@@ -48,137 +48,137 @@
         "hasregionmainsettingsmenu": false
     }
 }}
-    {{>theme_moove/inc_start}}
+{{>theme_moove/inc_start}}
 
-    <div id="page" class="container">
+<div id="page" class="container">
     <div class="bg-blue-brud">
         <div class="row m-0">
-          <div class="col text-dash">Dashboard
-          <br>
-          <span class="dasH_name">Welcome {{{ firstname }}}</span>
-            {{#is_siteadmin}}
-               {{{ output.mydashboard_admin_header }}}
-            {{/is_siteadmin}}
-          </div>
-          <div class="col text-right">
-            <div class="brud_s">
-                <a href="{{{ config.wwwroot }}}/?redirect=0">Home</a> / Dashboard
+            <div class="col text-dash">Dashboard
+                <br>
+                <span class="dasH_name">Welcome {{{ firstname }}}</span>
+                {{#is_siteadmin}}
+                {{{ output.mydashboard_admin_header }}}
+                {{/is_siteadmin}}
             </div>
-          </div>
+            <div class="col text-right">
+                <div class="brud_s">
+                    <a href="{{{ config.wwwroot }}}/?redirect=0">Home</a> / Dashboard
+                </div>
+            </div>
         </div>
         {{#is_siteadmin}}
-            {{>theme_moove/mydashboard_admin}}
+        {{>theme_moove/mydashboard_admin}}
         {{/is_siteadmin}}
         {{^is_siteadmin}}
-            {{{ output.full_header }}}
+        {{{ output.full_header }}}
         {{/is_siteadmin}}
     </div>
 
-       
 
 
-        <div id="page-content" class="row dasH_row_mar">
-            <div id="region-main-box" class="col-xs-12 student_dash">
-                {{#hasregionmainsettingsmenu}}
-                <div id="region-main-settings-menu" class="hidden-print">
-                    <div> {{{ output.region_main_settings_menu }}} </div>
-                </div>
-                {{/hasregionmainsettingsmenu}}
-                   
-                <section id="region-main" class="cust-box-tab" style="overflow-x: hidden;">    
-                    <div class="card mymaincontent">
-                    <div class="row" {{#is_siteadmin}} style="display:none"{{/is_siteadmin}}>
-                    <div class="col-md-12">
 
-                          <ul class="row nav nav-tabs remove_border {{#is_siteadmin}}remove_border{{/is_siteadmin}}" id="myTab" role="tablist">
-                                            
-                                                <li class="nav-item p-0">
-                                                    <a class="nav-item nav-link py-2 active tab_mb" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="true">
-                                                        {{# hascourses }}
-                                                            {{{ overview }}}
-                                                        {{/ hascourses }}
-                                                    
-                                                        {{# show_full_course}}
-                                                            {{{ heading_full_course }}}
-                                                        {{/ show_full_course }}
-                                                        
-                                                        {{# show_teacher_course}}
-                                                            {{{ heading_full_course }}}
-                                                        {{/ show_teacher_course}}
-                                                    </a>
-                                                </li>
-                                            
-
-                                            {{# courses_examorganizer }}
-                                           <li class="nav-item p-0">
-                                                <a class="nav-item nav-link py-2 tab_mb" id="nav-examorganizer-tab" data-toggle="tab" href="#nav-examorganizer" role="tab" aria-controls="nav-examorganizer" aria-selected="false">{{{ examorganizer }}}</a>
-                                            </li>
-                                            {{/ courses_examorganizer }}
-                                            
-                                            {{# hascourses }}
-                                            <li class="nav-item p-0">
-                                                <a class="nav-item nav-link py-2 tab_mb" id="nav-bookcourses-tab" data-toggle="tab" href="#nav-bookcourses" role="tab" aria-controls="nav-bookcourses" aria-selected="false">{{{ bookcourses }}}</a>
-                                            </li>
-                                            {{/ hascourses }}
-                                            
-                                        </ul>
-                    </div>
-                    <div class="col-md-12" style="overflow:hidden;padding: 0;margin-bottom: 20px;">
-                    <div class="card-body cust-tabs-s">
-                                      
-                                        <div class="tab-content" id="mypublic-tab">
-                                            
-                                                <div class="tab-pane fade show active" id="nav-overview" role="tabpanel" aria-labelledby="courses-tab">
-                                                    {{# show_full_course}}
-                                                        {{{ course_cat }}}
-                                                    {{/ show_full_course }} 
-
-                                                    {{# show_teacher_course}}
-                                                          {{{ teacher_courses }}}  
-                                                    {{/ show_teacher_course }} 
-
-                                                    {{# hascourses }}
-                                                        {{#hasregionmainsettingsmenu}}
-                                                            <div class="region_main_settings_menu_proxy"></div>
-                                                        {{/hasregionmainsettingsmenu}}
-                                                        {{{ output.course_content_header }}}
-                                                        {{{ output.main_content }}}
-                                                        {{{ output.course_content_footer }}}
-                                                    {{/ hascourses }}
-                                                </div>
-                                            
-                                            {{# courses_examorganizer }}
-                                            <div class="tab-pane fade" id="nav-examorganizer" role="tabpanel" aria-labelledby="nav-examorganizer-tab">
-                                                {{{ exame_orginser }}}
-                                            
-                                            </div>
-                                            {{/ courses_examorganizer}}
-                                            {{!  ExamOrganizer Tab }}
-
-                                            <div class="tab-pane fade" id="nav-bookcourses" role="tabpanel" aria-labelledby="nav-bookcourses-tab">
-                                                {{{ course_cat }}}
-                                            </div>
-
-                                        </div>
-                                    </div>
-                    </div>
-                    </div>
-
-                                            <div class="tab-pane fade pt-1 {{^hascourses}}active show{{/hascourses}}" id="details" role="tabpanel" aria-labelledby="details-tab">
-                                                   
-                                                {{#hasregionmainsettingsmenu}}
-                                                    <div class="region_main_settings_menu_proxy"></div>
-                                                {{/hasregionmainsettingsmenu}}
-                                                {{{ output.course_content_header }}}
-                                                {{{ output.main_content }}}
-                                                {{{ output.course_content_footer }}}
-                                            </div>
-
-                        
-                    </div>
-                </section>
+    <div id="page-content" class="row dasH_row_mar">
+        <div id="region-main-box" class="col-xs-12 student_dash">
+            {{#hasregionmainsettingsmenu}}
+            <div id="region-main-settings-menu" class="hidden-print">
+                <div> {{{ output.region_main_settings_menu }}} </div>
             </div>
+            {{/hasregionmainsettingsmenu}}
+
+            <section id="region-main" class="cust-box-tab" style="overflow-x: hidden;">    
+                <div class="card mymaincontent">
+                    <div class="row" {{#is_siteadmin}} style="display:none"{{/is_siteadmin}}>
+                         <div class="col-md-12">
+
+                            <ul class="row nav nav-tabs remove_border {{#is_siteadmin}}remove_border{{/is_siteadmin}}" id="myTab" role="tablist">
+
+                                <li class="nav-item p-0">
+                                    <a class="nav-item nav-link py-2 active tab_mb" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="true">
+                                        {{# hascourses }}
+                                        {{{ overview }}}
+                                        {{/ hascourses }}
+
+                                        {{# show_full_course}}
+                                        {{{ heading_full_course }}}
+                                        {{/ show_full_course }}
+
+                                        {{# show_teacher_course}}
+                                        {{{ heading_full_course }}}
+                                        {{/ show_teacher_course}}
+                                    </a>
+                                </li>
+
+
+                                {{# courses_examorganizer }}
+                                <li class="nav-item p-0">
+                                    <a class="nav-item nav-link py-2 tab_mb" id="nav-examorganizer-tab" data-toggle="tab" href="#nav-examorganizer" role="tab" aria-controls="nav-examorganizer" aria-selected="false">{{{ examorganizer }}}</a>
+                                </li>
+                                {{/ courses_examorganizer }}
+
+                                {{# hascourses }}
+                                <li class="nav-item p-0">
+                                    <a class="nav-item nav-link py-2 tab_mb" id="nav-bookcourses-tab" data-toggle="tab" href="#nav-bookcourses" role="tab" aria-controls="nav-bookcourses" aria-selected="false">{{{ bookcourses }}}</a>
+                                </li>
+                                {{/ hascourses }}
+
+                            </ul>
+                        </div>
+                        <div class="col-md-12" style="overflow:hidden;padding: 0;margin-bottom: 20px;">
+                            <div class="card-body cust-tabs-s">
+
+                                <div class="tab-content" id="mypublic-tab">
+
+                                    <div class="tab-pane fade show active" id="nav-overview" role="tabpanel" aria-labelledby="courses-tab">
+                                        {{# show_full_course}}
+                                        {{{ course_cat }}}
+                                        {{/ show_full_course }} 
+
+                                        {{# show_teacher_course}}
+                                        {{{ teacher_courses }}}  
+                                        {{/ show_teacher_course }} 
+
+                                        {{# hascourses }}
+                                        {{#hasregionmainsettingsmenu}}
+                                        <div class="region_main_settings_menu_proxy"></div>
+                                        {{/hasregionmainsettingsmenu}}
+                                        {{{ output.course_content_header }}}
+                                        {{{ output.main_content }}}
+                                        {{{ output.course_content_footer }}}
+                                        {{/ hascourses }}
+                                    </div>
+
+                                    {{# courses_examorganizer }}
+                                    <div class="tab-pane fade" id="nav-examorganizer" role="tabpanel" aria-labelledby="nav-examorganizer-tab">
+                                        {{{ exame_orginser }}}
+
+                                    </div>
+                                    {{/ courses_examorganizer}}
+                                    {{!  ExamOrganizer Tab }}
+
+                                    <div class="tab-pane fade" id="nav-bookcourses" role="tabpanel" aria-labelledby="nav-bookcourses-tab">
+                                        {{{ course_cat }}}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade pt-1 {{^hascourses}}active show{{/hascourses}}" id="details" role="tabpanel" aria-labelledby="details-tab">
+
+                        {{#hasregionmainsettingsmenu}}
+                        <div class="region_main_settings_menu_proxy"></div>
+                        {{/hasregionmainsettingsmenu}}
+                        {{{ output.course_content_header }}}
+                        {{{ output.main_content }}}
+                        {{{ output.course_content_footer }}}
+                    </div>
+
+
+                </div>
+            </section>
         </div>
     </div>
+</div>
 
-    {{>theme_moove/inc_end}}
+{{>theme_moove/inc_end}}

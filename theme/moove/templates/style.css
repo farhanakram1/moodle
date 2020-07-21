@@ -18,6 +18,18 @@
 .table-eodo-dashboard thead{
     background: #084e7e;
 }
+.course{
+    clear: both;
+    display: block !important;
+}
+.course-deck {
+	display: block !important;
+	margin-right: -.25rem;
+	margin-left: -.25rem;
+	float: left;
+	width: 31%;
+	margin-left: 25px;
+}
 .table-eodo-dashboard thead th{
     padding: 20px;
     color: #FFF !important
