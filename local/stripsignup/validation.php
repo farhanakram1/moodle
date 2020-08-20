@@ -3,7 +3,7 @@ require('../../config.php');
 require_once($CFG->dirroot . '/user/editlib.php');
 require_once($CFG->libdir . '/authlib.php');
 require_once('lib.php');
-global $DB;
+global $DB,$USER;
 
 if($_REQUEST['func'] == 'chkUName'){
    $user_username = $DB->get_record('user', array('username' =>  $_REQUEST['uname']));
@@ -48,6 +48,20 @@ if($_REQUEST['func'] == 'chkDiscount'){
             echo 'notok';
         }
     }
+}
+if($_REQUEST['func'] == 'updateCourseStatus'){
+    $course_status = new \stdClass();
+    $course_status->course_id = $_REQUEST['course_id'];
+    $course_status->student_id = $USER->id;
+    $course_status->status = 1;
+    $data = $DB->get_record_sql("SELECT * FROM {course_status} WHERE course_id=? and student_id=?  LIMIT 1", array( $_REQUEST['course_id'],$USER->id));
+    if(empty($data)){
+        $DB->insert_record('course_status', $course_status);
+    }else{
+        $course_status->id = $data->id;
+        $DB->update_record('course_status', $course_status);
+    }
+    echo 'ok';
 }
 
 ?>

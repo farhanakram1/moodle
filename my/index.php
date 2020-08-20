@@ -152,10 +152,19 @@ if (empty($CFG->forcedefaultmymoodle) && $PAGE->user_allowed_editing()) {
         $editstring = get_string('updatemymoodleoff');
         $resetbutton = $OUTPUT->single_button($reseturl, $resetstring);
     }
-
-    $url = new moodle_url("$CFG->wwwroot/my/index.php", $params);
-    $button = $OUTPUT->single_button($url, $editstring);
-    $PAGE->set_button($resetbutton . $button);
+    $roleassignments = $DB->get_records_sql('SELECT roleid FROM {role_assignments} WHERE userid=? ', array(intval($USER->id)));
+    $show_student = false;
+    $user_roles = array();
+    foreach ($roleassignments as $roleassignment) {
+        $user_roles[] = $roleassignment->roleid;
+    }
+    if (in_array(5, $user_roles)) {
+        $USER->editing = $edit = 0;
+    }else{
+        $url = new moodle_url("$CFG->wwwroot/my/index.php", $params);
+        $button = $OUTPUT->single_button($url, $editstring);
+        $PAGE->set_button($resetbutton . $button);
+    }
 
 } else {
     $USER->editing = $edit = 0;

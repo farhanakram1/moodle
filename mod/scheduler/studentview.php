@@ -149,7 +149,7 @@ if (count($upcomingslots) > 0) {
         } else {
             $others = null;
         }
-
+        $others = null;
         $cancancel = $slot->is_in_bookable_period();
         $canedit = $cancancel && $scheduler->uses_studentdata();
         $canview = !$cancancel && $scheduler->uses_studentdata();

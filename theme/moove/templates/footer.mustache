@@ -713,7 +713,13 @@ function open_enrollment_form(course_id,exam_orginzer){
     modal.style.display = "block";
 }
 
- 
+function check_status(e){
+    var download_link = $(e).data('link');
+    var course_id = $(e).data('course-id');
+    $.ajax({url: "{{{ config.wwwroot }}}/local/stripsignup/validation.php?func=updateCourseStatus&course_id="+course_id, success: function(result){
+        window.location.href = download_link;
+    }});
+} 
         function changeCourse(e){
             var class_number = e.options[e.selectedIndex].value;
             if(class_number == 'Select Courses'){

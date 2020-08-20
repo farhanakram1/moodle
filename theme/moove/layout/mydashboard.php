@@ -28,6 +28,8 @@
     require_once $CFG->dirroot . '/grade/lib.php';
     require_once $CFG->dirroot . '/course/renderer.php';
     require_once $CFG->dirroot . '/grade/report/overview/lib.php';
+//    require_once $CFG->dirroot . '/calander/renderer.php';
+    
 
     global $DB, $USER;
     // Get the profile userid.
@@ -184,7 +186,28 @@
     }else {
         $show_student = false;
     }
-    
+//    $content_html = $OUTPUT->blocks('content');
+    // Add a custom block.
+    if (in_array(5, $user_roles)) {
+        $contextt = context_user::instance($user->id);
+        $page = new moodle_page();
+        $page->set_context($contextt);
+        $page->set_pagelayout('mydashboard');
+        $page->set_pagetype('my-index');
+        $page->blocks->add_region('content');
+        $currentpage = my_get_page($user->id, MY_PAGE_PRIVATE);
+        $page->set_subpage($currentpage->id);
+        $page->blocks->load_blocks();
+        
+        $is_calendar_month_block_cinstance = $DB->get_record_sql("SELECT count(*) as block_count FROM {block_instances} WHERE parentcontextid='".$contextt->id."' and blockname='calendar_month' and pagetypepattern='my-index' and defaultregion='content' ");
+        if($is_calendar_month_block_cinstance->block_count == 0){
+            $page->blocks->add_block('calendar_month', 'content', 0, false);
+        }
+        $is_timeline_block_cinstance = $DB->get_record_sql("SELECT count(*) as block_count FROM {block_instances} WHERE parentcontextid='".$contextt->id."' and blockname='timeline' and pagetypepattern='my-index' and defaultregion='content' ");
+        if($is_timeline_block_cinstance->block_count == 0){
+            $page->blocks->add_block('timeline', 'content', 0, false);
+        }
+    }
     //$exame_orginser = '';
     $templatecontext = [
         'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
@@ -201,6 +224,8 @@
         'show_teacher_course' => $show_teacher_course,
         'teacher_courses' => $teacher_courses,
         'navdraweropen' => $navdraweropen,
+        'calander' => $PAGE->blocks->region_has_content('block_calendar', $OUTPUT),
+    'rand_time' => time(),
         'draweropenright' => $draweropenright,
         'regionmainsettingsmenu' => $regionmainsettingsmenu,
         'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
@@ -231,7 +256,7 @@
     $templatecontext = array_merge($templatecontext, $themesettings->footer_items());
 
 
-
+//    $calander_render = new core_calendar_renderer();
     //$cor_course_render = new core_course_renderer($PAGE, 'course');
     //$templatecontext['courses_examorganizer_courses'] = $cor_course_render->course_category(0);
     $usercourses = \theme_moove\util\extras::user_courses_with_progress($user);

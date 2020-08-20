@@ -153,9 +153,11 @@ class format_remuiformat_card_all_sections_summary implements renderable, templa
                 $percentage = floor($percentage);
                 $export->generalsection['percentage'] = $percentage;
             }
+            $export->scheduler_class = '';
             $number_of_sessions = $DB->get_record_sql('SELECT * from {customfield_data} where instanceid = '.$this->course->id);
             $number_of_sessions = (int)$number_of_sessions->intvalue;
             if($number_of_sessions > 0){
+                $export->scheduler_class = 'scheduler';
                 $sql = 'SELECT count(*) as total_attended_sessions FROM {scheduler} s
                         LEFT JOIN {scheduler_slots} ss
                         ON s.id = ss.schedulerid
@@ -175,6 +177,7 @@ class format_remuiformat_card_all_sections_summary implements renderable, templa
                     $export->generalsection['scheduler_sessions'] = 'Attended Sessions: '.$attended_sessions;
                 }
             }
+            
             // Get the all activities count from the all sections.
             $sectionmods = array();
             for ($i = 0; $i < count($sections); $i++) {
@@ -259,16 +262,20 @@ class format_remuiformat_card_all_sections_summary implements renderable, templa
                     $downloads = '<div class="download_assignments"><b>Download Assignment</b><br/>';
                     foreach ($download_files as $download_file) {
                         $file_link = new moodle_url('/pluginfile.php/' . $download_file->contextid . '/' . $download_file->component . '/' . $download_file->filearea . '/0/' . $download_file->filename . '?forcedownload=1');
-                        $downloads .= '<a href="' . $file_link . '"> ' . $download_file->filename . '</a><br/>';
+                        $downloads .= '<button data-course-id="'.$this->course->id.'" data-link="'.$file_link.'" type="button" class="download_file" onclick="check_status(this);" title="Download Assignment"> ' . $download_file->filename . '</button> <a onlclick href="' . $file_link . '"></a><br/>';
                     }
                     $downloads .= '</div>';
                     $activitydetails->downloads = $downloads;
                     $submission_link = new moodle_url('/mod/assign/view.php');
-                    $activitydetails->submissions  = '<form method="get" action="'.$submission_link.'">
-                                            <input type="hidden" name="id" value="'.$mod->id.'">
-                                            <input type="hidden" name="action" value="editsubmission">
-                                        <button type="submit" class="btn btn-secondary" id="single_button" title="">Add submission</button>
-                                    </form>';
+                    if($activitydetails->completed){
+                        $activitydetails->submissions  = '<a style="text-decoration:none;" class="btn btn-secondary"  href="'.$mod->url.'">View submission</a>';
+                    }else{
+                        $activitydetails->submissions  = '<form method="get" action="'.$submission_link.'">
+                                                <input type="hidden" name="id" value="'.$mod->id.'">
+                                                <input type="hidden" name="action" value="editsubmission">
+                                            <button type="submit" class="btn btn-secondary" id="single_button" title="">Add submission</button>
+                                        </form>';
+                    }
                 }
                 if ($PAGE->user_is_editing()) {
                     $editactions = course_get_cm_edit_actions($mod, $mod->indent, $section->section);

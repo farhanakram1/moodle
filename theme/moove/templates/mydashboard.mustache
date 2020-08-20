@@ -129,6 +129,8 @@
                                 <div class="tab-content" id="mypublic-tab">
 
                                     <div class="tab-pane fade show active" id="nav-overview" role="tabpanel" aria-labelledby="courses-tab">
+                                       <div class="col-md-6">
+                        
                                         {{# show_full_course}}
                                         {{{ course_cat }}}
                                         {{/ show_full_course }} 
@@ -136,7 +138,10 @@
                                         {{# show_teacher_course}}
                                         {{{ teacher_courses }}}  
                                         {{/ show_teacher_course }} 
-
+</div>
+<div class="col-md-6">
+ {{{  }}}
+</div>
                                         {{# hascourses }}
                                         {{#hasregionmainsettingsmenu}}
                                         <div class="region_main_settings_menu_proxy"></div>
@@ -145,6 +150,7 @@
                                         {{{ output.main_content }}}
                                         {{{ output.course_content_footer }}}
                                         {{/ hascourses }}
+
                                     </div>
 
                                     {{# courses_examorganizer }}
@@ -165,7 +171,6 @@
                     </div>
 
                     <div class="tab-pane fade pt-1 {{^hascourses}}active show{{/hascourses}}" id="details" role="tabpanel" aria-labelledby="details-tab">
-
                         {{#hasregionmainsettingsmenu}}
                         <div class="region_main_settings_menu_proxy"></div>
                         {{/hasregionmainsettingsmenu}}

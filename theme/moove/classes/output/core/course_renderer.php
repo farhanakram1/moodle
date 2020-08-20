@@ -432,9 +432,15 @@ class course_renderer extends \core_course_renderer {
             $class = 'noaccess-grey';
             $show_student = false;
         }
+        $data = $DB->get_record_sql("SELECT * FROM {course_status} WHERE course_id=? and student_id=?  LIMIT 1", array( $course->id,$USER->id));
+        if(!empty($data)){
+            $access_class = '';
+            $string = 'downloaded';
+        }
         if($percentage > 0 && $class == 'access'){
             $string = 'downloaded';
         }
+        
         if($show_student){
             $coursenamelink = html_writer::link($courselink, $coursename, array('class' => $course->visible ? '' : 'dimmed'));
         }else{

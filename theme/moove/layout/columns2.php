@@ -60,6 +60,7 @@ $templatecontext = [
     'hasblocks' => $hasblocks,
     'bodyattributes' => $bodyattributes,
     'hasdrawertoggle' => $hasdrawertoggle,
+    'rand_time' => time(),
     'navdraweropen' => $navdraweropen,
     'draweropenright' => $draweropenright,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,

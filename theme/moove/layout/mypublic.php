@@ -68,6 +68,7 @@ $templatecontext = [
     'bodyattributes' => $bodyattributes,
     'hasdrawertoggle' => $hasdrawertoggle,
     'navdraweropen' => $navdraweropen,
+    'rand_time' => time(),
     'draweropenright' => $draweropenright,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu)

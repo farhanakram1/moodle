@@ -64,7 +64,7 @@ class scheduler_slot_table implements renderable {
     public $showeditlink = false;
 
     /** @var bool whether to show the location of the appointment */
-    public $showlocation = true;
+    public $showlocation = false;
 
     /** @var bool whether to show the students in the slot */
     public $showstudent = false;
